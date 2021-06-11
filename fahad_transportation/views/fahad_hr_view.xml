@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_fahad_hr_form">
+            <field name="name">Employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="name" position="attributes">
+                    <attribute name="required">1</attribute>
+                </field>
+                <xpath expr="/form/sheet" position="before">
+                    <header>
+<!--                        <xpath expr="/form/header/button[@name='button_draft']" position="before">-->
+<!--                        </xpath>-->
+                        <button name="button_review" string="Review" type="object" states="new"/>
+                        <button name="button_confirm" string="Confirm" type="object" states="review"/>
+                        <button name="button_close" groups="base.group_no_one" string="Close" type="object" states="new,review"
+                                confirm="Are you sure you want to close"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                </xpath>
+                <field name="identification_id" position="replace"/>
+<!--                <label for="category_ids" position="before">-->
+<!--                    <label for="arabic_name" class="oe_edit_only"/>-->
+<!--                    <h1>-->
+<!--                        <field name="arabic_name" required="1"/>-->
+<!--                    </h1>-->
+<!--                    <label for="code"/>-->
+<!--                    <field name="code"/>-->
+<!--                    <label for="employee_type"/>-->
+<!--                    <field name="employee_type" required="1"/>-->
+<!--                </label>-->
+                <field name="marital" position="after">
+                    <field name="religion"/>
+                    <field name="blood_type"/>
+                </field>
+<!--                <group string="Birth" position="after">-->
+<!--                    <group string="Others">-->
+<!--                        <field name="other_1"/>-->
+<!--                        <field name="other_2"/>-->
+<!--                        <field name="other_3"/>-->
+<!--                        <field name="other_4"/>-->
+<!--                        <field name="other_5"/>-->
+<!--                        <field name="other_6"/>-->
+<!--                        <field name="other_7"/>-->
+<!--                        <field name="other_8"/>-->
+<!--                        <field name="other_9"/>-->
+<!--                        <field name="other_10"/>-->
+<!--                    </group>-->
+<!--                </group>-->
+                <notebook position="inside">
+                    <page string="Identification Data">
+                        <group>
+                            <group>
+                                <field name="identification_id"/>
+                                <field name="identification_hijri_date" placeholder="dd/mm/yy"/>
+                                <field name="identification_expiry_hijri_date" placeholder="dd/mm/yy"/>
+                                <field name="remaining_iqama_days"/>
+                            </group>
+                            <group>
+                                <field name="border_no"/>
+                                <field name="kingdom_entry_date"/>
+                                <field name="executed"/>
+                                <field name="visa_job"/>
+                                <field name="sponsor_type"/>
+                                <field name="sponsor"
+                                       attrs="{'invisible':[('sponsor_type', '=', 'internal')]}"/>
+                            </group>
+                        </group>
+                    </page>
+                    <page string="Passport Date">
+                        <group>
+                            <group>
+                                <field name="passport_no"/>
+                                <field name="passport_issue_date"/>
+                                <field name="passport_expiry_date"/>
+                                <field name="passport_issue"/>
+                                <field name="passport_job"/>
+                                <field name="remaining_passport_days"/>
+                            </group>
+                            <group></group>
+                        </group>
+                    </page>
+                    <page string="License Date">
+                        <group>
+                            <group>
+                                <field name="license_type"/>
+                                <field name="license_no"/>
+                                <field name="license_hijri_date" placeholder="dd/mm/yy"/>
+                                <field name="license_expiry_hijri_date" placeholder="dd/mm/yy"/>
+                                <field name="remaining_license_days"/>
+                            </group>
+                            <group></group>
+                        </group>
+                    </page>
+                    <page string="Buttom">
+                        <group>
+                            <group>
+                                <field name="emp_id"/>
+                                <field name="buttom_date"/>
+                                <field name="buttom_expiry_date"/>
+                                <field name="remaining_buttom_days"/>
+                            </group>
+                            <group></group>
+                        </group>
+                    </page>
+                    <page string="Aramco">
+                        <group>
+                            <group>
+                                <field name="has_vehicle" string="Drive On Vehicle" readonly="1"/>
+                                <field name="aramco_no"/>
+                                <field name="serial"/>
+                                <field name="aramco_issue_date"/>
+                                <field name="aramco_expiry_date"/>
+                                <field name="remaining_aramco_days"/>
+                            </group>
+                            <group></group>
+                        </group>
+                    </page>
+                    <page string="Electric card">
+                        <group>
+                            <group>
+                                <field name="electric_no"/>
+                                <field name="electric_serial"/>
+                                <field name="electric_issue_date"/>
+                                <field name="electric_expiry_date"/>
+                                <field name="remaining_electric_days"/>
+                            </group>
+                            <group></group>
+                        </group>
+                    </page>
+                    <page string="Branches">
+                        <group>
+                            <group>
+                                <field name="branch_no" readonly="1"/>
+                                <field name="branch_name" attrs="{'required':[('state','in',['review','confirm'])]}"
+                                       options="{'create': false, 'create_edit': false}"/>
+                            </group>
+                            <group></group>
+                        </group>
+                    </page>
+                    <page string="Insurance">
+                        <group>
+                            <group>
+                                <field name="insurance_no"/>
+                                <!--<field name="insurance_company" domain="[('supplier', '=', True)]"/>-->
+                                <field name="insurance_degree"/>
+                                <field name="insurance_issue_date"/>
+                                <field name="insurance_expiry_date"/>
+                                <field name="remaining_insurance_days"/>
+                            </group>
+                            <group></group>
+                        </group>
+                    </page>
+                    <page string="Dependencies">
+                        <group>
+                            <field name="dependence_ids">
+                                <tree string="Dependence" editable="bottom">
+                                    <field name="name"/>
+                                    <field name="kinship"/>
+                                    <field name="iqama_no"/>
+                                    <field name="passport_no"/>
+                                    <field name="birthday"/>
+                                    <field name="note"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                    <page string="Employee Custody">
+                        <field name="not_financial_custody_id" readonly="1">
+                            <tree string="Employee Custody" editable="bottom" delete="false">
+                                <field name="custody"/>
+                                <field name="location"/>
+                                <field name="number"/>
+                                <field name="product_uom_id"/>
+                                <field name="unit_price"/>
+                                <field name="total"/>
+                                <field name="delivery_date"/>
+                                <field name="note"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Salary and loans configuration">
+                        <group>
+                            <group>
+                                <field name="salary_receive" attrs="{'required':[('state','in',['review','confirm'])]}"/>
+                                <field name="can_take_loan"/>
+                                <field name="loan_account_id" options="{'create': false, 'create_edit': false}"
+                                       attrs="{'required':[('can_take_loan','=',True)],'invisible':[('can_take_loan','=','False')]}"/>
+                            </group>
+                            <group>
+                                <field name="liquidity_account_id" options="{'create': false, 'create_edit': false}"
+                                       attrs="{'required':[('state','in',['review','confirm'])]}"/>
+                            </group>
+                        </group>
+                    </page>
+                    <page string="Note">
+                        <group>
+                            <field name="note"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_discount_commission_form">
+            <field name="name">Discount Commission</field>
+            <field name="model">discount.commission</field>
+            <field name="arch" type="xml">
+                <form string="Car Category">
+                    <sheet>
+                        <group>
+                            <field name="code" readonly="1"/>
+                            <field name="line_ids">
+                                <tree editable="bottom">
+                                    <field name="employee_id"/>
+                                    <field name="amount"/>
+                                    <field name="type"/>
+                                    <field name="cause"/>
+                                    <field name="effective_date"/>
+                                    <field name="done"/>
+                                </tree>
+                            </field>
+                            <field name="note"/>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_discount_commission_tree">
+            <field name="name">Discount Commission</field>
+            <field name="model">discount.commission</field>
+            <field name="arch" type="xml">
+                <tree string="Car Category">
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_discount_commission">
+            <field name="name">Discount Commission</field>
+            <field name="res_model">discount.commission</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_employee_tree">
+            <field name="name">Employees</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="arabic_name"/>
+                    <field name="code"/>
+                    <field name="country_id"/>
+                    <field name="job_id"/>
+                    <field name="identification_id"/>
+                    <field name="identification_expiry_hijri_date_"/>
+                    <field name="passport_no"/>
+                    <field name="passport_expiry_date"/>
+                    <field name="license_expiry_hijri_date_"/>
+                    <field name="buttom_expiry_date"/>
+                    <field name="aramco_expiry_date"/>
+                    <field name="state"/>
+                    <!--<field name="name" string="Name"/>-->
+                    <!--<field name="work_phone" invisible="1"/>-->
+                    <!--<field name="work_email" invisible="1"/>-->
+                    <!--<field name="company_id" invisible="1" groups="base.group_multi_company"/>-->
+                    <!--<field name="department_id" invisible="1"/>-->
+                    <!--<field name="parent_id" invisible="1"/>-->
+                    <!--<field name="coach_id" invisible="1"/>-->
+                </field>
+                <field name="work_phone" position="replace"/>
+                <field name="work_email" position="replace"/>
+                <field name="company_id" position="replace"/>
+                <field name="department_id" position="replace"/>
+                <field name="parent_id" position="replace"/>
+            </field>
+        </record>
+    </data>
+</odoo>

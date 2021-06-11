@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_vehicle_form">
+            <field name="name">Vehicles</field>
+            <field name="model">new.vehicle</field>
+            <field name="arch" type="xml">
+                <form string="Vehicles">
+                    <header>
+                        <button name="action_reviewed" string="Reviewed" groups="fahad_transportation.group_fahd_wheel_review"
+                                states="new" type="object" class="oe_highlight"/>
+                        <button name="action_confirmed" string="Confirmed" groups="fahad_transportation.group_fahd_wheel_confirm"
+                                states="review" type="object" class="oe_highlight"/>
+                        <button name="action_closed" string="Closed" states="review" type="object" class="oe_highlight"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="for_rent" invisible="1"/>
+                                <field name="code" readonly="1"/>
+                                <field name="cause"/>
+                                <field name="ownership" required="1"/>
+                            </group>
+                            <group>
+                                <field name="install_date" required="1"/>
+                                <field name="decision_no"/>
+                            </group>
+                        </group>
+                        <group string="Car">
+                            <group>
+                                <field name="car_category_id" options="{'create': false, 'create_edit': false}" domain="[('tankable','=','yes')]" required="1"
+                                       context="{'car_category_id': car_category_id}"/>
+                                <field name="car_plaque_no" readonly="1"/>
+                                <field name="car_aramco_expiry_date" readonly="1"/>
+                                <field name="car_color" readonly="1"/>
+
+                            </group>
+                            <group>
+                                <field name="new_car_id"/>
+                                <field name="car_aramco_no" readonly="1"/>
+                                <field name="car_model" readonly="1"/>
+                                <field name="car_driver" readonly="1"/>
+                                <field name="has_driver" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group cols="4">
+                                <field name="line_id" readonly="1"/>
+                            </group>
+                        </group>
+                        <group string="Tank">
+                            <group>
+                                <field name="new_tank_id" domain="[('state','=','confirm')]"
+                                       options="{'create': false, 'create_edit': false}" required="1"/>
+                                <field name="capacity" readonly="1"/>
+                                <field name="tank_aramco_expiry_date" readonly="1"/>
+                                <field name="tank_company_no" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="tank_chasih_no" readonly="1"/>
+                                <field name="tank_aramco_no" readonly="1"/>
+                                <field name="tank_model" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Line History">
+                            <notebook>
+                                <page string='Current Linked Line'>
+                                    <field name="history_linked_line" readonly="1">
+                                    <tree string="Current Connected Lines" create="false" delete="false">
+                                        <field name="code"/>
+                                        <field name="route_no"/>
+                                        <field name="route_number"/>
+                                        <field name="line_name"/>
+                                        <field name="start_point"/>
+                                        <field name="end_point"/>
+                                        <field name="distance"/>
+                                        <field name="km_price"/>
+                                        <field name="line_price"/>
+                                        <field name="allowance"/>
+                                        <field name="state_of_linked_line"/>
+                                    </tree>
+                                </field>
+                                </page>
+                                <page string='Line History'>
+                                    <field name="history_linked_all" readonly="1">
+                                    <tree string="Current Connected Lines" create="false" delete="false">
+                                        <field name="code"/>
+                                        <field name="route_no"/>
+                                        <field name="route_number"/>
+                                        <field name="line_name"/>
+                                        <field name="start_point"/>
+                                        <field name="end_point"/>
+                                        <field name="distance"/>
+                                        <field name="km_price"/>
+                                        <field name="line_price"/>
+                                        <field name="allowance"/>
+                                        <field name="state_of_linked_line"/>
+                                    </tree>
+                                </field>
+                                </page>
+                            </notebook>
+
+                            </page>
+
+                            <!--<page string="Driver History">-->
+                                <!--<field name="driver_history" readonly="1">-->
+                                    <!--<tree string="Driver History">-->
+                                        <!--<field name="driver_id"/>-->
+                                        <!--&lt;!&ndash;<field name="custody"/>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<field name="location"/>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<field name="number" readonly="1"/>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<field name="unit_price" readonly="1"/>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<field name="total" readonly="1"/>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<field name="custody_state" readonly="1"/>&ndash;&gt;-->
+                                        <!--<field name="delivery_date" readonly="1"/>-->
+                                        <!--<field name="receive_location" required="1"/>-->
+                                        <!--<field name="lost" required="1"/>-->
+                                        <!--<field name="lost_number" required="1"/>-->
+                                        <!--<field name="driver_discount" required="1"/>-->
+                                        <!--<field name="total_discount" required="1"/>-->
+                                        <!--<field name="discount_date" required="1"/>-->
+                                    <!--</tree>-->
+                                <!--</field>-->
+                            <!--</page>-->
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_new_vehicle_tree">
+            <field name="name">Vehicles</field>
+            <field name="model">new.vehicle</field>
+            <field name="arch" type="xml">
+                <tree string="Vehicles">
+                    <field name="code"/>
+                    <field name="cause"/>
+                    <field name="ownership"/>
+                    <field name="install_date"/>
+                    <field name="car_aramco_no" string="Car Aramco No"/>
+                    <field name="car_plaque_no"/>
+                    <field name="tank_aramco_no" string="Tank Aramco No"/>
+                    <field name="capacity"/>
+                    <field name="car_driver"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_new_vehicles">
+            <field name="name">Vehicles</field>
+            <field name="res_model">new.vehicle</field>
+<!--            <field name="view_type">form</field>-->
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

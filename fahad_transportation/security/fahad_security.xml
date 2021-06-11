@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.module.category" id="module_group1_management">
+            <field name="name">Assets Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record model="ir.module.category" id="module_group2_management">
+            <field name="name">Vehicles Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">8</field>
+        </record>
+
+        <record model="ir.module.category" id="module_group3_management">
+            <field name="name">Lines Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">9</field>
+        </record>
+
+        <record model="ir.module.category" id="module_group4_management">
+            <field name="name">Branches Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record model="ir.module.category" id="module_group5_management">
+            <field name="name">Expenses and Maintenance Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">11</field>
+        </record>
+
+        <record model="ir.module.category" id="module_group6_management">
+            <field name="name">Revenue Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">12</field>
+        </record>
+
+        <record model="ir.module.category" id="module_group7_management">
+            <field name="name">Others Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">13</field>
+        </record>
+
+        <!--Group1 Access Right for first menu item-->
+        <!-- Group1 Create, Have all permission of group1-->
+        <record id="group_fahad_manager" model="res.groups">
+            <field name="name">Assets Create</field>
+            <field name="category_id" ref="module_group1_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!-- Group1 Review, It can review all screens in group1-->
+        <record id="group1_fahad_review" model="res.groups">
+            <field name="name">Assets Review</field>
+            <field name="category_id" ref="module_group1_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!-- Group1 Confirm, It can confirm all screens in group1-->
+        <record id="group1_fahad_confirm" model="res.groups">
+            <field name="name">Assets Confirm</field>
+            <field name="category_id" ref="module_group1_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!-- Group1 Approve, It can approve all screens in group1-->
+        <record id="group1_fahad_approve" model="res.groups">
+            <field name="name">Assets Approve</field>
+            <field name="category_id" ref="module_group1_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!-- Group1 Close, It can close all screens in group1-->
+        <record id="group1_fahad_close" model="res.groups">
+            <field name="name">Assets Close</field>
+            <field name="category_id" ref="module_group1_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <!--Group2 Access Right for first menu item-->
+        <!-- Group2 Create, Have all permission of group1-->
+        <record id="group2_fahad_manager" model="res.groups">
+            <field name="name">Vehicles Create</field>
+            <field name="category_id" ref="module_group2_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!-- Group2 Review, It can review all screens in group1-->
+        <record id="group2_fahad_review" model="res.groups">
+            <field name="name">Vehicles Review</field>
+            <field name="category_id" ref="module_group2_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group2_fahad_manager'))]"/>
+        </record>
+        <!-- Group2 Confirm, It can confirm all screens in group1-->
+        <record id="group2_fahad_confirm" model="res.groups">
+            <field name="name">Vehicles Confirm</field>
+            <field name="category_id" ref="module_group2_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group2_fahad_manager'))]"/>
+        </record>
+        <!-- Group2 Approve, It can approve all screens in group1-->
+        <record id="group2_fahad_approve" model="res.groups">
+            <field name="name">Vehicles Approve</field>
+            <field name="category_id" ref="module_group2_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group2_fahad_manager'))]"/>
+        </record>
+        <!-- Group2 Close, It can close all screens in group1-->
+        <record id="group2_fahad_close" model="res.groups">
+            <field name="name">Vehicles Close</field>
+            <field name="category_id" ref="module_group2_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group2_fahad_manager'))]"/>
+        </record>
+
+        <!--Group3 Access Right for first menu item-->
+        <!-- Group3 Create, Have all permission of group1-->
+        <record id="group3_fahad_manager" model="res.groups">
+            <field name="name">Line Create</field>
+            <field name="category_id" ref="module_group3_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!-- Group3 Review, It can review all screens in group1-->
+        <record id="group3_fahad_review" model="res.groups">
+            <field name="name">Line Review</field>
+            <field name="category_id" ref="module_group3_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group3_fahad_manager'))]"/>
+        </record>
+        <!-- Group3 Confirm, It can confirm all screens in group1-->
+        <record id="group3_fahad_confirm" model="res.groups">
+            <field name="name">Line Confirm</field>
+            <field name="category_id" ref="module_group3_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group3_fahad_manager'))]"/>
+        </record>
+        <!-- Group3 Approve, It can approve all screens in group1-->
+        <record id="group3_fahad_approve" model="res.groups">
+            <field name="name">Line Approve</field>
+            <field name="category_id" ref="module_group3_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group3_fahad_manager'))]"/>
+        </record>
+        <!-- Group3 Close, It can close all screens in group1-->
+        <record id="group3_fahad_close" model="res.groups">
+            <field name="name">Line Close</field>
+            <field name="category_id" ref="module_group3_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group3_fahad_manager'))]"/>
+        </record>
+
+        <!--Group4 Access Right for first menu item-->
+        <!-- Group4 Create, Have all permission of group1-->
+        <record id="group4_fahad_manager" model="res.groups">
+            <field name="name">Branch Create</field>
+            <field name="category_id" ref="module_group4_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!-- Group4 Review, It can review all screens in group1-->
+        <record id="group4_fahad_review" model="res.groups">
+            <field name="name">Branch Review</field>
+            <field name="category_id" ref="module_group4_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group4_fahad_manager'))]"/>
+        </record>
+        <!-- Group4 Confirm, It can confirm all screens in group1-->
+        <record id="group4_fahad_confirm" model="res.groups">
+            <field name="name">Branch Confirm</field>
+            <field name="category_id" ref="module_group4_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group4_fahad_manager'))]"/>
+        </record>
+        <!-- Group4 Approve, It can approve all screens in group1-->
+        <record id="group4_fahad_approve" model="res.groups">
+            <field name="name">Branch Approve</field>
+            <field name="category_id" ref="module_group4_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group4_fahad_manager'))]"/>
+        </record>
+        <!-- Group4 Close, It can close all screens in group1-->
+        <record id="group4_fahad_close" model="res.groups">
+            <field name="name">Branch Close</field>
+            <field name="category_id" ref="module_group4_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group4_fahad_manager'))]"/>
+        </record>
+
+        <!--Group5 Access Right for first menu item-->
+        <!-- Group5 Create, Have all permission of group1-->
+        <record id="group5_fahad_manager" model="res.groups">
+            <field name="name">Expenses and Maintenance Create</field>
+            <field name="category_id" ref="module_group5_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!-- Group5 Review, It can review all screens in group1-->
+        <record id="group5_fahad_review" model="res.groups">
+            <field name="name">Expenses and Maintenance Review</field>
+            <field name="category_id" ref="module_group5_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group5_fahad_manager'))]"/>
+        </record>
+        <!-- Group5 Confirm, It can confirm all screens in group1-->
+        <record id="group5_fahad_confirm" model="res.groups">
+            <field name="name">Expenses and Maintenance Confirm</field>
+            <field name="category_id" ref="module_group5_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group5_fahad_manager'))]"/>
+        </record>
+        <!-- Group5 Approve, It can approve all screens in group1-->
+        <record id="group5_fahad_approve" model="res.groups">
+            <field name="name">Expenses and Maintenance Approve</field>
+            <field name="category_id" ref="module_group5_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group5_fahad_manager'))]"/>
+        </record>
+        <!-- Group5 Close, It can close all screens in group1-->
+        <record id="group5_fahad_close" model="res.groups">
+            <field name="name">Expenses and Maintenance Close</field>
+            <field name="category_id" ref="module_group5_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group5_fahad_manager'))]"/>
+        </record>
+
+        <!--Group6 Access Right for first menu item-->
+        <!-- Group6 Create, Have all permission of group1-->
+        <record id="group6_fahad_manager" model="res.groups">
+            <field name="name">Revenue Create</field>
+            <field name="category_id" ref="module_group6_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!-- Group6 Review, It can review all screens in group1-->
+        <record id="group6_fahad_review" model="res.groups">
+            <field name="name">Revenue Review</field>
+            <field name="category_id" ref="module_group6_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group6_fahad_manager'))]"/>
+        </record>
+        <!-- Group6 Confirm, It can confirm all screens in group1-->
+        <record id="group6_fahad_confirm" model="res.groups">
+            <field name="name">Revenue Confirm</field>
+            <field name="category_id" ref="module_group6_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group6_fahad_manager'))]"/>
+        </record>
+        <!-- Group6 Approve, It can approve all screens in group1-->
+        <record id="group6_fahad_approve" model="res.groups">
+            <field name="name">Revenue Approve</field>
+            <field name="category_id" ref="module_group6_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group6_fahad_manager'))]"/>
+        </record>
+        <!-- Group6 Close, It can close all screens in group1-->
+        <record id="group6_fahad_close" model="res.groups">
+            <field name="name">Revenue Close</field>
+            <field name="category_id" ref="module_group6_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group6_fahad_manager'))]"/>
+        </record>
+
+        <!--Group7 Access Right for first menu item-->
+        <!-- Group7 Create, Have all permission of group1-->
+        <record id="group7_fahad_manager" model="res.groups">
+            <field name="name">Others Create</field>
+            <field name="category_id" ref="module_group7_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <!-- Group7 Review, It can review all screens in group1-->
+        <record id="group7_fahad_review" model="res.groups">
+            <field name="name">Others Review</field>
+            <field name="category_id" ref="module_group7_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group7_fahad_manager'))]"/>
+        </record>
+        <!-- Group7 Confirm, It can confirm all screens in group1-->
+        <record id="group7_fahad_confirm" model="res.groups">
+            <field name="name">Others Confirm</field>
+            <field name="category_id" ref="module_group7_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group7_fahad_manager'))]"/>
+        </record>
+        <!-- Group7 Approve, It can approve all screens in group1-->
+        <record id="group7_fahad_approve" model="res.groups">
+            <field name="name">Others Approve</field>
+            <field name="category_id" ref="module_group7_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group7_fahad_manager'))]"/>
+        </record>
+        <!-- Group7 Close, It can close all screens in group1-->
+        <record id="group7_fahad_close" model="res.groups">
+            <field name="name">Others Close</field>
+            <field name="category_id" ref="module_group7_management"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group7_fahad_manager'))]"/>
+        </record>
+
+    </data>
+    <data>
+
+        <record model="ir.module.category" id="fahad_groups">
+            <field name="name">Fahad</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">7</field>
+        </record>
+        <record id="group_all_fahad_read" model="res.groups">
+            <field name="name">Fahad read</field>
+            <field name="category_id" ref="fahad_groups"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="group_all_fahad_write" model="res.groups">
+            <field name="name">Fahad wirte</field>
+            <field name="category_id" ref="fahad_groups"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="group_all_fahad_create" model="res.groups">
+            <field name="name">Fahad create</field>
+            <field name="category_id" ref="fahad_groups"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="group_all_fahad_delete" model="res.groups">
+            <field name="name">Fahad delete</field>
+            <field name="category_id" ref="fahad_groups"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="group_all_fahad_review" model="res.groups">
+            <field name="name">Fahad Review</field>
+            <field name="category_id" ref="fahad_groups"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        <record id="group_all_fahad_confirm" model="res.groups">
+            <field name="name">Fahad confirm</field>
+            <field name="category_id" ref="fahad_groups"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+    </data>
+</odoo>

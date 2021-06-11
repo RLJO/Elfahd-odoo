@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_expense_form">
+            <field name="name">Expenses</field>
+            <field name="model">expenses</field>
+            <field name="arch" type="xml">
+                <form string="Contract">
+                    <header>
+                        <button name='button_review' type="object" string="Review" states="draft"
+                                groups="fahad_transportation.group_fahd_expens_review"/>
+                        <button name='button_confirm' type="object" string="Confirm" states="reviewed"
+                                groups="fahad_transportation.group_fahd_expens_confirm"/>
+                        <button name='button_close' confirm="Are you sure You want to close" type="object" groups="base.group_no_one" string="Close" states="draft,reviewed"/>
+                        <button name='button_draft' confirm="Are you sure You want to Draft" type="object" string="Set to Draft" states="draft,reviewed"/>
+                        <field name="state" widget='statusbar'/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="name" attrs="{'readonly': [('state', '=', 'confirmed')]}"/>
+                            </group>
+                            <group>
+                                <field name="expense_nature" attrs="{'readonly': [('state', '=', 'confirmed')]}"/>
+                                <field name="expense_account" options="{'create': false, 'create_edit': false}"
+                                       attrs="{'readonly': [('state', '=', 'confirmed')],
+                                               'invisible': [('expense_nature', '=', 'capital')],
+                                               'required': [('expense_nature', '=', 'operational')]}"/>
+                                <field name="expense_type" options="{'create': false, 'create_edit': false}" attrs="{'readonly': [('state', '=', 'confirmed')]}"/>
+                                <field name="journal_id" attrs="{'readonly': [('state', '=', 'confirmed')]}"
+                                       options="{'create': false, 'create_edit': false}" domain="[('type', 'not in', ['bank', 'cash'])]"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="note"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_expense_tree">
+            <field name="name">Expenses</field>
+            <field name="model">expenses</field>
+            <field name="arch" type="xml">
+                <tree string="Contract">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="expense_nature"/>
+                    <field name="expense_type"/>
+                    <field name="journal_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="view_expense_action">
+            <field name="name">Expenses</field>
+            <field name="res_model">expenses</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_expense_tree"/>
+        </record>
+    </data>
+</odoo>

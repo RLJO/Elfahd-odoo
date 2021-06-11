@@ -1,0 +1,1079 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* zolaphi_real_estate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-23 21:35+0000\n"
+"PO-Revision-Date: 2015-06-27 01:20+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 1.8.1\n"
+
+#. module: zolaphi_real_estate
+#: selection:rent.property,duration:0
+#: selection:rent.property,installment_duration:0
+msgid "12"
+msgstr "12"
+
+#. module: zolaphi_real_estate
+#: model:ir.actions.act_window,help:zolaphi_real_estate.open_expenses_types
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    Click to Create new property type.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Define your company's property types to your needs\n"
+"                </p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    Click to Create new property type.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Define your company's property types to your needs\n"
+"                </p>\n"
+"            "
+
+#. module: zolaphi_real_estate
+#: model:ir.actions.act_window,help:zolaphi_real_estate.action_property
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    Click to start a new Property.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Define your company's Properties according to your needs\n"
+"                </p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    Click to start a new Property.\n"
+"                </p>\n"
+"                <p>\n"
+"                    Define your company's Properties according to your needs\n"
+"                </p>\n"
+"            "
+
+#. module: zolaphi_real_estate
+#: field:expense.types,account_id:0
+msgid "Account"
+msgstr "حساب"
+
+#. module: zolaphi_real_estate
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+msgid "Accounting"
+msgstr "الحسابات"
+
+#. module: zolaphi_real_estate
+#: selection:z.property,Journal_entry_type:0
+msgid "Add to Capital"
+msgstr "اضافة الي راس المال"
+
+#. module: zolaphi_real_estate
+#: field:z.property,address:0
+msgid "Address"
+msgstr "عنوان"
+
+#. module: zolaphi_real_estate
+#: field:z.property,advanced_income_account_id:0
+msgid "Advanced income account"
+msgstr "حساب ايراد مقدم"
+
+#. module: zolaphi_real_estate
+#: field:expenses.register,amount:0
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: zolaphi_real_estate
+#: field:z.property,areal_number:0
+msgid "Areal Number"
+msgstr "رقم المساحة"
+
+#. module: zolaphi_real_estate
+#: field:z.property,asset_journal_id:0
+msgid "Asset Journal"
+msgstr "دفتر يومية الأصول"
+
+#. module: zolaphi_real_estate
+#: field:z.property,attachment_ids:0
+msgid "Attachment"
+msgstr "المرفق"
+
+#. module: zolaphi_real_estate
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+msgid "Attachments"
+msgstr "المرفقات"
+
+#. module: zolaphi_real_estate
+#: selection:expenses.register,method:0
+msgid "Bank & Cash"
+msgstr "نقدا و بنك"
+
+#. module: zolaphi_real_estate
+#: field:z.property,block_no:0
+msgid "Block number"
+msgstr "رقم البلوك"
+
+#. module: zolaphi_real_estate
+#: selection:z.property,Journal_entry_type:0
+msgid "Buy from Supplier"
+msgstr "شراء من المورد"
+
+#. module: zolaphi_real_estate
+#: field:z.property,can_rent:0
+msgid "Can rent this property"
+msgstr "يمكن تاجير العقار"
+
+#. module: zolaphi_real_estate
+#: field:z.property,capital_account_id:0
+msgid "Capital Account"
+msgstr "حساب راس المال"
+
+#. module: zolaphi_real_estate
+#: selection:expense.types,type:0 selection:expenses.register,type:0
+msgid "Capital expense"
+msgstr "مصروف راسمالي"
+
+#. module: zolaphi_real_estate
+#: view:cities:zolaphi_real_estate.cities_view_form
+#: view:cities:zolaphi_real_estate.cities_view_tree
+#: model:ir.actions.act_window,name:zolaphi_real_estate.open_cities
+#: model:ir.ui.menu,name:zolaphi_real_estate.Cities_menu
+msgid "Cities"
+msgstr "المدن"
+
+#. module: zolaphi_real_estate
+#: field:districts,city_id:0 field:z.property,city_id:0
+msgid "City"
+msgstr "المدينة"
+
+#. module: zolaphi_real_estate
+#: view:expenses.register:zolaphi_real_estate.expense_register_view_form
+#: view:rent.property:zolaphi_real_estate.rent_property_view_form
+#: view:sale.property:zolaphi_real_estate.sale_property_view_form
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+msgid "Confirm"
+msgstr "اعتماد"
+
+#. module: zolaphi_real_estate
+#: selection:expenses.register,state:0 selection:rent.property,state:0
+#: selection:sale.property,state:0 selection:z.property,state:0
+msgid "Confirmed"
+msgstr "معتمد"
+
+#. module: zolaphi_real_estate
+#: field:z.property,contain_shops:0
+msgid "Contain Shops"
+msgstr "يحتوي علي محلات"
+
+#. module: zolaphi_real_estate
+#: field:z.property,contain_apartments:0
+msgid "Contain apartments"
+msgstr "الشقق تحتوي علي "
+
+#. module: zolaphi_real_estate
+#: field:z.property,contain_offices:0
+msgid "Contain offices"
+msgstr "يحتوي علي مكاتب"
+
+#. module: zolaphi_real_estate
+#: view:rent.property:zolaphi_real_estate.rent_property_view_form
+msgid "Contract expired"
+msgstr "العقد منتهي"
+
+#. module: zolaphi_real_estate
+#: field:apartments,create_uid:0 field:attachments,create_uid:0
+#: field:cities,create_uid:0 field:districts,create_uid:0
+#: field:expense.types,create_uid:0 field:expenses.register,create_uid:0
+#: field:history,create_uid:0 field:offices,create_uid:0
+#: field:property.type,create_uid:0 field:rent.property,create_uid:0
+#: field:sale.property,create_uid:0 field:shops,create_uid:0
+#: field:sketches,create_uid:0 field:sommes,create_uid:0
+#: field:z.property,create_uid:0
+msgid "Created by"
+msgstr "تم انشائها بواسطة"
+
+#. module: zolaphi_real_estate
+#: field:apartments,create_date:0 field:attachments,create_date:0
+#: field:cities,create_date:0 field:districts,create_date:0
+#: field:expense.types,create_date:0 field:expenses.register,create_date:0
+#: field:history,create_date:0 field:offices,create_date:0
+#: field:property.type,create_date:0 field:rent.property,create_date:0
+#: field:sale.property,create_date:0 field:shops,create_date:0
+#: field:sketches,create_date:0 field:sommes,create_date:0
+#: field:z.property,create_date:0
+msgid "Created on"
+msgstr "تم انشائها"
+
+#. module: zolaphi_real_estate
+#: selection:expenses.register,method:0
+msgid "Credit"
+msgstr "دائن"
+
+#. module: zolaphi_real_estate
+#: field:z.property,current_price:0
+msgid "Current Price"
+msgstr "السعر الحالي"
+
+#. module: zolaphi_real_estate
+#: field:rent.property,partner_id:0 field:sale.property,partner_id:0
+msgid "Customer"
+msgstr "عميل"
+
+#. module: zolaphi_real_estate
+#: field:expenses.register,date:0 field:rent.property,date:0
+#: field:sale.property,date:0 field:sommes,date:0
+msgid "Date"
+msgstr "تاريخ"
+
+#. module: zolaphi_real_estate
+#: field:z.property,district_id:0
+msgid "District"
+msgstr "منطقة"
+
+#. module: zolaphi_real_estate
+#: field:cities,district_ids:0
+#: view:districts:zolaphi_real_estate.districts_view_tree
+#: model:ir.ui.menu,name:zolaphi_real_estate.districts_menu
+msgid "Districts"
+msgstr "مناطق"
+
+#. module: zolaphi_real_estate
+#: field:history,duration:0 field:rent.property,duration:0
+msgid "Duration"
+msgstr "مدة"
+
+#. module: zolaphi_real_estate
+#: field:z.property,east:0
+msgid "East"
+msgstr "الشرق"
+
+#. module: zolaphi_real_estate
+#: field:z.property,l_east:0
+msgid "East length"
+msgstr "طول الشرق"
+
+#. module: zolaphi_real_estate
+#: field:rent.property,end_date:0 field:rent.property,end_date_:0
+msgid "End date"
+msgstr "تاريخ انتهاء"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:167
+#, python-format
+msgid "Error!"
+msgstr "Error!"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:380
+#: constraint:expenses.register:0
+#, python-format
+msgid ""
+"Error!\n"
+" Expense amount cannot be Zero"
+msgstr ""
+"خطا!\n"
+" قيمة المصروف لا تكون صفر"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:175
+#: constraint:z.property:0
+#, python-format
+msgid ""
+"Error!\n"
+" You should enter one Shop at least"
+msgstr ""
+"Error!\n"
+"يجب وضع محل واحدة علي الاقل"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:174
+#: constraint:z.property:0
+#, python-format
+msgid ""
+"Error!\n"
+" You should enter one apartment at least"
+msgstr ""
+"Error!\n"
+" يجب ادخال شقة واحدة علي الاقل"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:173
+#: constraint:z.property:0
+#, python-format
+msgid ""
+"Error!\n"
+" You should enter one office at least"
+msgstr ""
+"Error!\n"
+"يجب وضع مكتب واحدة علي الاقل"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:624
+#: constraint:sale.property:0
+#, python-format
+msgid ""
+"Error!!\n"
+"You can not sell size more than available size"
+msgstr ""
+"Error!!\n"
+"لا يمكن البيع بحجم اكثر من الحجم المتاح"
+
+#. module: zolaphi_real_estate
+#: field:z.property,evaluate_date:0
+msgid "Evaluate date"
+msgstr "تاريخ التقييم"
+
+#. module: zolaphi_real_estate
+#: field:expenses.register,name:0
+msgid "Expense"
+msgstr "المصروغ"
+
+#. module: zolaphi_real_estate
+#: field:expense.types,name:0
+msgid "Expense name"
+msgstr "اسم المصروف"
+
+#. module: zolaphi_real_estate
+#: view:expenses.register:zolaphi_real_estate.expense_register_view_form
+#: view:expenses.register:zolaphi_real_estate.expense_register_view_tree
+#: model:ir.ui.menu,name:zolaphi_real_estate.expenses_register_menu
+msgid "Expense register"
+msgstr "تسجيل المصروف"
+
+#. module: zolaphi_real_estate
+#: model:ir.ui.menu,name:zolaphi_real_estate.expenses_types_menu
+msgid "Expense types"
+msgstr "نوع المصروف"
+
+#. module: zolaphi_real_estate
+#: model:ir.ui.menu,name:zolaphi_real_estate.expenses_menu
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+#: field:z.property,expenses_ids:0
+msgid "Expenses"
+msgstr "مصاريف"
+
+#. module: zolaphi_real_estate
+#: model:ir.actions.act_window,name:zolaphi_real_estate.open_expenses_register
+msgid "Expenses register"
+msgstr "تسجيل المصروف"
+
+#. module: zolaphi_real_estate
+#: view:expense.types:zolaphi_real_estate.expense_types_form
+#: view:expense.types:zolaphi_real_estate.expense_types_tree
+msgid "Expenses type"
+msgstr "نوع المصروف"
+
+#. module: zolaphi_real_estate
+#: model:ir.actions.act_window,name:zolaphi_real_estate.open_expenses_types
+msgid "Expenses types"
+msgstr "انواع المصاريف"
+
+#. module: zolaphi_real_estate
+#: selection:rent.property,state:0
+msgid "Expired"
+msgstr "منتهي"
+
+#. module: zolaphi_real_estate
+#: field:z.property,faseh:0
+msgid "Faseh"
+msgstr "Faseh"
+
+#. module: zolaphi_real_estate
+#: field:attachments,file:0
+msgid "File"
+msgstr "ملف"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:472
+#, python-format
+msgid "First,You must select installment duration "
+msgstr "اولا,يجب تحديد مدة التقسيط"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:697
+#, python-format
+msgid "First,You should enter size"
+msgstr "اولا,يجب ادخال المساحة "
+
+#. module: zolaphi_real_estate
+#: field:z.property,fixed_asset_account_id:0
+msgid "Fixed Asset account"
+msgstr "حساب الاصول الثابتة"
+
+#. module: zolaphi_real_estate
+#: field:apartments,floor:0 field:offices,floor:0 field:shops,floor:0
+msgid "Floor.No"
+msgstr "رقم الدور"
+
+#. module: zolaphi_real_estate
+#: selection:sale.property,sale_type:0
+msgid "Full property"
+msgstr "عقار كامل"
+
+#. module: zolaphi_real_estate
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+msgid "Get location"
+msgstr "احصل علي الموقع"
+
+#. module: zolaphi_real_estate
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+#: field:z.property,History_ids:0
+msgid "History"
+msgstr "البيانات التاريخية"
+
+#. module: zolaphi_real_estate
+#: field:apartments,id:0 field:attachments,id:0 field:cities,id:0
+#: field:districts,id:0 field:expense.types,id:0 field:expenses.register,id:0
+#: field:history,id:0 field:offices,id:0 field:property.type,id:0
+#: field:rent.property,id:0 field:sale.property,id:0 field:shops,id:0
+#: field:sketches,id:0 field:sommes,id:0 field:z.property,id:0
+msgid "ID"
+msgstr "الهوية"
+
+#. module: zolaphi_real_estate
+#: field:z.property,income_journal_id:0
+msgid "Income journal"
+msgstr "دفتر يومية الدخل"
+
+#. module: zolaphi_real_estate
+#: field:rent.property,installment_duration:0
+msgid "Installment Duration"
+msgstr "مدة التقسيط"
+
+#. module: zolaphi_real_estate
+#: field:expense.types,journal_id:0
+msgid "Journal"
+msgstr "دفتر يومية"
+
+#. module: zolaphi_real_estate
+#: field:expenses.register,journal_entry:0 field:sale.property,journal_entry:0
+msgid "Journal Entry"
+msgstr "قيد يومية"
+
+#. module: zolaphi_real_estate
+#: field:z.property,Journal_entry_type:0
+msgid "Journal Entry type"
+msgstr "نوع قيد اليومية"
+
+#. module: zolaphi_real_estate
+#: field:rent.property,journal_entry:0 field:z.property,journal_entry_id:0
+msgid "Journal entry"
+msgstr "قيد يومية"
+
+#. module: zolaphi_real_estate
+#: field:apartments,write_uid:0 field:attachments,write_uid:0
+#: field:cities,write_uid:0 field:districts,write_uid:0
+#: field:expense.types,write_uid:0 field:expenses.register,write_uid:0
+#: field:history,write_uid:0 field:offices,write_uid:0
+#: field:property.type,write_uid:0 field:rent.property,write_uid:0
+#: field:sale.property,write_uid:0 field:shops,write_uid:0
+#: field:sketches,write_uid:0 field:sommes,write_uid:0
+#: field:z.property,write_uid:0
+msgid "Last Updated by"
+msgstr "اخر تحديث بواسطة"
+
+#. module: zolaphi_real_estate
+#: field:apartments,write_date:0 field:attachments,write_date:0
+#: field:cities,write_date:0 field:districts,write_date:0
+#: field:expense.types,write_date:0 field:expenses.register,write_date:0
+#: field:history,write_date:0 field:offices,write_date:0
+#: field:property.type,write_date:0 field:rent.property,write_date:0
+#: field:sale.property,write_date:0 field:shops,write_date:0
+#: field:sketches,write_date:0 field:sommes,write_date:0
+#: field:z.property,write_date:0
+msgid "Last Updated on"
+msgstr "اخر تحديث"
+
+#. module: zolaphi_real_estate
+#: field:expenses.register,liquidity_account_id:0
+msgid "Liquidity Account"
+msgstr "حساب السيولة"
+
+#. module: zolaphi_real_estate
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+msgid "Location details"
+msgstr "تفاصيل الموقع"
+
+#. module: zolaphi_real_estate
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+msgid "Location information"
+msgstr "معلومات الموقع"
+
+#. module: zolaphi_real_estate
+#: field:sommes,tel:0 field:z.property,mobile:0
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: zolaphi_real_estate
+#: field:rent.property,monthly_amount:0
+msgid "Monthly amount"
+msgstr "المبلغ الشهري"
+
+#. module: zolaphi_real_estate
+#: field:attachments,name:0 field:cities,name:0 field:districts,name:0
+#: field:property.type,name:0 field:sketches,name:0
+msgid "Name"
+msgstr "اسم"
+
+#. module: zolaphi_real_estate
+#: selection:expenses.register,state:0 selection:rent.property,state:0
+#: selection:sale.property,state:0 selection:z.property,state:0
+msgid "New"
+msgstr "جديد"
+
+#. module: zolaphi_real_estate
+#: selection:z.property,Journal_entry_type:0
+msgid "None"
+msgstr "لا شئ"
+
+#. module: zolaphi_real_estate
+#: field:z.property,north:0
+msgid "North"
+msgstr "شمال"
+
+#. module: zolaphi_real_estate
+#: field:z.property,l_north:0
+msgid "North length"
+msgstr "طول الشمال"
+
+#. module: zolaphi_real_estate
+#: selection:apartments,state:0 selection:offices,state:0
+#: selection:shops,state:0
+msgid "Not rent"
+msgstr "غير مؤجر"
+
+#. module: zolaphi_real_estate
+#: field:apartments,notes:0
+#: view:expenses.register:zolaphi_real_estate.expense_register_view_form
+#: field:expenses.register,notes:0 field:history,notes:0 field:offices,notes:0
+#: view:rent.property:zolaphi_real_estate.rent_property_view_form
+#: field:rent.property,notes:0
+#: view:sale.property:zolaphi_real_estate.sale_property_view_form
+#: field:sale.property,notes:0 field:shops,notes:0 field:sommes,notes:0
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: zolaphi_real_estate
+#: field:z.property,offices_count:0
+msgid "Number of Offices"
+msgstr "عدد المكاتب"
+
+#. module: zolaphi_real_estate
+#: field:z.property,shops_count:0
+msgid "Number of Shops"
+msgstr "عدد المحلات"
+
+#. module: zolaphi_real_estate
+#: field:z.property,apartments_count:0
+msgid "Number of apartments"
+msgstr "عدد الشقق"
+
+#. module: zolaphi_real_estate
+#: field:rent.property,office_id:0 selection:rent.property,type:0
+msgid "Office"
+msgstr "مكتب"
+
+#. module: zolaphi_real_estate
+#: field:offices,office_no:0
+msgid "Office.No"
+msgstr "رقم المكتب"
+
+#. module: zolaphi_real_estate
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+#: field:z.property,offices_ids:0
+msgid "Offices"
+msgstr "المكاتب"
+
+#. module: zolaphi_real_estate
+#: field:z.property,old_owner:0
+msgid "Old Owner"
+msgstr "المالك القديم"
+
+#. module: zolaphi_real_estate
+#: selection:expense.types,type:0 selection:expenses.register,type:0
+msgid "Operational"
+msgstr "التشغيل"
+
+#. module: zolaphi_real_estate
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+msgid "Ownership"
+msgstr "الملكية"
+
+#. module: zolaphi_real_estate
+#: field:expenses.register,method:0
+msgid "Payment method"
+msgstr "طريقة الدفع"
+
+#. module: zolaphi_real_estate
+#: field:z.property,piece_number:0
+msgid "Piece number"
+msgstr "رقم القطعة"
+
+#. module: zolaphi_real_estate
+#: field:z.property,plate_no:0
+msgid "Plat number"
+msgstr "رقم اللوحة"
+
+#. module: zolaphi_real_estate
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+msgid "Pricing"
+msgstr "التسعير"
+
+#. module: zolaphi_real_estate
+#: field:z.property,Proceeding_no:0
+msgid "Proceeding Number"
+msgstr "عدد الاجراءات"
+
+#. module: zolaphi_real_estate
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+msgid "Propert"
+msgstr "عقار"
+
+#. module: zolaphi_real_estate
+#: model:ir.ui.menu,name:zolaphi_real_estate.menu_property1
+msgid "Properties"
+msgstr "عقارات"
+
+#. module: zolaphi_real_estate
+#: field:apartments,property_id:0 field:attachments,property_id:0
+#: field:expenses.register,property_id:0 field:history,property_id:0
+#: model:ir.actions.act_window,name:zolaphi_real_estate.action_property
+#: field:offices,property_id:0 field:rent.property,property_id:0
+#: selection:rent.property,type:0 field:sale.property,property_id:0
+#: field:shops,property_id:0 field:sketches,property_id:0
+#: field:sommes,property_id:0
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+#: view:z.property:zolaphi_real_estate.z_property_view_tree
+msgid "Property"
+msgstr "عقار"
+
+#. module: zolaphi_real_estate
+#: view:rent.property:zolaphi_real_estate.rent_property_view_form
+#: view:rent.property:zolaphi_real_estate.rent_property_view_tree
+msgid "Property rent"
+msgstr "تاجير عقار"
+
+#. module: zolaphi_real_estate
+#: field:z.property,property_size:0
+msgid "Property size"
+msgstr "مساحة العقار"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:167
+#, python-format
+msgid "Property size can't be Zero"
+msgstr "مساحة العقار يجب ان لا تكون صفر "
+
+#. module: zolaphi_real_estate
+#: model:ir.ui.menu,name:zolaphi_real_estate.types_menu
+msgid "Property types"
+msgstr "نوع الخصائص"
+
+#. module: zolaphi_real_estate
+#: field:z.property,pur_date:0
+msgid "Purchase date"
+msgstr "تاريخ الشراء"
+
+#. module: zolaphi_real_estate
+#: field:z.property,pur_prc:0
+msgid "Purchase price"
+msgstr "سعر الشراء"
+
+#. module: zolaphi_real_estate
+#: model:ir.ui.menu,name:zolaphi_real_estate.z_real_estate
+#: model:res.groups,name:zolaphi_real_estate.group_real_Estate
+msgid "Real Estate"
+msgstr "العقارات"
+
+#. module: zolaphi_real_estate
+#: field:rent.property,seq:0
+msgid "Ref"
+msgstr "Ref"
+
+#. module: zolaphi_real_estate
+#: selection:apartments,state:0
+#: model:ir.ui.menu,name:zolaphi_real_estate.rent_property_menu
+#: selection:offices,state:0 selection:shops,state:0
+msgid "Rent"
+msgstr "تاجير "
+
+#. module: zolaphi_real_estate
+#: model:ir.ui.menu,name:zolaphi_real_estate.rent_property_menu1
+msgid "Rent Property"
+msgstr "تاجير عقار"
+
+#. module: zolaphi_real_estate
+#: field:rent.property,type:0
+msgid "Rent type"
+msgstr "نوع التاجير"
+
+#. module: zolaphi_real_estate
+#: selection:z.property,state:0
+msgid "Rented"
+msgstr "مؤجر"
+
+#. module: zolaphi_real_estate
+#: view:expenses.register:zolaphi_real_estate.expense_register_view_form
+#: view:rent.property:zolaphi_real_estate.rent_property_view_form
+#: view:sale.property:zolaphi_real_estate.sale_property_view_form
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+msgid "Review"
+msgstr "مراجعة"
+
+#. module: zolaphi_real_estate
+#: selection:expenses.register,state:0 selection:rent.property,state:0
+#: selection:sale.property,state:0 selection:z.property,state:0
+msgid "Reviewed"
+msgstr "تم المراجعة"
+
+#. module: zolaphi_real_estate
+#: field:apartments,room_no:0 field:offices,room_no:0
+msgid "Rooms.No"
+msgstr "عدد الغرف"
+
+#. module: zolaphi_real_estate
+#: model:ir.ui.menu,name:zolaphi_real_estate.sale_property_menu1
+msgid "Sale Property"
+msgstr "بيع عقار"
+
+#. module: zolaphi_real_estate
+#: field:sale.property,sale_date:0
+msgid "Sale date"
+msgstr "تاريخ البيع"
+
+#. module: zolaphi_real_estate
+#: model:ir.actions.act_window,name:zolaphi_real_estate.open_sale_property
+#: view:sale.property:zolaphi_real_estate.sale_property_view_form
+#: view:sale.property:zolaphi_real_estate.sale_property_view_tree
+msgid "Sale property"
+msgstr "بيع عقار"
+
+#. module: zolaphi_real_estate
+#: field:sale.property,sale_type:0
+msgid "Sale type"
+msgstr "نوع البيع"
+
+#. module: zolaphi_real_estate
+#: model:ir.ui.menu,name:zolaphi_real_estate.sale_property_menu
+msgid "Sales"
+msgstr "المبيعات"
+
+#. module: zolaphi_real_estate
+#: field:z.property,sales_limit:0
+msgid "Sales Limit"
+msgstr "حد البيع"
+
+#. module: zolaphi_real_estate
+#: field:z.property,sales_limit_date:0
+msgid "Sales Limit date"
+msgstr "تاريخ حد البيع"
+
+#. module: zolaphi_real_estate
+#: field:z.property,sales_gain_account_id:0
+msgid "Sales gain account"
+msgstr "حساب ارباح بيع اصول "
+
+#. module: zolaphi_real_estate
+#: field:z.property,sales_loss_account_id:0
+msgid "Sales loss account"
+msgstr "حساب خسائر بيع اصول"
+
+#. module: zolaphi_real_estate
+#: field:z.property,save_no:0
+msgid "Save Number"
+msgstr "رقم الحفظ"
+
+#. module: zolaphi_real_estate
+#: field:sale.property,name:0
+msgid "Seq"
+msgstr "Seq"
+
+#. module: zolaphi_real_estate
+#: selection:rent.property,type:0
+msgid "Shop"
+msgstr "المحل"
+
+#. module: zolaphi_real_estate
+#: field:shops,shop_no:0
+msgid "Shop.No"
+msgstr "رقم المحل"
+
+#. module: zolaphi_real_estate
+#: field:rent.property,shop_id:0
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+#: field:z.property,shops_ids:0
+msgid "Shops"
+msgstr "المحلات"
+
+#. module: zolaphi_real_estate
+#: field:apartments,size:0 field:offices,size:0 field:shops,size:0
+msgid "Size"
+msgstr "مساحة"
+
+#. module: zolaphi_real_estate
+#: field:sale.property,size_to_sale:0
+msgid "Size to sale"
+msgstr "مساحة البيع"
+
+#. module: zolaphi_real_estate
+#: field:z.property,sketch_id:0
+msgid "Sketch"
+msgstr "رسم"
+
+#. module: zolaphi_real_estate
+#: selection:rent.property,state:0 selection:z.property,state:0
+msgid "Sold"
+msgstr "تباع"
+
+#. module: zolaphi_real_estate
+#: field:sommes,Value:0
+msgid "Somme"
+msgstr "السوم"
+
+#. module: zolaphi_real_estate
+#: field:sommes,name:0
+msgid "Somme Owner"
+msgstr "مالك السوم"
+
+#. module: zolaphi_real_estate
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+#: field:z.property,sommes_ids:0
+msgid "Sommes"
+msgstr "السوم"
+
+#. module: zolaphi_real_estate
+#: field:z.property,l_south:0 field:z.property,south:0
+msgid "South"
+msgstr "جنوب"
+
+#. module: zolaphi_real_estate
+#: field:z.property,stamping:0
+msgid "Stamping"
+msgstr "الختم"
+
+#. module: zolaphi_real_estate
+#: field:z.property,stamping_date:0
+msgid "Stamping date"
+msgstr "تاريخ الختم"
+
+#. module: zolaphi_real_estate
+#: field:history,end_date:0 field:history,start_date:0
+#: field:rent.property,start_date:0
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:18
+#, python-format
+msgid "Stop !!"
+msgstr "قف!!"
+
+#. module: zolaphi_real_estate
+#: field:expenses.register,partner_id:0 field:z.property,Supplier_id:0
+msgid "Supplier"
+msgstr "المورد"
+
+#. module: zolaphi_real_estate
+#: field:history,total:0
+msgid "Total"
+msgstr "اجمالي"
+
+#. module: zolaphi_real_estate
+#: field:rent.property,total_amount:0
+msgid "Total amount"
+msgstr "اجمالي القيمة"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:565
+#: constraint:rent.property:0
+#, python-format
+msgid "Total amount should be equal to monthly amount multiple installment duration"
+msgstr "اجمالي القيمة يجب ان تساوي متعدد القيمة الشهرية مدة التقسيط"
+
+#. module: zolaphi_real_estate
+#: field:z.property,total_cost:0
+msgid "Total price"
+msgstr "اجمالي السعر"
+
+#. module: zolaphi_real_estate
+#: field:expense.types,type:0 field:expenses.register,type:0
+#: field:z.property,type_id:0
+msgid "Type"
+msgstr "نوع"
+
+#. module: zolaphi_real_estate
+#: model:ir.actions.act_window,name:zolaphi_real_estate.open_types
+#: view:property.type:zolaphi_real_estate.property_type_view_tree
+msgid "Types"
+msgstr "Types"
+
+#. module: zolaphi_real_estate
+#: field:z.property,url:0 field:z.property,url_:0
+msgid "URL"
+msgstr "URL"
+
+#. module: zolaphi_real_estate
+#: field:sale.property,value:0
+msgid "Value"
+msgstr "قيمة"
+
+#. module: zolaphi_real_estate
+#: field:sale.property,value_per_meter:0
+msgid "Value per meter"
+msgstr "قيمة بالامتار"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:472
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:697
+#, python-format
+msgid "Warning"
+msgstr "تحذير"
+
+#. module: zolaphi_real_estate
+#: field:z.property,west:0
+msgid "West"
+msgstr "الغرب"
+
+#. module: zolaphi_real_estate
+#: field:z.property,l_west:0
+msgid "West length"
+msgstr "طول الغرب"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:618
+#, python-format
+msgid "You must enter Value"
+msgstr "يجب ادخال قيمة "
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:616
+#, python-format
+msgid "You must enter size to sale"
+msgstr "يجب ادخال مساحة بيع"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:620
+#, python-format
+msgid "You must enter size to value per meter"
+msgstr "يجب اداخال قيمة المساحة بالمتر"
+
+#. module: zolaphi_real_estate
+#: field:rent.property,apartment_id:0 selection:rent.property,type:0
+msgid "apartment"
+msgstr "شقة"
+
+#. module: zolaphi_real_estate
+#: field:apartments,apartment_no:0
+msgid "apartment.No"
+msgstr "رقم الشقة"
+
+#. module: zolaphi_real_estate
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+#: field:z.property,apartments_ids:0
+msgid "apartments"
+msgstr "الشقق"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:174
+#, python-format
+msgid "apartments_ids"
+msgstr "رقم الشقة_ids"
+
+#. module: zolaphi_real_estate
+#: field:expense.types,code:0
+msgid "code"
+msgstr "كود"
+
+#. module: zolaphi_real_estate
+#: model:ir.ui.menu,name:zolaphi_real_estate.config_menu
+msgid "configuration"
+msgstr "إعدادات"
+
+#. module: zolaphi_real_estate
+#: field:z.property,name:0
+msgid "description"
+msgstr "الوصف"
+
+#. module: zolaphi_real_estate
+#: model:ir.actions.act_window,name:zolaphi_real_estate.open_districts
+msgid "districts"
+msgstr "المناطق"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:173
+#, python-format
+msgid "offices_ids"
+msgstr "رقم المكتب"
+
+#. module: zolaphi_real_estate
+#: selection:sale.property,sale_type:0
+msgid "part of property"
+msgstr "جزء من العقار"
+
+#. module: zolaphi_real_estate
+#: model:ir.ui.menu,name:zolaphi_real_estate.Property_menu
+msgid "property"
+msgstr "عقار"
+
+#. module: zolaphi_real_estate
+#: view:z.property:zolaphi_real_estate.z_property_view_form
+msgid "property information"
+msgstr "معلومات العقار"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:172
+#, python-format
+msgid "property_size"
+msgstr "مساحة العقار"
+
+#. module: zolaphi_real_estate
+#: model:ir.actions.act_window,name:zolaphi_real_estate.open_rent_property
+msgid "rent property"
+msgstr "تاجير عقار"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:175
+#, python-format
+msgid "shops_ids"
+msgstr "رقم المحل"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:624
+#, python-format
+msgid "size_to_sale"
+msgstr "مساحة للبيع"
+
+#. module: zolaphi_real_estate
+#: field:apartments,state:0 field:offices,state:0 field:shops,state:0
+msgid "state"
+msgstr "الدولة"
+
+#. module: zolaphi_real_estate
+#: field:expenses.register,state:0 field:rent.property,state:0
+#: field:sale.property,state:0
+msgid "states"
+msgstr "الدول"
+
+#. module: zolaphi_real_estate
+#: field:history,type:0
+msgid "type"
+msgstr "نوع"
+
+#. module: zolaphi_real_estate
+#: field:z.property,state:0
+msgid "unknown"
+msgstr "غير معروف"
+
+#. module: zolaphi_real_estate
+#: code:addons/zolaphi_real_estate/zolaphi_real_estate.py:19
+#, python-format
+msgid "you cannot delete property that rented or confirmed \"\""
+msgstr " لا يمكن حذف عقار مؤجر او مؤكد \"\""

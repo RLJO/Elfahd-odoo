@@ -1,0 +1,458 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="expense_delivery_line_action_" model="ir.actions.act_window">
+            <field name="name">Workshop expenses</field>
+            <field name="res_model">expense.delivery.line</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('tank_id','=',active_id)]</field>
+        </record>
+        <record id="new_tank_form" model="ir.ui.view">
+            <field name="name">new.tank.form</field>
+            <field name="model">new.tank</field>
+            <field name="arch" type="xml">
+                <form string="New Tank">
+                    <header>
+                        <button name='button_review' type="object" string="Review" states="new" class="oe_highlight"
+                                groups="fahad_transportation.group_fahd_tank_review"/>
+                        <button name='button_confirm' class="oe_highlight" type="object" string="Confirm" states="review"
+                                groups="fahad_transportation.group_fahd_tank_confirm"/>
+                        <button name='button_close' type="object" groups="base.group_no_one" string="Close" states="new,review" confirm="Are you sure you want to close this"/>
+                        <button name='button_draft' type="object" string="Set to Draft" states="confirm"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="for_rent" invisible="1" />
+                            <field name="partner_id" invisible="1" />
+                            <field name="is_current" invisible="1" />
+                            <field name="code" readonly="1" />
+                        </group>
+                        <group>
+                            <group>
+                                <field name="chasih_no" required="1" />
+                                <field name="manufacture_company" />
+                                <field name="manufacture_year" />
+                                <field name="tank_type" />
+                                <field name="branch_id" options="{'create': false, 'create_edit': false}"
+                                         required="1"/>
+                                <field name="ownership" required="1" />
+                                <field name="tank_owner" options="{'create': false, 'create_edit': false}"
+                                       attrs="{'required': [('ownership', '=', 'external')],
+                                              'invisible': [('ownership', '!=', 'external')]}"
+                                       context="{'default_supplier': True, 'default_customer': False}"/>
+                                <field name="product_name"  required="1"/>
+                            </group>
+                            <group>
+                                <field name="model" required="1" />
+                                <field name="company_number"  required="1"/>
+                                <field name="capacity"  required="1"/>
+                                <field name="basic_wheel_no"  required="1"/>
+                                <field name="backup_wheel_no"  required="1"/>
+                                <field name="current_wheel_no" readonly="1"/>
+                                <field name="for_wheel_action" readonly="1"/>
+                                <field name="free_places" readonly="1"/>
+                            </group>
+                            <group>
+                                <group cols="4">
+                                    <field name="linked_line"  readonly="1"/>
+                                    <field name="linked_vehicle"  readonly="1"/>
+                                </group>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="aramco_no" />
+                                <field name="aramco_date" />
+                                <field name="aramco_sticker_expiry_date" />
+
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                        <notebook>
+                            <!--<page string="Driver History">-->
+                            <!--<field name="driver_history" readonly="1">-->
+                            <!--<tree string="Driver History">-->
+                            <!--<field name="driver_id"/>-->
+                            <!--</tree>-->
+                            <!--</field>-->
+                            <!--</page>-->
+
+                            <page string="Wheel Place">
+                                <field name="tank_flag" invisible="1"/>
+                                <button name="create_action_place" type="object" string="Generate Wheel Place Line"
+                                        attrs="{'invisible': ['|',('tank_flag', '=', True),('state', '=', 'new')]}"/>
+                                <field name="action_place_ids" create="false">
+                                    <tree string="Action Place" delete="false" create="false" editable="bottom" >
+                                        <field name="action_place_id" options="{'create': false, 'create_edit': false}" required="1"/>
+                                        <field name="linked_wheel_id" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="Purchases and Accounting">
+                                <group>
+                                    <group>
+<!--                                        <field name="revenue_account" domain="[('type', '=', 'other')]"-->
+<!--                                               options="{'create': false, 'create_edit': false}"/>-->
+<!--                                        <field name="loss_account" domain="[('type', '=', 'other')]"-->
+<!--                                             options="{'create': false, 'create_edit': false}"/>-->
+                                    </group>
+                                    <group>
+                                        <field name="sales_journal" options="{'create': false, 'create_edit': false}" domain="[('type', '=', 'sale')]"/>
+                                        <field name="sale_method"/>
+                                        <field name="asset_account_treatment"
+                                               attrs="{'invisible': [('sale_method', 'not in', ['asset','instalment'])],
+                                               'required':[('sale_method','in',['asset','instalment'])]}"/>
+                                        <field name="choose_treatment" invisible="1"/>
+                                    </group>
+                                </group>
+                                <notebook>
+                                    <page string="Rent">
+                                        <group>
+                                            <group>
+                                                <field name="monthly_rent_amount"
+                                                       attrs="{'required': [('sale_method', '=', 'rent')]}"/>
+                                                <field name="supplier"
+                                                       options="{'create': false, 'create_edit': false}"
+                                                       attrs="{'required': [('sale_method', '=', 'rent')]}"
+                                                       context="{'default_supplier': True, 'default_customer': False}"/>
+                                                <field name="expense_account"
+                                                       options="{'create': false, 'create_edit': false}" attrs="{'required': [('sale_method', '=', 'rent')]}"/>
+                                                <field name="rent_end_date"
+                                                       attrs="{'required': [('sale_method', '=', 'rent')]}"/>
+                                            </group>
+                                            <group>
+                                                <field name="rent_journal" options="{'create': false, 'create_edit': false}"
+                                                       domain="[('type', 'in', ('general', 'purchase'))]"
+                                                       attrs="{'required': [('sale_method', '=', 'rent')]}"/>
+                                                <field name="next_payment_date"
+                                                       attrs="{'required': [('sale_method', '=', 'rent')]}"/>
+                                                <button name="create_invoice" type="object" string="Create Invoice"
+                                                        attrs="{'invisible': [('state', 'not in', ['confirm', 'connect'])]}"
+                                                        groups="fahad_transportation.group_fahd_tank_confirm"/>
+                                            </group>
+                                        </group>
+                                        <notebook>
+                                            <page string="Items Table">
+                                                <field name="item_table" domain="[('type', '=', 'service')]">
+
+                                                </field>
+                                            </page>
+                                            <page string="Invoices">
+                                                <field name="journal_entries_table" readonly="1"/>
+                                            </page>
+                                        </notebook>
+                                    </page>
+                                    <page string="Our Asset">
+                                        <group>
+                                            <group>
+                                                <field name="total_purchase_value"
+                                                       attrs="{'required': [('sale_method', '=', 'asset'),('asset_account_treatment','not in',['none',False])]}"/>
+                                                <field name="current_value"/>
+                                                <field name="book_value"
+                                                       attrs="{'required': [('sale_method', '=', 'asset'),('asset_account_treatment','not in',['none',False,'asset'])]}"/>
+                                                <field name="salvage_value"
+                                                       attrs="{'required': [('sale_method', '=', 'asset'),('asset_account_treatment','not in',['none',False])]}"/>
+                                                <field name="asset_category" options="{'create': false, 'create_edit': false}"
+                                                       attrs="{'required': [('sale_method', '=', 'asset'),('asset_account_treatment','not in',['none',False])]}"/>
+                                            </group>
+                                            <group>
+                                                <field name="purchase_date"
+                                                       attrs="{'required': [('sale_method', '=', 'asset'),('asset_account_treatment','not in',['none',False])]}"/>
+                                                <field name="asset_journal" options="{'create': false, 'create_edit': false}"
+                                                       domain="[('type', 'in', ('general', 'purchase'))]"
+                                                       attrs="{'required': [('sale_method', '=', 'asset'),('asset_account_treatment','not in',['none',False])]}"/>
+                                                <field name="supplier_id"
+                                                        attrs="{'required':[('sale_method','=','asset'),('asset_account_treatment','not in',['none',False])],
+                                                        'invisible':[('asset_account_treatment','!=','asset')]}"
+                                                        context="{'default_supplier': True, 'default_customer': False}"/>
+                                                <field name="capital_account"
+                                                       options="{'create': false, 'create_edit': false}"
+                                                       attrs="{'required': [('sale_method', '=', 'asset'),('asset_account_treatment','not in',['none',False,'asset'])],'invisible':[('asset_account_treatment','=','asset')]}"/>
+                                            </group>
+                                        </group>
+                                    </page>
+                                    <page string="Instalment">
+                                        <group>
+                                            <group>
+                                                <field name="total_value" attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False])]}"/>
+                                                <field name="instalment_paid_amount" attrs="{'required': [('sale_method', '=', 'instalment')]}"/>
+                                                <field name="liquidity_account_id" options="{'create': false, 'create_edit': false}"
+                                                       attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False]),('instalment_paid_amount','&gt;','0')],'invisible':[('instalment_paid_amount','&lt;=',0),('asset_account_treatment','!=','asset')]}"/>
+                                                <field name="instalment_book_value" attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False])]}"/>
+                                                <field name="final_payment" attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False])]}"/>
+                                                <field name="residual_amount"/>
+                                                <field name="number_of_instalment" attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False])]}"/>
+                                            </group>
+                                            <group>
+                                                <field name="monthly_instalment"/>
+                                                <field name="instalment_salvage_value" attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False])]}"/>
+                                                <field name="instalment_supplier"
+                                                       attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False])]}"
+                                                       context="{'default_supplier': True, 'default_customer': False}"/>
+                                                <field name="instalment_purchase_date" attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False])]}"/>
+                                                <field name="instalment_next_payment_date" attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False])]}"/>
+                                                <field name="instalment_journal" options="{'create': false, 'create_edit': false}" attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False])]}" domain="[('type', 'in', ('general', 'purchase'))]"/>
+                                                <field name="instalment_asset_category" options="{'create': false, 'create_edit': false}" attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False])]}"/>
+                                                <field name="instalment_capital_account" options="{'create': false, 'create_edit': false}"
+                                                       attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False,'asset'])],'invisible':[('asset_account_treatment','=','asset')]}"/>
+                                                <field name="payment_journal" options="{'create': false, 'create_edit': false}"
+                                                       attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False])]}"
+                                                       domain="[('type', 'in', ('cash', 'bank'))]"/>
+                                                <field name="accumulated_depreciation"
+                                                       attrs="{'required': [('sale_method', '=', 'instalment'),('asset_account_treatment','not in',['none',False,'asset'])]}"/>
+                                            </group>
+                                        </group>
+                                    </page>
+                                    <page string="Linked Asset">
+                                            <group>
+                                                <field name="linked_asset" readonly="1"/>
+                                            </group>
+                                        </page>
+                                    <page string="Instalment Sheet">
+                                        <field name="sheet" invisible="1"/>
+                                        <button name="create_instalment_sheet"
+                                                string="Generate Instalment Sheet"
+                                                type="object"
+                                                attrs="{'invisible': ['|',('state', '=', 'new'),('sheet','=',True)]}"/>
+                                        <field name="instalment_sheet">
+                                            <tree string="Instalment Sheet" editable="bottom">
+                                                <field name="instalment_date" required="1"/>
+                                                <field name="amount_already_paid" required="1"/>
+                                                <field name="current_instalment" required="1"/>
+                                                <field name="residual_amount" required="1"/>
+                                                <field name="flag" invisible="1"/>
+                                                <button name="create_supplier_payment" string="Create" type="object"
+                                                        attrs="{'invisible': [('flag','=',True)]}"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+
+                                </notebook>
+                            </page>
+                            <page string="Tank Custody">
+                                <field name="not_financial_custody_id" readonly="1">
+                                    <tree string="Tank Custody" editable="bottom" delete="false">
+                                        <field name="custody"/>
+                                        <field name="location"/>
+                                        <field name="number"/>
+                                        <field name="product_uom_id"/>
+                                        <field name="unit_price"/>
+                                        <field name="total"/>
+                                        <field name="delivery_date"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Vehicles">
+                                <notebook>
+                                    <page string="Current Installed Vehicles">
+                                        <field name="linked_vehicles_ids" readonly="1"
+                                               domain="[('state_of_dismantling','=','connected')]">
+                                            <tree>
+                                                <field name="code"/>
+                                                <field name="cause"/>
+                                                <field name="ownership"/>
+                                                <field name="install_date"/>
+                                                <field name="tank_aramco_no"/>
+                                                <field name="car_category_id"/>
+                                                <field name="new_car_id"/>
+                                                <field name="car_plaque_no"/>
+                                                <field name="new_tank_id"/>
+                                                <field name="tank_chasih_no"/>
+                                                <field name="state"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+                                    <page string="History Vehicles">
+                                        <field name="linked_vehicles_ids_all" readonly="1">
+                                            <tree>
+                                                <field name="code"/>
+                                                <field name="cause"/>
+                                                <field name="ownership"/>
+                                                <field name="install_date"/>
+                                                <field name="tank_aramco_no"/>
+                                                <field name="car_category_id"/>
+                                                <field name="new_car_id"/>
+                                                <field name="car_plaque_no"/>
+                                                <field name="new_tank_id"/>
+                                                <field name="tank_chasih_no"/>
+                                                <field name="state"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+                                </notebook>
+                            </page>
+
+                            <page string="Lines">
+                                <notebook>
+                                    <page string="Current Linked Line">
+                                        <field name="history_linked_line" readonly="1"
+                                               domain="[('state_of_linked_line','=','linked')]">
+                                            <tree>
+                                                <field name="code"/>
+                                                <field name="route_no"/>
+                                                <field name="route_number"/>
+                                                <field name="line_name"/>
+                                                <field name="start_point"/>
+                                                <field name="end_point"/>
+                                                <field name="distance"/>
+                                                <field name="km_price"/>
+                                                <field name="line_price"/>
+                                                <field name="allowance"/>
+                                                <field name="state_of_linked_line"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+
+                                    <page string="History Lines">
+                                        <field name="history_linked_line_all" readonly="1">
+                                            <tree>
+                                                <field name="code"/>
+                                                <field name="route_no"/>
+                                                <field name="route_number"/>
+                                                <field name="line_name"/>
+                                                <field name="start_point"/>
+                                                <field name="end_point"/>
+                                                <field name="distance"/>
+                                                <field name="km_price"/>
+                                                <field name="line_price"/>
+                                                <field name="allowance"/>
+                                                <field name="state_of_linked_line"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+                                </notebook>
+
+                            </page>
+
+                            <page string="Wheels History">
+                                <notebook>
+                                    <page string="Installed Wheels">
+                                        <field name="history_wheel_installed" readonly="1">
+                                            <tree string="Install History" create="false" delete="false">
+                                                <field name="wheel_id"/>
+                                                <field name="wheel_code"/>
+                                                <field name="install_date"/>
+                                                <field name="car_meter"/>
+                                                <field name="install_place_"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+                                    <page string="Uninstalled Wheels">
+                                        <field name="history_wheel_uninstalled" readonly="1">
+                                            <tree string="UnInstall History" create="false" delete="false">
+                                                <field name="wheel_id"/>
+                                                <field name="wheel_code"/>
+                                                <field name="install_date"/>
+                                                <field name="car_meter"/>
+                                                <field name="install_place_"/>
+                                                <field name="select"/>
+                                                <field name="uninstall_date"/>
+                                                <field name="meter_at_uninstall"/>
+                                                <field name="distance"/>
+                                                <field name="wheel_status"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+
+                                    <page string="Wheels Expenses">
+                                        <field name="wheel_expenses" readonly="1">
+                                            <tree string="Wheel Expenses" create="false" delete="false">
+                                                <field name="date"/>
+                                                <field name="payment_method"/>
+                                                <field name="supplier"/>
+                                                <field name="expense_name"/>
+                                                <field name="expense_account"/>
+                                                <field name="quantity"/>
+                                                <field name="amount"/>
+                                                <field name="total_amount"/>
+                                                <field name="note"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+                                </notebook>
+                            </page>
+                            <page string="Expenses">
+                                <notebook>
+                                    <page string="Expense from DO">
+                                        <button name="%(expense_delivery_line_action_)d" type="action" string="Workshop expenses"/>
+                                        <field name="expense_delivery_line_ids" readonly="1">
+                                            <tree string="Expense from DO" editable="bottom">
+                                                <field name="date"/>
+                                                <field name="ref"/>
+                                                <field name="payment_method"/>
+                                                <field name="product_id"/>
+                                                <field name="quantity"/>
+                                                <field name="price"/>
+                                                <field name="total"/>
+                                                <field name="note"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+                                    <page string="Expenses from expenses">
+                                        <field name="expenses_line_ids">
+                                            <tree string="Expenses" editable="bottom" create="false" readonly="1">
+                                                <field name="expense_name"/>
+                                                <field name="date"/>
+                                                <field name="expense_account"/>
+                                                <field name="number"/>
+                                                <field name="amount"/>
+                                                <field name="total"/>
+                                                <field name="invoice"/>
+                                                <field name="filling_station"/>
+                                                <field name="notes"/>
+                                            </tree>
+                                        </field>
+                                    </page>
+                                </notebook>
+                            </page>
+                            <page string="Note">
+                                <field name="note"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_new_tank_tree">
+            <field name="name">New Tank</field>
+            <field name="model">new.tank</field>
+            <field name="arch" type="xml">
+<!--                 colors="red:state=='review';green:state=='confirm'"-->
+                <tree string="Tanks">
+                    <field name="code"/>
+                    <field name="chasih_no"/>
+                    <field name="manufacture_company"/>
+                    <field name="manufacture_year"/>
+                    <field name="tank_type"/>
+                    <field name="branch_id"/>
+                    <field name="ownership"/>
+                    <field name="tank_owner"/>
+                    <field name="model"/>
+                    <field name="capacity"/>
+                    <field name="basic_wheel_no"/>
+                    <field name="backup_wheel_no"/>
+                    <field name="current_wheel_no"/>
+                    <field name="aramco_no"/>
+                    <field name="aramco_date"/>
+                    <field name="aramco_sticker_expiry_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_new_tank_action" model="ir.actions.act_window">
+            <field name="name">New Tank</field>
+            <field name="res_model">new.tank</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

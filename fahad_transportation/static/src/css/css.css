@@ -1,0 +1,30 @@
+
+/******** Lines **********/
+.openerp .lines [data-id="line_price"]{
+        width:180px
+    }
+
+.openerp .lines [data-id="km_price"] {
+        width:180px
+    }
+
+.openerp .lines table{
+        width:120%
+    }
+
+.openerp .lines .oe_list_content{
+        width:100%
+    }
+
+/******** Trips ***********/
+.openerp .trip_line .oe_list_content{
+        width:107%
+    }
+
+.openerp .trip_line [data-id="line_id"]{
+        width:150px
+    }
+
+.openerp .trip_line [data-id="create_expense_register"]{
+        width:60px
+    }

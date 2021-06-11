@@ -1,0 +1,334 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_new_car_manager,"new.car manager",model_new_car,group_fahad_manager,1,1,1,1
+access_new_tank_manager,"new.tank manager",model_new_tank,group_fahad_manager,1,1,1,1
+access_car_category_manager,"car.category manager",model_car_category,group_fahad_manager,1,1,1,1
+access_branch_manager,"branch manager",model_branch,group_fahad_manager,1,1,1,1
+access_car_branch_manager,"car_branch_history manager",model_car_in_branch_history,group_fahad_manager,1,1,1,1
+access_action_place_line_manager,action.place manager,model_action_place_line,group_fahad_manager,1,1,1,1
+access_install_place_manager,install_place manager,model_install_place,group_fahad_manager,1,1,1,1
+access_line_vehicle_history,"history.vehicle manager",model_line_vehicle_history,group_fahad_manager,1,1,1,1
+access_instalment_sheet_line_manager,"instalment.sheet manager",model_instalment_sheet_line,group_fahad_manager,1,1,1,1
+access_new_vehicle_manager,"new.vehicle manager",model_new_vehicle,group_fahad_manager,1,0,0,0
+access_	wheel_action_lines_install_man,"wheel.install manager",model_wheel_action_lines_install,group_fahad_manager,1,1,1,1
+access_wheel_action_lines_uninstall_man,"wheel.uninstall manager",model_wheel_action_lines_uninstall,group_fahad_manager,1,1,1,1
+access_trips_line_manager,"trip.line manager",model_trips_line,group_fahad_manager,1,1,1,1
+access_wheel_expenses_manager,"wheel.expenses manager",model_wheel_expenses,group_fahad_manager,1,0,0,0
+access_wheel_register_manager,"wheel.register manager",model_expense_register,group_fahad_manager,1,0,0,0
+access_wheel_delivery_manager,"wheel.register manager",model_expense_delivery_line,group_fahad_manager,1,0,0,0
+access_rent_manager,"rent manager",model_rent,group_fahad_manager,1,0,0,0
+access_other_revenue_manager,"other.revenue manager",model_other_revenue,group_fahad_manager,1,0,0,0
+access_car_maintenance_mannger,"car.maintenance manger",model_car_maintenance,group_fahad_manager,0,1,1,0
+access_car_maintenance_mannger,"car.maintenance manger",model_car_maintenance,group_fahad_manager,0,1,1,0
+access_car_branch_manager,"car_branch manager",model_car_in_branch,group_fahad_manager,1,1,1,1
+access_new_wheel_manager,"wheel manager",model_new_wheel,group_fahad_manager,1,1,1,1
+access_wheel_supplier_manager,"wheel_supplier manager",model_wheel_supplier,group_fahad_manager,1,1,1,1
+access_wheel_purchase_manager,"wheel_purchase manager",model_wheel_purchase,group_fahad_manager,1,1,1,1
+access_wheel_purchase_line_manager,"wheel_purchase_line manager",model_wheel_purchase_line,group_fahad_manager,1,1,1,1
+access_wheel_action_manager,"wheel_action manager",model_wheel_action,group_fahad_manager,1,1,1,1
+access_buy_screen_manager,"buy_screen manager",model_buy_screen,group_fahad_manager,1,1,1,1
+
+access_new_vehicle2_manager,"new.vehicle2 manager",model_new_vehicle,group2_fahad_manager,1,1,1,1
+access_car_category2_manager,"car.category2 manager",model_car_category,group2_fahad_manager,1,0,0,0
+access_new_car2_manager,"new.car2 manager",model_new_car,group2_fahad_manager,1,0,0,0
+access_new_tank2_manager,"new.tank2 manager",model_new_tank,group2_fahad_manager,1,0,0,0
+access_line_vehicle2_history,"history.vehicle2 manager",model_line_vehicle_history,group2_fahad_manager,1,0,0,0
+access_vehicle_dismantling2,"vehicle.dismantling2 manager",model_vehicle_dismantling,group2_fahad_manager,1,1,1,1
+access_vehicle_custody2,"vehicle.custody2 manager",model_vehicle_custody,group2_fahad_manager,1,1,1,1
+access_hr_employee,"hr.employee manager",model_hr_employee,group2_fahad_manager,1,0,0,0
+
+access_new_line3,"new.line3 manager",model_new_line,group3_fahad_manager,1,1,1,1
+access_branch_manager3,"branch3 manager",model_branch,group3_fahad_manager,1,0,0,0
+access_product_template3,"product.template3 manager",model_product_template,group3_fahad_manager,1,1,1,1
+access_trips_line3,"trips.line3 manager",model_trips_line,group3_fahad_manager,1,0,0,0
+access_new_vehicle3,"new.vehicle3 manager",model_new_vehicle,group3_fahad_manager,1,0,0,0
+access_new_car_manager3,"new.car3 manager",model_new_car,group3_fahad_manager,1,0,0,0
+access_new_tank_manager3,"new.tank3 manager",model_new_tank,group3_fahad_manager,1,0,0,0
+access_vehicles_on_line3,"vehicles.on.line3 manager",model_vehicles_on_line,group3_fahad_manager,1,1,1,1
+access_linked_unlinked_vehicles3,"linked.unlinked.vehicles3 manager",model_linked_unlinked_vehicles,group3_fahad_manager,1,0,0,0
+
+access_branch_manager4,"branch4 manager",model_branch,group4_fahad_manager,1,1,1,1
+access_hr_employee4,"hr.employee4 manager",model_hr_employee,group4_fahad_manager,1,0,0,0
+access_new_line4,"new.line4 manager",model_new_line,group4_fahad_manager,1,0,0,0
+access_new_car_manager4,"new.car4 manager",model_new_car,group4_fahad_manager,1,0,0,0
+access_new_tank_manager4,"new.tank4 manager",model_new_tank,group4_fahad_manager,1,0,0,0
+access_car_in_branch_manager4,"car_in_branch4 manager",model_car_in_branch,group4_fahad_manager,1,1,1,1
+
+access_expenses5,"expenses5 manager",model_expenses,group5_fahad_manager,1,1,1,1
+access_expense_register5,"expense_register5 manager",model_expense_register,group5_fahad_manager,1,1,1,1
+access_expense_register_lines5,"expense_register_lines manager",model_expense_register_lines,group5_fahad_manager,1,1,1,1
+access_car_maintenance5,"car_maintenance5 manager",model_car_maintenance,group5_fahad_manager,1,1,1,1
+access_new_car_manager5,"new.car5 manager",model_new_car,group5_fahad_manager,1,0,0,0
+access_car_category_manager5,"car.category5 manager",model_car_category,group5_fahad_manager,1,0,0,0
+access_gearbox_line5,"gearbox_line5 manager",model_gearbox_line,group5_fahad_manager,1,1,1,1
+access_differential_line5,"differential_line5 manager",model_differential_line,group5_fahad_manager,1,1,1,1
+access_machine_motor_line5,"machine_motor_line5 manager",model_machine_motor_line,group5_fahad_manager,1,1,1,1
+
+access_trips6,"trips6 manager",model_trips,group6_fahad_manager,1,1,1,1
+access_commission_line6,"commission.line6 manager",fahad_hr.model_commission_line,group6_fahad_manager,1,1,0,0
+access_deduction_line6,"deduction.line6 manager",fahad_hr.model_deduction_line,group6_fahad_manager,1,1,0,0
+access_trips_line6,"trips.line6 manager",model_trips_line,group6_fahad_manager,1,1,1,1
+access_new_line6,"new.line6 manager",model_new_line,group6_fahad_manager,1,0,0,0
+access_product_template6,"product.template6 manager",model_product_template,group6_fahad_manager,1,0,0,0
+access_new_vehicle6,"new.vehicle6 manager",model_new_vehicle,group6_fahad_manager,1,0,0,0
+access_hr_employee6,"hr.employee6 manager",model_hr_employee,group6_fahad_manager,1,0,0,0
+access_other_revenue6,"other.revenue6 manager",model_other_revenue,group6_fahad_manager,1,1,1,1
+access_other_revenue_line6,"other.revenue.line6 manager",model_other_revenue_line,group6_fahad_manager,1,1,1,1
+access_new_car_manager6,"new.car6 manager",model_new_car,group6_fahad_manager,1,0,0,0
+access_car_category_manager6,"car.category6 manager",model_car_category,group6_fahad_manager,1,0,0,0
+access_rent6,"rent6 manager",model_rent,group6_fahad_manager,1,1,1,1
+access_rent_lines6,"rent_lines6 manager",model_rent_lines,group6_fahad_manager,1,1,1,1
+
+access_fahad_contract7,"fahad.contract7 manager",model_fahad_contract,group7_fahad_manager,1,1,1,1
+access_fahad_cities,"fahad.cities manager",model_z_cities,group7_fahad_manager,1,0,1,0
+
+access_buy_screen_r,buy_screen,model_buy_screen,group_all_fahad_read,1,0,0,0
+access_vehicle_custody_r,vehicle_custody,model_vehicle_custody,group_all_fahad_read,1,0,0,0
+access_car_not_financial_custody_r,car_not_financial_custody,model_car_not_financial_custody,group_all_fahad_read,1,0,0,0
+access_tank_not_financial_custody_r,tank_not_financial_custody,model_tank_not_financial_custody,group_all_fahad_read,1,0,0,0
+access_driver_not_financial_custody_r,driver_not_financial_custody,model_driver_not_financial_custody,group_all_fahad_read,1,0,0,0
+access_driver_custody_warehouse_line_r,driver_custody_warehouse_line,model_driver_custody_warehouse_line,group_all_fahad_read,1,0,0,0
+access_driver_custody_lost_line_r,driver_custody_lost_line,model_driver_custody_lost_line,group_all_fahad_read,1,0,0,0
+access_car_custody_warehouse_line_r,car_custody_warehouse_line,model_car_custody_warehouse_line,group_all_fahad_read,1,0,0,0
+access_car_custody_lost_line_r,car_custody_lost_line,model_car_custody_lost_line,group_all_fahad_read,1,0,0,0
+access_tank_custody_warehouse_line_r,tank_custody_warehouse_line,model_tank_custody_warehouse_line,group_all_fahad_read,1,0,0,0
+access_tank_custody_lost_line_r,tank_custody_lost_line,model_tank_custody_lost_line,group_all_fahad_read,1,0,0,0
+access_driver_history_r,driver_history,model_driver_history,group_all_fahad_read,1,0,0,0
+access_car_category_r,car_category,model_car_category,group_all_fahad_read,1,0,0,0
+access_car_maintenance_r,car_maintenance,model_car_maintenance,group_all_fahad_read,1,0,0,0
+access_gearbox_line_r,gearbox_line,model_gearbox_line,group_all_fahad_read,1,0,0,0
+access_differential_line_r,differential_line,model_differential_line,group_all_fahad_read,1,0,0,0
+access_machine_motor_line_r,machine_motor_line,model_machine_motor_line,group_all_fahad_read,1,0,0,0
+access_fahad_contract_r,fahad_contract,model_fahad_contract,group_all_fahad_read,1,0,0,0
+access_expense_register_lines_r,expense_register_lines,model_expense_register_lines,group_all_fahad_read,1,0,0,0
+access_expense_register_r,expense_register,model_expense_register,group_all_fahad_read,1,0,0,0
+access_expenses_r,expenses,model_expenses,group_all_fahad_read,1,0,0,0
+access_dependence_line_r,dependence_line,model_dependence_line,group_all_fahad_read,1,0,0,0
+access_hr_employee_r,hr_employee,model_hr_employee,group_all_fahad_read,1,0,0,0
+access_discount_commission_line_r,discount_commission_line,model_discount_commission_line,group_all_fahad_read,1,0,0,0
+access_discount_commission_r,discount_commission,model_discount_commission,group_all_fahad_read,1,0,0,0
+access_action_place_line_r,action_place_line,model_action_place_line,group_all_fahad_read,1,0,0,0
+access_instalment_sheet_line_r,instalment_sheet_line,model_instalment_sheet_line,group_all_fahad_read,1,0,0,0
+access_expense_delivery_line_r,expense_delivery_line,model_expense_delivery_line,group_all_fahad_read,1,0,0,0
+access_new_car_r,new_car,model_new_car,group_all_fahad_read,1,0,0,0
+access_account_voucher_r,account_voucher,model_account_voucher,group_all_fahad_read,1,0,0,0
+access_account_move_r,account_move,model_account_move,group_all_fahad_read,1,0,0,0
+access_account_invoice_r,account_invoice,model_account_invoice,group_all_fahad_read,1,0,0,0
+access_account_asset_asset_r,account_asset_asset,model_account_asset_asset,group_all_fahad_read,1,0,0,0
+access_wheel_expenses_r,wheel_expenses,model_wheel_expenses,group_all_fahad_read,1,0,0,0
+access_car_in_branch_r,car_in_branch,model_car_in_branch,group_all_fahad_read,1,0,0,0
+access_car_in_branch_history_r,car_in_branch_history,model_car_in_branch_history,group_all_fahad_read,1,0,0,0
+access_tank_instalment_sheet_line_r,tank_instalment_sheet_line,model_tank_instalment_sheet_line,group_all_fahad_read,1,0,0,0
+access_new_tank_r,new_tank,model_new_tank,group_all_fahad_read,1,0,0,0
+access_account_move_r,account_move,model_account_move,group_all_fahad_read,1,0,0,0
+access_account_invoice_r,account_invoice,model_account_invoice,group_all_fahad_read,1,0,0,0
+access_new_vehicle_r,new_vehicle,model_new_vehicle,group_all_fahad_read,1,0,0,0
+access_not_financial_custody_r,not_financial_custody,model_not_financial_custody,group_all_fahad_read,1,0,0,0
+access_other_revenue_line_r,other_revenue_line,model_other_revenue_line,group_all_fahad_read,1,0,0,0
+access_other_revenue_r,other_revenue,model_other_revenue,group_all_fahad_read,1,0,0,0
+access_rent_r,rent,model_rent,group_all_fahad_read,1,0,0,0
+access_branch_r,branch,model_branch,group_all_fahad_read,1,0,0,0
+access_new_wheel_r,new_wheel,model_new_wheel,group_all_fahad_read,1,0,0,0
+access_wheel_supplier_r,wheel_supplier,model_wheel_supplier,group_all_fahad_read,1,0,0,0
+access_wheel_action_r,wheel_action,model_wheel_action,group_all_fahad_read,1,0,0,0
+access_wheel_action_lines_install_r,wheel_action_lines_install,model_wheel_action_lines_install,group_all_fahad_read,1,0,0,0
+access_wheel_action_lines_uninstall_r,wheel_action_lines_uninstall,model_wheel_action_lines_uninstall,group_all_fahad_read,1,0,0,0
+access_install_place_r,install_place,model_install_place,group_all_fahad_read,1,0,0,0
+access_new_line_r,new_line,model_new_line,group_all_fahad_read,1,0,0,0
+access_z_cities_r,z_cities,model_z_cities,group_all_fahad_read,1,0,0,0
+access_vehicles_on_line_r,vehicles_on_line,model_vehicles_on_line,group_all_fahad_read,1,0,0,0
+access_linked_unlinked_vehicles_r,linked_unlinked_vehicles,model_linked_unlinked_vehicles,group_all_fahad_read,1,0,0,0
+access_line_vehicle_history_r,line_vehicle_history,model_line_vehicle_history,group_all_fahad_read,1,0,0,0
+access_trips_line_r,trips_line,model_trips_line,group_all_fahad_read,1,0,0,0
+access_trips_r,trips,model_trips,group_all_fahad_read,1,0,0,0
+access_vehicle_dismantling_r,vehicle_dismantling,model_vehicle_dismantling,group_all_fahad_read,1,0,0,0
+access_wheel_purchase_r,wheel_purchase,model_wheel_purchase,group_all_fahad_read,1,0,0,0
+access_wheel_purchase_line_r,wheel_purchase_line,model_wheel_purchase_line,group_all_fahad_read,1,0,0,0
+
+access_buy_screen_wr,buy_screen,model_buy_screen,group_all_fahad_write,0,1,0,0
+access_vehicle_custody_wr,vehicle_custody,model_vehicle_custody,group_all_fahad_write,0,1,0,0
+access_car_not_financial_custody_wr,car_not_financial_custody,model_car_not_financial_custody,group_all_fahad_write,0,1,0,0
+access_tank_not_financial_custody_wr,tank_not_financial_custody,model_tank_not_financial_custody,group_all_fahad_write,0,1,0,0
+access_driver_not_financial_custody_wr,driver_not_financial_custody,model_driver_not_financial_custody,group_all_fahad_write,0,1,0,0
+access_driver_custody_warehouse_line_wr,driver_custody_warehouse_line,model_driver_custody_warehouse_line,group_all_fahad_write,0,1,0,0
+access_driver_custody_lost_line_wr,driver_custody_lost_line,model_driver_custody_lost_line,group_all_fahad_write,0,1,0,0
+access_car_custody_warehouse_line_wr,car_custody_warehouse_line,model_car_custody_warehouse_line,group_all_fahad_write,0,1,0,0
+access_car_custody_lost_line_wr,car_custody_lost_line,model_car_custody_lost_line,group_all_fahad_write,0,1,0,0
+access_tank_custody_warehouse_line_wr,tank_custody_warehouse_line,model_tank_custody_warehouse_line,group_all_fahad_write,0,1,0,0
+access_tank_custody_lost_line_wr,tank_custody_lost_line,model_tank_custody_lost_line,group_all_fahad_write,0,1,0,0
+access_driver_history_wr,driver_history,model_driver_history,group_all_fahad_write,0,1,0,0
+access_car_category_wr,car_category,model_car_category,group_all_fahad_write,0,1,0,0
+access_car_maintenance_wr,car_maintenance,model_car_maintenance,group_all_fahad_write,0,1,0,0
+access_gearbox_line_wr,gearbox_line,model_gearbox_line,group_all_fahad_write,0,1,0,0
+access_differential_line_wr,differential_line,model_differential_line,group_all_fahad_write,0,1,0,0
+access_machine_motor_line_wr,machine_motor_line,model_machine_motor_line,group_all_fahad_write,0,1,0,0
+access_fahad_contract_wr,fahad_contract,model_fahad_contract,group_all_fahad_write,0,1,0,0
+access_expense_register_lines_wr,expense_register_lines,model_expense_register_lines,group_all_fahad_write,0,1,0,0
+access_expense_register_wr,expense_register,model_expense_register,group_all_fahad_write,0,1,0,0
+access_expenses_wr,expenses,model_expenses,group_all_fahad_write,0,1,0,0
+access_dependence_line_wr,dependence_line,model_dependence_line,group_all_fahad_write,0,1,0,0
+access_hr_employee_wr,hr_employee,model_hr_employee,group_all_fahad_write,0,1,0,0
+access_discount_commission_line_wr,discount_commission_line,model_discount_commission_line,group_all_fahad_write,0,1,0,0
+access_discount_commission_wr,discount_commission,model_discount_commission,group_all_fahad_write,0,1,0,0
+access_action_place_line_wr,action_place_line,model_action_place_line,group_all_fahad_write,0,1,0,0
+access_instalment_sheet_line_wr,instalment_sheet_line,model_instalment_sheet_line,group_all_fahad_write,0,1,0,0
+access_expense_delivery_line_wr,expense_delivery_line,model_expense_delivery_line,group_all_fahad_write,0,1,0,0
+access_new_car_wr,new_car,model_new_car,group_all_fahad_write,0,1,0,0
+access_account_voucher_wr,account_voucher,model_account_voucher,group_all_fahad_write,0,1,0,0
+access_account_move_wr,account_move,model_account_move,group_all_fahad_write,0,1,0,0
+access_account_invoice_wr,account_invoice,model_account_invoice,group_all_fahad_write,0,1,0,0
+access_account_asset_asset_wr,account_asset_asset,model_account_asset_asset,group_all_fahad_write,0,1,0,0
+access_wheel_expenses_wr,wheel_expenses,model_wheel_expenses,group_all_fahad_write,0,1,0,0
+access_car_in_branch_wr,car_in_branch,model_car_in_branch,group_all_fahad_write,0,1,0,0
+access_car_in_branch_history_wr,car_in_branch_history,model_car_in_branch_history,group_all_fahad_write,0,1,0,0
+access_tank_instalment_sheet_line_wr,tank_instalment_sheet_line,model_tank_instalment_sheet_line,group_all_fahad_write,0,1,0,0
+access_new_tank_wr,new_tank,model_new_tank,group_all_fahad_write,0,1,0,0
+access_account_move_wr,account_move,model_account_move,group_all_fahad_write,0,1,0,0
+access_account_invoice_wr,account_invoice,model_account_invoice,group_all_fahad_write,0,1,0,0
+access_new_vehicle_wr,new_vehicle,model_new_vehicle,group_all_fahad_write,0,1,0,0
+access_not_financial_custody_wr,not_financial_custody,model_not_financial_custody,group_all_fahad_write,0,1,0,0
+access_other_revenue_line_wr,other_revenue_line,model_other_revenue_line,group_all_fahad_write,0,1,0,0
+access_other_revenue_wr,other_revenue,model_other_revenue,group_all_fahad_write,0,1,0,0
+access_rent_wr,rent,model_rent,group_all_fahad_write,0,1,0,0
+access_branch_wr,branch,model_branch,group_all_fahad_write,0,1,0,0
+access_new_wheel_wr,new_wheel,model_new_wheel,group_all_fahad_write,0,1,0,0
+access_wheel_supplier_wr,wheel_supplier,model_wheel_supplier,group_all_fahad_write,0,1,0,0
+access_wheel_action_wr,wheel_action,model_wheel_action,group_all_fahad_write,0,1,0,0
+access_wheel_action_lines_install_wr,wheel_action_lines_install,model_wheel_action_lines_install,group_all_fahad_write,0,1,0,0
+access_wheel_action_lines_uninstall_wr,wheel_action_lines_uninstall,model_wheel_action_lines_uninstall,group_all_fahad_write,0,1,0,0
+access_install_place_wr,install_place,model_install_place,group_all_fahad_write,0,1,0,0
+access_new_line_wr,new_line,model_new_line,group_all_fahad_write,0,1,0,0
+access_z_cities_wr,z_cities,model_z_cities,group_all_fahad_write,0,1,0,0
+access_vehicles_on_line_wr,vehicles_on_line,model_vehicles_on_line,group_all_fahad_write,0,1,0,0
+access_linked_unlinked_vehicles_wr,linked_unlinked_vehicles,model_linked_unlinked_vehicles,group_all_fahad_write,0,1,0,0
+access_line_vehicle_history_wr,line_vehicle_history,model_line_vehicle_history,group_all_fahad_write,0,1,0,0
+access_trips_line_wr,trips_line,model_trips_line,group_all_fahad_write,0,1,0,0
+access_trips_wr,trips,model_trips,group_all_fahad_write,0,1,0,0
+access_vehicle_dismantling_wr,vehicle_dismantling,model_vehicle_dismantling,group_all_fahad_write,0,1,0,0
+access_wheel_purchase_wr,wheel_purchase,model_wheel_purchase,group_all_fahad_write,0,1,0,0
+access_wheel_purchase_line_wr,wheel_purchase_line,model_wheel_purchase_line,group_all_fahad_write,0,1,0,0
+
+access_buy_screen_c,buy_screen,model_buy_screen,group_all_fahad_create,0,0,1,0
+access_vehicle_custody_c,vehicle_custody,model_vehicle_custody,group_all_fahad_create,0,0,1,0
+access_car_not_financial_custody_c,car_not_financial_custody,model_car_not_financial_custody,group_all_fahad_create,0,0,1,0
+access_tank_not_financial_custody_c,tank_not_financial_custody,model_tank_not_financial_custody,group_all_fahad_create,0,0,1,0
+access_driver_not_financial_custody_c,driver_not_financial_custody,model_driver_not_financial_custody,group_all_fahad_create,0,0,1,0
+access_driver_custody_warehouse_line_c,driver_custody_warehouse_line,model_driver_custody_warehouse_line,group_all_fahad_create,0,0,1,0
+access_driver_custody_lost_line_c,driver_custody_lost_line,model_driver_custody_lost_line,group_all_fahad_create,0,0,1,0
+access_car_custody_warehouse_line_c,car_custody_warehouse_line,model_car_custody_warehouse_line,group_all_fahad_create,0,0,1,0
+access_car_custody_lost_line_c,car_custody_lost_line,model_car_custody_lost_line,group_all_fahad_create,0,0,1,0
+access_tank_custody_warehouse_line_c,tank_custody_warehouse_line,model_tank_custody_warehouse_line,group_all_fahad_create,0,0,1,0
+access_tank_custody_lost_line_c,tank_custody_lost_line,model_tank_custody_lost_line,group_all_fahad_create,0,0,1,0
+access_driver_history_c,driver_history,model_driver_history,group_all_fahad_create,0,0,1,0
+access_car_category_c,car_category,model_car_category,group_all_fahad_create,0,0,1,0
+access_car_maintenance_c,car_maintenance,model_car_maintenance,group_all_fahad_create,0,0,1,0
+access_gearbox_line_c,gearbox_line,model_gearbox_line,group_all_fahad_create,0,0,1,0
+access_differential_line_c,differential_line,model_differential_line,group_all_fahad_create,0,0,1,0
+access_machine_motor_line_c,machine_motor_line,model_machine_motor_line,group_all_fahad_create,0,0,1,0
+access_fahad_contract_c,fahad_contract,model_fahad_contract,group_all_fahad_create,0,0,1,0
+access_expense_register_lines_c,expense_register_lines,model_expense_register_lines,group_all_fahad_create,0,0,1,0
+access_expense_register_c,expense_register,model_expense_register,group_all_fahad_create,0,0,1,0
+access_expenses_c,expenses,model_expenses,group_all_fahad_create,0,0,1,0
+access_dependence_line_c,dependence_line,model_dependence_line,group_all_fahad_create,0,0,1,0
+access_hr_employee_c,hr_employee,model_hr_employee,group_all_fahad_create,0,0,1,0
+access_discount_commission_line_c,discount_commission_line,model_discount_commission_line,group_all_fahad_create,0,0,1,0
+access_discount_commission_c,discount_commission,model_discount_commission,group_all_fahad_create,0,0,1,0
+access_action_place_line_c,action_place_line,model_action_place_line,group_all_fahad_create,0,0,1,0
+access_instalment_sheet_line_c,instalment_sheet_line,model_instalment_sheet_line,group_all_fahad_create,0,0,1,0
+access_expense_delivery_line_c,expense_delivery_line,model_expense_delivery_line,group_all_fahad_create,0,0,1,0
+access_new_car_c,new_car,model_new_car,group_all_fahad_create,0,0,1,0
+access_account_voucher_c,account_voucher,model_account_voucher,group_all_fahad_create,0,0,1,0
+access_account_move_c,account_move,model_account_move,group_all_fahad_create,0,0,1,0
+access_account_invoice_c,account_invoice,model_account_invoice,group_all_fahad_create,0,0,1,0
+access_account_asset_asset_c,account_asset_asset,model_account_asset_asset,group_all_fahad_create,0,0,1,0
+access_wheel_expenses_c,wheel_expenses,model_wheel_expenses,group_all_fahad_create,0,0,1,0
+access_car_in_branch_c,car_in_branch,model_car_in_branch,group_all_fahad_create,0,0,1,0
+access_car_in_branch_history_c,car_in_branch_history,model_car_in_branch_history,group_all_fahad_create,0,0,1,0
+access_tank_instalment_sheet_line_c,tank_instalment_sheet_line,model_tank_instalment_sheet_line,group_all_fahad_create,0,0,1,0
+access_new_tank_c,new_tank,model_new_tank,group_all_fahad_create,0,0,1,0
+access_account_move_c,account_move,model_account_move,group_all_fahad_create,0,0,1,0
+access_account_invoice_c,account_invoice,model_account_invoice,group_all_fahad_create,0,0,1,0
+access_new_vehicle_c,new_vehicle,model_new_vehicle,group_all_fahad_create,0,0,1,0
+access_not_financial_custody_c,not_financial_custody,model_not_financial_custody,group_all_fahad_create,0,0,1,0
+access_other_revenue_line_c,other_revenue_line,model_other_revenue_line,group_all_fahad_create,0,0,1,0
+access_other_revenue_c,other_revenue,model_other_revenue,group_all_fahad_create,0,0,1,0
+access_rent_c,rent,model_rent,group_all_fahad_create,0,0,1,0
+access_branch_c,branch,model_branch,group_all_fahad_create,0,0,1,0
+access_new_wheel_c,new_wheel,model_new_wheel,group_all_fahad_create,0,0,1,0
+access_wheel_supplier_c,wheel_supplier,model_wheel_supplier,group_all_fahad_create,0,0,1,0
+access_wheel_action_c,wheel_action,model_wheel_action,group_all_fahad_create,0,0,1,0
+access_wheel_action_lines_install_c,wheel_action_lines_install,model_wheel_action_lines_install,group_all_fahad_create,0,0,1,0
+access_wheel_action_lines_uninstall_c,wheel_action_lines_uninstall,model_wheel_action_lines_uninstall,group_all_fahad_create,0,0,1,0
+access_install_place_c,install_place,model_install_place,group_all_fahad_create,0,0,1,0
+access_new_line_c,new_line,model_new_line,group_all_fahad_create,0,0,1,0
+access_z_cities_c,z_cities,model_z_cities,group_all_fahad_create,0,0,1,0
+access_vehicles_on_line_c,vehicles_on_line,model_vehicles_on_line,group_all_fahad_create,0,0,1,0
+access_linked_unlinked_vehicles_c,linked_unlinked_vehicles,model_linked_unlinked_vehicles,group_all_fahad_create,0,0,1,0
+access_line_vehicle_history_c,line_vehicle_history,model_line_vehicle_history,group_all_fahad_create,0,0,1,0
+access_trips_line_c,trips_line,model_trips_line,group_all_fahad_create,0,0,1,0
+access_trips_c,trips,model_trips,group_all_fahad_create,0,0,1,0
+access_vehicle_dismantling_c,vehicle_dismantling,model_vehicle_dismantling,group_all_fahad_create,0,0,1,0
+access_wheel_purchase_c,wheel_purchase,model_wheel_purchase,group_all_fahad_create,0,0,1,0
+access_wheel_purchase_line_c,wheel_purchase_line,model_wheel_purchase_line,group_all_fahad_create,0,0,1,0
+
+access_buy_screen_d,buy_screen,model_buy_screen,group_all_fahad_delete,0,0,0,1
+access_vehicle_custody_d,vehicle_custody,model_vehicle_custody,group_all_fahad_delete,0,0,0,1
+access_car_not_financial_custody_d,car_not_financial_custody,model_car_not_financial_custody,group_all_fahad_delete,0,0,0,1
+access_tank_not_financial_custody_d,tank_not_financial_custody,model_tank_not_financial_custody,group_all_fahad_delete,0,0,0,1
+access_driver_not_financial_custody_d,driver_not_financial_custody,model_driver_not_financial_custody,group_all_fahad_delete,0,0,0,1
+access_driver_custody_warehouse_line_d,driver_custody_warehouse_line,model_driver_custody_warehouse_line,group_all_fahad_delete,0,0,0,1
+access_driver_custody_lost_line_d,driver_custody_lost_line,model_driver_custody_lost_line,group_all_fahad_delete,0,0,0,1
+access_car_custody_warehouse_line_d,car_custody_warehouse_line,model_car_custody_warehouse_line,group_all_fahad_delete,0,0,0,1
+access_car_custody_lost_line_d,car_custody_lost_line,model_car_custody_lost_line,group_all_fahad_delete,0,0,0,1
+access_tank_custody_warehouse_line_d,tank_custody_warehouse_line,model_tank_custody_warehouse_line,group_all_fahad_delete,0,0,0,1
+access_tank_custody_lost_line_d,tank_custody_lost_line,model_tank_custody_lost_line,group_all_fahad_delete,0,0,0,1
+access_driver_history_d,driver_history,model_driver_history,group_all_fahad_delete,0,0,0,1
+access_car_category_d,car_category,model_car_category,group_all_fahad_delete,0,0,0,1
+access_car_maintenance_d,car_maintenance,model_car_maintenance,group_all_fahad_delete,0,0,0,1
+access_gearbox_line_d,gearbox_line,model_gearbox_line,group_all_fahad_delete,0,0,0,1
+access_differential_line_d,differential_line,model_differential_line,group_all_fahad_delete,0,0,0,1
+access_machine_motor_line_d,machine_motor_line,model_machine_motor_line,group_all_fahad_delete,0,0,0,1
+access_fahad_contract_d,fahad_contract,model_fahad_contract,group_all_fahad_delete,0,0,0,1
+access_expense_register_lines_d,expense_register_lines,model_expense_register_lines,group_all_fahad_delete,0,0,0,1
+access_expense_register_d,expense_register,model_expense_register,group_all_fahad_delete,0,0,0,1
+access_expenses_d,expenses,model_expenses,group_all_fahad_delete,0,0,0,1
+access_dependence_line_d,dependence_line,model_dependence_line,group_all_fahad_delete,0,0,0,1
+access_hr_employee_d,hr_employee,model_hr_employee,group_all_fahad_delete,0,0,0,1
+access_discount_commission_line_d,discount_commission_line,model_discount_commission_line,group_all_fahad_delete,0,0,0,1
+access_discount_commission_d,discount_commission,model_discount_commission,group_all_fahad_delete,0,0,0,1
+access_action_place_line_d,action_place_line,model_action_place_line,group_all_fahad_delete,0,0,0,1
+access_instalment_sheet_line_d,instalment_sheet_line,model_instalment_sheet_line,group_all_fahad_delete,0,0,0,1
+access_expense_delivery_line_d,expense_delivery_line,model_expense_delivery_line,group_all_fahad_delete,0,0,0,1
+access_new_car_d,new_car,model_new_car,group_all_fahad_delete,0,0,0,1
+access_account_voucher_d,account_voucher,model_account_voucher,group_all_fahad_delete,0,0,0,1
+access_account_move_d,account_move,model_account_move,group_all_fahad_delete,0,0,0,1
+access_account_invoice_d,account_invoice,model_account_invoice,group_all_fahad_delete,0,0,0,1
+access_account_asset_asset_d,account_asset_asset,model_account_asset_asset,group_all_fahad_delete,0,0,0,1
+access_wheel_expenses_d,wheel_expenses,model_wheel_expenses,group_all_fahad_delete,0,0,0,1
+access_car_in_branch_d,car_in_branch,model_car_in_branch,group_all_fahad_delete,0,0,0,1
+access_car_in_branch_history_d,car_in_branch_history,model_car_in_branch_history,group_all_fahad_delete,0,0,0,1
+access_tank_instalment_sheet_line_d,tank_instalment_sheet_line,model_tank_instalment_sheet_line,group_all_fahad_delete,0,0,0,1
+access_new_tank_d,new_tank,model_new_tank,group_all_fahad_delete,0,0,0,1
+access_account_move_d,account_move,model_account_move,group_all_fahad_delete,0,0,0,1
+access_account_invoice_d,account_invoice,model_account_invoice,group_all_fahad_delete,0,0,0,1
+access_new_vehicle_d,new_vehicle,model_new_vehicle,group_all_fahad_delete,0,0,0,1
+access_not_financial_custody_d,not_financial_custody,model_not_financial_custody,group_all_fahad_delete,0,0,0,1
+access_other_revenue_line_d,other_revenue_line,model_other_revenue_line,group_all_fahad_delete,0,0,0,1
+access_other_revenue_d,other_revenue,model_other_revenue,group_all_fahad_delete,0,0,0,1
+access_rent_d,rent,model_rent,group_all_fahad_delete,0,0,0,1
+access_branch_d,branch,model_branch,group_all_fahad_delete,0,0,0,1
+access_new_wheel_d,new_wheel,model_new_wheel,group_all_fahad_delete,0,0,0,1
+access_wheel_supplier_d,wheel_supplier,model_wheel_supplier,group_all_fahad_delete,0,0,0,1
+access_wheel_action_d,wheel_action,model_wheel_action,group_all_fahad_delete,0,0,0,1
+access_wheel_action_lines_install_d,wheel_action_lines_install,model_wheel_action_lines_install,group_all_fahad_delete,0,0,0,1
+access_wheel_action_lines_uninstall_d,wheel_action_lines_uninstall,model_wheel_action_lines_uninstall,group_all_fahad_delete,0,0,0,1
+access_install_place_d,install_place,model_install_place,group_all_fahad_delete,0,0,0,1
+access_new_line_d,new_line,model_new_line,group_all_fahad_delete,0,0,0,1
+access_z_cities_d,z_cities,model_z_cities,group_all_fahad_delete,0,0,0,1
+access_vehicles_on_line_d,vehicles_on_line,model_vehicles_on_line,group_all_fahad_delete,0,0,0,1
+access_linked_unlinked_vehicles_d,linked_unlinked_vehicles,model_linked_unlinked_vehicles,group_all_fahad_delete,0,0,0,1
+access_line_vehicle_history_d,line_vehicle_history,model_line_vehicle_history,group_all_fahad_delete,0,0,0,1
+access_trips_line_d,trips_line,model_trips_line,group_all_fahad_delete,0,0,0,1
+access_trips_d,trips,model_trips,group_all_fahad_delete,0,0,0,1
+access_vehicle_dismantling_d,vehicle_dismantling,model_vehicle_dismantling,group_all_fahad_delete,0,0,0,1
+access_wheel_purchase_d,wheel_purchase,model_wheel_purchase,group_all_fahad_delete,0,0,0,1
+access_wheel_purchase_line_d,wheel_purchase_line,model_wheel_purchase_line,group_all_fahad_delete,0,0,0,1

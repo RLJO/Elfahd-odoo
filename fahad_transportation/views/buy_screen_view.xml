@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_buy_screen_form">
+            <field name="name">Asset Sales</field>
+            <field name="model">buy.screen</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name='button_review' type="object" string="Review" states="draft"
+                                 groups="fahad_transportation.group_fahd_trip_review"/>
+                        <button name='button_confirm' type="object" string="Confirm" states="reviewed"
+                                 groups="fahad_transportation.group_fahd_trip_confirm"/>
+                        <button name='button_draft' type="object" string="Set To Draft" states="draft,reviewed"/>
+                        <button name='button_close' type="object" string="Close" states="draft,reviewed"
+                                confirm="Are you sure you want to close" groups="base.group_no_one"/>
+                        <field name="state" widget='statusbar' statusbar_visible="draft,reviewed,confirmed,closed"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" readonly="1"/>
+                                <field name="buy_type" required="1"/>
+                                <field name="car_id"
+                                       attrs="{'invisible':[('buy_type', '!=', 'car')], 'required':[('buy_type', '=', 'car')]}"
+                                       domain="[('state','=','confirm'),('sale_method','in',('asset','instalment'))]"
+                                       context="{'connected_tanks_only':True}"
+                                       options="{'create': false, 'create_edit': false}"/>
+                                <field name="tank_id"
+                                       attrs="{'invisible':[('buy_type', '!=', 'tank')], 'required':[('buy_type', '=', 'tank')]}"
+                                       context="{'connected_tanks_only':True}"
+                                       domain="[('state','=','confirm'),('sale_method','in',('asset','instalment'))]"
+                                       options="{'create': false, 'create_edit': false}"/>
+                                <field name="vehicle_id"
+                                       attrs="{'invisible':[('buy_type', '!=', 'vehicle')], 'required':[('buy_type', '=', 'vehicle')]}"
+                                       domain="[('state','=','confirm')]"
+                                       options="{'create': false, 'create_edit': false}"/>
+                                <field name="wheel_id"
+                                       attrs="{'invisible':[('buy_type', '!=', 'wheel')], 'required':[('buy_type', '=', 'wheel')]}"
+                                       domain="[('state','in',('confirmed','used','damaged'))]"
+                                       options="{'create': false, 'create_edit': false}"/>
+                                <field name="head_price"
+                                       attrs="{'invisible':[('buy_type', '!=', 'vehicle')], 'required':[('buy_type', '=', 'vehicle')]}"/>
+                                <field name="tank_price"
+                                       attrs="{'invisible':[('buy_type', '!=', 'vehicle')], 'required':[('buy_type', '=', 'vehicle')]}"/>
+                                <field name="buy_price" required="1"/>
+                                <field name="asset_categ_id" required="1"/>
+                            </group>
+                            <group>
+                                <field name="customer_id" required="1"/>
+                                <field name="journal_id" required="1" domain="[('type', '=', 'sale')]"/>
+                                <field name="income_account_id"
+                                       attrs="{'invisible':[('buy_type', '!=', 'wheel')], 'required':[('buy_type', '=', 'wheel')]}"/>
+                                <field name="date" required="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Notes">
+                                <field name="note"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_buy_screen_tree">
+            <field name="name">Asset Sales</field>
+            <field name="model">buy.screen</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="date"/>
+                    <field name="customer_id"/>
+                    <field name="journal_id"/>
+                    <field name="buy_type"/>
+                    <field name="head_price"/>
+                    <field name="tank_price"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="view_buy_screen_action">
+            <field name="name">Asset Sales</field>
+            <field name="res_model">buy.screen</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

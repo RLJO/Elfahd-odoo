@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record model="ir.module.category" id="module_transportation">
+            <field name="name">Transportation</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">7</field>
+        </record>
+        <record id="group_transportation" model="res.groups">
+            <field name="name">General transportation</field>
+            <field name="category_id" ref="module_transportation"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <!--    Car Groups    -->
+        <record model="ir.module.category" id="module_car_group">
+            <field name="name">Car Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="group_fahd_car_create" model="res.groups">
+            <field name="name">car Create</field>
+            <field name="category_id" ref="module_car_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_car_read" model="res.groups">
+            <field name="name">car Read</field>
+            <field name="category_id" ref="module_car_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_car_write" model="res.groups">
+            <field name="name">Car write</field>
+            <field name="category_id" ref="module_car_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_car_delete" model="res.groups">
+            <field name="name">car delete</field>
+            <field name="category_id" ref="module_car_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_car_review" model="res.groups">
+            <field name="name">car review</field>
+            <field name="category_id" ref="module_car_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_car_read'))]"/>
+        </record>
+
+        <record id="group_fahd_car_confirm" model="res.groups">
+            <field name="name">car confirm</field>
+            <field name="category_id" ref="module_car_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_car_read'))]"/>
+        </record>
+
+        <!--    tank Groups    -->
+        <record model="ir.module.category" id="module_tank_group">
+            <field name="name">Tank Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="group_fahd_tank_create" model="res.groups">
+            <field name="name">tank Create</field>
+            <field name="category_id" ref="module_tank_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_tank_read" model="res.groups">
+            <field name="name">tank Read</field>
+            <field name="category_id" ref="module_tank_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_tank_review" model="res.groups">
+            <field name="name">tank review</field>
+            <field name="category_id" ref="module_tank_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_tank_read'))]"/>
+        </record>
+
+        <record id="group_fahd_tank_confirm" model="res.groups">
+            <field name="name">tank confirm</field>
+            <field name="category_id" ref="module_tank_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_tank_read'))]"/>
+        </record>
+
+        <!--    Wheel Groups    -->
+        <record model="ir.module.category" id="module_wheel_group">
+            <field name="name">wheel Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="group_fahd_wheel_create" model="res.groups">
+            <field name="name">wheel Create</field>
+            <field name="category_id" ref="module_wheel_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_wheel_read" model="res.groups">
+            <field name="name">wheel Read</field>
+            <field name="category_id" ref="module_wheel_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_wheel_review" model="res.groups">
+            <field name="name">wheel review</field>
+            <field name="category_id" ref="module_wheel_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_wheel_read'))]"/>
+        </record>
+
+        <record id="group_fahd_wheel_confirm" model="res.groups">
+            <field name="name">wheel confirm</field>
+            <field name="category_id" ref="module_wheel_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_wheel_read'))]"/>
+        </record>
+
+        <!--    vehicle Groups    -->
+        <record model="ir.module.category" id="module_vehicle_group">
+            <field name="name">vehicle Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="group_fahd_vehicle_create" model="res.groups">
+            <field name="name">vehicle Create</field>
+            <field name="category_id" ref="module_vehicle_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_vehicle_read" model="res.groups">
+            <field name="name">vehicle Read</field>
+            <field name="category_id" ref="module_vehicle_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_vehicle_review" model="res.groups">
+            <field name="name">vehicle review</field>
+            <field name="category_id" ref="module_vehicle_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_vehicle_read'))]"/>
+        </record>
+
+        <record id="group_fahd_vehicle_confirm" model="res.groups">
+            <field name="name">vehicle confirm</field>
+            <field name="category_id" ref="module_vehicle_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_vehicle_read'))]"/>
+        </record>
+
+        <!--    expens Groups    -->
+        <record model="ir.module.category" id="module_expens_group">
+            <field name="name">expens Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="group_fahd_expens_create" model="res.groups">
+            <field name="name">expens Create</field>
+            <field name="category_id" ref="module_expens_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_expens_read" model="res.groups">
+            <field name="name">expens Read</field>
+            <field name="category_id" ref="module_expens_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_expens_review" model="res.groups">
+            <field name="name">expens review</field>
+            <field name="category_id" ref="module_expens_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_expens_read'))]"/>
+        </record>
+
+        <record id="group_fahd_expens_confirm" model="res.groups">
+            <field name="name">expens confirm</field>
+            <field name="category_id" ref="module_expens_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_expens_read'))]"/>
+        </record>
+
+        <!--    lines Groups    -->
+        <record model="ir.module.category" id="module_lines_group">
+            <field name="name">lines Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="group_fahd_lines_create" model="res.groups">
+            <field name="name">lines Create</field>
+            <field name="category_id" ref="module_lines_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_lines_read" model="res.groups">
+            <field name="name">lines Read</field>
+            <field name="category_id" ref="module_lines_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_lines_review" model="res.groups">
+            <field name="name">lines review</field>
+            <field name="category_id" ref="module_lines_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_lines_read'))]"/>
+        </record>
+
+        <record id="group_fahd_lines_confirm" model="res.groups">
+            <field name="name">lines confirm</field>
+            <field name="category_id" ref="module_lines_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_lines_read'))]"/>
+        </record>
+
+        <!--    trip Groups    -->
+        <record model="ir.module.category" id="module_trip_group">
+            <field name="name">trip Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="group_fahd_trip_create" model="res.groups">
+            <field name="name">trip Create</field>
+            <field name="category_id" ref="module_trip_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_trip_read" model="res.groups">
+            <field name="name">trip Read</field>
+            <field name="category_id" ref="module_trip_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_trip_review" model="res.groups">
+            <field name="name">trip review</field>
+            <field name="category_id" ref="module_trip_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_trip_read'))]"/>
+        </record>
+
+        <record id="group_fahd_trip_confirm" model="res.groups">
+            <field name="name">trip confirm</field>
+            <field name="category_id" ref="module_trip_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_trip_read'))]"/>
+        </record>
+
+        <record id="group_fahd_trip_complete" model="res.groups">
+            <field name="name">trip Complete</field>
+            <field name="category_id" ref="module_trip_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_trip_read'))]"/>
+        </record>
+
+        <!--    other Groups    -->
+        <record model="ir.module.category" id="module_other_group">
+            <field name="name">other Groups</field>
+            <field name="description">Helps you manage your Transportation.</field>
+            <field name="sequence">7</field>
+        </record>
+
+        <record id="group_fahd_other_create" model="res.groups">
+            <field name="name">other Create</field>
+            <field name="category_id" ref="module_other_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_other_read" model="res.groups">
+            <field name="name">other Read</field>
+            <field name="category_id" ref="module_other_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+        <record id="group_fahd_other_review" model="res.groups">
+            <field name="name">other review</field>
+            <field name="category_id" ref="module_other_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_other_read'))]"/>
+        </record>
+
+        <record id="group_fahd_other_confirm" model="res.groups">
+            <field name="name">other confirm</field>
+            <field name="category_id" ref="module_other_group"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+            <field name="implied_ids" eval="[(4, ref('fahad_transportation.group_fahd_other_read'))]"/>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_vehicle_dismantling_form">
+            <field name="name">Vehicles Dismantling</field>
+            <field name="model">vehicle.dismantling</field>
+            <field name="arch" type="xml">
+                <form string="Vehicles Dismantling" create="false">
+                    <header>
+                        <button name="action_reviewed" string="Reviewed" groups="fahad_transportation.group_fahd_vehicle_review"
+                                states="new" type="object" class="oe_highlight"/>
+                        <button name="action_confirmed" string="Confirmed" groups="fahad_transportation.group_fahd_vehicle_confirm"
+                                states="review" type="object" class="oe_highlight"/>
+                        <button name="action_closed" string="Closed" states="review" type="object" class="oe_highlight"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="decision_no" readonly="1"/>
+                                <field name="vehicle_id" readonly="1" options="{'create': false, 'create_edit': false}" required="1" domain="[('state_of_dismantling','=','connected')]"/>
+                                <field name="new_car_id" readonly="1"/>
+                                <field name="new_tank_id" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="install_date" readonly="1"/>
+                                <field name="uninstall_date" readonly="1" required="1"/>
+                                <field name="cause" required="1"/>
+                            </group>
+                        </group>
+                        <label for="note"/>
+                        <field name="note"/>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_vehicle_dismantling_tree">
+            <field name="name">Vehicles Dismantling</field>
+            <field name="model">vehicle.dismantling</field>
+            <field name="arch" type="xml">
+                <tree string="Vehicles Dismantling" create="false">
+                    <field name="decision_no" readonly="1"/>
+                    <field name="vehicle_id" />
+                    <field name="new_car_id" />
+                    <field name="install_date" />
+                    <field name="uninstall_date" />
+                    <field name="cause" />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_vehicles_dismantling">
+            <field name="name">Vehicles Dismantling</field>
+            <field name="res_model">vehicle.dismantling</field>
+<!--            <field name="view_type">form</field>-->
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+<template id="report_new_tank_document">
+    <t t-call="report.external_layout">
+        <div class="page" dir="rtl">
+            <table class="table table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th>م</th>
+                        <th>رقم التانكي ارامكو</th>
+                        <th>رقم المؤسسة</th>
+                        <t t-if="o.aramco_sticker_expiry_date">
+                            <th>تاريخ انتهاء الفحص</th>
+                        </t>
+                        <th>الخط</th>
+                        <th>الكمية</th>
+                        <th>التصنيع</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    <t t-set="counter" t-value="0+1"/>
+                    <tr>
+                        <td>
+                           <span t-esc="counter"/>
+                        </td>
+                        <td>
+                            <span t-field="o.aramco_no"/>
+                        </td>
+                        <td>
+                            <span t-field="o.company_number"/>
+                        </td>
+                        <t t-if="o.aramco_sticker_expiry_date">
+                          <td>
+                                <span t-field="o.aramco_sticker_expiry_date"/>
+                            </td>
+                        </t>
+                        <td>
+                            <span t-field="o.linked_line"/>
+                        </td>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            <span t-field="o.manufacture_company"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </t>
+</template>
+
+<template id="report_new_tank">
+    <t t-call="report.html_container">
+        <t t-foreach="doc_ids" t-as="doc_id">
+            <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'fahad_transportation.report_new_tank_document')"/>
+        </t>
+    </t>
+</template>
+</data>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_ticketing_manager,"hr.ticketing manager",model_hr_ticketing,,1,1,1,1
+access_hr_eoc_manager,"hr.eoc manager",model_hr_eoc,,1,1,1,1

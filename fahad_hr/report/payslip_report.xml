@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <template id="report_payslip_employees">
+            <t t-call="report.html_container">
+                <t t-call="report.external_layout">
+                    <div class="page" dir="rtl">
+        <p style="font-weight:blod;font-size:25px" align="center">
+            مسير الرواتب عن شهر
+            <span t-esc="month_name(docs[0])"/> </p>
+        <table class="table table-condensed">
+            <thead style="border:1px solid">
+            <tr style="background-color:#ECECEC">
+                <th style="border-right:1px solid #D2D2D2;" align="center" rowspan="2">م</th>
+                <th style="border-right:1px solid #D2D2D2;" rowspan="2"><p style="margin-top:30px" align="center">إسم الموظف</p></th>
+                <th style="border-right:1px solid #D2D2D2;" rowspan="2"><p style="margin-top:30px" align="center">أساسى</p></th>
+                <th style="border-right:1px solid #D2D2D2;" rowspan="2"><p style="margin-top:20px" align="center">عدد الردود</p></th>
+                <th style="border-right:1px solid #D2D2D2;" colspan="2"><p align="center">العمولات والمكافئات</p></th>
+                <th style="border-right:1px solid #D2D2D2;" colspan="3"><p align="center">الخصومات</p></th>
+                <th style="border-right:1px solid #D2D2D2;" colspan="3"><p align="center">سلف و قروض</p></th>
+                <th style="border-right:1px solid #D2D2D2;" rowspan="2"><p style="margin-top:20px" align="center">الصافى العام</p></th>
+                <th style="border-right:1px solid #D2D2D2;border-left:1px solid #D2D2D2;" rowspan="2"><p style="margin-top:20px" align="center">توقيع الاستلام</p></th>
+            </tr>
+            <tr style="background-color:#ECECEC;height:20px">
+                <th style="border-right:1px solid #D2D2D2;">اجمالى</th>
+                <th style="border-right:1px solid #D2D2D2;"><p align="center">تم دفعه للموظف</p></th>
+                <th style="border-right:1px solid #D2D2D2;"><p align="center">اجمالى</p></th>
+                <th style="border-right:1px solid #D2D2D2;"><p align="center">تم خصمه من الموظف</p></th>
+                <th style="border-right:1px solid #D2D2D2;"><p align="center">مرحل للشهر القادم</p></th>
+                <th style="border-right:1px solid #D2D2D2;"><p align="center">اجمالى</p></th>
+                <th style="border-right:1px solid #D2D2D2;"><p align="center">تم خصمه من الموظف</p></th>
+                <th style="border-right:1px solid #D2D2D2;"><p align="center">مرحل للشهر القادم</p></th>
+            </tr>
+            </thead>
+            <tbody>
+            <t t-foreach="docs" t-as="o">
+            <t t-set="counter" t-value="1"/>
+                <tr style="border-bottom:1px solid #D2D2D2;">
+                    <td style="border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"><span t-esc="o_index +1"/></td>
+                    <td style="border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"><span t-esc="str(o.employee_id.name or '')"/></td>
+                    <td style="border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"><span t-esc="str(o.contract_id.wage or 0.0)"/></td>
+                    <td style="border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"><span t-esc="str(trips_count(o) or 0.0)"/></td>
+                    <td style="border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"><span t-esc="str(o.unpaid_commission_ or 0.0)"/></td>
+                    <td style="border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"><span t-esc="str(o.paid_commission)"/></td>
+                    <td style="border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"><span t-esc="str(o.unpaid_deduction_ or 0.0)"/></td>
+                    <td style="border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"><span t-esc="str(o.paid_deduction)"/></td>
+                    <td style="border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"><span t-esc="str((o.unpaid_deduction_ - o.paid_deduction) or 0.0)"/></td>
+                    <td style="border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"><span t-esc="str(o.unpaid_loan_ or 0.0)"/></td>
+                    <td style="border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"><span t-esc="str(o.paid_loan)"/></td>
+                    <td style="border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"><span t-esc="str((o.unpaid_loan_ - o.paid_loan) or 0.0)"/></td>
+                    <td style="border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"><span t-esc="str((o.contract_id.wage + o.paid_commission - o.paid_deduction - o.paid_loan) or 0.0)"/></td>
+                    <td style="border-right:1px solid #D2D2D2;border-left:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;"/>
+                </tr>
+            </t>
+            </tbody>
+        </table>
+        <table class="table table-condensed" style="margin-top:-50px">
+            <tr style="background-color:#ECECEC">
+
+                <td style="border-right:1px solid #D2D2D2;" align="center" >إجمالى عدد الموظفين<br/>
+ بمسير الرواتب</td>
+                <td style="border-right:1px solid #D2D2D2;" align="center" >اجمالى<br/>
+ الرواتب</td>
+                <td style="border-right:1px solid #D2D2D2;" align="center" >اجمالى<br/>
+ الردود</td>
+                <td style="border-right:1px solid #D2D2D2;" align="center" >اجمالى<br/>
+ العمولات</td>
+                <td style="border-right:1px solid #D2D2D2;" align="center" >اجمالى<br/>
+ العمولات<br/>
+ المدفوعه</td>
+                <td style="border-right:1px solid #D2D2D2;" align="center" >إجمالى<br/>
+ الخصومات</td><br/>
+                <td style="border-right:1px solid #D2D2D2;" align="center" >اجمالى ما تم<br/>
+  خصمه من الموظفين</td><br/>
+                <td style="border-right:1px solid #D2D2D2;" align="center" >اجمالى<br/>
+ الخصومات<br/>
+ المرحله</td><br/>
+                <td style="border-right:1px solid #D2D2D2;" align="center" >اجمالى<br/>
+ السلف</td><br/>
+                <td style="border-right:1px solid #D2D2D2;" align="center" >إجمالى السلف<br/>
+ المخصومه</td><br/>
+                <td style="border-right:1px solid #D2D2D2;" align="center" >السلف المرحله<br/>
+ للشهر القادم</td><br/>
+                <td style="border-right:1px solid #D2D2D2;" align="center" >الاجمالى <br/>العام</td>
+            </tr>
+            <tr style="border-bottom:1px solid #D2D2D2;">
+                <td style="border-right:1px solid #D2D2D2;"><span t-esc="str(len(docs))"/></td>
+                <td style="border-right:1px solid #D2D2D2;"><span t-esc="str(sum([o.contract_id.wage for o in docs]))"/></td>
+                <td style="border-right:1px solid #D2D2D2;"><span t-esc="str(sum([trips_count(o) for o in docs]))"/></td>
+                <td style="border-right:1px solid #D2D2D2;"><span t-esc="str(sum([o.unpaid_commission_ for o in docs]))"/></td>
+                <td style="border-right:1px solid #D2D2D2;"><span t-esc="str(sum([o.paid_commission for o in docs]))"/></td>
+                <td style="border-right:1px solid #D2D2D2;"><span t-esc="str(sum([o.unpaid_deduction_ for o in docs]))"/></td>
+                <td style="border-right:1px solid #D2D2D2;"><span t-esc="str(sum([o.paid_deduction for o in docs]))"/></td>
+                <td style="border-right:1px solid #D2D2D2;"><span t-esc="str(sum([(o.unpaid_deduction_ - o.paid_deduction) for o in docs]))"/></td>
+                <td style="border-right:1px solid #D2D2D2;"><span t-esc="str(sum([o.unpaid_loan_ for o in docs]))"/></td>
+                <td style="border-right:1px solid #D2D2D2;"><span t-esc="str(sum([o.paid_loan for o in docs]))"/></td>
+                <td style="border-right:1px solid #D2D2D2;"><span t-esc="str(sum([(o.unpaid_loan_ - o.paid_loan) for o in docs]))"/></td>
+                <td style="border-right:1px solid #D2D2D2;border-left:1px solid #D2D2D2;"><span t-esc="str(sum([(o.contract_id.wage + o.paid_commission - o.paid_deduction - o.paid_loan) for o in docs]))"/></td>
+            </tr>
+        </table>
+        <table style="width:90%;margin-top:80px">
+            <tr>
+                <td height="70"><p align="center">إعداد</p></td>
+                <td><p align="center">مراجعة</p></td>
+                <td><p align="center">اعتماد</p></td>
+            </tr>
+            <tr>
+                <td><p align="center">--------------------</p></td>
+                <td><p align="center">--------------------</p></td>
+                <td><p align="center">--------------------</p></td>
+            </tr>
+        </table>
+</div>
+</t>
+</t>
+</template>
+
+</odoo>

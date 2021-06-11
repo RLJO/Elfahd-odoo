@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+<!--        <menuitem name="Transportation"-->
+<!--            id="menu_transportation_root"-->
+<!--            web_icon="fahad_transportation,static/description/icon.png"-->
+<!--            sequence="90"/>-->
+<!--        <menuitem-->
+<!--           id="menu_transportation_root"-->
+<!--           name="Transportation"-->
+<!--           web_icon="fahad_transportation, static/description/icon.png"-->
+<!--        />-->
+
+        <record id="view_new_line_form" model="ir.ui.view">
+            <field name="name">view.new.line.form</field>
+            <field name="model">new.line</field>
+            <field name="arch" type="xml">
+                <form string="New Line">
+                    <header>
+                        <button name="button_review" states="new" string="Review" type="object"
+                                groups="fahad_transportation.group_fahd_lines_review"/>
+                        <button name="button_confirm" states="review" string="Confirm" type="object"
+                                groups="fahad_transportation.group_fahd_lines_confirm"/>
+                        <button name="button_close" states="confirm" confirm="Are you sure you want to close" groups="base.group_no_one" string="Close" type="object"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="code" readonly="1"/>
+                        </group>
+                        <group>
+                            <group>
+
+                                <field name="branch_id" options="{'create': false, 'create_edit': false}" required="1" attrs="{'readonly': [('state', '=', 'close')]}"/>
+                                <field name="route_no" required="1" attrs="{'readonly': [('state', '=', 'close')]}"/>
+                                <field name="route_number" attrs="{'readonly': [('state', '=', 'close')]}"/>
+                                <field name="line_name" required="1" attrs="{'readonly': [('state', '=', 'close')]}"/>
+                                <field name="start_point" required="1"
+                                       attrs="{'readonly': [('state', 'in', ('confirm','close'))]}" options="{'create': false, 'create_edit': false}"/>
+                                <field name="end_point" required="1" options="{'create': false, 'create_edit': false}"
+                                       attrs="{'readonly': [('state', 'in', ('confirm','close'))]}"/>
+                            </group>
+                            <group>
+                                <field name="distance" required="1"/>
+                                <field name="km_price" required="1"/>
+                                <field name="line_price"/><!-- readonly="1"-->
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="allowance" required="1"/>
+                                <field name="driver_commission" required="1"/>
+                                <field name="loss_liter" required="1"/>
+                            </group>
+                            <group>
+<!--                                <field name="income_account"-->
+<!--                                       options="{'create': false, 'create_edit': false}" domain="[('type', '=', 'other')]"-->
+<!--                                       attrs="{'readonly': [('state', 'in', ('confirm','close'))],'required':[('state','=','review')]}"/>-->
+<!--                                <field name="loss_account" options="{'create': false, 'create_edit': false}" domain="[('type', '=', 'other')]"-->
+<!--                                       attrs="{'readonly': [('state', 'in', ('confirm','close'))],-->
+<!--                                       'required': [('loss_liter', '>', 0),('state','=','review')]}"/>-->
+                                <field name="journal" options="{'create': false, 'create_edit': false}" domain="[('type', '=', 'sale')]"
+                                       attrs="{'readonly': [('state', 'in', ('confirm','close'))],'required':[('state','=','review')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Products" invisible="1">
+                                <field name="product_ids" attrs="{'readonly': [('state', 'in', ('confirm','close'))]}"
+                                     options="{'create': false, 'create_edit': false}"
+                                     context="{'default_is_aramco':True,'default_sale_ok':False,'default_purchase_ok':False,'default_type': 'service'}">
+                                    <tree editable="top">
+                                        <field name="default_code" required="1"/>
+                                        <field name="name" required="1"/>
+                                        <field name="type" invisible="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Trips">
+                                <field name="trip_ids" readonly="1">
+                                    <tree string="Trips Data" editable="bottom">
+                                        <field name="trips_no"/>
+                                        <field name="loaded_date"/>
+                                        <field name="loaded_amount"/>
+                                        <field name="unloaded_amount"/>
+                                        <field name="total_amount"/>
+                                        <field name="discounted_aramco" string="Aramco Deduction"/>
+                                        <field name="net_amount"/>
+                                        <field name="diff_liter"/>
+                                        <field name="average_diff_liter"/>
+                                        <field name="aramco_invoice_no"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="Vehicles on Line">
+                                <field name="connected_vehicles" readonly="1"/>
+
+                            </page>
+                            <page string="Aramco Cars">
+                                <field name="aramco_line_ids">
+                                    <tree editable="top">
+                                        <field name="plaque_no" required="1"  options="{'create': false, 'create_edit': false}"/>
+                                        <field name="model" readonly="1"/>
+                                        <field name="color" readonly="1"/>
+                                        <field name="chasih_no" readonly="1"/>
+                                        <field name="aramco_no" readonly="1"/>
+                                        <field name="aramco_date" readonly="1"/>
+                                        <field name="aramco_expiry_date" readonly="1"/>
+                                        <field name="tank_no" required="1"  options="{'create': false, 'create_edit': false}"/>
+                                        <field name="aramco_sticker_expiry_date" readonly="1"/>
+                                        <field name="company_number" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_new_line_tree">
+            <field name="name">Line</field>
+            <field name="model">new.line</field>
+            <field name="arch" type="xml">
+                <tree string="Lines" class="lines">
+                    <field name="branch_id"/>
+                    <field name="route_no"/>
+                    <field name="route_number"/>
+                    <field name="line_name"/>
+                    <field name="start_point"/>
+                    <field name="end_point"/>
+
+                    <field name="distance"/>
+                    <field name="km_price"/>
+                    <field name="line_price"/>
+                    <field name="state"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_new_line_action" model="ir.actions.act_window">
+            <field name="name">New Line</field>
+            <field name="res_model">new.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p>
+                    Here You can new line, its products, linked trips, car information and tank information.
+                </p>
+            </field>
+        </record>
+
+
+        <!--############# Vehicle On Line #################################-->
+        <record model="ir.ui.view" id="view_vehicle_on_line_form">
+            <field name="name">Vehicles On Line</field>
+            <field name="model">vehicles.on.line</field>
+            <field name="arch" type="xml">
+                <form string="Vehicles On Line">
+                    <header>
+                        <button name="action_reviewed" string="Reviewed"
+                                states="new" type="object" class="oe_highlight"/>
+                        <button name="action_confirmed" string="Confirmed"
+                                states="review" type="object" class="oe_highlight"/>
+                        <button name="action_closed" string="Closed"
+                                states="review" type="object" class="oe_highlight"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" readonly="1"/>
+                                <field name="new_line_id" options="{'create': false, 'create_edit': false}"
+                                       domain="[('state', '=', 'confirm')]"
+                                       attrs="{'readonly': [('state', '=', 'confirm')], 'required': 1}"/>
+                            </group>
+                            <group>
+                                <field name="decision_date" attrs="{'readonly': [('state', '=', 'confirm')], 'required': 1}"/>
+                                <field name="decision_type" attrs="{'readonly': [('state', '=', 'confirm')], 'required': 1}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Tied Vehicles"
+                                  attrs="{'invisible':[('decision_type','=','install')]}">
+                                <field name="connected_vehicles_ids" context="{'vehicle_id': id}" attrs="{'readonly': [('state', '=', 'confirm')]}">
+                                    <tree string="Tied Vehicles" editable='bottom' create="false" delete="false">
+                                        <field name="code" readonly="1"/>
+                                        <field name="vehicle_id" invisible="1"/>
+                                        <!--<field name="cause"/>-->
+                                        <field name="decision_no" readonly="1"/>
+                                        <field name="install_date" />
+                                        <field name="car_code" readonly="1"/>
+                                        <field name="plaque_no" readonly="1"/>
+                                        <field name="model" readonly="1"/>
+                                        <field name="mark" readonly="1"/>
+                                        <field name="tank_code" readonly="1"/>
+                                        <field name="tank_capacity" readonly="1"/>
+                                        <field name="tank_company_no" readonly="1"/>
+                                        <field name="state_of_linked_line" required="1"/>
+                                        <!--<button name="connect_vehicle" string="Link Vehicle" type="object"-->
+                                        <!--icon="fa-star" context="{'vehicle_id': id}"/>-->
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="UnTied Vehicles">
+                                <field name="unconnected_vehicles_ids" context="{'vehicle_id': id}"  attrs="{'readonly': [('state', '=', 'confirm')]}">
+                                    <tree string="UnTied Vehicles" editable='bottom' create="false" delete="false">
+                                        <field name="code" readonly="1"/>
+                                        <field name="vehicle_id" invisible="1"/>
+                                        <!--<field name="cause"/>-->
+                                        <field name="decision_no" readonly="1"/>
+                                        <field name="install_date" />
+                                        <field name="car_code" readonly="1"/>
+                                        <field name="plaque_no" readonly="1"/>
+                                        <field name="model" readonly="1"/>
+                                        <field name="mark" readonly="1"/>
+                                        <field name="tank_code" readonly="1"/>
+                                        <field name="tank_capacity" readonly="1"/>
+                                        <field name="tank_company_no" readonly="1"/>
+                                        <field name="state_of_linked_line" required="1"/>
+                                        <!--<button name="connect_vehicle" string="Link Vehicle" type="object"-->
+                                        <!--icon="fa-star" context="{'vehicle_id': id}"/>-->
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_vehicle_on_line_tree">
+            <field name="name">Vehicles On Line</field>
+            <field name="model">vehicles.on.line</field>
+            <field name="arch" type="xml">
+                <tree string="Vehicles On Line">
+                    <field name="code"/>
+                    <field name="new_line_id"/>
+                    <field name="decision_date"/>
+                    <field name="decision_type"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_vehicles_on_line">
+            <field name="name">Vehicles On Line</field>
+            <field name="res_model">vehicles.on.line</field>
+<!--            <field name="view_type">form</field>-->
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="z_cities_form_view" model="ir.ui.view">
+            <field name="name">Cities form</field>
+            <field name="model">z.cities</field>
+            <field name="arch" type="xml">
+                <form string="Cities">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                            </group>
+                            <group>
+                                <field name="e_name" required="1"/>
+                            </group>
+                        </group>
+                        <group string="Notes">
+                            <field name="note" nolabel="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="z_cities_tree_view" model="ir.ui.view">
+            <field name="name">Cities tree</field>
+            <field name="model">z.cities</field>
+            <field name="arch" type="xml">
+                <tree string="Cities">
+                    <field name="name"/>
+                    <field name="e_name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="open_cities_action" model="ir.actions.act_window">
+            <field name="name">Cities</field>
+            <field name="res_model">z.cities</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="z_manufacture_form_view" model="ir.ui.view">
+            <field name="name">z.manufacture form</field>
+            <field name="model">z.manufacture</field>
+            <field name="arch" type="xml">
+                <form string="Wheel brands">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="code" required="1"/>
+                            </group>
+                            <group>
+                                <field name="e_name"/>
+                            </group>
+                        </group>
+                        <group string="Notes">
+                            <field name="note" nolabel="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="z_manufacture_tree_view" model="ir.ui.view">
+            <field name="name">Wheel brands</field>
+            <field name="model">z.manufacture</field>
+            <field name="arch" type="xml">
+                <tree string="Manufactures">
+                    <field name="name"/>
+                    <field name="e_name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+        <record id="open_manufacture_action" model="ir.actions.act_window">
+            <field name="name">Wheel brands</field>
+            <field name="res_model">z.manufacture</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="z_manufacture_tree_view"/>
+        </record>
+
+<!--        <template id="edit_backend_style" inherit_id="web.assets_backend" name="Edit backend Style">-->
+<!--            <link href="/fahad_transportation/static/src/css/base.css" position="after">-->
+<!--                <link rel="stylesheet" href="/fahad_transportation/static/src/css/css.css"/>-->
+<!--            </link>-->
+<!--        </template>-->
+    </data>
+</odoo>
+

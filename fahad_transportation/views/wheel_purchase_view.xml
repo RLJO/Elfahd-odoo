@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_wheel_purchase_form">
+            <field name="name">Wheel Purchase</field>
+            <field name="model">wheel.purchase</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name='button_review' type="object" string="Review" states="draft"
+                                groups="fahad_transportation.group1_fahad_review"/>
+                        <button name='button_confirmed' type="object" string="Confirm" states="reviewed"
+                                groups="fahad_transportation.group1_fahad_confirm"/>
+                        <field name="state" widget='statusbar' statusbar_visible="draft,reviewed,confirmed"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" readonly="1"/>
+                                <field name="invoice_number" required="1"/>
+
+                            </group>
+                            <group>
+                                <field name="invoice_date" required="1"/>
+                                <field name="estimated_life" required="1"/>
+                                <field name="show_wheels" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Wheels">
+                                <field name="wheels_ids">
+                                    <tree string="Wheels" editable="bottom">
+                                        <field name="wheel_no" />
+                                        <field name="size"/>
+                                        <field name="wheel_status" required="1"/>
+                                        <field name="manufacturing_company"/>
+                                        <field name="install_type" required="1"/>
+                                        <field name="purchase_price" required="1"/>
+                                        <field name="purchase_date" required="1"/>
+                                        <field name="estimated_life"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <group>
+                            <group>
+                                <group>
+                                    <field name="total"/>
+                                    <field name="supplier_id" required="1"/>
+                                    <field name="expense_account"
+                                           attrs="{'invisible':[('supplier_invoice_type','=','no_invoice')],'required':[('supplier_invoice_type','=','invoiced')]}"/>
+                                </group>
+                                <group>
+                                    <field name="supplier_invoice_type" required="1"/>
+                                    <field name="expense_journal" domain="[('type', 'not in', ['cash','bank'])]"
+                                           attrs="{'invisible':[('supplier_invoice_type','=','no_invoice')],'required':[('supplier_invoice_type','=','invoiced')]}"/>
+                                </group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_wheel_purchase_tree">
+            <field name="name">Wheel Purchase</field>
+            <field name="model">wheel.purchase</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="invoice_number"/>
+                    <field name="invoice_date"/>
+                    <field name="total"/>
+                    <field name="supplier_id"/>
+                    <field name="expense_account"/>
+                    <field name="supplier_invoice_type"/>
+                    <field name="expense_journal"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="view_wheel_purchase_action">
+            <field name="name">Wheel Purchase</field>
+            <field name="res_model">wheel.purchase</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

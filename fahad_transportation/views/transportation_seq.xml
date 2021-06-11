@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="seq_type_car_category" model="ir.sequence">
+            <field name="name">Car Category</field>
+            <field name="code">car.category</field>
+        </record>
+
+        <record id="seq_car_category" model="ir.sequence">
+            <field name="name">Car Category</field>
+            <field name="code">car.category</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_new_line" model="ir.sequence">
+            <field name="name">New Line Sequence Type</field>
+            <field name="code">new.line</field>
+        </record>
+
+        <record id="seq_new_line" model="ir.sequence">
+            <field name="name">New Line Sequence</field>
+            <field name="code">new.line</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_new_car" model="ir.sequence">
+            <field name="name">New Car Sequence Type</field>
+            <field name="code">new.car</field>
+        </record>
+
+        <record id="seq_new_car" model="ir.sequence">
+            <field name="name">New Car Sequence</field>
+            <field name="code">new.car</field>
+            <field name="prefix">C</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_discount" model="ir.sequence">
+            <field name="name">New Discount Sequence Type</field>
+            <field name="code">new.discount</field>
+        </record>
+
+        <record id="seq_new_discount" model="ir.sequence">
+            <field name="name">New discount Sequence</field>
+            <field name="code">new.discount</field>
+            <field name="padding">5</field>
+        </record>
+        <record id="seq_type_branch" model="ir.sequence">
+            <field name="name">Branch</field>
+            <field name="code">branch</field>
+        </record>
+
+        <record id="seq_new_branch" model="ir.sequence">
+            <field name="name">Branch</field>
+            <field name="code">branch</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_new_wheel" model="ir.sequence">
+            <field name="name">Wheel</field>
+            <field name="code">new.wheel</field>
+        </record>
+
+        <record id="seq_new_wheel" model="ir.sequence">
+            <field name="name">Wheel</field>
+            <field name="code">new.wheel</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_install_place" model="ir.sequence">
+            <field name="name">Install Place</field>
+            <field name="code">install.place</field>
+        </record>
+
+        <record id="seq_install_place" model="ir.sequence">
+            <field name="name">Install Place</field>
+            <field name="code">install.place</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_new_tank" model="ir.sequence">
+            <field name="name">New Tank Sequence Type</field>
+            <field name="code">new.tank</field>
+        </record>
+
+        <record id="seq_new_tank" model="ir.sequence">
+            <field name="name">New Tank Sequence</field>
+            <field name="code">new.tank</field>
+            <field name="prefix">K</field>
+            <field name="padding">4</field>
+        </record>
+
+        <record id="seq_type_expense_place" model="ir.sequence">
+            <field name="name">Expense</field>
+            <field name="code">expense</field>
+        </record>
+
+        <record id="seq_expense" model="ir.sequence">
+            <field name="name">Expense</field>
+            <field name="code">expense</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_trip" model="ir.sequence">
+            <field name="name">Trip</field>
+            <field name="code">trip</field>
+        </record>
+
+        <record id="seq_trip" model="ir.sequence">
+            <field name="name">Trip</field>
+            <field name="code">trip</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_new_vehicle" model="ir.sequence">
+            <field name="name">New Vehicle Sequence Type</field>
+            <field name="code">new.vehicle</field>
+        </record>
+
+        <record id="seq_new_vehicle" model="ir.sequence">
+            <field name="name">New Vehicle Sequence</field>
+            <field name="code">new.vehicle</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_vehicle_dismantling" model="ir.sequence">
+            <field name="name">New Vehicle Dismantling Sequence Type</field>
+            <field name="code">vehicle.dismantling</field>
+        </record>
+
+        <record id="seq_vehicle_dismantling" model="ir.sequence">
+            <field name="name">New Vehicle Dismantling Sequence</field>
+            <field name="code">vehicle.dismantling</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_vehicle_on_line" model="ir.sequence">
+            <field name="name">New Vehicle On Line Sequence Type</field>
+            <field name="code">vehicles.on.line</field>
+        </record>
+
+        <record id="seq_vehicle_on_line" model="ir.sequence">
+            <field name="name">New Vehicle On Line Sequence</field>
+            <field name="code">vehicles.on.line</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_expense_register" model="ir.sequence">
+            <field name="name">Expense Register Sequence Type</field>
+            <field name="code">expense.register</field>
+        </record>
+
+        <record id="seq_expense_register" model="ir.sequence">
+            <field name="name">Expense Register Sequence</field>
+            <field name="code">expense.register</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_other_revenue" model="ir.sequence">
+            <field name="name">Other Revenue Sequence Type</field>
+            <field name="code">other.revenue</field>
+        </record>
+
+        <record id="seq_other_revenue" model="ir.sequence">
+            <field name="name">Other Revenue Sequence</field>
+            <field name="code">other.revenue</field>
+            <field name="padding">5</field>
+        </record>
+        <record id="seq_type_rent" model="ir.sequence">
+            <field name="name">Rent Sequence Type</field>
+            <field name="code">rent</field>
+        </record>
+
+        <record id="seq_rent" model="ir.sequence">
+            <field name="name">Rent Sequence</field>
+            <field name="code">rent</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_buy_screen" model="ir.sequence">
+            <field name="name">Buy Screen Sequence Type</field>
+            <field name="code">buy.screen</field>
+        </record>
+
+        <record id="seq_buy_screen" model="ir.sequence">
+            <field name="name">Buy Screen Sequence</field>
+            <field name="code">buy.screen</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_wheel_purchase" model="ir.sequence">
+            <field name="name">Wheel Purchase</field>
+            <field name="code">wheel.purchase</field>
+        </record>
+
+        <record id="seq_wheel_purchase" model="ir.sequence">
+            <field name="name">Wheel Purchase</field>
+            <field name="code">wheel.purchase</field>
+            <field name="padding">5</field>
+        </record>
+
+        <record id="seq_type_journal_type" model="ir.sequence">
+            <field name="name">Journal Entry</field>
+            <field name="code">journal.entry</field>
+        </record>
+
+        <record id="seq_journal_type" model="ir.sequence">
+            <field name="name">Journal Entry</field>
+            <field name="code">journal.entry</field>
+            <field name="prefix">%(year)s/%(month)s/</field>
+            <field name="padding">5</field>
+        </record>
+
+    </data>
+</odoo>

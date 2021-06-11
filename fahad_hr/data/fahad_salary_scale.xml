@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- #### Salary Rule Category #### -->
+	<record model="hr.salary.rule.category" id="fahad_salary_rule_category_calc">
+        <field name="name">Calculation</field>
+        <field name="code">CALC</field>
+	</record>
+    <record model="hr.salary.rule.category" id="BASIC2">
+        <field name="name">Fahad Basic</field>
+        <field name="code">BASIC2</field>
+	</record>
+    <record model="hr.salary.rule.category" id="ALW2">
+        <field name="name">Fahad Allowance</field>
+        <field name="code">ALW2</field>
+	</record>
+    <record model="hr.salary.rule.category" id="DED2">
+        <field name="name">Fahad Deduction</field>
+        <field name="code">DED2</field>
+	</record>
+    <record model="hr.salary.rule.category" id="NET2">
+        <field name="name">Fahad Net</field>
+        <field name="code">NET2</field>
+	</record>
+	<!-- #### Salary Rule #### -->
+<!--	<record model="hr.salary.rule" id="fahad_salary_calculate_days">-->
+<!--        <field name="name">Calculate Days</field>-->
+<!--        <field name="code">CALD</field>-->
+<!--        <field name="category_id" ref="fahad_salary_rule_category_calc"/>-->
+<!--        <field name="condition_select">none</field>-->
+<!--        <field name="amount_select">code</field>-->
+<!--		<field name="appears_on_payslip" eval="False"/>-->
+<!--		<field name="sequence" eval="0"/>-->
+<!--		<field name="note">Calculate No. of Days in Payslip.</field>-->
+<!--        <field name="amount_python_compute">-->
+<!--date_to = str(payslip.date_to)-->
+<!--date_from = str(payslip.date_from)-->
+<!--d_to = date_to[-2:]-->
+<!--x = 0-->
+<!--new = 0-->
+<!--while(x &lt;= 31):-->
+<!--    x = x + 1-->
+<!--    if str(x) == d_to or "0" + str(x) == d_to:-->
+<!--        new = x-->
+<!--d_from = date_from[-2:]-->
+<!--y = 0-->
+<!--old = 0-->
+<!--while(y &lt;= 31):-->
+<!--    y = y + 1-->
+<!--    if str(y) == d_from or "0"+str(y) == d_from:-->
+<!--        old = y-->
+<!--caldays = new - old + 1-->
+<!--result = caldays-->
+<!--		</field>-->
+<!--	</record>-->
+<!--    <record model="hr.salary.rule" id="fahad_salary_specify_days_in_month">-->
+<!--        <field name="name">Calculate Month Days</field>-->
+<!--        <field name="code">CALM</field>-->
+<!--        <field name="category_id" ref="fahad_salary_rule_category_calc"/>-->
+<!--        <field name="condition_select">none</field>-->
+<!--        <field name="amount_select">code</field>-->
+<!--		<field name="appears_on_payslip" eval="False"/>-->
+<!--		<field name="sequence" eval="1"/>-->
+<!--		<field name="note">This calculate number of days in month</field>-->
+<!--        <field name="amount_python_compute">-->
+<!--datej = str(payslip.date_to)-->
+<!--datek = str(payslip.date_from)-->
+<!--dj = datej[5:7]-->
+<!--x = 0-->
+<!--new = 0-->
+<!--while(x &lt;= 12):-->
+<!--    x = x + 1-->
+<!--    if str(x) == dj or "0"+str(x) == dj:-->
+<!--        new = x-->
+<!--old = 31-->
+<!--if (new == 4 or new == 6 or new ==9 or new ==11):-->
+<!--    old = 30-->
+<!--if (new == 2):-->
+<!--    old = 28-->
+<!--result = old-->
+<!--		</field>-->
+<!--	</record>-->
+<!--    <record model="hr.salary.rule" id="fahad_salary_basic">-->
+<!--        <field name="name">Basic</field>-->
+<!--        <field name="code">FAHAD_BASIC</field>-->
+<!--        <field name="category_id" ref="fahad_hr.BASIC2"/>-->
+<!--        <field name="condition_select">python</field>-->
+<!--        <field name="condition_python">result = contract.wage or False</field>-->
+<!--        <field name="amount_select">code</field>-->
+<!--		<field name="appears_on_payslip" eval="True"/>-->
+<!--		<field name="sequence" eval="2"/>-->
+<!--		<field name="note">This calculate base</field>-->
+<!--        <field name="amount_python_compute">-->
+<!--if CALD &lt; CALM:-->
+<!--    result = (contract.wage/30)*CALD-->
+<!--else:-->
+<!--    result = contract.wage-->
+<!--		</field>-->
+<!--	</record>-->
+<!--    <record model="hr.salary.rule" id="fahad_salary_commission">-->
+<!--        <field name="name">Commission</field>-->
+<!--        <field name="code">COM</field>-->
+<!--        <field name="category_id" ref="fahad_hr.ALW2"/>-->
+<!--        <field name="condition_select">python</field>-->
+<!--        <field name="condition_python">result = payslip.paid_commission or False</field>-->
+<!--        <field name="amount_select">code</field>-->
+<!--		<field name="appears_on_payslip" eval="True"/>-->
+<!--		<field name="sequence" eval="3"/>-->
+<!--		<field name="note">This calculate commission</field>-->
+<!--        <field name="amount_python_compute">-->
+<!--result = payslip.paid_commission-->
+<!--		</field>-->
+<!--	</record>-->
+<!--    <record model="hr.salary.rule" id="fahad_salary_deduction">-->
+<!--        <field name="name">Deduction</field>-->
+<!--        <field name="code">DED</field>-->
+<!--        <field name="category_id" ref="fahad_hr.DED2"/>-->
+<!--        <field name="condition_select">python</field>-->
+<!--        <field name="condition_python">result = payslip.paid_deduction or False</field>-->
+<!--        <field name="amount_select">code</field>-->
+<!--		<field name="appears_on_payslip" eval="True"/>-->
+<!--		<field name="sequence" eval="4"/>-->
+<!--		<field name="note">This calculate commission</field>-->
+<!--        <field name="amount_python_compute">-->
+<!--result = payslip.paid_deduction-->
+<!--		</field>-->
+<!--	</record>-->
+<!--    <record model="hr.salary.rule" id="fahad_salary_loan">-->
+<!--        <field name="name">Loan</field>-->
+<!--        <field name="code">LOAN</field>-->
+<!--        <field name="category_id" ref="fahad_hr.DED2"/>-->
+<!--        <field name="condition_select">python</field>-->
+<!--        <field name="condition_python">result = payslip.paid_loan or False</field>-->
+<!--        <field name="amount_select">code</field>-->
+<!--		<field name="appears_on_payslip" eval="True"/>-->
+<!--		<field name="sequence" eval="5"/>-->
+<!--		<field name="note">This calculate commission</field>-->
+<!--        <field name="amount_python_compute">-->
+<!--result = payslip.paid_loan-->
+<!--		</field>-->
+<!--	</record>-->
+<!--    <record id="fahad_hr_rule_net" model="hr.salary.rule">-->
+<!--        <field name="name">Net</field>-->
+<!--        <field name="sequence" eval="400"/>-->
+<!--        <field name="code">FAHAD_NET</field>-->
+<!--        <field name="category_id" ref="fahad_hr.NET2"/>-->
+<!--        <field name="condition_select">none</field>-->
+<!--        <field name="amount_select">code</field>-->
+<!--        <field name="amount_python_compute">result = categories.BASIC2 + categories.ALW2 - categories.DED2</field>-->
+<!--        &lt;!&ndash;<field name="register_id" ref="hr_payroll.contrib_register_employees"/>&ndash;&gt;-->
+<!--    </record>-->
+<!--    <record id="fahad_structure_base" model="hr.payroll.structure">-->
+<!--        <field name="code">BASE2</field>-->
+<!--        <field name="name">Fahad Salary Scale</field>-->
+<!--        <field name="rule_ids" eval="[(6, 0, [ref('fahad_salary_basic'),-->
+<!--                              ref('fahad_salary_calculate_days'),-->
+<!--                              ref('fahad_salary_specify_days_in_month'),-->
+<!--                              ref('fahad_salary_commission'),-->
+<!--                              ref('fahad_salary_deduction'),-->
+<!--                              ref('fahad_salary_loan'),-->
+<!--                              ref('fahad_hr_rule_net')])]"/>-->
+<!--        <field name="company_id" ref="base.main_company"/>-->
+<!--    </record>-->
+</odoo>

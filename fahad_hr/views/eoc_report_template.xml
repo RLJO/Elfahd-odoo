@@ -1,0 +1,101 @@
+<odoo>
+        <template id="eoc_print_out_report">
+            <t t-call="report.html_container">
+                <t t-call="report.external_layout">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="page" style="direction:rtl">
+                            <table style="direction: rtl; height: 249px;" width="600;margin-top:2opx;">
+                                <thead style="font-size:18px; border-bottom:2px solid; padding:5px">
+                                    <tr>
+                                        <td>مخالصة العامل : <span t-field="o.employee_id.arabic_name"/> </td>
+                                        <td style="text-align: left;"> حتى تاريخ / <span t-field="o.last_working_day"/></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="padding:5px; padding-top:10px">تاريخ الدخول ميلادى</td>
+                                        <td style="padding:5px;"><span t-field="o.contract_start_date"/> </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px;">مدة العقد</td>
+                                        <td style="padding:5px;"><span t-field="o.contract_duration"/> </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px;">تاريخ توقف العقد</td>
+                                        <td style="padding:5px;"><span t-field="o.last_working_day"/> </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px;">تاريخ الدخول</td>
+                                        <td style="padding:5px;"><span t-field="o.contract_start_date"/> </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px;"> &#160;</td>
+                                        <td style="padding:5px;">
+                                            <div style="border-top:2px solid; border-bottom:2px solid; width: 180px; padding-bottom:10px">
+                                                <span t-field="o.contract_duration"/> </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px;">الاجمالى قبل الخصومات</td>
+                                        <td style="padding:5px;"><span t-field="o.eoc_calculation"/> </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px;">راتب عن شهر <span t-field="o.payslip_month"/></td>
+                                        <td style="padding:5px;"><span t-field="o.payslip_amount"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px;">مدفوعات / خصومات أخرى</td>
+                                        <td style="padding:5px;"><span t-field="o.other_payment_deduction"/> </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px;">السبب</td>
+                                        <td style="padding:5px;"><span t-field="o.cause"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px;">أجازة و نهاية الخدمه</td>
+                                        <td style="padding:5px;"><span t-field="o.contract_duration"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px;">عمولات غير مدفوعة</td>
+                                        <td style="padding:5px;"><span t-field="o.unpaid_commission"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px;">خصومات غير مسدده</td>
+                                        <td style="padding:5px;"><span t-field="o.unpaid_deduction"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px;">قروض غير مسددة</td>
+                                        <td style="padding:5px;"><span t-field="o.unpaid_loan"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:5px;">اجمالى المستحق</td>
+                                        <td style="padding:5px;"><span t-field="o.net"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br/><br/><br/>
+                            <p>
+ إستلمت كامل مستحقاتى و جواز سفرى و تذكرتى ولا أطالب المؤسسة بأى شئ حتى تاريخه .<br/>
+                                علما بأن العقد يتجدد تلقائيا بنفس شروط العقد السابق و على ذلك جرى التوقيع .
+                            </p><br/><br/>
+                            <table style="width:90%">
+                                <tr>
+                                    <td style="width:30%">مدير الحسابات</td>
+                                    <td style="width:30%">المدير</td>
+                                    <td style="width:30%">المستلم</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+        <report id="eoc_print_out"
+                model="hr.eoc"
+                string="EOC print out"
+                report_type="qweb-pdf"
+                name="fahad_hr.eoc_print_out_report"
+                file="fahad_hr.eoc_print_out_report"/>
+</odoo>

@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+		<!-- Root Menu -->
+<!--		<menuitem name="Transportation" id="menu_transportation_root" sequence="5"/>-->
+        <menuitem
+           id="menu_transportation_root"
+           name="Transportation"
+           web_icon="fahad_transportation,static/description/icon.png"
+        />
+        <!--<menuitem id="transportation" parent="menu_transportation_root" name="Transportation"/>-->
+		<!-- ###### Main Menu ######-->
+        <menuitem id="asset" parent="menu_transportation_root" name="Assets" sequence="0"/>
+        <menuitem id="vehicle" parent="menu_transportation_root" groups="fahad_transportation.group_fahd_vehicle_read" name="Vehicles" sequence="1" />
+        <menuitem id="line" parent="menu_transportation_root" name="Lines" sequence="2" groups="fahad_transportation.group_fahd_lines_read"/>
+        <menuitem id="branch" parent="menu_transportation_root" name="Branches" sequence="3" groups="fahad_transportation.group_fahd_car_read"/>
+        <menuitem id="expenses" parent="menu_transportation_root" name="Expenses and Maintenance" sequence="4" groups="fahad_transportation.group_fahd_expens_read"/>
+                                            <menuitem id="revenue" parent="menu_transportation_root" name="Revenue" sequence="5" groups="fahad_transportation.group_fahd_trip_read"/>
+        <menuitem id="other" parent="menu_transportation_root" name="Others" sequence="6" groups="fahad_transportation.group_fahd_other_read" />
+		<!-- ###### End of Main Menu ###### -->	
+
+		<!-- ###### Assets Menu ######-->
+        <menuitem action="view_new_car_action" id="new_car_menu" parent="asset" name="Cars" sequence="0"
+                  groups="fahad_transportation.group_fahd_car_read"/>
+        <menuitem action="view_new_tank_action" id="new_tank_menu" parent="asset" name="Tanks" sequence="1"
+                  groups="fahad_transportation.group_fahd_tank_read"/>
+        <menuitem name="Wheels Purchasing" id="menu_wheel_purchase" action="view_wheel_purchase_action"
+                  parent="asset" sequence="2" groups="fahad_transportation.group_fahd_wheel_read"/>
+        <menuitem name="Wheels" id="menu_wheel" action="action_new_wheel" parent="asset" sequence="3"
+                  groups="fahad_transportation.group_fahd_wheel_read"/>
+        <menuitem name="Wheels Action" id="menu_wheel_action" action="action_new_wheel_action" parent="asset"
+                  groups="fahad_transportation.group_fahd_wheel_read" sequence="4"/>
+        <menuitem name="Asset Sales" id="menu_buy_screen_actionview_vehicle_form" action="view_buy_screen_action"
+                  parent="asset" groups="fahad_transportation.group_fahd_trip_read" sequence="5"/>
+        <menuitem name="Car Categories" id="menu_car_category" action="action_car_category"
+                   groups="fahad_transportation.group_fahd_car_read" parent="asset" sequence="6"/>
+		<menuitem name="Install Places" id="menu_wheel_install_places" action="action_install_place_"
+                  parent="asset" sequence="7" groups="fahad_transportation.group_fahd_car_read,fahad_transportation.group_fahd_tank_read"/>
+		<!-- ###### End of Assets Menu ###### -->
+
+		<!-- ###### Vehicles Menu ######-->
+        <menuitem name="Vehicles" id="menu_vehicle_action" action="action_new_vehicles"
+                  parent="vehicle" sequence="0" groups="fahad_transportation.group_fahd_vehicle_read"/>
+        <menuitem name="Vehicles Dismantling" id="menu_vehicle_dismantling_action" action="action_vehicles_dismantling"
+                  parent="vehicle" sequence="1" groups="fahad_transportation.group_fahd_vehicle_read"/>
+        <menuitem name="Vehicles Custody" id="menu_vehicle_custody_action" action="view_vehicle_custody_action"
+                  parent="vehicle" sequence="2" groups="fahad_transportation.group_fahd_vehicle_read"/>
+
+        <menuitem name="Vehicles History" id="view_vehicle_history_menu" action="view_vehicle_history_action"
+                  parent="vehicle" sequence="5" groups="fahad_transportation.group_fahd_vehicle_read"/>
+		<!-- ###### End of Vehicles Menu ###### -->
+
+		<!-- ###### Lines Menu ######-->
+		<menuitem action="view_new_line_action" id="new_line_menu" parent="line" name="New Line" sequence="0"
+                groups="fahad_transportation.group_fahd_lines_read"/>
+        <menuitem name="Vehicles On Line" id="menu_vehicle_on_line_action" action="action_vehicles_on_line"
+                groups="fahad_transportation.group_fahd_lines_read"
+                  parent="line" sequence="1"/>
+		<!-- ###### End of Lines Menu ###### -->
+
+		<!-- ###### Branches Menu ######-->
+        <menuitem name="Branch" id="menu_branch" action="action_new_branch" parent="branch" sequence="0"
+                  groups="fahad_transportation.group_fahd_car_read"/>
+        <menuitem action="view_car_in_branch_action" id="car_branch_menu" parent="branch" name="Car In Branch"
+                  sequence="1" groups="fahad_transportation.group_fahd_car_read"/>
+		<!-- ###### End of Branches Menu ###### -->
+
+		<!-- ###### Expenses Menu ######-->
+        <menuitem name="Expenses" id="menu_expense_action" action="view_expense_action"
+                  groups="fahad_transportation.group_fahd_expens_read" parent="expenses" sequence="0"/>
+        <menuitem action="view_expense_register_action" id="expense_register_menu"
+                  groups="fahad_transportation.group_fahd_expens_read"
+                  parent="expenses" name="Expense Register" sequence="1"/>
+		<menuitem action="view_car_maintenance_action" id="car_maintenance_menu"
+                  groups="fahad_transportation.group_fahd_expens_read"
+                  parent="expenses" name="Car Maintenance" sequence="2"/>
+		<menuitem action="view_traffic_violation_action" id="traffic_violation_menu"
+                  groups="fahad_transportation.group_fahd_expens_read"
+                  parent="expenses" name="Traffic violation" sequence="5"/>
+		<!-- ###### End of Expenses Menu ###### -->
+
+		<!-- ###### Revenue Menu ######-->
+        <menuitem name="Trips" id="menu_tripe_action" action="view_trip_action" parent="revenue" sequence="0"
+                  groups="fahad_transportation.group_fahd_trip_read"/>
+        <menuitem name="Other Revenue" id="menu_other_revenue_action" action="view_other_revenue_action"
+                  groups="fahad_transportation.group_fahd_trip_read" parent="revenue" sequence="1"/>
+        <menuitem name="Rent to Other" id="menu_rent_action" action="view_rent_action"
+                  groups="fahad_transportation.group_fahd_trip_read" parent="revenue" sequence="2"/>
+		<!-- ###### End of Revenue Menu ###### -->
+
+		<!-- ###### Others Menu ######-->
+        <menuitem name="Contract" id="menu_fahad_contract_action" action="view_fahad_contract_action" parent="other" sequence="0"
+                 groups="fahad_transportation.group_fahd_other_read"/>
+        <menuitem action="open_cities_action" id="cities_menu" parent="other" name="Cities" sequence="20"
+                 groups="fahad_transportation.group_fahd_other_read"/>
+        <menuitem action="open_manufacture_action" id="manufactures_menu" parent="other" name="Wheel brands" sequence="25"
+                 groups="fahad_transportation.group_fahd_other_read"/>
+		<!-- ###### End of Others Menu ###### -->
+
+
+    </data>
+</odoo>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+<template id="report_new_car_document">
+    <t t-call="report.external_layout">
+        <div class="page" dir="rtl">
+            <table class="table table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th>م</th>
+                        <th>رقم السيارة</th>
+                        <th>موديل</th>
+                        <th>رقم الهيكل</th>
+                        <th>تاريخ انتهاء الاستمارة</th>
+                        <th>تاريخ انتهاء الفحص الدوري</th>
+                        <th>الخط</th>
+                    </tr>
+               </thead>
+               <tbody>
+                    <t t-set="counter" t-value="0+1"/>
+                    <tr>
+                        <td>
+                           <span t-esc="counter"/>
+                        </td>
+                        <td>
+                            <span t-field="o.plaque_no"/>
+                        </td>
+                        <td>
+                            <span t-field="o.model"/>
+                        </td>
+                        <td>
+                            <span t-field="o.chasih_no"/>
+                        </td>
+                        <td>
+                            <span t-field="o.operation_expiry_date"/>
+                        </td>
+                        <td>
+                            <span t-field="o.examine_date"/>
+                        </td>
+                        <td>
+                            <span t-field="o.linked_line"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </t>
+</template>
+
+<template id="report_new_car">
+    <t t-call="report.html_container">
+        <t t-foreach="doc_ids" t-as="doc_id">
+            <t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'fahad_transportation.report_new_car_document')"/>
+        </t>
+    </t>
+</template>
+</data>
+</odoo>

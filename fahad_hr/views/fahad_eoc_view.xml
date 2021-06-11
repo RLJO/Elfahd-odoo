@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--        <record model="ir.ui.view" id="view_fahad_hr_eoc_form">-->
+<!--            <field name="name">EOC</field>-->
+<!--            <field name="model">hr.eoc</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <form string="EOC">-->
+<!--                    <header>-->
+<!--                        <button name='button_review' type="object" string="Review" states="draft" class="oe_highlight"/>-->
+<!--                        <button name='button_confirm' type="object" string="Confirm" states="review"-->
+<!--                                class="oe_highlight"/>-->
+<!--                        <button name='button_draft' type="object" string="Set to Draft" states="draft,review"/>-->
+<!--                        <field name="state" widget="statusbar"/>-->
+<!--                    </header>-->
+<!--                    <sheet>-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="employee_id" options="{'create':false,'create_edit':false}"-->
+<!--                                       domain="[('state', '=', 'confirm')]" required="1"/>-->
+<!--                                <field name="eoc_reward" options="{'create':false,'create_edit':false}" required="1"/>-->
+<!--                                <field name="close_contract" invisible="1" options="{'create':false,'create_edit':false}" required="1"/>-->
+<!--                                <field name="last_working_day" required="1"/>-->
+<!--                                <field name="working_days" readonly="1"/>-->
+<!--                                <field name="contract_start_date" readonly="1"/>-->
+<!--                                <field name="contract_end_date" readonly="1"/>-->
+
+<!--                                <button name="create_payslip" string="Create Payslip" type="object"/>-->
+<!--                            </group>-->
+<!--                            <group>-->
+<!--                                <field name="close_employee" required="1"/>-->
+<!--                                <field name="contract_id" readonly="1"/>-->
+<!--                                <field name="payslip_id" readonly="1" attrs="{'invisible':[('payslip_id','=',False)]}"/>-->
+<!--                                <field name="ticket_eligibility" readonly="1"/>-->
+<!--                                <field name="ticket_used" readonly="1"/>-->
+<!--                                <field name="ticket_price" attrs="{'invisible': [('ticket_used', '=', 'yes')],-->
+<!--                                                                   'required': [('ticket_used', '=', 'no')]}"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="eoc_days" readonly="1" attrs="{'invisible': [('eoc_reward', 'not in', ['complete', 'incomplete'])]}"/>-->
+<!--                                <field name="eoc_consumed_days" readonly="1"-->
+<!--                                       attrs="{'invisible': [('eoc_reward', 'not in', ['complete', 'incomplete'])]}"/>-->
+<!--                                <field name="eoc_calculated"/>-->
+<!--                                <field name="wage" required="1"/>-->
+<!--                                <field name="other_payment_deduction" required="1"/>-->
+<!--                                <field name="cause" attrs="{'invisible':[('other_payment_deduction','=',0)],-->
+<!--                                                        'required':[('other_payment_deduction','!=',0)]}"/>-->
+<!--                                <field name="payslip_id_"/>-->
+<!--                                <field name="payslip_amount_" domain="[('employee_id','=',employee_id)]" attrs="{'invisible':[('payslip_id_','=',False)]}"/>-->
+<!--                            </group>-->
+<!--                            <group>-->
+<!--                                <field name="unpaid_commission" readonly="1"/>-->
+<!--                                <field name="unpaid_deduction" readonly="1"/>-->
+<!--                                <field name="unpaid_loan" readonly="1"/>-->
+<!--                                <field name="eoc_calculation" readonly="1"/>-->
+<!--                                <label for="payslip_amount_"/>-->
+<!--                                <div>-->
+<!--                                    <field name="payslip_amount" class="oe_inline"/>-->
+<!--                                    - -->
+<!--                                    <field name="payslip_month" class="oe_inline" placeholder="عن شهر"/>-->
+<!--                                </div>-->
+<!--                                <field name="net" readonly="1"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="liquidity_account_id" options="{'create':false,'create_edit':false}" domain="[('type', '=', 'liquidity')]"-->
+<!--                                       attrs="{'required':[('state','in',['review','confirm'])]}"/>-->
+<!--                                <field name="expense_account_id" attrs="{'required':[('state','in',['review','confirm'])]}"-->
+<!--                                       options="{'create':false,'create_edit':false}" domain="[('type', '=', 'other')]"/>-->
+<!--                                <field name="journal_id" attrs="{'required':[('state','in',['review','confirm'])]}"-->
+<!--                                       options="{'create':false,'create_edit':false}" domain="[('type', '!=', 'sale')]"/>-->
+<!--                                <field name="last_payslip" readonly="1"/>-->
+<!--                                <field name="move_id" readonly="1" attrs="{'invisible':[('move_id','=',False)]}"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                        <group string="Notes">-->
+<!--                            <field name="note"/>-->
+<!--                        </group>-->
+<!--                    </sheet>-->
+<!--                </form>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        <record model="ir.ui.view" id="view_fahad_hr_eoc_tree">-->
+<!--            <field name="name">EOC</field>-->
+<!--            <field name="model">hr.eoc</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <tree string="EOC" colors="blue:state=='draft';gray:state=='review';black:state=='confirm'">-->
+<!--                    <field name="employee_id"/>-->
+<!--                    <field name="eoc_days"/>-->
+<!--                    <field name="eoc_consumed_days"/>-->
+<!--                    <field name="eoc_calculated"/>-->
+<!--                    <field name="ticket_price"/>-->
+<!--                    <field name="unpaid_commission"/>-->
+<!--                    <field name="unpaid_deduction"/>-->
+<!--                    <field name="unpaid_loan"/>-->
+<!--                    <field name="net"/>-->
+<!--                    <field name="liquidity_account_id"/>-->
+<!--                    <field name="expense_account_id"/>-->
+<!--                    <field name="journal_id"/>-->
+<!--                    <field name="state"/>-->
+<!--                </tree>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <record id="view_fahad_hr_eoc_action" model="ir.actions.act_window">
+            <field name="name">EOC</field>
+            <field name="res_model">hr.eoc</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+</odoo>

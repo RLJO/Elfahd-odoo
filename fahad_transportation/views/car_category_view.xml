@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_car_category_form">
+            <field name="name">Car Category</field>
+            <field name="model">car.category</field>
+            <field name="arch" type="xml">
+                <form string="Car Category">
+                    <sheet>
+                        <group col="4">
+                            <field name="code" readonly="1"/>
+                            <field name="category_name" required="1"/>
+                            <field name="tankable" required="1"/>
+                            <field name="revenue" required="1"/>
+                        </group>
+                        <label for="linked_cars"/>
+                        <field name="linked_cars" readonly="1"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_car_category_tree">
+            <field name="name">car category</field>
+            <field name="model">car.category</field>
+            <field name="arch" type="xml">
+                <tree string="Car Category">
+                    <field name="code"/>
+                    <field name="category_name"/>
+                    <field name="tankable"/>
+                    <field name="revenue"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_car_category">
+            <field name="name">Car Category</field>
+            <field name="res_model">car.category</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_car_category_tree"/>
+        </record>
+
+
+    </data>
+</odoo>

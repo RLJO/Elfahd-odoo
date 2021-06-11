@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_vehicle_history_form">
+            <field name="name">view_vehicle_history_form</field>
+            <field name="model">vehicle.history</field>
+            <field name="arch" type="xml">
+                <form create="0" delete="0" edit="0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="driver_id"/>
+                                <field name="date"/>
+                                <field name="vehicle_id"/>
+                            </group>
+                            <group>
+                                <field name="car_id"/>
+                                <field name="vehicle_state"/>
+<!--                                <field name="car_code"/>-->
+                                <field name="line_id"/>
+                            </group>
+                        </group>
+                        <!--                        <notebook>-->
+                        <!--                            <page string="Notes">-->
+                        <!--                                <field name="note"/>-->
+                        <!--                            </page>-->
+                        <!--                        </notebook>-->
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_vehicle_history_tree">
+            <field name="name">view_vehicle_history_tree</field>
+            <field name="model">vehicle.history</field>
+            <field name="arch" type="xml">
+                <tree create="0" delete="0" edit="0">
+                    <field name="driver_id"/>
+                    <field name="date"/>
+                    <field name="vehicle_id"/>
+                    <field name="car_id"/>
+                    <field name="vehicle_state"/>
+<!--                    <field name="car_code"/>-->
+                    <field name="line_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="view_vehicle_history_action">
+            <field name="name">Vehicle History</field>
+            <field name="res_model">vehicle.history</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

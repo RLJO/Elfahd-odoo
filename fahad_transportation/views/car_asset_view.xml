@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="view_vehicle_custody_form" model="ir.ui.view">
+            <field name="name">Vehicle Custody</field>
+            <field name="model">vehicle.custody</field>
+            <field name="arch" type="xml">
+                <form string="Vehicle Custody">
+                    <header>
+						<button name="button_review" type="object" string="Review" states="draft"
+                                groups="fahad_transportation.group_fahd_vehicle_review"/>
+                        <button name="button_confirm" type="object" string="Confirm" states="review"
+                                groups="fahad_transportation.group_fahd_vehicle_confirm"/>
+                        <button name="button_close" type="object" confirm="Are you sure you want to close" string="Close"
+                                states="review" groups="base.group_no_one"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="decision_date" required="1"/>
+                            </group>
+                            <group>
+                                <field name="decision_type" required="1"/>
+                                <field name="dismantling_vehicle" attrs="{'invisible':[('decision_type','=','deliver')],'required':[('decision_type','=','receive')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="driver_id" domain="[('has_vehicle', '=', False),('employee_type','=','driver')]" options="{'create': false, 'create_edit': false}" required="1"/>
+                            </group>
+                            <group>
+                                <field name="vehicle_id" domain="[('state','=','confirm')]"
+                                       attrs="{'readonly':[('decision_type','=','deliver'),'&amp;',('driver_id','=',False)]}"
+                                       options="{'create': false, 'create_edit': false}" required="1"/>
+                                <field name="new_car_id" readonly="1"/>
+                                <field name="new_tank_id" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Driver Custody" >
+                                <field name="driver_custody_ids" >
+                                    <tree string="Diver Custody" create="false" delete="false">
+                                        <field name="driver_id" readonly="1" options="{'create': false, 'create_edit': false}"/>
+                                        <field name="custody" required="1" options="{'create': false, 'create_edit': false}"/>
+                                        <field name="location" domain="[('usage','=','internal')]" required="1" options="{'create': false, 'create_edit': false}"/>
+                                        <field name="number" required="1"/>
+                                        <field name="product_uom_id" required="1" options="{'create': false, 'create_edit': false}"/>
+                                        <field name="unit_price" required="1"/>
+                                        <field name="total" required="1"/>
+                                        <field name="custody_state" required="1"/>
+                                        <field name="delivery_date" required="1"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+
+                                <label for="driver_custody_to_warehouse" attrs="{'invisible':[('decision_type','=','deliver')]}"/>
+                                <field name="driver_custody_to_warehouse" attrs="{'invisible':[('decision_type','=','deliver')]}">
+                                    <tree string="Receive Custody" editable="bottom">
+                                        <field name="custody" required="1"/>
+                                        <field name="number" string="Quantity" required="1"/>
+                                        <field name="product_uom_id" readonly="1"  options="{'create': false, 'create_edit': false}"/>
+                                        <!--<field name="location" domain="[('usage','=','internal')]" options="{'create': false, 'create_edit': false}"-->
+                                               <!--required="1"/>-->
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                                <separator/>
+                                <label for ="driver_custody_lost" attrs="{'invisible':[('decision_type','=','deliver')]}"/>
+                                <field name="driver_custody_lost" attrs="{'invisible':[('decision_type','=','deliver')]}">
+                                    <tree string="Lost Custody" editable="bottom">
+                                        <field name="custody" required="1"/>
+                                        <field name="number" string="Quantity" required="1"/>
+                                        <field name="unit_price" required="1"/>
+                                        <field name="total" required="1"/>
+                                        <field name="driver_discount"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+
+                            </page>
+
+                            <page string="Car Custody" >
+                                <field name="car_custody_ids">
+                                    <tree string="Car Custody" create="false" delete="false">
+                                        <field name="car_id" readonly="1" options="{'create': false, 'create_edit': false}"/>
+                                        <field name="custody" required="1" options="{'create': false, 'create_edit': false}"/>
+                                        <field name="location" required="1" domain="[('usage','=','internal')]" options="{'create': false, 'create_edit': false}"/>
+                                        <field name="number" required="1"/>
+                                        <field name="product_uom_id" options="{'create': false, 'create_edit': false}"/>
+                                        <field name="unit_price" required="1"/>
+                                        <field name="total" required="1"/>
+                                        <field name="custody_state" required="1"/>
+                                        <field name="delivery_date" required="1"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+
+                                <label for="car_custody_to_warehouse" attrs="{'invisible':[('decision_type','=','deliver')]}"/>
+                                <field name="car_custody_to_warehouse" attrs="{'invisible':[('decision_type','=','deliver')]}">
+                                    <tree string="Receive Custody" editable="bottom">
+                                        <field name="custody" required="1"/>
+                                        <field name="number" string="Quantity" required="1"/>
+                                        <field name="product_uom_id" readonly="1" options="{'create': false, 'create_edit': false}"/>
+                                        <!--<field name="location" options="{'create': false, 'create_edit': false}"-->
+                                               <!--domain="[('usage','=','internal')]" required="1"/>-->
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                                <separator/>
+                                <label for ="car_custody_lost" attrs="{'invisible':[('decision_type','=','deliver')]}"/>
+                                <field name="car_custody_lost" attrs="{'invisible':[('decision_type','=','deliver')]}">
+                                    <tree string="Lost Custody" editable="bottom">
+                                        <field name="custody" required="1"/>
+
+                                        <field name="number" string="Quantity" required="1"/>
+                                        <field name="unit_price" required="1"/>
+                                        <field name="total" required="1"/>
+                                        <field name="driver_discount"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+
+                            </page>
+
+                            <page string="Tank Custody">
+                                <field name="tank_custody_ids" >
+                                    <tree string="Tank Custody" create="false" delete="false">
+                                        <field name="tank_id" readonly="1" options="{'create': false, 'create_edit': false}"/>
+                                        <field name="custody" required="1" options="{'create': false, 'create_edit': false}"/>
+                                        <field name="location" domain="[('usage','=','internal')]" required="1" options="{'create': false, 'create_edit': false}"/>
+                                        <field name="number" required="1"/>
+                                        <field name="product_uom_id" options="{'create': false, 'create_edit': false}"/>
+                                        <field name="unit_price" required="1"/>
+                                        <field name="total" required="1"/>
+                                        <field name="custody_state" required="1"/>
+                                        <field name="delivery_date" required="1"/>
+                                        <field name="state"/>
+                                    </tree>
+                                </field>
+                                 <label for="tank_custody_to_warehouse" attrs="{'invisible':[('decision_type','=','deliver')]}"/>
+                                <field name="tank_custody_to_warehouse" attrs="{'invisible':[('decision_type','=','deliver')]}">
+                                    <tree string="Receive Custody" editable="bottom">
+                                       <field name="custody" required="1"/>
+                                        <field name="number" string="Quantity" required="1"/>
+                                        <field name="product_uom_id" readonly="1" options="{'create': false, 'create_edit': false}"/>
+                                        <!--<field name="location" options="{'create': false, 'create_edit': false}"-->
+                                               <!--domain="[('usage','=','internal')]" required="1"/>-->
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                                <separator/>
+                                <label for ="tank_custody_lost" attrs="{'invisible':[('decision_type','=','deliver')]}"/>
+                                <field name="tank_custody_lost" attrs="{'invisible':[('decision_type','=','deliver')]}">
+                                    <tree string="Lost Custody" editable="bottom">
+                                        <field name="custody" required="1"/>
+                                        <field name="number" string="Quantity" required="1"/>
+                                        <field name="unit_price" required="1"/>
+                                        <field name="total" required="1"/>
+                                        <field name="driver_discount"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <group>
+                            <group>
+                                <field name="expense_account" options="{'create': false, 'create_edit': false}"
+                                                       attrs="{'invisible':[('decision_type','!=','receive',)],'required':[('state','=','review'),('decision_type','=','receive')]}"/>
+                                <field name="custody_account" options="{'create': false, 'create_edit': false}"
+                                                       attrs="{'invisible':[('decision_type','!=','receive',)],
+                                                       'required':[('state','=','review'),('decision_type','=','receive')]}"/>
+                                <field name="location" attrs="{'invisible':[('decision_type','!=','receive',)],'required':[('state','=','review'),('decision_type','=','receive')]}" options="{'create': false, 'create_edit': false}"
+                                       domain="[('usage','=','internal')]"/>
+                                <field name="account_journal" attrs="{'invisible':[('decision_type','!=','receive',)],'required':[('state','=','review'),('decision_type','=','receive')]}" options="{'create': false, 'create_edit': false}" domain="[('type','in',['general','purchase'])]"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="note"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_vehicle_custody_tree">
+            <field name="name">Vehicle Custody</field>
+            <field name="model">vehicle.custody</field>
+            <field name="arch" type="xml">
+                <tree string="Vehicle Custody">
+                    <field name="decision_date"/>
+                    <field name="decision_type"/>
+                    <field name="driver_id"/>
+                    <field name="vehicle_id"/>
+                    <field name="new_car_id"/>
+                    <field name="new_tank_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_vehicle_custody_action" model="ir.actions.act_window">
+            <field name="name">Vehicle Custody</field>
+            <field name="res_model">vehicle.custody</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

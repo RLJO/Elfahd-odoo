@@ -1,0 +1,118 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* zolaphi_warehouse
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-23 21:35+0000\n"
+"PO-Revision-Date: 2015-06-27 01:27+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"X-Generator: Poedit 1.8.1\n"
+
+#. module: zolaphi_warehouse
+#: view:res.users:zolaphi_warehouse.view_users_inherit
+msgid "Access Rights"
+msgstr "الصلاحيات"
+
+#. module: zolaphi_warehouse
+#: field:stock.location,account_id:0
+msgid "Account"
+msgstr "حساب"
+
+#. module: zolaphi_warehouse
+#: field:stock.picking,car_id:0 selection:stock.picking,delivery_type:0
+msgid "Car"
+msgstr "سيارة"
+
+#. module: zolaphi_warehouse
+#: field:stock.picking,delivery_type:0
+msgid "Delivery type"
+msgstr "نوع التسليم"
+
+#. module: zolaphi_warehouse
+#: code:addons/zolaphi_warehouse/zolaphi_warehouse.py:66
+#, python-format
+msgid "Error !"
+msgstr "خطأ !"
+
+#. module: zolaphi_warehouse
+#: field:stock.picking,expense_type_id:0
+msgid "Expense Type"
+msgstr "نوع المصروف"
+
+#. module: zolaphi_warehouse
+#: field:stock.picking,is_internal:0
+msgid "Internal"
+msgstr "داخلي"
+
+#. module: zolaphi_warehouse
+#: model:ir.model,name:zolaphi_warehouse.model_stock_location
+msgid "Inventory Locations"
+msgstr "موقع المخزن"
+
+#. module: zolaphi_warehouse
+#: view:res.users:zolaphi_warehouse.view_users_inherit
+msgid "Locations"
+msgstr "الموقع"
+
+#. module: zolaphi_warehouse
+#: model:ir.model,name:zolaphi_warehouse.model_stock_picking
+msgid "Picking List"
+msgstr "قائمة الالتقاط"
+
+#. module: zolaphi_warehouse
+#: model:ir.model,name:zolaphi_warehouse.model_stock_transfer_details
+msgid "Picking wizard"
+msgstr "اختيار"
+
+#. module: zolaphi_warehouse
+#: code:addons/zolaphi_warehouse/zolaphi_warehouse.py:66
+#, python-format
+msgid "Please set the account in ("
+msgstr "فضلا ضع الحساب في ("
+
+#. module: zolaphi_warehouse
+#: code:addons/zolaphi_warehouse/zolaphi_warehouse.py:40
+#, python-format
+msgid "Sorry , car status must be approved or linked to a vehicle   or rented"
+msgstr "اسف، حالة السيارة يجب ان تكون معتمدة او مربوطة مع شاحنة او مؤجرة"
+
+#. module: zolaphi_warehouse
+#: code:addons/zolaphi_warehouse/zolaphi_warehouse.py:43
+#, python-format
+msgid "Sorry, tank status must be approved or linked to a vehicle   or rented"
+msgstr "اسف ، حالة الخزان يجب ان تكون معتمدة او مربوطة مع شاحنة او مؤجرة"
+
+#. module: zolaphi_warehouse
+#: model:ir.model,name:zolaphi_warehouse.model_stock_move
+msgid "Stock Move"
+msgstr "حركة مخزن"
+
+#. module: zolaphi_warehouse
+#: code:addons/zolaphi_warehouse/zolaphi_warehouse.py:39
+#: code:addons/zolaphi_warehouse/zolaphi_warehouse.py:42
+#, python-format
+msgid "Stop !!"
+msgstr "توقف!!"
+
+#. module: zolaphi_warehouse
+#: selection:stock.picking,delivery_type:0 field:stock.picking,tank_id:0
+msgid "Tank"
+msgstr "خزان"
+
+#. module: zolaphi_warehouse
+#: model:ir.model,name:zolaphi_warehouse.model_res_users
+msgid "Users"
+msgstr "مستخدم"
+
+#. module: zolaphi_warehouse
+#: field:res.users,locations_ids:0
+msgid "locations"
+msgstr "المواقع"

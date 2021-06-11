@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- #### Ticketing Menu ####-->
+        <menuitem name="Ticketing" id="menu_ticketing" action="view_fahad_hr_ticket_action"
+                  parent="hr.menu_hr_main"/>
+
+        <menuitem name="EOC" id="menu_eoc" action="view_fahad_hr_eoc_action"
+                  parent="hr.menu_hr_main"/>
+</odoo>

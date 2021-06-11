@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="remove_Quotation_taxes">
+            <field name="name">remove_Quotation_taxes</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <field name="taxes_id" position="replace"></field>
+            </field>
+        </record>
+<!--        <record model="ir.ui.view" id="remove_customer_invoice_taxes">-->
+<!--            <field name="name">remove_customer_invoice_taxes</field>-->
+<!--            <field name="model">account.invoice</field>-->
+<!--            <field name="inherit_id" ref="account.invoice_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <field name="invoice_line_tax_id" position="replace"></field>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record model="ir.ui.view" id="remove_supllier_invoice_taxes">-->
+<!--            <field name="name">remove_supplier_invoice_taxes</field>-->
+<!--            <field name="model">account.invoice</field>-->
+<!--            <field name="inherit_id" ref="account.invoice_supplier_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <field name="invoice_line_tax_id" position="replace"></field>-->
+<!--            </field>-->
+<!--        </record>-->
+<!--        <record model="ir.ui.view" id="product_template_form_view_inherit">-->
+<!--            <field name="name">product_template_form_view inherit</field>-->
+<!--            <field name="model">product.template</field>-->
+<!--            <field name="inherit_id" ref="account.product_template_form_view"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//page[@string='Accounting']" position="replace" >-->
+<!--                     <page string="Accounting"-->
+<!--                          groups="account.group_account_invoice,fahad_transportation.group_fahd_car_confirm,fahad_transportation.group_fahd_tank_confirm">-->
+<!--                        <group>-->
+<!--                            <label for="categ_id" string="Internal Category"/>-->
+<!--                            <div><field name="categ_id" colspan="3" nolabel="1"/></div>-->
+<!--                        </group>-->
+<!--                        <group name="properties">-->
+<!--                            <group>-->
+<!--                                <field name="property_account_income" groups="account.group_account_user"/>-->
+<!--                                <field name="taxes_id" colspan="2" widget="many2many_tags"/>-->
+<!--                            </group>-->
+<!--                            <group>-->
+<!--                                <field name="property_account_expense" groups="account.group_account_user"/>-->
+<!--                                <field name="supplier_taxes_id" colspan="2" widget="many2many_tags"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                </page>-->
+<!--                </xpath>-->
+<!--&lt;!&ndash;                 <page string="Accounting" position="replace">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <page string="Accounting"&ndash;&gt;-->
+<!--&lt;!&ndash;                          groups="account.group_account_invoice,fahad_transportation.group_fahd_car_confirm,fahad_transportation.group_fahd_tank_confirm">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <group>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <label for="categ_id" string="Internal Category"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <div><field name="categ_id" colspan="3" nolabel="1"/></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </group>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <group name="properties">&ndash;&gt;-->
+<!--&lt;!&ndash;                            <group>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <field name="property_account_income" groups="account.group_account_user"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <field name="taxes_id" colspan="2" widget="many2many_tags"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </group>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <group>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <field name="property_account_expense" groups="account.group_account_user"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <field name="supplier_taxes_id" colspan="2" widget="many2many_tags"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </group>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </group>&ndash;&gt;-->
+<!--&lt;!&ndash;                </page>&ndash;&gt;-->
+<!--&lt;!&ndash;                 </page>&ndash;&gt;-->
+<!--            </field>-->
+<!--        </record>-->
+    </data>
+</odoo>

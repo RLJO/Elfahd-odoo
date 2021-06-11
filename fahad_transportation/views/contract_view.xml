@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_fahad_contract_form">
+            <field name="name">Contract</field>
+            <field name="model">fahad.contract</field>
+            <field name="arch" type="xml">
+                <form string="Contract">
+                    <header>
+                        <button name='button_review' type="object" string="Review" states="draft"
+                                groups="fahad_transportation.group_fahd_other_review"/>
+                        <button name='button_confirm' type="object" string="Confirm" states="reviewed"
+                                groups="fahad_transportation.group_fahd_other_confirm"/>
+                        <button name='button_close' type="object" confirm="Are you sure you want to close" groups="base.group_no_one" string="Close" states="draft,reviewed"/>
+                        <button name='button_draft' type="object" string="Set to Draft" states="draft,reviewed"/>
+                        <field name="state" widget='statusbar'/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="contract_no" attrs="{'readonly': [('state', '=', 'confirmed')]}"/>
+                                <field name="contractor_no" attrs="{'readonly': [('state', '=', 'confirmed')]}"/>
+                                <field name="purchase_no" attrs="{'readonly': [('state', '=', 'confirmed')]}"/>
+                            </group>
+                            <group>
+                                <field name="contract_start_date" attrs="{'readonly': [('state', '=', 'confirmed')]}"/>
+                                <field name="contract_end_date" attrs="{'readonly': [('state', '=', 'confirmed')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="note"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_fahad_contract_tree">
+            <field name="name">Contract</field>
+            <field name="model">fahad.contract</field>
+            <field name="arch" type="xml">
+                <tree string="Contract">
+                    <field name="contract_no"/>
+                    <field name="contractor_no"/>
+                    <field name="purchase_no"/>
+                    <field name="contract_start_date"/>
+                    <field name="contract_end_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="view_fahad_contract_action">
+            <field name="name">Contract</field>
+            <field name="res_model">fahad.contract</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_fahad_contract_tree"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!--        <record model="ir.ui.view" id="view_fahad_hr_contract_form">-->
+<!--            <field name="name">Contract</field>-->
+<!--            <field name="model">hr.contract</field>-->
+<!--            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <field name="permit_no" position="after">-->
+<!--                    <field name="active"/>-->
+<!--                </field>-->
+<!--                <field name="date_end" position="attributes">-->
+<!--                    <attribute name="required">1</attribute>-->
+<!--                 </field>-->
+<!--                <notebook position="inside">-->
+<!--                    <page string="Flight Ticket">-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="ticket_eligibility" required="1"/>-->
+<!--                            </group>-->
+<!--                            <group>-->
+<!--                                <field name="ticket_used" required="1"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                    <page string="Commission Data">-->
+<!--                        <group>-->
+<!--                            <field name="commission_line">-->
+<!--                                <tree string="Commission" editable="bottom">-->
+<!--                                    <field name="date" required="1"/>-->
+<!--                                    <field name="line_id" readonly="1"/>-->
+<!--                                    <field name="trip_code" readonly="1"/>-->
+<!--                                    <field name="vehicle_id" readonly="1"/>-->
+<!--                                    <field name="amount" sum="test" required="1"/>-->
+<!--                                    <field name="note"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="commission_paid_line" readonly="1">-->
+<!--                                <tree string="Paid Commission" editable="bottom">-->
+<!--                                    <field name="date"/>-->
+<!--                                    <field name="amount" sum="test"/>-->
+<!--                                    <field name="note"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="commission_diff"/>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                    <page string="Deduction Data">-->
+<!--                        <group>-->
+<!--                            <field name="deduction_line">-->
+<!--                                <tree string="Deduction" editable="bottom">-->
+<!--                                    <field name="date" required="1"/>-->
+<!--                                    <field name="amount" sum="test" required="1"/>-->
+<!--                                    <field name="cause" required="1"/>-->
+<!--                                    <field name="document"/>-->
+<!--                                    <field name="note"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="deduction_paid_line" readonly="1">-->
+<!--                                <tree string="Paid Deduction" editable="bottom">-->
+<!--                                    <field name="date"/>-->
+<!--                                    <field name="amount" sum="test"/>-->
+<!--                                    <field name="note"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="deduction_diff"/>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                    <page string="Loan Data">-->
+<!--                        <group>-->
+<!--                            <field name="loan_line">-->
+<!--                                <tree string="Loan" editable="bottom">-->
+<!--                                    <field name="date" required="1"/>-->
+<!--                                    <field name="amount" sum="test" required="1"/>-->
+<!--                                    <field name="cause" required="1"/>-->
+<!--                                    <field name="note"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="loan_paid_line" readonly="1">-->
+<!--                                <tree string="Paid Loan" editable="bottom">-->
+<!--                                    <field name="date"/>-->
+<!--                                    <field name="amount" sum="test"/>-->
+<!--                                    <field name="note"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="loan_diff"/>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                    <page string="EOC Data">-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="eoc_boolean"/>-->
+<!--                            </group>-->
+<!--                            <group></group>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="leave_line">-->
+<!--                                <tree string="Leave Data" editable="bottom">-->
+<!--                                    <field name="date_to" required="1"/>-->
+<!--                                    <field name="date_from" required="1"/>-->
+<!--                                    <field name="leave_balance" sum="test"/>-->
+<!--                                    <field name="note"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <group>-->
+<!--                                <field name="eoc_days"/>-->
+<!--                            </group>-->
+<!--                            <group>-->
+<!--                                <field name="remaining_eoc_days"/>-->
+<!--                            </group>-->
+<!--                        </group>-->
+<!--                    </page>-->
+<!--                </notebook>-->
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        <record model="ir.ui.view" id="view_fahad_hr_contract_form2">-->
+<!--            <field name="name">Contract</field>-->
+<!--            <field name="model">hr.contract</field>-->
+<!--            <field name="inherit_id" ref="hr_payroll_account.hr_contract_form_inherit"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <field name="journal_id" position="replace">-->
+<!--                    <field name="journal_id" required="1" domain="[('type', 'not in', ['cash', 'bank', 'sale'])]"-->
+<!--                           options="{'create': false, 'create_edit': false}"/>-->
+<!--                 </field>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <record id="view_hr_payslip_form2" model="ir.ui.view">
+            <field name="name">hr.payslip</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <field name="employee_id" position="attributes">
+                    <attribute name="options">{'create': false, 'create_edit': false}</attribute>
+                </field>
+            </field>
+        </record>
+
+<!--        <record model="ir.ui.view" id="hr_contract_view_form_inherit">-->
+<!--            <field name="name">Contract</field>-->
+<!--            <field name="model">hr.contract</field>-->
+<!--            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <field name="employee_id" position="attributes">-->
+<!--                    <attribute name="options">{'create': false, 'create_edit': false}</attribute>-->
+<!--                    <attribute name="domain">[('state','=','confirm')]</attribute>-->
+<!--                 </field>-->
+<!--            </field>-->
+<!--        </record>-->
+</odoo>

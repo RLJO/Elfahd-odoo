@@ -1,0 +1,4208 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* fahad_transportation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-25 00:22+0000\n"
+"PO-Revision-Date: 2015-06-27 01:09+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar_SY\n"
+"X-Generator: Poedit 1.8.1\n"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:36
+#: code:addons/fahad_transportation/models/new_car.py:440
+#, python-format
+msgid " %s Should be 10 Characters."
+msgstr " %s يجب ان يكون 10 أحرف "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:48
+#: code:addons/fahad_transportation/models/new_car.py:452
+#, python-format
+msgid " %s Should be in this format dd/mm/yyyy or dd-mm-yyyy only"
+msgstr " %s التاريخ يجب ان يكون بهذا الشكل اليوم/الشهر/السنة أو اليوم-الشهر-السنة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:52
+#: code:addons/fahad_transportation/models/new_car.py:456
+#, python-format
+msgid " %s should not be greater than 12 months"
+msgstr " %s يجب ان لا يكون اكبر من 12 شهر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:50
+#: code:addons/fahad_transportation/models/new_car.py:454
+#, python-format
+msgid " %s should not be greater than 30 days"
+msgstr " %s يجب ان لا يكون اكبر من 30 يوم"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:54
+#: code:addons/fahad_transportation/models/new_car.py:458
+#, python-format
+msgid " Year of %s should be only 4 digits."
+msgstr "السنة  %s  يجب ان تكون 4 ارقام"
+
+#. module: fahad_transportation
+#: field:trips,trip_discount:0
+msgid "10% Discount"
+msgstr "خصم 10 % "
+
+#. module: fahad_transportation
+#: model:ir.actions.act_window,help:fahad_transportation.view_new_line_action
+msgid ""
+"<p>\n"
+"                    Here You can new line, its products, linked trips, car information and tank information.\n"
+"                </p>\n"
+"            "
+msgstr ""
+"<p>\n"
+"                    هنا يمكن اضافة سطر جديد للمنتجات والرحلات المرتطبة ومعلومات السيارات والخزانات.\n"
+"                </p>\n"
+"            "
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_account_move
+msgid "Account Entry"
+msgstr "قيد الحساب"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:415
+#: code:addons/fahad_transportation/models/new_tank.py:318
+#, python-format
+msgid "Accumulated Depreciation Can not be bigger than Paid Amount"
+msgstr "مجمع الاهلاك يجب ان لا يكون اكبر من المبلغ المدفوع"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:210
+#: code:addons/fahad_transportation/models/new_tank.py:106
+#: field:new.car,accumulated_depreciation:0
+#: field:new.tank,accumulated_depreciation:0
+#, python-format
+msgid "Accumulated‬‬ ‫‪Depreciation"
+msgstr "مجمع الاهلاك"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: field:new.car,action_place_ids:0
+#: view:new.tank:fahad_transportation.new_tank_form
+#: field:new.tank,action_place_ids:0
+msgid "Action Place"
+msgstr "مكان العمل"
+
+#. module: fahad_transportation
+#: field:car.maintenance,active:0
+msgid "Active"
+msgstr "نشط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:21
+#: code:addons/fahad_transportation/models/transportation.py:336
+#: field:line.vehicle.history,allowance:0 field:new.line,allowance:0
+#, python-format
+msgid "Allowance"
+msgstr "بدل"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:94
+#, python-format
+msgid "Allowance should be less than 2"
+msgstr "البدل يجب ان يكون اقل من 2"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:15
+#: code:addons/fahad_transportation/models/rent.py:126
+#: field:discount.commission.line,amount:0
+#: field:expense.register.lines,amount:0 field:other.revenue.line,amount:0
+#: field:rent.lines,amount:0 field:wheel.expenses,amount:0
+#, python-format
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: fahad_transportation
+#: field:instalment.sheet.line,amount_already_paid:0
+#: field:tank.instalment.sheet.line,amount_already_paid:0
+msgid "Amount Already Paid"
+msgstr "المبلغ بالفعل مدفوع"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:47
+#, python-format
+msgid "Amount Should be 5 digits only."
+msgstr "المبلغ يجب ان يكون 5 ارقام فقط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:45
+#: code:addons/fahad_transportation/models/other_revenue.py:29
+#, python-format
+msgid "Amount must be +ve and bigger than 0"
+msgstr "المبلغ يجب ان يكون اكبر من صفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:275
+#, python-format
+msgid "Amount should be less than 6 digits only"
+msgstr "المبلغ يحب ان يكون اقل من 6 ارقام"
+
+#. module: fahad_transportation
+#: field:hr.employee,arabic_name:0
+msgid "Arabic Name"
+msgstr "الاسم العربي"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:223
+#, python-format
+msgid "Arabic Name should be less than 40 digits only"
+msgstr "الاسم العربي يجب ان يكون اقل من 40 حرف فقط"
+
+#. module: fahad_transportation
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+msgid "Aramco"
+msgstr "أرامكو"
+
+#. module: fahad_transportation
+#: view:new.line:fahad_transportation.view_new_line_form
+msgid "Aramco Cars"
+msgstr "سيارة آرامكو"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:117
+#: code:addons/fahad_transportation/models/new_tank.py:49
+#: code:addons/fahad_transportation/models/transportation.py:36
+#: field:new.car,aramco_date:0 field:new.tank,aramco_date:0
+#, python-format
+msgid "Aramco Date"
+msgstr "تاريخ آرامكو"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:116
+#: field:new.car,aramco_door_no:0
+#, python-format
+msgid "Aramco Door No"
+msgstr "رقم دخول آرامكو"
+
+#. module: fahad_transportation
+#: sql_constraint:new.car:0
+msgid "Aramco Door No must be unique."
+msgstr "رقم دخول آرامكو يجب ان يكون غير متكرر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:50
+#: code:addons/fahad_transportation/models/transportation.py:37
+#: field:hr.employee,aramco_expiry_date:0
+#: field:new.tank,aramco_sticker_expiry_date:0
+#, python-format
+msgid "Aramco Expiry Date"
+msgstr "تاريخ انتهاء صلاحية آرامكو"
+
+#. module: fahad_transportation
+#: field:trips.line,aramco_invoice_no:0
+msgid "Aramco Invoice No"
+msgstr "رقم فاتورة آرامكو"
+
+#. module: fahad_transportation
+#: field:hr.employee,aramco_issue_date:0
+msgid "Aramco Issue Date"
+msgstr "رقم اصدار آرامكو"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:115
+#: code:addons/fahad_transportation/models/new_tank.py:48
+#: code:addons/fahad_transportation/models/transportation.py:35
+#: field:hr.employee,aramco_no:0 field:new.car,aramco_no:0
+#: field:new.tank,aramco_no:0
+#, python-format
+msgid "Aramco No"
+msgstr "رقم آرامكو"
+
+#. module: fahad_transportation
+#: sql_constraint:new.car:0 sql_constraint:new.tank:0
+msgid "Aramco No must be unique."
+msgstr "رقم آرامكو يجب ان لا يتكرر"
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_account_asset_asset
+msgid "Asset"
+msgstr "أصل"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:189
+#: code:addons/fahad_transportation/models/new_car.py:207
+#: code:addons/fahad_transportation/models/new_tank.py:86
+#: code:addons/fahad_transportation/models/new_tank.py:103
+#: field:new.car,asset_category:0 field:new.car,instalment_asset_category:0
+#: field:new.tank,asset_category:0 field:new.tank,instalment_asset_category:0
+#, python-format
+msgid "Asset Category"
+msgstr "تصنيف الاصل "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:131
+#: code:addons/fahad_transportation/models/new_tank.py:57
+#: field:new.car,backup_wheel_no:0 field:new.tank,backup_wheel_no:0
+#, python-format
+msgid "Backup Wheel No"
+msgstr "عدد الكفرات الاحتياطية"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:368
+#: code:addons/fahad_transportation/models/new_tank.py:268
+#, python-format
+msgid "Backup Wheel No should not be more than 2 digits only."
+msgstr "عدد الكفرات الاحتياطية يجب ان لا تزيد عن رقمين فقط"
+
+#. module: fahad_transportation
+#: selection:expense.register,payment_method:0
+msgid "Bank or Cash"
+msgstr "نقدا او بنك"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:130
+#: code:addons/fahad_transportation/models/new_tank.py:56
+#: field:new.car,basic_wheel_no:0 field:new.tank,basic_wheel_no:0
+#, python-format
+msgid "Basic Wheel No"
+msgstr "عدد الكفرات الرئيسية"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:383
+#: code:addons/fahad_transportation/models/new_tank.py:289
+#, python-format
+msgid "Basic Wheel No Should not be equal to zero."
+msgstr "عدد الكفرات الرئيسية يجب الا يساوي صفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:366
+#: code:addons/fahad_transportation/models/new_tank.py:266
+#, python-format
+msgid "Basic Wheel No should not be more than 2 digits only."
+msgstr "عدد الكفرات الرئيسية يجب ان لا يزيد عن رقمين فقط"
+
+#. module: fahad_transportation
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+msgid "Birth"
+msgstr "الميلاد"
+
+#. module: fahad_transportation
+#: field:dependence.line,birthday:0
+msgid "Birth Day"
+msgstr "تاريخ الميلاد"
+
+#. module: fahad_transportation
+#: field:hr.employee,blood_type:0
+msgid "Blood Type"
+msgstr "نوع فصيلة الدم"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:187
+#: code:addons/fahad_transportation/models/new_tank.py:84
+#: field:new.car,book_value:0 field:new.tank,book_value:0
+#, python-format
+msgid "Book Value"
+msgstr "القيمة الدفترية"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:388
+#: code:addons/fahad_transportation/models/new_tank.py:294
+#, python-format
+msgid "Book Value should be greater than zero and less than Total Purchase Value"
+msgstr "القيمة الدفترية يجب ان تكون اكبر من الصفر واقل من قيمة المشتريات "
+
+#. module: fahad_transportation
+#: field:hr.employee,border_no:0
+msgid "Border No"
+msgstr "رقم الحدود"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:230
+#, python-format
+msgid "Border No should be less than 6 digits only"
+msgstr "رقم الحدود يجب ان يكون اقل من 6 حروف فقط"
+
+#. module: fahad_transportation
+#: selection:new.wheel,install_type:0
+msgid "Both"
+msgstr "مثل"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:157
+#: view:branch:fahad_transportation.view_branch_form
+#: view:branch:fahad_transportation.view_branch_tree
+#: field:hr.employee,branch_id:0 field:hr.employee,line_id:0
+#: model:ir.ui.menu,name:fahad_transportation.menu_branch
+#: field:new.car,branch_id:0 field:new.line,branch_id:0
+#: field:new.tank,branch_id:0
+#, python-format
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: fahad_transportation
+#: field:branch,code:0
+msgid "Branch Code"
+msgstr "رقم الفرع"
+
+#. module: fahad_transportation
+#: field:branch,branch_manager:0
+msgid "Branch Manager"
+msgstr "مدير الفرع"
+
+#. module: fahad_transportation
+#: field:branch,name:0 field:hr.employee,branch_name:0
+msgid "Branch Name"
+msgstr "اسم الفرع"
+
+#. module: fahad_transportation
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+#: model:ir.actions.act_window,name:fahad_transportation.action_new_branch
+#: model:ir.model,name:fahad_transportation.model_branch
+msgid "Branches"
+msgstr "الفروع"
+
+#. module: fahad_transportation
+#: selection:dependence.line,kinship:0
+msgid "Brother"
+msgstr "اخ"
+
+#. module: fahad_transportation
+#: selection:hr.employee,religion:0
+msgid "Buddhist"
+msgstr "Buddhist"
+
+#. module: fahad_transportation
+#: field:branch,building_name:0
+msgid "Building Name"
+msgstr "اسم المبني"
+
+#. module: fahad_transportation
+#: field:branch,building_no:0
+msgid "Building No."
+msgstr "رقم المبني"
+
+#. module: fahad_transportation
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+msgid "Buttom"
+msgstr "buttom"
+
+#. module: fahad_transportation
+#: field:hr.employee,buttom_expiry_date:0
+msgid "Buttom Expiry Date"
+msgstr "تاريخ انتهاء"
+
+#. module: fahad_transportation
+#: field:hr.employee,buttom_date:0
+msgid "Buttom Issue Date"
+msgstr "تاريخ اصدار "
+
+#. module: fahad_transportation
+#: field:buy.screen,buy_price:0
+msgid "Buy Price"
+msgstr "سعر الشراء"
+
+#. module: fahad_transportation
+#: model:ir.actions.act_window,name:fahad_transportation.view_buy_screen_action
+#: model:ir.model,name:fahad_transportation.model_buy_screen
+#: model:ir.ui.menu,name:fahad_transportation.menu_buy_screen_action
+msgid "Buy Screen"
+msgstr "شاشة الشراء"
+
+#. module: fahad_transportation
+#: field:buy.screen,buy_type:0
+msgid "Buy Type"
+msgstr "نوع الشراء"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/buy_screen.py:50
+#, python-format
+msgid "Buy price should not be equal to  zero"
+msgstr "سعر الشراء يجب ان لا يساوي الصفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:51
+#: field:new.tank,capacity:0
+#, python-format
+msgid "Capacity"
+msgstr "الطاقة القصوي"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:283
+#, python-format
+msgid "Capacity cannot be 0"
+msgstr "الطاقة القصوي يجب ان تكون صفر"
+
+#. module: fahad_transportation
+#: selection:expenses,expense_nature:0
+msgid "Capital"
+msgstr "راس المال"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:193
+#: code:addons/fahad_transportation/models/new_car.py:208
+#: code:addons/fahad_transportation/models/new_tank.py:90
+#: code:addons/fahad_transportation/models/new_tank.py:104
+#: field:new.car,capital_account:0 field:new.car,instalment_capital_account:0
+#: field:new.tank,capital_account:0
+#: field:new.tank,instalment_capital_account:0
+#, python-format
+msgid "Capital Account"
+msgstr "حساب راس المال"
+
+#. module: fahad_transportation
+#: field:action.place.line,car_id:0
+#: code:addons/fahad_transportation/models/car_maintenance.py:12
+#: code:addons/fahad_transportation/models/expense_register.py:64
+#: code:addons/fahad_transportation/models/expense_register.py:67
+#: code:addons/fahad_transportation/models/rent.py:14
+#: code:addons/fahad_transportation/models/rent.py:16
+#: code:addons/fahad_transportation/models/vehicle_dismantling.py:12
+#: selection:buy.screen,buy_type:0 field:buy.screen,car_id:0
+#: field:car.maintenance,new_car_id:0 field:custody.receive.line,car_id:0
+#: field:differential.line,new_car_id:0 field:expense.register,car_id:0
+#: selection:expense.register,expense_register_level:0
+#: selection:expenses,expense_type:0 field:gearbox.line,new_car_id:0
+#: field:instalment.sheet.line,car_id:0 field:machine.motor.line,new_car_id:0
+#: view:new.vehicle:fahad_transportation.view_vehicle_form
+#: field:other.revenue,car_id:0 field:rent,car_id:0 selection:rent,rent_type:0
+#: field:trips.line,car_id:0 field:vehicle.dismantling,new_car_id:0
+#: field:wheel.action,vehicle_id:0 field:wheel.action.lines.install,car_id:0
+#: field:wheel.action.lines.uninstall,car_id:0
+#: field:wheel.expenses,new_car_id:0
+#, python-format
+msgid "Car"
+msgstr "السيارة"
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_car_category
+msgid "Car Categories"
+msgstr "تصنيفات السيارة "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_vehicle.py:21
+#: view:car.category:fahad_transportation.view_car_category_form
+#: view:car.category:fahad_transportation.view_car_category_tree
+#: view:discount.commission:fahad_transportation.view_discount_commission_form
+#: view:discount.commission:fahad_transportation.view_discount_commission_tree
+#: model:ir.actions.act_window,name:fahad_transportation.action_car_category
+#: model:ir.ui.menu,name:fahad_transportation.menu_car_category
+#: field:new.car,car_category:0 field:new.vehicle,car_category_id:0
+#: view:new.wheel:fahad_transportation.view_wheel_form
+#: field:new.wheel,car_category_ids:0 field:other.revenue,car_category_id:0
+#, python-format
+msgid "Car Category"
+msgstr "تصنيف السيارة"
+
+#. module: fahad_transportation
+#: field:linked.unlinked.vehicles,car_code:0
+msgid "Car Code"
+msgstr "كود السيارة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_vehicle.py:57
+#: field:new.car,driver_id:0 field:new.tank,driver_id:0
+#: field:new.vehicle,car_driver:0
+#, python-format
+msgid "Car Driver"
+msgstr "سائق السيارة"
+
+#. module: fahad_transportation
+#: field:car.category,revenue:0
+msgid "Car Get Revenue"
+msgstr "السيار تحصل علي ايراد"
+
+#. module: fahad_transportation
+#: field:line.vehicle.history,new_car_id:0
+msgid "Car Id"
+msgstr "رقم هوية السيارة"
+
+#. module: fahad_transportation
+#: view:new.line:fahad_transportation.view_new_line_form
+msgid "Car Information"
+msgstr "معلومات السيارة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:219
+#: field:differential.line,maintenance_id:0
+#: field:gearbox.line,maintenance_id:0
+#: model:ir.actions.act_window,name:fahad_transportation.view_car_maintenance_action
+#: model:ir.ui.menu,name:fahad_transportation.car_maintenance_menu
+#: field:machine.motor.line,maintenance_id:0 field:new.car,car_maintenance:0
+#, python-format
+msgid "Car Maintenance"
+msgstr "صيانة السيارة"
+
+#. module: fahad_transportation
+#: field:linked.unlinked.vehicles,mark:0
+msgid "Car Mark"
+msgstr "علامة السيارة"
+
+#. module: fahad_transportation
+#: field:wheel.action.lines.install,car_meter:0
+#: field:wheel.action.lines.uninstall,car_meter:0
+msgid "Car Meter"
+msgstr "عدد امتار السيارة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transport_wheel.py:474
+#, python-format
+msgid "Car Meter Should not be equal to zero."
+msgstr "عدد امتار السيارة يجب ان لا يساوي الصفر"
+
+#. module: fahad_transportation
+#: field:linked.unlinked.vehicles,model:0
+msgid "Car Model"
+msgstr "موديل السيارة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:86
+#: code:addons/fahad_transportation/models/new_car.py:88
+#: code:addons/fahad_transportation/models/new_car.py:90
+#, python-format
+msgid "Car Plate Number Should Contain 3 Chars"
+msgstr "رقم لوحة السيارة يجب ان يحتوي علي 3 حروف"
+
+#. module: fahad_transportation
+#: view:car.maintenance:fahad_transportation.view_car_maintenance_form
+msgid "Car maintenance"
+msgstr "صيانة السيارة"
+
+#. module: fahad_transportation
+#: view:branch:fahad_transportation.view_branch_form field:branch,cars_ids:0
+#: model:ir.ui.menu,name:fahad_transportation.car
+#: view:new.car:fahad_transportation.view_new_car_tree
+msgid "Cars"
+msgstr "السيارات"
+
+#. module: fahad_transportation
+#: view:car.maintenance:fahad_transportation.view_car_maintenance_tree
+msgid "Cars Maintenance"
+msgstr "صيانة السيارة"
+
+#. module: fahad_transportation
+#: field:car.category,category_name:0
+msgid "Category Name"
+msgstr "اسم التصنيف"
+
+#. module: fahad_transportation
+#: field:discount.commission.line,cause:0 field:new.vehicle,cause:0
+#: field:vehicle.dismantling,cause:0
+msgid "Cause"
+msgstr "Cause"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:278
+#, python-format
+msgid "Cause should be less than 6 digits only"
+msgstr "Cause should be less than 6 digits only"
+
+#. module: fahad_transportation
+#: field:car.maintenance,differential_change_after:0
+#: field:car.maintenance,gear_change_after:0
+#: field:car.maintenance,machine_change_after:0
+msgid "Change Oil After"
+msgstr "تغيير الزيت بعد"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:20
+#: code:addons/fahad_transportation/models/new_car.py:112
+#: code:addons/fahad_transportation/models/transportation.py:34
+#: field:new.car,chasih_no:0
+#, python-format
+msgid "Chasih No"
+msgstr "رقم الشاسيه"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:364
+#: code:addons/fahad_transportation/models/new_tank.py:264
+#, python-format
+msgid "Chasih No should be between 10 and 20 digits only."
+msgstr "رقم الشاسية يجب ان يكون بين 10 الي 20 رقم فقط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:54
+#: field:new.tank,chasih_no:0
+#, python-format
+msgid "Chasih No."
+msgstr "رقم شاسيه "
+
+#. module: fahad_transportation
+#: selection:hr.employee,religion:0
+msgid "Christian"
+msgstr "مسيحي"
+
+#. module: fahad_transportation
+#: view:buy.screen:fahad_transportation.view_buy_screen_form
+#: view:expense.register:fahad_transportation.view_expense_register_form
+#: view:expenses:fahad_transportation.view_expense_form
+#: view:fahad.contract:fahad_transportation.view_fahad_contract_form
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.line:fahad_transportation.view_new_line_form
+#: view:new.tank:fahad_transportation.new_tank_form
+#: view:other.revenue:fahad_transportation.view_other_revenue_form
+#: view:rent:fahad_transportation.view_rent_form
+#: view:trips:fahad_transportation.view_trip_form
+msgid "Close"
+msgstr "إغلاق"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:79
+#: code:addons/fahad_transportation/models/new_vehicle.py:38
+#: code:addons/fahad_transportation/models/rent.py:32
+#: code:addons/fahad_transportation/models/transportation.py:49
+#: code:addons/fahad_transportation/models/transportation.py:132
+#: code:addons/fahad_transportation/models/vehicle_dismantling.py:21
+#: selection:buy.screen,state:0 selection:expense.register,state:0
+#: selection:expenses,state:0 selection:fahad.contract,state:0
+#: selection:hr.employee,state:0 selection:new.car,state:0
+#: selection:new.line,state:0 selection:new.tank,state:0
+#: view:new.vehicle:fahad_transportation.view_vehicle_form
+#: selection:new.vehicle,state:0
+#: view:new.wheel:fahad_transportation.view_wheel_form
+#: selection:new.wheel,state:0 selection:other.revenue,state:0
+#: selection:rent,state:0 selection:trips,state:0
+#: view:vehicle.dismantling:fahad_transportation.view_vehicle_dismantling_form
+#: selection:vehicle.dismantling,state:0
+#: view:vehicles.on.line:fahad_transportation.view_vehicle_on_line_form
+#: selection:vehicles.on.line,state:0
+#: view:wheel.action:fahad_transportation.view_wheel_action_form
+#: selection:wheel.action,state:0
+#, python-format
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:13
+#: code:addons/fahad_transportation/models/expense_register.py:63
+#: code:addons/fahad_transportation/models/new_car.py:73
+#: code:addons/fahad_transportation/models/new_tank.py:44
+#: code:addons/fahad_transportation/models/rent.py:12
+#: code:addons/fahad_transportation/models/transportation.py:12
+#: code:addons/fahad_transportation/models/transportation.py:327
+#: field:buy.screen,code:0 field:car.category,code:0
+#: field:discount.commission,code:0 field:expense.register,code:0
+#: field:expenses,code:0 field:hr.employee,code:0 field:install.place,code:0
+#: field:line.vehicle.history,code:0 field:linked.unlinked.vehicles,code:0
+#: field:new.car,code:0 field:new.line,code:0 field:new.tank,code:0
+#: field:new.wheel,code:0 field:other.revenue,code:0 field:rent,code:0
+#: field:trips,code:0 field:vehicles.on.line,code:0
+#, python-format
+msgid "Code"
+msgstr "كود"
+
+#. module: fahad_transportation
+#: sql_constraint:hr.employee:0
+msgid "Code No must be unique."
+msgstr "كود يجب ان لا يتكرر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:226
+#, python-format
+msgid "Code should be less than 6 digits only"
+msgstr "كود يجب ان يكون اقل من 6 حروف فقط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:19
+#: code:addons/fahad_transportation/models/new_car.py:111
+#: code:addons/fahad_transportation/models/transportation.py:33
+#: field:new.car,color:0
+#, python-format
+msgid "Color"
+msgstr "اللون"
+
+#. module: fahad_transportation
+#: selection:discount.commission.line,type:0 field:other.revenue,commission:0
+msgid "Commission"
+msgstr "العمولة"
+
+#. module: fahad_transportation
+#: field:other.revenue,commission_amount:0
+msgid "Commission Amount"
+msgstr "قيمة العمولة"
+
+#. module: fahad_transportation
+#: field:branch,community:0
+msgid "Community"
+msgstr "Community"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:279
+#, python-format
+msgid "Company No cannot be 0"
+msgstr "رقم الشركة يجب ان لا يساوي الصفر"
+
+#. module: fahad_transportation
+#: sql_constraint:new.tank:0
+msgid "Company No must be unique."
+msgstr "رقم الشركة يجب ان لا يتكرر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:47
+#: field:new.tank,company_number:0
+#, python-format
+msgid "Company Number"
+msgstr "رقم الشركة"
+
+#. module: fahad_transportation
+#: model:ir.ui.menu,name:fahad_transportation.menu_transportation_config
+msgid "Configuration"
+msgstr "إعدادات"
+
+#. module: fahad_transportation
+#: view:buy.screen:fahad_transportation.view_buy_screen_form
+#: view:car.maintenance:fahad_transportation.view_car_maintenance_form
+#: view:expense.register:fahad_transportation.view_expense_register_form
+#: view:expenses:fahad_transportation.view_expense_form
+#: view:fahad.contract:fahad_transportation.view_fahad_contract_form
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.line:fahad_transportation.view_new_line_form
+#: view:new.tank:fahad_transportation.new_tank_form
+#: view:other.revenue:fahad_transportation.view_other_revenue_form
+#: view:rent:fahad_transportation.view_rent_form
+#: view:trips:fahad_transportation.view_trip_form
+#: view:vehicle.custody:fahad_transportation.view_vehicle_custody_form
+#: selection:vehicle.custody,state:0
+msgid "Confirm"
+msgstr "اعتماد"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:77
+#: code:addons/fahad_transportation/models/new_vehicle.py:37
+#: code:addons/fahad_transportation/models/rent.py:31
+#: code:addons/fahad_transportation/models/transportation.py:48
+#: code:addons/fahad_transportation/models/transportation.py:131
+#: code:addons/fahad_transportation/models/vehicle_dismantling.py:20
+#: selection:buy.screen,state:0 selection:car.maintenance,state:0
+#: selection:expense.register,state:0 selection:expenses,state:0
+#: selection:fahad.contract,state:0 selection:hr.employee,state:0
+#: selection:new.car,state:0 selection:new.line,state:0
+#: selection:new.tank,state:0
+#: view:new.vehicle:fahad_transportation.view_vehicle_form
+#: selection:new.vehicle,state:0
+#: view:new.wheel:fahad_transportation.view_wheel_form
+#: selection:new.wheel,state:0 selection:other.revenue,state:0
+#: selection:rent,state:0 selection:trips,state:0
+#: view:vehicle.dismantling:fahad_transportation.view_vehicle_dismantling_form
+#: selection:vehicle.dismantling,state:0
+#: view:vehicles.on.line:fahad_transportation.view_vehicle_on_line_form
+#: selection:vehicles.on.line,state:0
+#: view:wheel.action:fahad_transportation.view_wheel_action_form
+#: selection:wheel.action,state:0
+#, python-format
+msgid "Confirmed"
+msgstr "معتمد"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_vehicle.py:40
+#: selection:new.vehicle,state_of_dismantling:0
+#, python-format
+msgid "Connected"
+msgstr "متصل"
+
+#. module: fahad_transportation
+#: field:vehicles.on.line,connected_vehicles_ids:0
+msgid "Connected Vehicle"
+msgstr "المركبة المتصلة"
+
+#. module: fahad_transportation
+#: field:new.line,connected_vehicles:0
+msgid "Connected Vehicles"
+msgstr "المركبات المتصلة "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:77
+#: selection:new.car,state:0 selection:new.tank,state:0
+#, python-format
+msgid "Connected to Vehicle"
+msgstr "متصلة بالمركبة"
+
+#. module: fahad_transportation
+#: view:expenses:fahad_transportation.view_expense_form
+#: view:expenses:fahad_transportation.view_expense_tree
+#: view:fahad.contract:fahad_transportation.view_fahad_contract_form
+#: view:fahad.contract:fahad_transportation.view_fahad_contract_tree
+#: model:ir.actions.act_window,name:fahad_transportation.view_fahad_contract_action
+#: model:ir.model,name:fahad_transportation.model_fahad_contract
+#: model:ir.ui.menu,name:fahad_transportation.menu_fahad_contract_action
+#: view:trips:fahad_transportation.view_trip_form
+#: view:trips:fahad_transportation.view_trip_tree
+msgid "Contract"
+msgstr "عقد"
+
+#. module: fahad_transportation
+#: field:fahad.contract,contract_end_date:0
+msgid "Contract End Date"
+msgstr "تاريخ انتهاء العقد"
+
+#. module: fahad_transportation
+#: field:fahad.contract,contract_no:0
+msgid "Contract No"
+msgstr "رقم العقد"
+
+#. module: fahad_transportation
+#: field:fahad.contract,contract_start_date:0
+msgid "Contract Start Date"
+msgstr "تاريخ بداية العقد"
+
+#. module: fahad_transportation
+#: field:fahad.contract,contractor_no:0
+msgid "Contractor No"
+msgstr "رقم المتعاقد"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+msgid "Create"
+msgstr "انشاء "
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+#: selection:new.wheel,supplier_invoice_type:0
+#: view:rent:fahad_transportation.view_rent_form
+msgid "Create Invoice"
+msgstr "انشاء فاتورة"
+
+#. module: fahad_transportation
+#: field:action.place.line,create_uid:0 field:branch,create_uid:0
+#: field:buy.screen,create_uid:0 field:car.category,create_uid:0
+#: field:car.maintenance,create_uid:0 field:custody.deliver.line,create_uid:0
+#: field:custody.receive.line,create_uid:0 field:dependence.line,create_uid:0
+#: field:differential.line,create_uid:0 field:discount.commission,create_uid:0
+#: field:discount.commission.line,create_uid:0
+#: field:expense.register,create_uid:0
+#: field:expense.register.lines,create_uid:0 field:expenses,create_uid:0
+#: field:fahad.contract,create_uid:0 field:gearbox.line,create_uid:0
+#: field:install.place,create_uid:0 field:instalment.sheet.line,create_uid:0
+#: field:line.vehicle.history,create_uid:0
+#: field:linked.unlinked.vehicles,create_uid:0
+#: field:machine.motor.line,create_uid:0 field:new.car,create_uid:0
+#: field:new.line,create_uid:0 field:new.tank,create_uid:0
+#: field:new.vehicle,create_uid:0 field:new.wheel,create_uid:0
+#: field:other.revenue,create_uid:0 field:other.revenue.line,create_uid:0
+#: field:rent,create_uid:0 field:rent.lines,create_uid:0
+#: field:tank.instalment.sheet.line,create_uid:0 field:trips,create_uid:0
+#: field:trips.line,create_uid:0 field:vehicle.custody,create_uid:0
+#: field:vehicle.dismantling,create_uid:0 field:vehicles.on.line,create_uid:0
+#: field:wheel.action,create_uid:0
+#: field:wheel.action.lines.install,create_uid:0
+#: field:wheel.action.lines.uninstall,create_uid:0
+#: field:wheel.expenses,create_uid:0 field:wheel.supplier,create_uid:0
+msgid "Created by"
+msgstr "تم انشاءها علي "
+
+#. module: fahad_transportation
+#: field:action.place.line,create_date:0 field:branch,create_date:0
+#: field:buy.screen,create_date:0 field:car.category,create_date:0
+#: field:car.maintenance,create_date:0
+#: field:custody.deliver.line,create_date:0
+#: field:custody.receive.line,create_date:0
+#: field:dependence.line,create_date:0 field:differential.line,create_date:0
+#: field:discount.commission,create_date:0
+#: field:discount.commission.line,create_date:0
+#: field:expense.register,create_date:0
+#: field:expense.register.lines,create_date:0 field:expenses,create_date:0
+#: field:fahad.contract,create_date:0 field:gearbox.line,create_date:0
+#: field:install.place,create_date:0 field:instalment.sheet.line,create_date:0
+#: field:line.vehicle.history,create_date:0
+#: field:linked.unlinked.vehicles,create_date:0
+#: field:machine.motor.line,create_date:0 field:new.car,create_date:0
+#: field:new.line,create_date:0 field:new.tank,create_date:0
+#: field:new.vehicle,create_date:0 field:new.wheel,create_date:0
+#: field:other.revenue,create_date:0 field:other.revenue.line,create_date:0
+#: field:rent,create_date:0 field:rent.lines,create_date:0
+#: field:tank.instalment.sheet.line,create_date:0 field:trips,create_date:0
+#: field:trips.line,create_date:0 field:vehicle.custody,create_date:0
+#: field:vehicle.dismantling,create_date:0
+#: field:vehicles.on.line,create_date:0 field:wheel.action,create_date:0
+#: field:wheel.action.lines.install,create_date:0
+#: field:wheel.action.lines.uninstall,create_date:0
+#: field:wheel.expenses,create_date:0 field:wheel.supplier,create_date:0
+msgid "Created on"
+msgstr "تم انشائها بواسطة"
+
+#. module: fahad_transportation
+#: view:account.asset.asset:fahad_transportation.view_fahad_asset_form
+msgid "Creation Date"
+msgstr "تاريخ الإنشاء "
+
+#. module: fahad_transportation
+#: selection:expense.register,payment_method:0
+msgid "Credit"
+msgstr "دائن"
+
+#. module: fahad_transportation
+#: view:new.vehicle:fahad_transportation.view_vehicle_form
+msgid "Current Connected Lines"
+msgstr "الخطوط المتصلة الحالية"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+msgid "Current Installed Vehicles"
+msgstr "المركبات المثبتة الحالية"
+
+#. module: fahad_transportation
+#: field:instalment.sheet.line,current_instalment:0
+#: field:tank.instalment.sheet.line,current_instalment:0
+msgid "Current Instalment"
+msgstr "القسط الحالي"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: field:new.car,current_line:0
+msgid "Current Line"
+msgstr "الخط الحالي"
+
+#. module: fahad_transportation
+#: view:new.tank:fahad_transportation.new_tank_form
+#: view:new.vehicle:fahad_transportation.view_vehicle_form
+msgid "Current Linked Line"
+msgstr "الخط المرتبط الحالي"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+msgid "Current Rent"
+msgstr "المؤجر حاليا"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:186
+#: code:addons/fahad_transportation/models/new_tank.py:83
+#: field:new.car,current_value:0 field:new.tank,current_value:0
+#, python-format
+msgid "Current Value"
+msgstr "القيمة الحالية"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:30
+#: field:new.line,vehicles_lines:0
+#, python-format
+msgid "Current Vehicles"
+msgstr "المركبة الحالية"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:58
+#, python-format
+msgid "Current Wheel No"
+msgstr "عدد الكفرات الحالي"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:154
+#: code:addons/fahad_transportation/models/new_tank.py:187
+#, python-format
+msgid "Current wheel no. is larger than basic wheel + backup wheel"
+msgstr "عدد الكفرات الحالي يجب ان لا يكون اكبر من عدد الكفرات الرئيسية + عدد الكفرات الاحتياطية"
+
+#. module: fahad_transportation
+#: field:custody.deliver.line,custody:0 field:custody.receive.line,custody:0
+msgid "Custody"
+msgstr "عهدة"
+
+#. module: fahad_transportation
+#: field:custody.deliver.line,custody_state:0
+#: field:custody.receive.line,custody_state:0
+msgid "Custody State"
+msgstr "حالة العهدة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:13
+#: field:buy.screen,customer_id:0 field:other.revenue,customer_id:0
+#: field:rent,customer_id:0 field:trips,customer_id:0
+#, python-format
+msgid "Customer"
+msgstr "العميل"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:129
+#: field:rent.lines,invoice_id:0
+#, python-format
+msgid "Customer Invoice"
+msgstr "فاتورة العميل"
+
+#. module: fahad_transportation
+#: selection:new.wheel,state:0
+#: selection:wheel.action.lines.uninstall,wheel_status:0
+msgid "Damaged"
+msgstr "التالف"
+
+#. module: fahad_transportation
+#: field:discount.commission,line_ids:0
+msgid "Data"
+msgstr "بيانات"
+
+#. module: fahad_transportation
+#: field:other.revenue,line_ids:0
+msgid "Data Entry"
+msgstr "تاريخ الادخال"
+
+#. module: fahad_transportation
+#: field:buy.screen,date:0 field:differential.line,date:0
+#: field:expense.register,date:0 field:gearbox.line,date:0
+#: field:machine.motor.line,date:0 field:other.revenue,date:0
+#: field:trips,date:0 field:wheel.expenses,date:0
+msgid "Date"
+msgstr "تاريخ"
+
+#. module: fahad_transportation
+#: help:new.car,message_last_post:0 help:new.tank,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr "تاريخ اخر رسالة موجود في السجل"
+
+#. module: fahad_transportation
+#: selection:dependence.line,kinship:0
+msgid "Daughter"
+msgstr "ابنة"
+
+#. module: fahad_transportation
+#: field:vehicle.custody,decision_date:0
+#: field:vehicles.on.line,decision_date:0 field:wheel.action,decision_date:0
+msgid "Decision Date"
+msgstr "تاريخ التسجيل"
+
+#. module: fahad_transportation
+#: field:linked.unlinked.vehicles,decision_no:0
+#: field:new.vehicle,decision_no:0 field:vehicle.dismantling,decision_no:0
+msgid "Decision No."
+msgstr "رقم التسجيل"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:125
+#: field:vehicle.custody,decision_type:0
+#: field:vehicles.on.line,decision_type:0
+#, python-format
+msgid "Decision Type"
+msgstr "نوع التسجيل"
+
+#. module: fahad_transportation
+#: field:trips.line,deduct_owner:0
+msgid "Deduct Owner"
+msgstr "يخصم من المالك"
+
+#. module: fahad_transportation
+#: field:trips.line,deduct_driver:0
+msgid "Deduct from Driver"
+msgstr "يخصم من السائق"
+
+#. module: fahad_transportation
+#: field:rent,differential_line_ids:0
+msgid "Defrance Asset"
+msgstr "اصول مختلفة "
+
+#. module: fahad_transportation
+#: view:car.maintenance:fahad_transportation.view_car_maintenance_form
+msgid "Defrance Maintenance"
+msgstr "صيانة مختلفة"
+
+#. module: fahad_transportation
+#: selection:custody.deliver.line,state:0
+#: selection:custody.receive.line,state:0
+#: selection:vehicle.custody,decision_type:0
+msgid "Deliver"
+msgstr "التسليم"
+
+#. module: fahad_transportation
+#: view:vehicle.custody:fahad_transportation.view_vehicle_custody_form
+#: field:vehicle.custody,deliver_custody_ids:0
+msgid "Deliver Custody"
+msgstr "Deliver Custody"
+
+#. module: fahad_transportation
+#: field:custody.receive.line,location:0
+msgid "Delivered Location"
+msgstr "موقع التسليم"
+
+#. module: fahad_transportation
+#: field:custody.deliver.line,delivery_date:0
+#: field:custody.receive.line,delivery_date:0
+msgid "Delivery Date"
+msgstr "تاريخ التسليم"
+
+#. module: fahad_transportation
+#: view:car.maintenance:fahad_transportation.view_car_maintenance_form
+msgid "Delivery Order"
+msgstr "امر تسليم"
+
+#. module: fahad_transportation
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+#: field:hr.employee,dependence_ids:0
+msgid "Dependence"
+msgstr "تابع"
+
+#. module: fahad_transportation
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+msgid "Dependencies"
+msgstr "التابعين"
+
+#. module: fahad_transportation
+#: field:other.revenue.line,description:0
+msgid "Description"
+msgstr "الوصف"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:56
+#, python-format
+msgid "Diferance Oil Change should not be more than 5 digits only"
+msgstr "فرق تغير الزيت يجب ان يكون 5 ارقام فقط"
+
+#. module: fahad_transportation
+#: selection:discount.commission.line,type:0
+msgid "Discount"
+msgstr "خصم"
+
+#. module: fahad_transportation
+#: model:ir.ui.menu,name:fahad_transportation.menu_discount
+msgid "Discount / Commission"
+msgstr "خصم / عمولة"
+
+#. module: fahad_transportation
+#: model:ir.actions.act_window,name:fahad_transportation.action_discount_commission
+msgid "Discount Commission"
+msgstr "خصم العمولة"
+
+#. module: fahad_transportation
+#: field:custody.receive.line,discount_date:0
+msgid "Discount Date"
+msgstr "تاريخ الخصم"
+
+#. module: fahad_transportation
+#: field:trips.line,discounted_aramco:0
+msgid "Discounted Aramco"
+msgstr "خصم ارامكو"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_vehicle.py:40
+#: selection:new.vehicle,state_of_dismantling:0
+#, python-format
+msgid "Dismantling"
+msgstr "تفكيك"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:18
+#: code:addons/fahad_transportation/models/transportation.py:333
+#: field:line.vehicle.history,distance:0 field:new.line,distance:0
+#, python-format
+msgid "Distance"
+msgstr "المسافة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:79
+#, python-format
+msgid "Distance should be 5 digits only"
+msgstr "المسافة يجب ان تكون 5 ارقام"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:77
+#, python-format
+msgid "Distance should be greater than zero."
+msgstr "المسافة يجب ان تكون اكبر من الصفر "
+
+#. module: fahad_transportation
+#: field:branch,district:0
+msgid "District"
+msgstr "منطقة"
+
+#. module: fahad_transportation
+#: selection:new.wheel,supplier_invoice_type:0
+msgid "Do Not Create Invoice"
+msgstr "لا تقم بإنشاء الفاتورة"
+
+#. module: fahad_transportation
+#: field:discount.commission.line,done:0
+msgid "Done"
+msgstr "تم"
+
+#. module: fahad_transportation
+#: selection:buy.screen,state:0 selection:expense.register,state:0
+#: selection:expenses,state:0 selection:fahad.contract,state:0
+#: selection:other.revenue,state:0 selection:trips,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: fahad_transportation
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+msgid "Drive On Vehicle"
+msgstr "سائق المركبة "
+
+#. module: fahad_transportation
+#: selection:hr.employee,employee_type:0
+#: field:linked.unlinked.vehicles,driver:0 field:vehicle.custody,driver_id:0
+msgid "Driver"
+msgstr "سائق"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:22
+#: field:new.line,driver_commission:0
+#, python-format
+msgid "Driver Commission"
+msgstr "عمولة السائق"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:75
+#, python-format
+msgid "Driver Commission Should be greater than Zero"
+msgstr "عمولة السائق يجب ان تكون اكبر من صفر"
+
+#. module: fahad_transportation
+#: field:custody.receive.line,driver_discount:0
+msgid "Driver Discount"
+msgstr "خصم السائق"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: field:new.car,driver_history:0
+#: view:new.vehicle:fahad_transportation.view_vehicle_form
+#: field:new.vehicle,driver_history:0
+msgid "Driver History"
+msgstr "سجل السائق"
+
+#. module: fahad_transportation
+#: field:custody.receive.line,driver_id:0
+msgid "Driver Name"
+msgstr "اسم السائق"
+
+#. module: fahad_transportation
+#: field:branch,email:0
+msgid "E-Mail"
+msgstr "البريد الالكتروني"
+
+#. module: fahad_transportation
+#: field:discount.commission.line,effective_date:0
+msgid "Effective Date"
+msgstr "تاريخ التفعيل"
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_new_car
+#: model:ir.model,name:fahad_transportation.model_new_tank
+msgid "Email Thread"
+msgstr "Email Thread"
+
+#. module: fahad_transportation
+#: field:discount.commission.line,employee_id:0
+#: selection:hr.employee,employee_type:0
+#: model:ir.model,name:fahad_transportation.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: fahad_transportation
+#: field:hr.employee,employee_type:0
+msgid "Employee Type"
+msgstr "نوع الموظف"
+
+#. module: fahad_transportation
+#: view:branch:fahad_transportation.view_branch_form
+#: field:branch,employee_ids:0
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:32
+#: view:car.maintenance:fahad_transportation.view_car_maintenance_form
+#: selection:car.maintenance,state:0
+#: view:rent:fahad_transportation.view_rent_form selection:rent,state:0
+#, python-format
+msgid "End"
+msgstr "الانتهاء"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:17
+#: code:addons/fahad_transportation/models/transportation.py:332
+#: field:line.vehicle.history,end_point:0 field:new.line,end_point:0
+#, python-format
+msgid "End Point"
+msgstr "نقطة النهاية"
+
+#. module: fahad_transportation
+#: field:car.maintenance,differential_line_ids:0
+#: field:car.maintenance,gearbox_line_ids:0
+#: field:car.maintenance,machine_line_ids:0
+msgid "Entry Data"
+msgstr "تاريخ الادخال"
+
+#. module: fahad_transportation
+#: field:new.wheel,estimated_life:0
+msgid "Estimated Life"
+msgstr "العمر المقدر"
+
+#. module: fahad_transportation
+#: field:hr.employee,executed:0
+msgid "Executed"
+msgstr "نفذت"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:238
+#, python-format
+msgid "Executed should be less than 6 digits only"
+msgstr "التنفيذ يجب ان يكون اقل من 6 ارقام"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:172
+#: code:addons/fahad_transportation/models/new_tank.py:70
+#: field:expense.register.lines,expense_account:0
+#: field:expenses,expense_account:0 field:new.car,expense_account:0
+#: field:new.tank,expense_account:0 field:new.wheel,expense_account:0
+#: field:wheel.expenses,expense_account:0
+#, python-format
+msgid "Expense Account"
+msgstr "حساب المصروف"
+
+#. module: fahad_transportation
+#: field:new.wheel,expense_journal:0
+msgid "Expense Journal"
+msgstr "دفتر يومية المصروف"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:11
+#: field:expense.register.lines,expense_name:0 field:expenses,name:0
+#: field:wheel.expenses,expense_name:0
+#, python-format
+msgid "Expense Name"
+msgstr "اسم المصروف"
+
+#. module: fahad_transportation
+#: field:expenses,expense_nature:0
+msgid "Expense Nature"
+msgstr "طبيعة المصروف"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:10
+#: field:expense.register.lines,expense_register_id:0
+#: model:ir.actions.act_window,name:fahad_transportation.view_expense_register_action
+#: model:ir.model,name:fahad_transportation.model_expense_register
+#: model:ir.ui.menu,name:fahad_transportation.expense_register_menu
+#, python-format
+msgid "Expense Register"
+msgstr "تسجيل المصروف"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:65
+#: field:expense.register,expense_register_level:0
+#, python-format
+msgid "Expense Register Level"
+msgstr "مستوي تسجيل المصروف"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:79
+#: field:expense.register,expense_register_line_ids:0
+#: model:ir.model,name:fahad_transportation.model_expense_register_lines
+#, python-format
+msgid "Expense Register Lines"
+msgstr "تسجيل مصروف الخط"
+
+#. module: fahad_transportation
+#: field:differential.line,expense_type_id:0 field:expenses,expense_type:0
+#: field:gearbox.line,expense_type_id:0
+#: field:machine.motor.line,expense_type_id:0
+msgid "Expense Type"
+msgstr "نوع المصروف"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+msgid "Expense from Expenses"
+msgstr "مصروف من المصروفات"
+
+#. module: fahad_transportation
+#: view:expense.register:fahad_transportation.view_expense_register_form
+#: model:ir.actions.act_window,name:fahad_transportation.view_expense_action
+#: model:ir.model,name:fahad_transportation.model_expenses
+#: model:ir.ui.menu,name:fahad_transportation.expenses
+#: model:ir.ui.menu,name:fahad_transportation.menu_expense_action
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:other.revenue:fahad_transportation.view_other_revenue_form
+#: view:trips:fahad_transportation.view_trip_form field:trips,expenses_ids:0
+msgid "Expenses"
+msgstr "المصروفات"
+
+#. module: fahad_transportation
+#: field:new.car,expense_expense:0
+msgid "Expenses from Expenses"
+msgstr "مصروفات من المصروفات"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:46
+#: selection:hr.employee,sponsor_type:0 selection:new.car,ownership:0
+#: selection:new.tank,ownership:0
+#, python-format
+msgid "External"
+msgstr "خارجي"
+
+#. module: fahad_transportation
+#: field:new.car,external_ownership:0
+msgid "External Ownership"
+msgstr "مالك خارجي"
+
+#. module: fahad_transportation
+#: selection:dependence.line,kinship:0
+msgid "Father"
+msgstr "الاب"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:18
+#: field:expense.register.lines,filling_station:0
+#, python-format
+msgid "Filling Station"
+msgstr "محطة وقود"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:198
+#: code:addons/fahad_transportation/models/new_tank.py:94
+#: field:new.car,final_payment:0 field:new.tank,final_payment:0
+#, python-format
+msgid "Final Payment"
+msgstr "الدفعة النهائية"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:405
+#: code:addons/fahad_transportation/models/new_tank.py:308
+#, python-format
+msgid "Final Payment should be greater than Zero and less than Residual Value"
+msgstr "الدفعة النهائية يجب ان تكون اكبر من الصفر واقل من القيمة المتبقية"
+
+#. module: fahad_transportation
+#: selection:trips.line,deduct_owner:0
+msgid "Fixed"
+msgstr "ثابت"
+
+#. module: fahad_transportation
+#: field:trips.line,deduct_owner_amount:0
+msgid "Fixed / Percentage"
+msgstr "نسبة ثايتة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/trips.py:73
+#, python-format
+msgid "Fixed cannot exceed Total Amount"
+msgstr "الثابت لا يمكن ان يتجاوز المبلغ الاجمالي"
+
+#. module: fahad_transportation
+#: field:instalment.sheet.line,flag:0 field:new.car,car_flag:0
+#: field:new.car,sheet:0 field:new.tank,sheet:0 field:new.tank,tank_flag:0
+#: field:tank.instalment.sheet.line,flag:0
+msgid "Flag"
+msgstr "إشارة"
+
+#. module: fahad_transportation
+#: field:branch,floor_no:0
+msgid "Floor No."
+msgstr "رقم الدور/ الطابق"
+
+#. module: fahad_transportation
+#: field:new.car,message_follower_ids:0 field:new.tank,message_follower_ids:0
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:133
+#: code:addons/fahad_transportation/models/new_tank.py:129
+#: code:addons/fahad_transportation/models/new_vehicle.py:45
+#, python-format
+msgid "For Rent"
+msgstr "للايجار"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:114
+#: field:new.car,form_expiry_date:0
+#, python-format
+msgid "Form Expiry Date"
+msgstr "من تاريخ انتهاء الصلاحية"
+
+#. module: fahad_transportation
+#: selection:expense.register,payment_method:0
+msgid "From Warehouse"
+msgstr "من المخزن "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:59
+#, python-format
+msgid "Gear Box Change should not be more than 5 digits only"
+msgstr "تغيير علبة التروس يجب ان لا يكون اكثر من 5 ارقام"
+
+#. module: fahad_transportation
+#: field:rent,gearbox_line_ids:0
+msgid "GearBox Asset"
+msgstr "أصل علبة التروس"
+
+#. module: fahad_transportation
+#: view:car.maintenance:fahad_transportation.view_car_maintenance_form
+msgid "GearBox Maintenance"
+msgstr "صيانة علبة التروس"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+msgid "Generate Instalment Sheet"
+msgstr "انشاء القسط "
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+msgid "Generate Wheel Place Line"
+msgstr "Generate Wheel Place Line"
+
+#. module: fahad_transportation
+#: field:new.vehicle,has_driver:0
+msgid "Has Driver"
+msgstr "لديها سائق"
+
+#. module: fahad_transportation
+#: field:hr.employee,has_vehicle:0 selection:new.line,has_vehicle:0
+msgid "Has Vehicle"
+msgstr "لديها مركبة "
+
+#. module: fahad_transportation
+#: field:new.line,has_vehicle:0
+msgid "Has Vehicle?"
+msgstr "لديها مركبة ؟"
+
+#. module: fahad_transportation
+#: field:buy.screen,head_price:0
+msgid "Head Price"
+msgstr "السعر الرئيسي"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/buy_screen.py:45
+#, python-format
+msgid "Head price/ Tank price should not be equal or greater than Buy price"
+msgstr "السعر الرئيسي / سعر الخزان يجب ان لا يكون مساوي او اكبر من سعر الشراء"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/buy_screen.py:43
+#, python-format
+msgid "Head price/ Tank price should not be equal to  zero"
+msgstr "السعر الرئيسي / سعر الخزان يجب ان لا يساوي الصفر"
+
+#. module: fahad_transportation
+#: model:ir.module.category,description:fahad_transportation.module_category_fahad_management
+msgid "Helps you manage your Transportation."
+msgstr "يساعدك علي إدارة النقل الخاص بك"
+
+#. module: fahad_transportation
+#: field:differential.line,complete:0 field:gearbox.line,complete:0
+#: field:machine.motor.line,complete:0
+msgid "Hide"
+msgstr "مخفي"
+
+#. module: fahad_transportation
+#: view:new.wheel:fahad_transportation.view_wheel_form
+msgid "History"
+msgstr "البيانات التاريخية"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: field:new.car,history_linked_line:0
+#: view:new.tank:fahad_transportation.new_tank_form
+#: field:new.tank,history_linked_line:0
+#: field:new.tank,history_linked_line_all:0
+#: field:new.vehicle,history_linked_all:0
+#: field:new.vehicle,history_linked_line:0
+msgid "History Lines"
+msgstr "البيانات التاريخية للخط"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+msgid "History Rent"
+msgstr "البيانات التاريخة للايجار"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:29
+#: view:new.car:fahad_transportation.view_new_car_form
+#: field:new.line,all_vehicles_lines:0
+#: view:new.tank:fahad_transportation.new_tank_form
+#, python-format
+msgid "History Vehicles"
+msgstr "البيانات التاريخية للمركبة"
+
+#. module: fahad_transportation
+#: help:new.car,message_summary:0 help:new.tank,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+
+#. module: fahad_transportation
+#: selection:dependence.line,kinship:0
+msgid "Husband"
+msgstr "الزوج"
+
+#. module: fahad_transportation
+#: field:action.place.line,id:0 field:branch,id:0 field:buy.screen,id:0
+#: field:car.category,id:0 field:car.maintenance,id:0
+#: field:custody.deliver.line,id:0 field:custody.receive.line,id:0
+#: field:dependence.line,employee_id:0 field:dependence.line,id:0
+#: field:differential.line,id:0 field:discount.commission,id:0
+#: field:discount.commission.line,id:0 field:expense.register,id:0
+#: field:expense.register.lines,id:0 field:expenses,id:0
+#: field:fahad.contract,id:0 field:gearbox.line,id:0
+#: field:hr.employee,emp_id:0 field:install.place,id:0
+#: field:instalment.sheet.line,id:0 field:line.vehicle.history,id:0
+#: field:linked.unlinked.vehicles,id:0 field:machine.motor.line,id:0
+#: field:new.car,id:0 field:new.line,id:0 field:new.tank,id:0
+#: field:new.vehicle,id:0 field:new.wheel,id:0 field:other.revenue,id:0
+#: field:other.revenue.line,id:0 field:rent,id:0 field:rent.lines,id:0
+#: field:tank.instalment.sheet.line,id:0 field:trips,id:0
+#: field:trips.line,id:0 field:vehicle.custody,id:0
+#: field:vehicle.dismantling,id:0 field:vehicles.on.line,id:0
+#: field:wheel.action,id:0 field:wheel.action.lines.install,id:0
+#: field:wheel.action.lines.uninstall,id:0 field:wheel.expenses,id:0
+#: field:wheel.supplier,id:0
+msgid "ID"
+msgstr "الاقامة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:242
+#, python-format
+msgid "ID should be less than 6 digits only"
+msgstr "رقم الاقامة يجب ان يكون اقل من 6 ارقام"
+
+#. module: fahad_transportation
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+msgid "Identification Data"
+msgstr "بيانات الاقامة"
+
+#. module: fahad_transportation
+#: field:hr.employee,identification_date:0
+msgid "Identification Date"
+msgstr "تاريخ الاقامة"
+
+#. module: fahad_transportation
+#: field:hr.employee,identification_expiry_date:0
+msgid "Identification Expiry Date"
+msgstr "تاريخ انتهاء الاقامة بالميلادي"
+
+#. module: fahad_transportation
+#: field:hr.employee,identification_expiry_hijri_date:0
+msgid "Identification Expiry Hijri Date"
+msgstr "تاريخ انتهاء الاقامة بالهجري"
+
+#. module: fahad_transportation
+#: field:hr.employee,identification_hijri_date:0
+msgid "Identification Hijri Date"
+msgstr "تاريخ الاقامة الهجري"
+
+#. module: fahad_transportation
+#: help:new.car,message_unread:0 help:new.tank,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "فحص الرسائل الجديدة تتطلب انتباهكم"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:23
+#: code:addons/fahad_transportation/models/transportation.py:24
+#: field:buy.screen,income_account_id:0 field:new.line,income_account:0
+#: field:other.revenue,income_account_id:0 field:rent,income_account_id:0
+#, python-format
+msgid "Income Account"
+msgstr "حساب الدخل"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:125
+#: selection:vehicles.on.line,decision_type:0
+#: selection:wheel.action,order_type:0
+#, python-format
+msgid "Install"
+msgstr "التركيب"
+
+#. module: fahad_transportation
+#: field:linked.unlinked.vehicles,install_date:0
+#: field:new.vehicle,install_date:0
+#: field:wheel.action.lines.install,install_date:0
+#: field:wheel.action.lines.uninstall,install_date:0
+msgid "Install Date"
+msgstr "تاريخ التركيب"
+
+#. module: fahad_transportation
+#: view:wheel.action:fahad_transportation.view_wheel_action_form
+#: field:wheel.action,install_decision:0
+msgid "Install Decision"
+msgstr "قرار التركيب"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+#: view:new.wheel:fahad_transportation.view_wheel_form
+#: field:new.wheel,install_history_ids:0
+msgid "Install History"
+msgstr "البيانات التاريخية التركيب"
+
+#. module: fahad_transportation
+#: field:action.place.line,action_place_id:0
+#: view:install.place:fahad_transportation.view_install_place_form
+#: view:install.place:fahad_transportation.view_install_place_tree
+#: field:wheel.action.lines.install,install_place:0
+#: field:wheel.action.lines.uninstall,install_place:0
+msgid "Install Place"
+msgstr "مكان التركيب"
+
+#. module: fahad_transportation
+#: model:ir.actions.act_window,name:fahad_transportation.action_install_place
+#: model:ir.ui.menu,name:fahad_transportation.menu_wheel_install_places
+msgid "Install Places"
+msgstr "اماكن التركيب"
+
+#. module: fahad_transportation
+#: view:wheel.action:fahad_transportation.view_wheel_action_form
+msgid "Install Wheel"
+msgstr "تركيب الكفر"
+
+#. module: fahad_transportation
+#: selection:new.wheel,state:0
+msgid "Installed"
+msgstr "تم التركيب"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:132
+#, python-format
+msgid "Installed Wheel No"
+msgstr "رقم الكفر المركب"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+msgid "Installed Wheels"
+msgstr "الكفرات المركبة "
+
+#. module: fahad_transportation
+#: field:wheel.action,install_on:0
+msgid "Installed on"
+msgstr "تركيب علي "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:67
+#: view:new.car:fahad_transportation.view_new_car_form
+#: selection:new.car,sale_method:0
+#: view:new.tank:fahad_transportation.new_tank_form
+#: selection:new.tank,sale_method:0
+#, python-format
+msgid "Instalment"
+msgstr "قسط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:197
+#: code:addons/fahad_transportation/models/new_tank.py:93
+#, python-format
+msgid "Instalment Book Value"
+msgstr "القيمة الدفترية للقسط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:403
+#: code:addons/fahad_transportation/models/new_tank.py:306
+#, python-format
+msgid "Instalment Book Value should be greater than Zero and less than Total Value"
+msgstr "القيمة الدفترية للقسط يجب ان تكون اكبر من الصفر واقل من القيمة الاجمالية "
+
+#. module: fahad_transportation
+#: field:instalment.sheet.line,instalment_date:0
+#: field:tank.instalment.sheet.line,instalment_date:0
+msgid "Instalment Date"
+msgstr "تاريخ القسط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:211
+#: code:addons/fahad_transportation/models/new_tank.py:120
+#: view:new.car:fahad_transportation.view_new_car_form
+#: field:new.car,instalment_sheet:0
+#: view:new.tank:fahad_transportation.new_tank_form
+#: field:new.tank,instalment_sheet:0
+#, python-format
+msgid "Instalment Sheet"
+msgstr "بيان القسط"
+
+#. module: fahad_transportation
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+msgid "Insurance"
+msgstr "التامين"
+
+#. module: fahad_transportation
+#: field:hr.employee,insurance_company:0
+msgid "Insurance Company"
+msgstr "شركة التامين "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:250
+#, python-format
+msgid "Insurance Company should be less than 6 digits only"
+msgstr "شركة التامين يجب ان تكون اقل من 6 ارقام"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:128
+#: field:new.car,insurance_date:0
+#, python-format
+msgid "Insurance Date"
+msgstr "تاريخ التامين"
+
+#. module: fahad_transportation
+#: field:hr.employee,insurance_degree:0
+msgid "Insurance Degree"
+msgstr "درجة  التامين"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:254
+#, python-format
+msgid "Insurance Degree should be less than 6 digits only"
+msgstr "فئة التامين يجب ان تكون اقل من 6 ارقام"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:126
+#: field:hr.employee,insurance_expiry_date:0
+#: field:new.car,insurance_expiry_date:0
+#, python-format
+msgid "Insurance Expiry Date"
+msgstr "تاريخ انتهاء التامين"
+
+#. module: fahad_transportation
+#: field:hr.employee,insurance_issue_date:0
+msgid "Insurance Issue Date"
+msgstr "تاريخ اصدار التامين"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:127
+#: field:hr.employee,insurance_no:0 field:new.car,insurance_no:0
+#, python-format
+msgid "Insurance No"
+msgstr "رقم التامين"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:125
+#: field:new.car,insurance_policy_no:0
+#, python-format
+msgid "Insurance Policy No"
+msgstr "رقم بوليصة التامين"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:124
+#: field:new.car,insurance_type:0
+#, python-format
+msgid "Insurance Type"
+msgstr "نوع التامين "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:246
+#, python-format
+msgid "Insurance should be less than 6 digits only"
+msgstr "التامين يجب ان يكون اقل من 6 ارقام"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:17
+#: field:expense.register.lines,invoice:0
+#: model:ir.model,name:fahad_transportation.model_account_invoice
+#: view:new.car:fahad_transportation.view_new_car_form
+#, python-format
+msgid "Invoice"
+msgstr "فاتورة"
+
+#. module: fahad_transportation
+#: view:new.tank:fahad_transportation.new_tank_form
+msgid "Invoices"
+msgstr "الفواتير"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:81
+#: field:new.tank,journal_entries_table:0
+#, python-format
+msgid "Invoices Table"
+msgstr "جدول الفواتير"
+
+#. module: fahad_transportation
+#: field:dependence.line,iqama_no:0
+msgid "Iqama No"
+msgstr "رقم الاقامة"
+
+#. module: fahad_transportation
+#: field:new.car,message_is_follower:0 field:new.tank,message_is_follower:0
+msgid "Is a Follower"
+msgstr "متابع"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:177
+#: code:addons/fahad_transportation/models/new_tank.py:75
+#: field:new.car,item_table:0 field:new.tank,item_table:0
+#, python-format
+msgid "Item Table"
+msgstr "جدول الصنف"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:349
+#: code:addons/fahad_transportation/models/new_tank.py:250
+#, python-format
+msgid "Item Table Should have at least a line"
+msgstr "جدول الاصناف يجب ان يحتوي علي الاقل سطر واحد"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+msgid "Items Table"
+msgstr "جدول الاصناف"
+
+#. module: fahad_transportation
+#: field:hr.employee,visa_job:0
+msgid "Job in Iqama"
+msgstr "الوظيفة في الاقامة"
+
+#. module: fahad_transportation
+#: field:hr.employee,passport_job:0
+msgid "Job in Passport"
+msgstr "الوظيفة في جواز السفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:76
+#: code:addons/fahad_transportation/models/new_car.py:174
+#: code:addons/fahad_transportation/models/new_car.py:192
+#: code:addons/fahad_transportation/models/new_car.py:206
+#: code:addons/fahad_transportation/models/new_tank.py:72
+#: code:addons/fahad_transportation/models/new_tank.py:89
+#: code:addons/fahad_transportation/models/new_tank.py:102
+#: code:addons/fahad_transportation/models/rent.py:24
+#: code:addons/fahad_transportation/models/transportation.py:26
+#: field:buy.screen,journal_id:0 field:expense.register,journal_id:0
+#: field:expenses,journal_id:0 field:new.car,asset_journal:0
+#: field:new.car,instalment_journal:0 field:new.car,rent_journal:0
+#: field:new.line,journal:0 field:new.tank,asset_journal:0
+#: field:new.tank,instalment_journal:0 field:new.tank,rent_journal:0
+#: field:new.wheel,journal_id:0 field:other.revenue,journal_id:0
+#: field:rent,journal_id:0 field:trips,journal_id:0
+#, python-format
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:19
+#: code:addons/fahad_transportation/models/transportation.py:334
+#: field:line.vehicle.history,km_price:0 field:new.line,km_price:0
+#, python-format
+msgid "KM Price"
+msgstr "سعر KM"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:83
+#, python-format
+msgid "KM Price should be 5 digits only"
+msgstr "سعر KM  يجب ان يكون 5 ارقام "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:81
+#, python-format
+msgid "KM Price should be greater than zero."
+msgstr "سعر KM  يجب ان يكون اكبر من الصفر"
+
+#. module: fahad_transportation
+#: field:hr.employee,kingdom_entry_date:0
+msgid "Kingdom Entry Date"
+msgstr "تاريخ دخول المملكة "
+
+#. module: fahad_transportation
+#: field:dependence.line,kinship:0
+msgid "Kinship"
+msgstr "صلة القرابة"
+
+#. module: fahad_transportation
+#: field:new.car,message_last_post:0 field:new.tank,message_last_post:0
+msgid "Last Message Date"
+msgstr "تاريخ اخر رسالة"
+
+#. module: fahad_transportation
+#: field:action.place.line,write_uid:0 field:branch,write_uid:0
+#: field:buy.screen,write_uid:0 field:car.category,write_uid:0
+#: field:car.maintenance,write_uid:0 field:custody.deliver.line,write_uid:0
+#: field:custody.receive.line,write_uid:0 field:dependence.line,write_uid:0
+#: field:differential.line,write_uid:0 field:discount.commission,write_uid:0
+#: field:discount.commission.line,write_uid:0
+#: field:expense.register,write_uid:0 field:expense.register.lines,write_uid:0
+#: field:expenses,write_uid:0 field:fahad.contract,write_uid:0
+#: field:gearbox.line,write_uid:0 field:install.place,write_uid:0
+#: field:instalment.sheet.line,write_uid:0
+#: field:line.vehicle.history,write_uid:0
+#: field:linked.unlinked.vehicles,write_uid:0
+#: field:machine.motor.line,write_uid:0 field:new.car,write_uid:0
+#: field:new.line,write_uid:0 field:new.tank,write_uid:0
+#: field:new.vehicle,write_uid:0 field:new.wheel,write_uid:0
+#: field:other.revenue,write_uid:0 field:other.revenue.line,write_uid:0
+#: field:rent,write_uid:0 field:rent.lines,write_uid:0
+#: field:tank.instalment.sheet.line,write_uid:0 field:trips,write_uid:0
+#: field:trips.line,write_uid:0 field:vehicle.custody,write_uid:0
+#: field:vehicle.dismantling,write_uid:0 field:vehicles.on.line,write_uid:0
+#: field:wheel.action,write_uid:0 field:wheel.action.lines.install,write_uid:0
+#: field:wheel.action.lines.uninstall,write_uid:0
+#: field:wheel.expenses,write_uid:0 field:wheel.supplier,write_uid:0
+msgid "Last Updated by"
+msgstr "اخر تخديث"
+
+#. module: fahad_transportation
+#: field:action.place.line,write_date:0 field:branch,write_date:0
+#: field:buy.screen,write_date:0 field:car.category,write_date:0
+#: field:car.maintenance,write_date:0 field:custody.deliver.line,write_date:0
+#: field:custody.receive.line,write_date:0 field:dependence.line,write_date:0
+#: field:differential.line,write_date:0 field:discount.commission,write_date:0
+#: field:discount.commission.line,write_date:0
+#: field:expense.register,write_date:0
+#: field:expense.register.lines,write_date:0 field:expenses,write_date:0
+#: field:fahad.contract,write_date:0 field:gearbox.line,write_date:0
+#: field:install.place,write_date:0 field:instalment.sheet.line,write_date:0
+#: field:line.vehicle.history,write_date:0
+#: field:linked.unlinked.vehicles,write_date:0
+#: field:machine.motor.line,write_date:0 field:new.car,write_date:0
+#: field:new.line,write_date:0 field:new.tank,write_date:0
+#: field:new.vehicle,write_date:0 field:new.wheel,write_date:0
+#: field:other.revenue,write_date:0 field:other.revenue.line,write_date:0
+#: field:rent,write_date:0 field:rent.lines,write_date:0
+#: field:tank.instalment.sheet.line,write_date:0 field:trips,write_date:0
+#: field:trips.line,write_date:0 field:vehicle.custody,write_date:0
+#: field:vehicle.dismantling,write_date:0 field:vehicles.on.line,write_date:0
+#: field:wheel.action,write_date:0
+#: field:wheel.action.lines.install,write_date:0
+#: field:wheel.action.lines.uninstall,write_date:0
+#: field:wheel.expenses,write_date:0 field:wheel.supplier,write_date:0
+msgid "Last Updated on"
+msgstr "اخر تحديث بواسطة"
+
+#. module: fahad_transportation
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+msgid "License Date"
+msgstr "تاريخ الرخصة "
+
+#. module: fahad_transportation
+#: field:hr.employee,license_expiry_hijri_date:0
+msgid "License Expiry Hijri Date"
+msgstr "تاريخ انتهاء الرخصة بالهجري"
+
+#. module: fahad_transportation
+#: field:hr.employee,license_hijri_date:0
+msgid "License Hijri Date"
+msgstr "تاريخ الرخصة بالهجري"
+
+#. module: fahad_transportation
+#: field:hr.employee,license_no:0
+msgid "License No"
+msgstr "رقم الرخصة"
+
+#. module: fahad_transportation
+#: field:hr.employee,license_type:0
+msgid "License Type"
+msgstr "نوع الرخصة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:156
+#: field:linked.unlinked.vehicles,line_id_for_link:0
+#: field:linked.unlinked.vehicles,line_id_for_unlink:0 field:new.car,line_id:0
+#: field:other.revenue.line,line_id:0 field:trips.line,line_id:0
+#, python-format
+msgid "Line"
+msgstr "خط"
+
+#. module: fahad_transportation
+#: view:new.vehicle:fahad_transportation.view_vehicle_form
+msgid "Line History"
+msgstr "البيانات التاريخية للخط "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:15
+#: code:addons/fahad_transportation/models/transportation.py:330
+#: field:line.vehicle.history,line_name:0 field:new.line,line_name:0
+#, python-format
+msgid "Line Name"
+msgstr "اسم الخط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:20
+#: code:addons/fahad_transportation/models/transportation.py:335
+#: field:line.vehicle.history,line_price:0
+#, python-format
+msgid "Line Price"
+msgstr "سعر الخط"
+
+#. module: fahad_transportation
+#: view:branch:fahad_transportation.view_branch_form field:branch,line_ids:0
+#: model:ir.ui.menu,name:fahad_transportation.line
+#: view:new.line:fahad_transportation.view_new_line_tree
+#: view:new.tank:fahad_transportation.new_tank_form
+msgid "Lines"
+msgstr "الخطوط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:312
+#: selection:linked.unlinked.vehicles,state_of_linked_line:0
+#, python-format
+msgid "Link"
+msgstr "الربط"
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_vehicle_custody
+msgid "Link vehicle(car-tank) with driver"
+msgstr "ربط الشاحنة ( السيارة - الخزان ) مع السائق"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:228
+#: code:addons/fahad_transportation/models/new_tank.py:116
+#: code:addons/fahad_transportation/models/new_vehicle.py:44
+#: code:addons/fahad_transportation/models/transportation.py:337
+#: selection:line.vehicle.history,state_of_linked_line:0
+#: selection:new.car,state_of_linked_line:0
+#: selection:new.tank,state_of_linked_line:0
+#: selection:new.vehicle,state_of_linked_line:0
+#, python-format
+msgid "Linked"
+msgstr "مربوط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:191
+#: code:addons/fahad_transportation/models/new_tank.py:88
+#: view:new.car:fahad_transportation.view_new_car_form
+#: field:new.car,linked_asset:0
+#: view:new.tank:fahad_transportation.new_tank_form
+#: field:new.tank,linked_asset:0
+#, python-format
+msgid "Linked Asset"
+msgstr "الاصول المرتبطة"
+
+#. module: fahad_transportation
+#: field:car.category,linked_cars:0
+msgid "Linked Cars"
+msgstr "السيارات المرتبطة "
+
+#. module: fahad_transportation
+#: field:new.car,linked_line:0 field:new.tank,linked_line:0
+#: field:new.vehicle,line_id:0
+msgid "Linked Line"
+msgstr "الخطوط المرتبطة "
+
+#. module: fahad_transportation
+#: field:new.car,linked_vehicle:0 field:new.tank,linked_vehicle:0
+msgid "Linked Vehicle"
+msgstr "الشاحنة المرتبطة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:312
+#: code:addons/fahad_transportation/models/transportation.py:337
+#: field:line.vehicle.history,state_of_linked_line:0
+#: field:linked.unlinked.vehicles,state_of_linked_line:0
+#, python-format
+msgid "Linked/UnLinked"
+msgstr "مرتبطة / غير مرتبطة"
+
+#. module: fahad_transportation
+#: field:expense.register,liquidity_account:0
+msgid "Liquidity Account"
+msgstr "حساب السيولة "
+
+#. module: fahad_transportation
+#: field:trips.line,loaded_amount:0
+msgid "Loaded Amount"
+msgstr "مبلغ التحميل "
+
+#. module: fahad_transportation
+#: field:trips.line,loaded_date:0
+msgid "Loaded Date"
+msgstr "تاريخ التحميل"
+
+#. module: fahad_transportation
+#: field:custody.deliver.line,location:0 field:expense.register,location_id:0
+msgid "Location"
+msgstr "الموقع"
+
+#. module: fahad_transportation
+#: field:expense.register,location_account:0
+msgid "Location Account"
+msgstr "حساب الموقع"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:25
+#: field:new.line,loss_account:0 field:trips,loss_account:0
+#, python-format
+msgid "Loss Account"
+msgstr "حساب الخسارة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:164
+#: code:addons/fahad_transportation/models/new_tank.py:63
+#: field:new.car,loss_account:0 field:new.tank,loss_account:0
+#, python-format
+msgid "Loss Asset Account"
+msgstr "حساب خسارة الاصل"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:23
+#: field:new.line,loss_liter:0
+#, python-format
+msgid "Loss per each Liter"
+msgstr "خسارة لكل لتر "
+
+#. module: fahad_transportation
+#: field:custody.receive.line,lost:0
+msgid "Lost"
+msgstr "فقد"
+
+#. module: fahad_transportation
+#: field:custody.receive.line,lost_number:0
+msgid "Lost Number"
+msgstr "عدد الفقد"
+
+#. module: fahad_transportation
+#: field:rent,machine_line_ids:0
+msgid "Machine Motor Asset"
+msgstr "اصل المكينة"
+
+#. module: fahad_transportation
+#: view:car.maintenance:fahad_transportation.view_car_maintenance_form
+msgid "Machine Motor Maintenance"
+msgstr "صيانة المكينة  "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:53
+#, python-format
+msgid "Machine Oil Change should not be more than 5 digits only"
+msgstr "تغير زيت المكينة يجب ان لا يكون اكبر من 5 ارقام"
+
+#. module: fahad_transportation
+#: field:car.maintenance,maintenance_journal:0
+msgid "Maintenance Expense Journal"
+msgstr "دفتر يومية الصيانة الدورية "
+
+#. module: fahad_transportation
+#: field:new.wheel,manufacturing_company:0
+msgid "Manufacturer"
+msgstr "التصنيع"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:53
+#: field:new.tank,manufacture_year:0
+#, python-format
+msgid "Manufacturing Year"
+msgstr "سنة الصنع"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:52
+#: field:new.tank,manufacture_company:0
+#, python-format
+msgid "Manufacturing company"
+msgstr "الشركة المصنعة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:17
+#: code:addons/fahad_transportation/models/new_car.py:109 field:new.car,mark:0
+#, python-format
+msgid "Mark"
+msgstr "علامة"
+
+#. module: fahad_transportation
+#: field:differential.line,mechanical:0 field:gearbox.line,mechanical:0
+#: field:machine.motor.line,mechanical:0
+msgid "Mechanical"
+msgstr "ميكانيكي"
+
+#. module: fahad_transportation
+#: field:new.car,message_ids:0 field:new.tank,message_ids:0
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: fahad_transportation
+#: help:new.car,message_ids:0 help:new.tank,message_ids:0
+msgid "Messages and communication history"
+msgstr "البيانات التاريخية للرسائل والاتصال "
+
+#. module: fahad_transportation
+#: field:differential.line,meter_read:0 field:gearbox.line,meter_read:0
+#: field:machine.motor.line,meter_read:0
+msgid "Meter Read"
+msgstr "قراءة الامتار"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:132
+#: code:addons/fahad_transportation/models/car_maintenance.py:222
+#: code:addons/fahad_transportation/models/car_maintenance.py:312
+#, python-format
+msgid "Meter Read should not be more than 7 digits only"
+msgstr "قراءة العداد يجب ان يكون اكبر من 7 ارقام"
+
+#. module: fahad_transportation
+#: field:wheel.action.lines.uninstall,meter_at_uninstall:0
+msgid "Meter When Uninstall"
+msgstr "المتر عند عدم التركيب"
+
+#. module: fahad_transportation
+#: field:branch,mobile1:0
+msgid "Mobile 1 No."
+msgstr "رقم جوال 1"
+
+#. module: fahad_transportation
+#: field:branch,mobile2:0
+msgid "Mobile 2 No."
+msgstr "رقم جوال 2"
+
+#. module: fahad_transportation
+#: field:branch,mobile3:0
+msgid "Mobile 3 No."
+msgstr "رقم جوال  3"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:16
+#: code:addons/fahad_transportation/models/new_car.py:108
+#: code:addons/fahad_transportation/models/new_tank.py:55
+#: code:addons/fahad_transportation/models/transportation.py:32
+#: field:new.car,model:0 field:new.tank,model:0
+#, python-format
+msgid "Model"
+msgstr "موديل"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:362
+#: code:addons/fahad_transportation/models/new_tank.py:262
+#, python-format
+msgid "Model should not be more than 4 digits only"
+msgstr "الموديل يجب ان لايكون اكبر من  4 ارقام"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:201
+#: code:addons/fahad_transportation/models/new_tank.py:97
+#, python-format
+msgid "Monthly Instalment Amount"
+msgstr "قيمة القسط الشهري"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:170
+#: code:addons/fahad_transportation/models/new_tank.py:68
+#: code:addons/fahad_transportation/models/rent.py:22
+#: field:new.car,monthly_rent_amount:0 field:new.tank,monthly_rent_amount:0
+#: field:rent,monthly_rent_amount:0
+#, python-format
+msgid "Monthly Rent Amount"
+msgstr "قيمة الايجار الشهري"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:108
+#, python-format
+msgid "Monthly Rent Amount Can not be equal or less than zero"
+msgstr "قيمة الايجار الشهري لا يمكن ان تساوي الصفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:281
+#, python-format
+msgid "Monthly Rent Amount cannot be 0"
+msgstr "قيمة الايجار الشهري لا يمكن ان تكون صفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:322
+#: code:addons/fahad_transportation/models/new_tank.py:224
+#, python-format
+msgid "Monthly Rent Amount, Supplier, Expense Account, Journal, Next Payment Date and Item Table fields are invalid"
+msgstr "قيمة الايجار الشهري،مورد،حساب المصروف،دفتر اليومية ،تاريخ الدفعة التالية "
+
+#. module: fahad_transportation
+#: selection:dependence.line,kinship:0
+msgid "Mother"
+msgstr "الام"
+
+#. module: fahad_transportation
+#: selection:hr.employee,religion:0
+msgid "Muslim"
+msgstr "مسلم"
+
+#. module: fahad_transportation
+#: field:dependence.line,name:0 field:install.place,name:0
+msgid "Name"
+msgstr "الاسم"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:76
+#: code:addons/fahad_transportation/models/new_vehicle.py:36
+#: code:addons/fahad_transportation/models/rent.py:31
+#: code:addons/fahad_transportation/models/transportation.py:46
+#: code:addons/fahad_transportation/models/transportation.py:129
+#: code:addons/fahad_transportation/models/vehicle_dismantling.py:19
+#: selection:car.maintenance,state:0
+#: selection:custody.deliver.line,custody_state:0
+#: selection:custody.receive.line,custody_state:0
+#: selection:hr.employee,state:0 selection:new.car,state:0
+#: selection:new.line,state:0 selection:new.tank,state:0
+#: selection:new.vehicle,state:0 selection:new.wheel,state:0
+#: selection:new.wheel,wheel_status:0 selection:rent,state:0
+#: selection:vehicle.custody,state:0 selection:vehicle.dismantling,state:0
+#: selection:vehicles.on.line,state:0 selection:wheel.action,state:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: fahad_transportation
+#: field:account.asset.asset,car_id:0 field:account.invoice,new_car_id:0
+#: field:account.move,new_car_id:0
+#: code:addons/fahad_transportation/models/new_car.py:586
+#: code:addons/fahad_transportation/models/new_car.py:592
+#: code:addons/fahad_transportation/models/new_car.py:598
+#: code:addons/fahad_transportation/models/new_vehicle.py:20
+#: model:ir.actions.act_window,name:fahad_transportation.view_new_car_action
+#: model:ir.ui.menu,name:fahad_transportation.new_car_menu
+#: field:linked.unlinked.vehicles,new_car_id:0
+#: view:new.car:fahad_transportation.view_new_car_form
+#: field:new.vehicle,new_car_id:0
+#, python-format
+msgid "New Car"
+msgstr "سيارة جديد"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transport_wheel.py:304
+#: code:addons/fahad_transportation/models/transport_wheel.py:387
+#, python-format
+msgid "New Installed Wheels Must Be equal Uninstalled Wheels"
+msgstr "الكفرات الجديدة المثبتة يجب ان تساوي الكفرات الغير مثبتة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:114
+#: code:addons/fahad_transportation/models/transportation.py:121
+#: code:addons/fahad_transportation/models/trips.py:97
+#: model:ir.actions.act_window,name:fahad_transportation.view_new_line_action
+#: model:ir.ui.menu,name:fahad_transportation.new_line_menu
+#: field:line.vehicle.history,new_line_id:0
+#: field:linked.unlinked.vehicles,new_line_id:0
+#: view:new.line:fahad_transportation.view_new_line_form
+#: field:product.template,new_line_id:0 field:trips,new_line_id:0
+#: field:vehicles.on.line,new_line_id:0
+#, python-format
+msgid "New Line"
+msgstr "خط جديد"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:108
+#, python-format
+msgid "New Line Can not be deleted when state is Confirmed and has trips on it."
+msgstr "الخط الجديد لا يمكن خذفه عندما تكون الحالة مؤكدة "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:106
+#, python-format
+msgid "New Line Can not be deleted when state is closed."
+msgstr "الخط الجديد لا يمكن خذفه عندما تكون الحالة ملغاه"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:122
+#: field:vehicles.on.line,new_line_history_id:0
+#, python-format
+msgid "New Line History"
+msgstr "البيانات التاريخية للخط الجديد"
+
+#. module: fahad_transportation
+#: field:account.asset.asset,tank_id:0 field:account.invoice,new_tank_id:0
+#: field:account.move,new_tank_id:0
+#: code:addons/fahad_transportation/models/new_tank.py:435
+#: code:addons/fahad_transportation/models/new_tank.py:441
+#: code:addons/fahad_transportation/models/new_tank.py:446
+#: model:ir.actions.act_window,name:fahad_transportation.view_new_tank_action
+#: model:ir.ui.menu,name:fahad_transportation.new_tank_menu
+#: field:linked.unlinked.vehicles,new_tank_id:0
+#: view:new.tank:fahad_transportation.new_tank_form
+#, python-format
+msgid "New Tank"
+msgstr "خزان جديد"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:175
+#: code:addons/fahad_transportation/models/new_car.py:205
+#: code:addons/fahad_transportation/models/new_tank.py:73
+#: code:addons/fahad_transportation/models/new_tank.py:101
+#: field:new.car,instalment_next_payment_date:0
+#: field:new.car,next_payment_date:0
+#: field:new.tank,instalment_next_payment_date:0
+#: field:new.tank,next_payment_date:0
+#, python-format
+msgid "Next Payment Date"
+msgstr "تاريخ الدفعة التالية"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:413
+#: code:addons/fahad_transportation/models/new_tank.py:316
+#, python-format
+msgid "Next Payment Date Can not be greater than Purchase Date"
+msgstr "تاريخ الدفعة التالية لا يمكن ان تكون اكبر من تاريخ الشراء"
+
+#. module: fahad_transportation
+#: selection:car.category,revenue:0 selection:car.category,tankable:0
+#: selection:new.car,tankable:0 selection:other.revenue,commission:0
+#: selection:trips,trip_discount:0 selection:trips.line,deduct_owner:0
+msgid "No"
+msgstr "رقم"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_asset.py:88
+#, python-format
+msgid "No Available Product Quantity In Stock"
+msgstr "لا يوجد كمية من المنتج في المخزون"
+
+#. module: fahad_transportation
+#: selection:wheel.action,install_on:0
+msgid "None"
+msgstr "لا شئ"
+
+#. module: fahad_transportation
+#: selection:new.line,has_vehicle:0
+msgid "Not Has Vehicle"
+msgstr "Not Has Vehicle"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:25 field:buy.screen,note:0
+#: field:custody.deliver.line,note:0 field:dependence.line,note:0
+#: field:differential.line,note:0 field:expense.register,note:0
+#: field:expenses,note:0 field:fahad.contract,note:0 field:gearbox.line,note:0
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+#: field:machine.motor.line,note:0 field:new.car,note:0
+#: view:new.tank:fahad_transportation.new_tank_form field:other.revenue,note:0
+#: field:other.revenue.line,note:0 field:rent,note:0
+#: field:wheel.expenses,note:0
+#, python-format
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:23
+#: code:addons/fahad_transportation/models/expense_register.py:19
+#: code:addons/fahad_transportation/models/new_car.py:129
+#: view:buy.screen:fahad_transportation.view_buy_screen_form
+#: field:discount.commission,note:0
+#: view:expense.register:fahad_transportation.view_expense_register_form
+#: field:expense.register.lines,notes:0 field:hr.employee,note:0
+#: view:new.car:fahad_transportation.view_new_car_form field:new.tank,note:0
+#: view:other.revenue:fahad_transportation.view_other_revenue_form
+#: view:rent:fahad_transportation.view_rent_form field:vehicle.custody,note:0
+#: field:vehicle.dismantling,note:0 field:wheel.action,notes:0
+#, python-format
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: fahad_transportation
+#: field:custody.deliver.line,number:0 field:custody.receive.line,number:0
+#: field:other.revenue.line,number:0
+msgid "Number"
+msgstr "رقم"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:43
+#: code:addons/fahad_transportation/models/other_revenue.py:27
+#, python-format
+msgid "Number must be +ve and bigger than 0"
+msgstr "يجب ان يكون رقم + واكبر من الصفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:200
+#: code:addons/fahad_transportation/models/new_tank.py:96
+#: field:new.car,number_of_instalment:0 field:new.tank,number_of_instalment:0
+#, python-format
+msgid "Number of Instalment"
+msgstr "عدد الاقساط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:407
+#: code:addons/fahad_transportation/models/new_tank.py:310
+#, python-format
+msgid "Number of Instalment should not be equal to Zero"
+msgstr "عدد الاقساط يجب ان لا يساوي الصفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:121
+#: field:new.car,operation_date:0
+#, python-format
+msgid "Operation Card Date"
+msgstr "تاريخ بطاقة التسجيل"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:122
+#: field:new.car,operation_expiry_date:0
+#, python-format
+msgid "Operation Card Expiry Date"
+msgstr "تاريخ انتهاء بطاقة التسجيل"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:120
+#: field:new.car,operation_card:0
+#, python-format
+msgid "Operation Vehicle"
+msgstr "تشغيل الشاحنة"
+
+#. module: fahad_transportation
+#: selection:expenses,expense_nature:0
+msgid "Operational"
+msgstr "التشغيل"
+
+#. module: fahad_transportation
+#: field:wheel.action,order_type:0
+msgid "Order Type"
+msgstr "نوع الطلب"
+
+#. module: fahad_transportation
+#: selection:dependence.line,kinship:0 selection:hr.employee,religion:0
+msgid "Other"
+msgstr "اخري"
+
+#. module: fahad_transportation
+#: field:trips,other_account:0
+msgid "Other Income Account"
+msgstr "حساب ايرادات اخري"
+
+#. module: fahad_transportation
+#: model:ir.actions.act_window,name:fahad_transportation.view_other_revenue_action
+#: model:ir.model,name:fahad_transportation.model_other_revenue
+#: model:ir.ui.menu,name:fahad_transportation.menu_other_revenue_action
+#: field:new.car,other_revenue_ids:0
+msgid "Other Revenue"
+msgstr "ايرادات اخري"
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_other_revenue_line
+msgid "Other Revenue Line"
+msgstr "خط ايراد اخر"
+
+#. module: fahad_transportation
+#: field:hr.employee,other_1:0
+msgid "Other1"
+msgstr "اخري 1"
+
+#. module: fahad_transportation
+#: field:hr.employee,other_10:0
+msgid "Other10"
+msgstr "اخري 10"
+
+#. module: fahad_transportation
+#: field:hr.employee,other_2:0
+msgid "Other2"
+msgstr "اخري 2"
+
+#. module: fahad_transportation
+#: field:hr.employee,other_3:0
+msgid "Other3"
+msgstr "اخري 3"
+
+#. module: fahad_transportation
+#: field:hr.employee,other_4:0
+msgid "Other4"
+msgstr "اخري 4"
+
+#. module: fahad_transportation
+#: field:hr.employee,other_5:0
+msgid "Other5"
+msgstr "اخري 5"
+
+#. module: fahad_transportation
+#: field:hr.employee,other_6:0
+msgid "Other6"
+msgstr "اخري 6"
+
+#. module: fahad_transportation
+#: field:hr.employee,other_7:0
+msgid "Other7"
+msgstr "اخري 7"
+
+#. module: fahad_transportation
+#: field:hr.employee,other_8:0
+msgid "Other8"
+msgstr "اخري 8"
+
+#. module: fahad_transportation
+#: field:hr.employee,other_9:0
+msgid "Other9"
+msgstr "اخري 9"
+
+#. module: fahad_transportation
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+msgid "Others"
+msgstr "اخري "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:66
+#: view:new.car:fahad_transportation.view_new_car_form
+#: selection:new.car,sale_method:0
+#: view:new.tank:fahad_transportation.new_tank_form
+#: selection:new.tank,sale_method:0
+#, python-format
+msgid "Our Asset"
+msgstr "أصولنا"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:46
+#: field:new.car,ownership:0 field:new.tank,ownership:0
+#, python-format
+msgid "Ownership"
+msgstr "ملكية"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:196
+#: code:addons/fahad_transportation/models/new_tank.py:92
+#: field:new.car,instalment_paid_amount:0
+#: field:new.tank,instalment_paid_amount:0
+#, python-format
+msgid "Paid Amount"
+msgstr "المبلغ المدفوع"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:401
+#: code:addons/fahad_transportation/models/new_tank.py:304
+#, python-format
+msgid "Paid Amount should be less than Total Value"
+msgstr "المبلغ المدفوع يجب ان يكون اصغر من القيمة الاجمالية"
+
+#. module: fahad_transportation
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+msgid "Passport Date"
+msgstr "تاريخ جواز السفر"
+
+#. module: fahad_transportation
+#: field:hr.employee,passport_expiry_date:0
+msgid "Passport Expiry Date"
+msgstr "تاريخ انتهاء جواز السفر"
+
+#. module: fahad_transportation
+#: field:hr.employee,passport_issue:0
+msgid "Passport Issue"
+msgstr "اصدار جواز السفر"
+
+#. module: fahad_transportation
+#: field:hr.employee,passport_issue_date:0
+msgid "Passport Issue Date"
+msgstr "تاريخ اصدار جواز السفر"
+
+#. module: fahad_transportation
+#: field:dependence.line,passport_no:0 field:hr.employee,passport_no:0
+msgid "Passport No"
+msgstr "رقم جواز السفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:127
+#: field:rent.lines,payment_date:0
+#, python-format
+msgid "Payment Date"
+msgstr "تاريخ الدفع"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:209
+#: code:addons/fahad_transportation/models/new_tank.py:105
+#: field:new.car,payment_journal:0 field:new.tank,payment_journal:0
+#, python-format
+msgid "Payment Journal"
+msgstr "دفتر يومية المدفوعات"
+
+#. module: fahad_transportation
+#: field:expense.register,payment_method:0
+#: field:wheel.expenses,payment_method:0 field:wheel.expenses,supplier:0
+msgid "Payment Method"
+msgstr "طريقة الدفع"
+
+#. module: fahad_transportation
+#: selection:trips.line,deduct_owner:0
+msgid "Percentage"
+msgstr "نسبة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/trips.py:76
+#, python-format
+msgid "Percentage cannot exceed 100"
+msgstr "نسبة لا تتجاوز 100"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:22
+#: code:addons/fahad_transportation/models/new_car.py:123
+#: field:new.car,examine_date:0
+#, python-format
+msgid "Periodic Examine Date"
+msgstr "تسجيل الفحص الدوري"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:15
+#: code:addons/fahad_transportation/models/new_car.py:79
+#: code:addons/fahad_transportation/models/transportation.py:31
+#: field:new.line,plaque_no:0
+#, python-format
+msgid "Plaque No"
+msgstr "رقم اللوحة "
+
+#. module: fahad_transportation
+#: sql_constraint:new.car:0
+msgid "Plaque No must be unique."
+msgstr "رقم اللوحة يجب ان لا يتكرر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:92
+#, python-format
+msgid "Plaque No should contain 4 digits only"
+msgstr "رقم اللوحة يجب ان يحتوي علي 4 ارقام"
+
+#. module: fahad_transportation
+#: field:linked.unlinked.vehicles,plaque_no:0
+msgid "Plaque No."
+msgstr "رقم اللوحة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:75
+#: code:addons/fahad_transportation/models/new_car.py:76
+#: code:addons/fahad_transportation/models/new_car.py:77
+#: code:addons/fahad_transportation/models/new_car.py:78
+#: field:new.car,char_1:0 field:new.car,char_12:0 field:new.car,char_13:0
+#: field:new.car,plate_no:0
+#, python-format
+msgid "Plate No"
+msgstr "رقم اللوحة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:381
+#, python-format
+msgid "Plate No must be unique"
+msgstr "رقم اللوحة يجب ان لا يتكرر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:105
+#, python-format
+msgid "Plate Number Must Be Unique"
+msgstr "رقم اللوحة يجب ان لا يتكرر"
+
+#. module: fahad_transportation
+#: field:differential.line,price_unit:0 field:gearbox.line,price_unit:0
+#: field:machine.motor.line,price_unit:0
+msgid "Price Unit"
+msgstr "سعر الوحدة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:136
+#: code:addons/fahad_transportation/models/car_maintenance.py:226
+#: code:addons/fahad_transportation/models/car_maintenance.py:316
+#, python-format
+msgid "Price Unit should not be more than 3 digits only."
+msgstr "سعر الوحدة يجب ان لا يكون اكبر من 3 ارقام فقط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:45
+#: selection:new.car,ownership:0 selection:new.tank,ownership:0
+#, python-format
+msgid "Private"
+msgstr "خاص"
+
+#. module: fahad_transportation
+#: field:trips.line,product_id:0
+msgid "Product"
+msgstr "منتج"
+
+#. module: fahad_transportation
+#: field:differential.line,product_id:0 field:gearbox.line,product_id:0
+#: field:machine.motor.line,product_id:0
+msgid "Product Name"
+msgstr "اسم المنتج"
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:327
+#: code:addons/fahad_transportation/models/new_tank.py:229
+#, python-format
+msgid "Product in Item Table should have Property expense account as current expense account."
+msgstr "المنتج في جدول المنتجات يجب ان يحتوي علي خصائص حساب المصروف كما في حساب المصروف الحالي"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:27
+#: view:new.line:fahad_transportation.view_new_line_form
+#: field:new.line,product_ids:0
+#, python-format
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: fahad_transportation
+#: field:account.asset.asset,asset_purchase_date:0
+#: code:addons/fahad_transportation/models/new_car.py:190
+#: code:addons/fahad_transportation/models/new_car.py:204
+#: code:addons/fahad_transportation/models/new_car.py:599
+#: code:addons/fahad_transportation/models/new_tank.py:87
+#: code:addons/fahad_transportation/models/new_tank.py:100
+#: field:new.car,instalment_purchase_date:0 field:new.car,purchase_date:0
+#: field:new.tank,instalment_purchase_date:0 field:new.tank,purchase_date:0
+#, python-format
+msgid "Purchase Date"
+msgstr "تاريخ الشراء"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:392
+#: code:addons/fahad_transportation/models/new_car.py:411
+#: code:addons/fahad_transportation/models/new_tank.py:298
+#: code:addons/fahad_transportation/models/new_tank.py:314
+#, python-format
+msgid "Purchase Date Can not be greater than today date"
+msgstr "تاريخ الشراء لا يمكن ان يكون اكبر من تاريخ اليوم"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:67
+#: field:new.car,sale_method:0 field:new.tank,sale_method:0
+#, python-format
+msgid "Purchase Method"
+msgstr "طريقة الشراء"
+
+#. module: fahad_transportation
+#: field:fahad.contract,purchase_no:0
+msgid "Purchase No"
+msgstr "رقم الشراء"
+
+#. module: fahad_transportation
+#: field:new.wheel,purchase_price:0
+msgid "Purchase Price"
+msgstr "سعر الشراء"
+
+#. module: fahad_transportation
+#: field:new.wheel,purchase_date:0
+msgid "Purchase date"
+msgstr "تاريخ الشراء"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+#: view:new.wheel:fahad_transportation.view_wheel_form
+msgid "Purchases and Accounting"
+msgstr "المشتريات والحسابات"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:14
+#: field:differential.line,quantity:0 field:expense.register.lines,number:0
+#: field:gearbox.line,quantity:0 field:machine.motor.line,quantity:0
+#: field:wheel.expenses,quantity:0
+#, python-format
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:134
+#: code:addons/fahad_transportation/models/car_maintenance.py:224
+#: code:addons/fahad_transportation/models/car_maintenance.py:314
+#, python-format
+msgid "Quantity should not be more than 3 digits only"
+msgstr "الكيمة يجب ان تكون اكبر من 3 ارقام "
+
+#. module: fahad_transportation
+#: selection:custody.deliver.line,state:0
+#: selection:custody.receive.line,state:0
+#: selection:vehicle.custody,decision_type:0
+msgid "Receive"
+msgstr "تسلم"
+
+#. module: fahad_transportation
+#: view:vehicle.custody:fahad_transportation.view_vehicle_custody_form
+#: field:vehicle.custody,receive_custody_ids:0
+msgid "Receive Custody"
+msgstr "Receive Custody"
+
+#. module: fahad_transportation
+#: field:custody.receive.line,receive_location:0
+msgid "Received Location"
+msgstr "موقع التسليم"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:18
+#: code:addons/fahad_transportation/models/new_car.py:110
+#: field:new.car,record_type:0
+#, python-format
+msgid "Record Type"
+msgstr "نوع التسليم"
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_gearbox_line
+msgid "Register Gearbox records"
+msgstr "سجل تسجيل علبة التروس"
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_machine_motor_line
+msgid "Register Machine Motor records"
+msgstr "سجل تسجيل مكينة السيارة"
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_wheel_expenses
+msgid "Register Wheel expense installed in car"
+msgstr "تسجيل حساب المصروفات الكفرات المثبتة في السيارة"
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_wheel_action
+msgid "Register actions on wheel"
+msgstr "تسجيل الكفراات النشطة "
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_differential_line
+msgid "Register differential records"
+msgstr "تسجيل السجلات المختلفة"
+
+#. module: fahad_transportation
+#: field:hr.employee,religion:0
+msgid "Religion"
+msgstr "الديانة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:235
+#: code:addons/fahad_transportation/models/new_tank.py:65
+#: code:addons/fahad_transportation/models/rent.py:128
+#: model:ir.actions.act_window,name:fahad_transportation.view_rent_action
+#: model:ir.ui.menu,name:fahad_transportation.menu_rent_action
+#: view:new.car:fahad_transportation.view_new_car_form field:new.car,rent_id:0
+#: selection:new.car,sale_method:0
+#: view:new.tank:fahad_transportation.new_tank_form
+#: selection:new.tank,sale_method:0
+#: view:rent:fahad_transportation.view_rent_form
+#: view:rent:fahad_transportation.view_rent_tree field:rent.lines,rent_id:0
+#, python-format
+msgid "Rent"
+msgstr "الايجار"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:21
+#: field:new.car,rent_end_date:0 field:new.tank,rent_end_date:0
+#, python-format
+msgid "Rent End Date"
+msgstr "تاريخ انتهاء الايجار "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:236
+#: field:new.car,rent_history_id:0
+#, python-format
+msgid "Rent History"
+msgstr "البيانات التاريخية للايجار"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:183
+#: field:new.car,journal_entries_table:0
+#, python-format
+msgid "Rent Invoice"
+msgstr "فاتورة الايجار"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:26
+#: field:rent,rent_line_ids:0
+#, python-format
+msgid "Rent Lines"
+msgstr "خطوط الايجار"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:20
+#: field:rent,period_month:0
+#, python-format
+msgid "Rent Period by Months"
+msgstr "فترة الايجار بالشهر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:106
+#, python-format
+msgid "Rent Period by Months Can not be equal or less than zero"
+msgstr "فتر الايجار بالشهر "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:19
+#: field:rent,rent_start_date:0
+#, python-format
+msgid "Rent Start Date"
+msgstr "تاريخ بداية الايجار"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:15 field:rent,rent_type:0
+#, python-format
+msgid "Rent Type"
+msgstr "نوع الايجار"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:78
+#: selection:new.car,state:0 selection:new.tank,state:0
+#, python-format
+msgid "Rented"
+msgstr "مؤجر"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+msgid "Rents"
+msgstr "الايجارات"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:199
+#: code:addons/fahad_transportation/models/new_tank.py:95
+#: field:instalment.sheet.line,residual_amount:0
+#: field:tank.instalment.sheet.line,residual_amount:0
+#, python-format
+msgid "Residual Amount"
+msgstr "المبلغ المتبقي"
+
+#. module: fahad_transportation
+#: model:ir.ui.menu,name:fahad_transportation.revenue
+msgid "Revenue"
+msgstr "ايراد"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:163
+#: code:addons/fahad_transportation/models/new_tank.py:62
+#: field:new.car,revenue_account:0 field:new.tank,revenue_account:0
+#, python-format
+msgid "Revenue Asset Account"
+msgstr "حساب ايرادات الاصول"
+
+#. module: fahad_transportation
+#: view:buy.screen:fahad_transportation.view_buy_screen_form
+#: view:car.maintenance:fahad_transportation.view_car_maintenance_form
+#: view:expense.register:fahad_transportation.view_expense_register_form
+#: view:expenses:fahad_transportation.view_expense_form
+#: view:fahad.contract:fahad_transportation.view_fahad_contract_form
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.line:fahad_transportation.view_new_line_form
+#: view:new.tank:fahad_transportation.new_tank_form
+#: view:other.revenue:fahad_transportation.view_other_revenue_form
+#: view:rent:fahad_transportation.view_rent_form
+#: view:trips:fahad_transportation.view_trip_form
+#: view:vehicle.custody:fahad_transportation.view_vehicle_custody_form
+#: selection:vehicle.custody,state:0
+msgid "Review"
+msgstr "مراجعة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:76
+#: code:addons/fahad_transportation/models/new_vehicle.py:36
+#: code:addons/fahad_transportation/models/rent.py:31
+#: code:addons/fahad_transportation/models/transportation.py:47
+#: code:addons/fahad_transportation/models/transportation.py:130
+#: code:addons/fahad_transportation/models/vehicle_dismantling.py:19
+#: selection:buy.screen,state:0 selection:car.maintenance,state:0
+#: selection:expense.register,state:0 selection:expenses,state:0
+#: selection:fahad.contract,state:0 selection:hr.employee,state:0
+#: selection:new.car,state:0 selection:new.line,state:0
+#: selection:new.tank,state:0
+#: view:new.vehicle:fahad_transportation.view_vehicle_form
+#: selection:new.vehicle,state:0
+#: view:new.wheel:fahad_transportation.view_wheel_form
+#: selection:new.wheel,state:0 selection:other.revenue,state:0
+#: selection:rent,state:0 selection:trips,state:0
+#: view:vehicle.dismantling:fahad_transportation.view_vehicle_dismantling_form
+#: selection:vehicle.dismantling,state:0
+#: view:vehicles.on.line:fahad_transportation.view_vehicle_on_line_form
+#: selection:vehicles.on.line,state:0
+#: view:wheel.action:fahad_transportation.view_wheel_action_form
+#: selection:wheel.action,state:0
+#, python-format
+msgid "Reviewed"
+msgstr "تم النراجعة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:14
+#: code:addons/fahad_transportation/models/transportation.py:329
+#: field:line.vehicle.history,route_number:0 field:new.line,route_number:0
+#, python-format
+msgid "Route No"
+msgstr "رقم الطريق"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:13
+#: code:addons/fahad_transportation/models/transportation.py:328
+#: field:line.vehicle.history,route_no:0 field:new.line,route_no:0
+#, python-format
+msgid "Route number"
+msgstr "رقم الطريق"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:165
+#: code:addons/fahad_transportation/models/new_tank.py:64
+#: field:new.car,sales_journal:0 field:new.tank,sales_journal:0
+#, python-format
+msgid "Sales Journal"
+msgstr "دفتر المبيعات"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:188
+#: code:addons/fahad_transportation/models/new_car.py:202
+#: code:addons/fahad_transportation/models/new_tank.py:85
+#: code:addons/fahad_transportation/models/new_tank.py:98
+#: field:new.car,instalment_salvage_value:0 field:new.car,salvage_value:0
+#: field:new.tank,instalment_salvage_value:0 field:new.tank,salvage_value:0
+#, python-format
+msgid "Salvage Value"
+msgstr "القيمة الاصل كخرده"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:409
+#: code:addons/fahad_transportation/models/new_tank.py:312
+#, python-format
+msgid "Salvage Value should be greater than Zero and less than Residual Amount"
+msgstr "قيمة الاصل كخرده يجب ان تكون اكبر من صفر واقل من القيمة الحالية "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:390
+#: code:addons/fahad_transportation/models/new_tank.py:296
+#, python-format
+msgid "Salvage Value should be less than Book Value"
+msgstr "قيمة الاصل كخرده يجب ان تكون اقل من القيمة الدفترية"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:rent:fahad_transportation.view_rent_form
+msgid "Secondary Asset"
+msgstr "اصل ثانوي"
+
+#. module: fahad_transportation
+#: field:wheel.action.lines.uninstall,select:0
+msgid "Select"
+msgstr "تحديد"
+
+#. module: fahad_transportation
+#: field:hr.employee,serial:0
+msgid "Serial No"
+msgstr "رقم سيريال "
+
+#. module: fahad_transportation
+#: view:buy.screen:fahad_transportation.view_buy_screen_form
+#: view:expense.register:fahad_transportation.view_expense_register_form
+#: view:other.revenue:fahad_transportation.view_other_revenue_form
+msgid "Set To Draft"
+msgstr "وصع في المسودة"
+
+#. module: fahad_transportation
+#: view:car.maintenance:fahad_transportation.view_car_maintenance_form
+#: view:expenses:fahad_transportation.view_expense_form
+#: view:fahad.contract:fahad_transportation.view_fahad_contract_form
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+#: view:rent:fahad_transportation.view_rent_form
+#: view:trips:fahad_transportation.view_trip_form
+msgid "Set to Draft"
+msgstr "وضع في المسودة"
+
+#. module: fahad_transportation
+#: selection:dependence.line,kinship:0
+msgid "Sister"
+msgstr "اخت"
+
+#. module: fahad_transportation
+#: field:new.wheel,size:0
+msgid "Size"
+msgstr "مقاس"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:78
+#: selection:new.car,state:0 selection:new.tank,state:0
+#: selection:new.wheel,state:0
+#, python-format
+msgid "Sold"
+msgstr "تباع"
+
+#. module: fahad_transportation
+#: selection:dependence.line,kinship:0
+msgid "Son"
+msgstr "ابن"
+
+#. module: fahad_transportation
+#: field:hr.employee,sponsor:0
+msgid "Sponsor"
+msgstr "الكفيل"
+
+#. module: fahad_transportation
+#: field:hr.employee,sponsor_type:0
+msgid "Sponsor Type"
+msgstr "نوع الكفيل"
+
+#. module: fahad_transportation
+#: selection:hr.employee,sponsor_type:0
+msgid "Sponsor on Company"
+msgstr "الكفيل في الشركة "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:16
+#: code:addons/fahad_transportation/models/transportation.py:331
+#: field:line.vehicle.history,start_point:0 field:new.line,start_point:0
+#, python-format
+msgid "Start Point"
+msgstr "نقطة البداية"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/contract.py:29
+#, python-format
+msgid "Start date mus be less than End date"
+msgstr "تاريخ البداية يجب ان يكون اقل من تاريخ الانتهاء"
+
+#. module: fahad_transportation
+#: field:buy.screen,state:0 field:car.maintenance,state:0
+#: field:custody.deliver.line,state:0 field:custody.receive.line,state:0
+#: field:expense.register,state:0 field:expenses,state:0
+#: field:fahad.contract,state:0 field:hr.employee,state:0
+#: field:new.line,state:0 field:new.wheel,state:0 field:other.revenue,state:0
+#: field:trips,state:0 field:vehicle.custody,state:0
+#: field:vehicles.on.line,state:0 field:wheel.action,state:0
+msgid "State"
+msgstr "الحالة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:228
+#: code:addons/fahad_transportation/models/new_tank.py:116
+#: code:addons/fahad_transportation/models/new_vehicle.py:44
+#: field:new.car,state_of_linked_line:0 field:new.tank,state_of_linked_line:0
+#: field:new.vehicle,state_of_linked_line:0
+#, python-format
+msgid "State Of Linked To Line"
+msgstr "الحالة مرتبطة بالخط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:79
+#: code:addons/fahad_transportation/models/new_vehicle.py:38
+#: code:addons/fahad_transportation/models/new_vehicle.py:40
+#: code:addons/fahad_transportation/models/rent.py:32
+#: code:addons/fahad_transportation/models/vehicle_dismantling.py:21
+#: field:new.car,state:0 field:new.tank,state:0 field:new.vehicle,state:0
+#: field:new.vehicle,state_of_dismantling:0 field:rent,state:0
+#: field:vehicle.dismantling,state:0
+#, python-format
+msgid "Status"
+msgstr "الحالة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:118
+#: field:new.car,sticker_expiry_date:0
+#, python-format
+msgid "Sticker Expiry Date"
+msgstr "ملصق تاريخ انتهاء الصلاحية"
+
+#. module: fahad_transportation
+#: field:differential.line,location_id:0 field:gearbox.line,location_id:0
+#: field:machine.motor.line,location_id:0
+msgid "Stock Location"
+msgstr "موقع التخزين"
+
+#. module: fahad_transportation
+#: field:branch,street:0
+msgid "Street"
+msgstr "الشارع"
+
+#. module: fahad_transportation
+#: field:new.car,message_summary:0 field:new.tank,message_summary:0
+msgid "Summary"
+msgstr "ملخص"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/buy_screen.py:48
+#, python-format
+msgid "Summation of Head price and Tank price should be equal to Buy price"
+msgstr "مجموع السعر الرئيسي وسعر الخزان يجب ان يساوي سعر الشراء"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:171
+#: code:addons/fahad_transportation/models/new_car.py:203
+#: code:addons/fahad_transportation/models/new_tank.py:69
+#: code:addons/fahad_transportation/models/new_tank.py:99
+#: field:expense.register,partner_id:0 field:new.car,instalment_supplier:0
+#: field:new.car,supplier:0 field:new.tank,instalment_supplier:0
+#: field:new.tank,supplier:0
+#: view:new.wheel:fahad_transportation.view_wheel_form
+#: field:new.wheel,supplier:0 field:wheel.supplier,supplier_id:0
+#, python-format
+msgid "Supplier"
+msgstr "المورد"
+
+#. module: fahad_transportation
+#: field:new.wheel,supplier_code:0
+msgid "Supplier Code"
+msgstr "كود المورد"
+
+#. module: fahad_transportation
+#: field:new.wheel,supplier_id:0
+msgid "Supplier Id"
+msgstr "رقم المورد"
+
+#. module: fahad_transportation
+#: field:new.car,invoice_id:0 field:new.tank,invoice_id:0
+msgid "Supplier Invoice"
+msgstr "فاتورة المورد"
+
+#. module: fahad_transportation
+#: field:new.wheel,supplier_invoice_type:0
+msgid "Supplier Invoice Type"
+msgstr "نوع فاتورة المورد"
+
+#. module: fahad_transportation
+#: field:wheel.supplier,supplier_product_code:0
+msgid "Supplier Product Code"
+msgstr "كود منتج المورد"
+
+#. module: fahad_transportation
+#: field:wheel.supplier,supplier_product:0
+msgid "Supplier Product Name"
+msgstr "اسم منتج المورد"
+
+#. module: fahad_transportation
+#: field:action.place.line,tank_id:0
+#: code:addons/fahad_transportation/models/expense_register.py:64
+#: code:addons/fahad_transportation/models/expense_register.py:68
+#: code:addons/fahad_transportation/models/rent.py:14
+#: code:addons/fahad_transportation/models/rent.py:17
+#: code:addons/fahad_transportation/models/vehicle_dismantling.py:13
+#: selection:buy.screen,buy_type:0 field:buy.screen,tank_id:0
+#: selection:expense.register,expense_register_level:0
+#: field:expense.register,tank_id:0 selection:expenses,expense_type:0
+#: view:new.vehicle:fahad_transportation.view_vehicle_form
+#: selection:new.wheel,install_type:0 selection:rent,rent_type:0
+#: field:rent,tank_id:0 field:tank.instalment.sheet.line,tank_id:0
+#: selection:wheel.action,install_on:0 field:wheel.action,tank_id:0
+#: field:wheel.action.lines.install,tank_id:0
+#: field:wheel.action.lines.uninstall,tank_id:0
+#: field:wheel.expenses,new_tank_id:0
+#, python-format
+msgid "Tank"
+msgstr "خزان"
+
+#. module: fahad_transportation
+#: field:linked.unlinked.vehicles,tank_capacity:0
+msgid "Tank Capacity"
+msgstr "الطاقة القصوي للخزان"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_vehicle.py:28
+#: field:linked.unlinked.vehicles,tank_code:0 field:new.vehicle,new_tank_id:0
+#, python-format
+msgid "Tank Code"
+msgstr "كود الخزان"
+
+#. module: fahad_transportation
+#: field:linked.unlinked.vehicles,tank_company_no:0
+msgid "Tank Company No."
+msgstr "رقم شركة الخزان"
+
+#. module: fahad_transportation
+#: field:line.vehicle.history,new_tank_id:0
+msgid "Tank Id"
+msgstr "رقم الخزان"
+
+#. module: fahad_transportation
+#: view:new.line:fahad_transportation.view_new_line_form
+msgid "Tank Information"
+msgstr "معلومات الخزان"
+
+#. module: fahad_transportation
+#: field:new.line,tank_no:0
+msgid "Tank No"
+msgstr "رقم الخزان"
+
+#. module: fahad_transportation
+#: field:new.tank,tank_owner:0
+msgid "Tank Owner"
+msgstr "مالك الخزان"
+
+#. module: fahad_transportation
+#: field:buy.screen,tank_price:0
+msgid "Tank Price"
+msgstr "سعر الخزان"
+
+#. module: fahad_transportation
+#: field:new.tank,tank_type:0
+msgid "Tank Type"
+msgstr "نوع الخزان"
+
+#. module: fahad_transportation
+#: field:car.category,tankable:0 field:new.car,tankable:0
+msgid "Tankable"
+msgstr "Tankable"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:212
+#: code:addons/fahad_transportation/models/new_car.py:213
+#: view:branch:fahad_transportation.view_branch_form field:branch,tanks_ids:0
+#: model:ir.ui.menu,name:fahad_transportation.tank field:new.car,tank_ids:0
+#: field:new.car,tank_ids_all:0
+#: view:new.tank:fahad_transportation.view_new_tank_tree
+#, python-format
+msgid "Tanks"
+msgstr "الخزانات"
+
+#. module: fahad_transportation
+#: field:branch,telephone_no:0
+msgid "Tel. No."
+msgstr "رقم الهاتف"
+
+#. module: fahad_transportation
+#: field:new.car,terella_ids:0
+msgid "Terella"
+msgstr "Terella"
+
+#. module: fahad_transportation
+#: view:vehicles.on.line:fahad_transportation.view_vehicle_on_line_form
+msgid "Tied Vehicles"
+msgstr "شاحنات مرتبطة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:16
+#, python-format
+msgid "Total"
+msgstr "اجمالي"
+
+#. module: fahad_transportation
+#: field:trips.line,total_amount:0 field:wheel.expenses,total_amount:0
+msgid "Total Amount"
+msgstr "اجمالي القيمة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/trips.py:70
+#, python-format
+msgid "Total Amount cannot be 0"
+msgstr "اجمالي القيمة لا يمكن ان تكون صفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:185
+#: code:addons/fahad_transportation/models/new_tank.py:82
+#: field:new.car,total_purchase_value:0 field:new.tank,total_purchase_value:0
+#, python-format
+msgid "Total Purchase Value"
+msgstr "اجمالي قيمة المشتريات "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:386
+#: code:addons/fahad_transportation/models/new_tank.py:292
+#, python-format
+msgid "Total Purchase Value Should not be equal to zero."
+msgstr "اجمالي قيمة المشتريات يجب ان لا تساوي الصفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:195
+#: code:addons/fahad_transportation/models/new_tank.py:91
+#: field:new.car,total_value:0 field:new.tank,total_value:0
+#, python-format
+msgid "Total Value"
+msgstr "القيمة الاجمالية"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:399
+#: code:addons/fahad_transportation/models/new_tank.py:302
+#, python-format
+msgid "Total Value Can not be equal to Zero"
+msgstr "القيمة الاجمالية لا يمكن ان تساوي صفر"
+
+#. module: fahad_transportation
+#: model:ir.module.category,name:fahad_transportation.module_category_fahad_management
+#: model:ir.ui.menu,name:fahad_transportation.menu_transportation_root
+#: model:ir.ui.menu,name:fahad_transportation.transportation
+msgid "Transportation"
+msgstr "النقليات"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:64
+#: selection:expense.register,expense_register_level:0
+#: selection:expenses,expense_type:0
+#, python-format
+msgid "Trip"
+msgstr "رحلة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:66
+#: code:addons/fahad_transportation/models/transportation.py:28
+#: field:expense.register,trips_id:0
+#: model:ir.actions.act_window,name:fahad_transportation.view_trip_action
+#: model:ir.model,name:fahad_transportation.model_trips
+#: model:ir.ui.menu,name:fahad_transportation.menu_tripe_action
+#: field:new.car,trip_ids:0
+#: view:new.line:fahad_transportation.view_new_line_form
+#: field:new.line,trip_ids:0 view:trips:fahad_transportation.view_trip_form
+#: field:trips,trips_line_ids:0
+#, python-format
+msgid "Trips"
+msgstr "الرحلات"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/trips.py:68
+#, python-format
+msgid "Trips Amount cannot be 0"
+msgstr "الرحلات لا يمكن ان تكون صفر"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+msgid "Trips Data"
+msgstr "بيانات الرحلات"
+
+#. module: fahad_transportation
+#: field:trips.line,trip_line_id:0
+msgid "Trips ID"
+msgstr "كود الرحلة "
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_trips_line
+msgid "Trips Line"
+msgstr "خط الرحلة"
+
+#. module: fahad_transportation
+#: field:trips.line,trips_no:0
+msgid "Trips No"
+msgstr "رقم الرحلة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_maintenance.py:21
+#: code:addons/fahad_transportation/models/new_car.py:113
+#: field:discount.commission.line,type:0 field:new.car,type:0
+#, python-format
+msgid "Type"
+msgstr "نوع"
+
+#. module: fahad_transportation
+#: field:vehicle.dismantling,uninstall_date:0
+msgid "UnInstall Date"
+msgstr "تاريخ الغاء التثبيت"
+
+#. module: fahad_transportation
+#: view:wheel.action:fahad_transportation.view_wheel_action_form
+#: field:wheel.action,uninstall_decision:0
+msgid "UnInstall Decision"
+msgstr "إلغاء تثبيت القرار"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+#: view:new.wheel:fahad_transportation.view_wheel_form
+msgid "UnInstall History"
+msgstr "البيانات التاريخية لالغاء التثبيت"
+
+#. module: fahad_transportation
+#: view:wheel.action:fahad_transportation.view_wheel_action_form
+msgid "UnInstall Wheel"
+msgstr "الغاء تثبيت الكفر"
+
+#. module: fahad_transportation
+#: field:trips.line,unloaded_amount:0
+msgid "UnLoaded Amount"
+msgstr "كمية التفريغ"
+
+#. module: fahad_transportation
+#: view:vehicles.on.line:fahad_transportation.view_vehicle_on_line_form
+msgid "UnTied Vehicles"
+msgstr "مركبات غير مسجلة"
+
+#. module: fahad_transportation
+#: field:vehicles.on.line,unconnected_vehicles_ids:0
+msgid "Unconnected Vehicle"
+msgstr "شاحنة غير مرتبطة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:125
+#: selection:vehicles.on.line,decision_type:0
+#: selection:wheel.action,order_type:0
+#, python-format
+msgid "Uninstall"
+msgstr "إلغاء التثبيت"
+
+#. module: fahad_transportation
+#: field:wheel.action.lines.uninstall,uninstall_date:0
+msgid "Uninstall Date"
+msgstr "تاريخ إلغاء التثبيت"
+
+#. module: fahad_transportation
+#: field:new.wheel,uninstall_history_ids:0
+msgid "Uninstall History"
+msgstr "البيانات التاريخية لالغاء التثبيت"
+
+#. module: fahad_transportation
+#: selection:wheel.action,order_type:0
+msgid "Uninstall Old / Install New"
+msgstr "إلغاء قديم / تركيب جديد"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+msgid "Uninstalled Wheels"
+msgstr "إلغاء تركيب العجلات"
+
+#. module: fahad_transportation
+#: field:custody.deliver.line,unit_price:0
+#: field:custody.receive.line,unit_price:0
+msgid "Unit Price"
+msgstr "وحدة السعر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:312
+#: selection:linked.unlinked.vehicles,state_of_linked_line:0
+#, python-format
+msgid "Unlink"
+msgstr "لا يوجد ارتباط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:228
+#: code:addons/fahad_transportation/models/new_tank.py:116
+#: code:addons/fahad_transportation/models/new_vehicle.py:44
+#: code:addons/fahad_transportation/models/transportation.py:337
+#: selection:line.vehicle.history,state_of_linked_line:0
+#: selection:new.car,state_of_linked_line:0
+#: selection:new.tank,state_of_linked_line:0
+#: selection:new.vehicle,state_of_linked_line:0
+#, python-format
+msgid "Unlinked"
+msgstr "غير مرتبط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/trips.py:66
+#, python-format
+msgid "Unloaded amount cannot be larger than loaded amount"
+msgstr "كمية التفريغ لا يمكن ان تكون اكبر من كمية التحميل"
+
+#. module: fahad_transportation
+#: field:new.car,message_unread:0 field:new.tank,message_unread:0
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: fahad_transportation
+#: selection:custody.deliver.line,custody_state:0
+#: selection:custody.receive.line,custody_state:0 selection:new.wheel,state:0
+#: selection:new.wheel,wheel_status:0
+#: selection:wheel.action.lines.uninstall,wheel_status:0
+msgid "Used"
+msgstr "تستخدم"
+
+#. module: fahad_transportation
+#: model:res.groups,name:fahad_transportation.group_fahad_manager
+msgid "User"
+msgstr "مستخدم"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:14
+#: code:addons/fahad_transportation/models/rent.py:18
+#: selection:buy.screen,buy_type:0 field:buy.screen,vehicle_id:0
+#: field:custody.receive.line,vehicle_id:0
+#: field:new.tank,linked_vehicles_ids:0
+#: field:new.tank,linked_vehicles_ids_all:0 selection:new.wheel,install_type:0
+#: selection:rent,rent_type:0 field:rent,vehicle_id:0
+#: field:trips.line,vehicle_id:0 field:vehicle.custody,vehicle_id:0
+#: selection:wheel.action,install_on:0
+#, python-format
+msgid "Vehicle"
+msgstr "الشاحنة"
+
+#. module: fahad_transportation
+#: field:vehicle.dismantling,vehicle_id:0
+msgid "Vehicle Code"
+msgstr "كود الشاحنة"
+
+#. module: fahad_transportation
+#: field:custody.deliver.line,line_deliver_id:0
+#: field:custody.receive.line,line_receive_id:0
+#: model:ir.actions.act_window,name:fahad_transportation.view_vehicle_custody_action
+#: view:vehicle.custody:fahad_transportation.view_vehicle_custody_form
+#: view:vehicle.custody:fahad_transportation.view_vehicle_custody_tree
+msgid "Vehicle Custody"
+msgstr "عهدة الشاحنة"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+msgid "Vehicle Expenses"
+msgstr "مصروفات الشاحنة"
+
+#. module: fahad_transportation
+#: field:line.vehicle.history,vehicle_id:0
+#: field:linked.unlinked.vehicles,vehicle_id:0
+msgid "Vehicle Id"
+msgstr "رقم هوية الشاحنة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:119
+#: field:new.car,vehicle_style:0
+#, python-format
+msgid "Vehicle Style"
+msgstr "نوع الشاحنة"
+
+#. module: fahad_transportation
+#: model:ir.actions.act_window,name:fahad_transportation.action_new_vehicles
+#: model:ir.ui.menu,name:fahad_transportation.menu_vehicle_action
+#: model:ir.ui.menu,name:fahad_transportation.vehicle
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+#: view:new.vehicle:fahad_transportation.view_new_vehicle_tree
+#: view:new.vehicle:fahad_transportation.view_vehicle_form
+msgid "Vehicles"
+msgstr "الشاحنات"
+
+#. module: fahad_transportation
+#: model:ir.ui.menu,name:fahad_transportation.menu_vehicle_custody_action
+msgid "Vehicles Custody"
+msgstr "عهدة الشاحنة"
+
+#. module: fahad_transportation
+#: model:ir.actions.act_window,name:fahad_transportation.action_vehicles_dismantling
+#: model:ir.ui.menu,name:fahad_transportation.menu_vehicle_dismantling_action
+#: view:vehicle.dismantling:fahad_transportation.view_vehicle_dismantling_form
+#: view:vehicle.dismantling:fahad_transportation.view_vehicle_dismantling_tree
+msgid "Vehicles Dismantling"
+msgstr "شاحنات تفكيك"
+
+#. module: fahad_transportation
+#: model:ir.actions.act_window,name:fahad_transportation.action_vehicles_on_line
+#: model:ir.ui.menu,name:fahad_transportation.menu_vehicle_on_line_action
+#: view:vehicles.on.line:fahad_transportation.view_vehicle_on_line_form
+#: view:vehicles.on.line:fahad_transportation.view_vehicle_on_line_tree
+msgid "Vehicles On Line"
+msgstr "شاحنات علي الخط"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+msgid "Vehicles Revenue"
+msgstr "ايراد الشاحنات"
+
+#. module: fahad_transportation
+#: view:new.line:fahad_transportation.view_new_line_form
+msgid "Vehicles on Line"
+msgstr "شاحنات علي الخط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:234
+#, python-format
+msgid "Visa Job should be less than 6 digits only"
+msgstr "تأشيرة العمل يجب ان تكون 6 ارقام فقط"
+
+#. module: fahad_transportation
+#: field:differential.line,warehouse_account:0
+#: field:gearbox.line,warehouse_account:0
+#: field:machine.motor.line,warehouse_account:0
+msgid "Warehouse Account"
+msgstr "حساب المخزن"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:53
+#, python-format
+msgid "We shouldn't record a capital expense in a rented car"
+msgstr "لا يمكن تسجيل مصروف راسمالي علي سيارة مؤجرة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:56
+#, python-format
+msgid "We shouldn't record a capital expense in a rented tank"
+msgstr "لا يمكن تسجيل مصروف راسمالي علي خزان مؤجر"
+
+#. module: fahad_transportation
+#: selection:buy.screen,buy_type:0 field:buy.screen,wheel_id:0
+#: view:new.wheel:fahad_transportation.view_wheel_form
+msgid "Wheel"
+msgstr "كفر"
+
+#. module: fahad_transportation
+#: view:wheel.action:fahad_transportation.view_new_wheel_action_tree
+#: view:wheel.action:fahad_transportation.view_wheel_action_form
+#: field:wheel.action.lines.install,action_id:0
+#: field:wheel.action.lines.uninstall,action_id:0
+msgid "Wheel Action"
+msgstr "كفر نشط"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:223
+#: code:addons/fahad_transportation/models/new_tank.py:109
+#: view:new.car:fahad_transportation.view_new_car_form
+#: field:new.car,wheel_expense:0
+#: view:new.tank:fahad_transportation.new_tank_form
+#: field:new.tank,wheel_expenses:0
+#, python-format
+msgid "Wheel Expenses"
+msgstr "مصاريف الكفر"
+
+#. module: fahad_transportation
+#: field:wheel.action.lines.install,wheel_id:0
+#: field:wheel.action.lines.uninstall,wheel_id:0
+msgid "Wheel ID"
+msgstr "كود تعريف الكفر"
+
+#. module: fahad_transportation
+#: field:wheel.supplier,wheel_id:0
+msgid "Wheel Id"
+msgstr "كود تعريف الكفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:224
+#: code:addons/fahad_transportation/models/new_tank.py:107
+#: field:new.car,history_wheel_installed:0
+#: field:new.tank,history_wheel_installed:0
+#, python-format
+msgid "Wheel Installed"
+msgstr "كفر مثبت"
+
+#. module: fahad_transportation
+#: field:new.wheel,install_type:0
+msgid "Wheel Installment Type"
+msgstr "نوع تثبيت الكفر "
+
+#. module: fahad_transportation
+#: field:new.wheel,wheel_no:0
+msgid "Wheel No."
+msgstr "رقم الكفر"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+msgid "Wheel Place"
+msgstr "مكان الكفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:353
+#: code:addons/fahad_transportation/models/new_tank.py:254
+#, python-format
+msgid "Wheel Place Must be Unique"
+msgstr "مكان الكفر لا يمكن ان يتكرر"
+
+#. module: fahad_transportation
+#: field:new.wheel,wheel_status:0
+#: field:wheel.action.lines.uninstall,wheel_status:0
+msgid "Wheel Status"
+msgstr "حالة الكفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:225
+#: code:addons/fahad_transportation/models/new_tank.py:108
+#: field:new.car,history_wheel_uninstalled:0
+#: field:new.tank,history_wheel_uninstalled:0
+#, python-format
+msgid "Wheel UnInstalled"
+msgstr "كفر غير مثبت"
+
+#. module: fahad_transportation
+#: model:ir.actions.act_window,name:fahad_transportation.action_new_wheel
+#: model:ir.ui.menu,name:fahad_transportation.menu_wheel
+#: model:ir.ui.menu,name:fahad_transportation.wheels
+msgid "Wheels"
+msgstr "الكفرات"
+
+#. module: fahad_transportation
+#: model:ir.actions.act_window,name:fahad_transportation.action_new_wheel_action
+#: model:ir.ui.menu,name:fahad_transportation.menu_wheel_action
+msgid "Wheels Action"
+msgstr "كفرات نشطة"
+
+#. module: fahad_transportation
+#: view:new.tank:fahad_transportation.new_tank_form
+msgid "Wheels Expenses"
+msgstr "مصاريف كفرات"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+#: view:new.tank:fahad_transportation.new_tank_form
+msgid "Wheels History"
+msgstr "البيانات التاريخية للكفرات"
+
+#. module: fahad_transportation
+#: selection:dependence.line,kinship:0
+msgid "Wife"
+msgstr "زوجة"
+
+#. module: fahad_transportation
+#: selection:car.category,revenue:0 selection:car.category,tankable:0
+#: selection:new.car,tankable:0 selection:other.revenue,commission:0
+#: selection:trips,trip_discount:0
+msgid "Yes"
+msgstr "نعم"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transport_wheel.py:263
+#: code:addons/fahad_transportation/models/transport_wheel.py:279
+#, python-format
+msgid "You Can not install The same wheel in two places"
+msgstr "لا يمكن تركيب نفس الكفر في اكثر من مكان "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transport_wheel.py:261
+#: code:addons/fahad_transportation/models/transport_wheel.py:277
+#, python-format
+msgid "You Can not install Two Wheel in Same Place"
+msgstr "لا يمكن تركيب عدد 2 كفر في نفس المكان"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expenses.py:39
+#, python-format
+msgid "You Cannot define capital expense on trip"
+msgstr "لا يمكن تعريف مصروف راسمالي علي الرحلة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:49
+#, python-format
+msgid "You can not select Expense Name that is capital when Expense Register Level is Trip"
+msgstr "لا يمكن تحديد اسم مصروف "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:262
+#: code:addons/fahad_transportation/models/new_tank.py:158
+#, python-format
+msgid "You cannot create new lines! There are line(s) create as supplier payment"
+msgstr "لا يمكن انشاء سطر جديد ! هناك خطوط تم انشاءها كدفعات للمورد"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_category.py:40
+#, python-format
+msgid "You cannot delete Category that has linked cars"
+msgstr "لا يمكن حذف تصنيف مربوط علي سيارة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transport_wheel.py:537
+#, python-format
+msgid "You cannot delete Place has Linked Wheels"
+msgstr "لا يمكن حذف كفرات مربوظة مع مكان "
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:159
+#, python-format
+msgid "You cannot delete confirmed Decision"
+msgstr "لا يمكن حذف قرار مؤكد"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:119
+#, python-format
+msgid "You cannot delete confirmed Rent"
+msgstr "لا يمكن حذف ايجار مؤكد"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/vehicle_dismantling.py:49
+#, python-format
+msgid "You cannot delete confirmed Vehicle"
+msgstr "لا يمكن حذف شاحنة مؤكده"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:579
+#: code:addons/fahad_transportation/models/new_tank.py:429
+#, python-format
+msgid "You cannot delete confirmed car"
+msgstr "لا يمكن حذف سيارة مؤكده"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/contract.py:51
+#, python-format
+msgid "You cannot delete confirmed contract"
+msgstr "لا يمكن حذف عقد مؤكد"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/car_asset.py:152
+#: code:addons/fahad_transportation/models/expenses.py:54
+#, python-format
+msgid "You cannot delete confirmed expense"
+msgstr "لا يمكن حذف مصروف مؤكد"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/buy_screen.py:368
+#: code:addons/fahad_transportation/models/expense_register.py:252
+#: code:addons/fahad_transportation/models/other_revenue.py:143
+#, python-format
+msgid "You cannot delete confirmed expense register"
+msgstr "لا يمكن حذف سجل مصروف مؤكد"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/trips.py:305
+#, python-format
+msgid "You cannot delete confirmed trip"
+msgstr "لا يمكن حذف رحلة مؤكدة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_vehicle.py:97
+#: code:addons/fahad_transportation/models/transport_wheel.py:108
+#, python-format
+msgid "You cannot delete confirmed wheel"
+msgstr "لا يمكنك حذف كفر تم تاكيده"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transport_wheel.py:247
+#, python-format
+msgid "You cannot delete confirmed wheel action"
+msgstr "لا يمكنك حذف كفر نشط تم تاكيده"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/fahad_hr.py:208
+#, python-format
+msgid "You cannot delete employee linked to branch, please delete first from branch"
+msgstr "لا يمكن حذف موظف مربوط علي فرع ، فضلا احذفه اولا من الفرع"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/other_revenue.py:58
+#, python-format
+msgid "You have to enter at least one line"
+msgstr "يجب ادخال خط واحد علي الاقل"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/expense_register.py:89
+#, python-format
+msgid "You have to enter at least one line expense"
+msgstr "يجب ادخال مصروف خط واحد علي الاقل"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:482
+#: code:addons/fahad_transportation/models/new_tank.py:335
+#, python-format
+msgid "You have to generate action place"
+msgstr "يجب ان تضع مكان عمل"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/rent.py:62
+#, python-format
+msgid "You should create invoice for all Rent lines before set the state to  End"
+msgstr "يجب انشاء فاتورة لجميع الخطوط المؤجرة قبل تغير الحالة الي انهاء"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/transportation.py:58
+#: code:addons/fahad_transportation/models/transportation.py:64
+#: code:addons/fahad_transportation/models/transportation.py:99
+#, python-format
+msgid "You should have at least a product"
+msgstr "يجب ان يحتوي علي الاقل علي منتج واحد"
+
+#. module: fahad_transportation
+#: field:branch,city:0
+msgid "city"
+msgstr "المدينة"
+
+#. module: fahad_transportation
+#: field:car.maintenance,current_meter:0
+msgid "current Meter"
+msgstr "الامتار الحالية"
+
+#. module: fahad_transportation
+#: view:hr.employee:fahad_transportation.view_fahad_hr_form
+msgid "dd/mm/yy"
+msgstr "dd/mm/yy"
+
+#. module: fahad_transportation
+#: view:new.car:fahad_transportation.view_new_car_form
+msgid "dd/mm/yyyy"
+msgstr "dd/mm/yyyy"
+
+#. module: fahad_transportation
+#: field:discount.commission.line,line_id:0
+msgid "line"
+msgstr "خط"
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_wheel_action_lines_install
+msgid "register wheel installed on vehicle or tank"
+msgstr "تسجيل كفر مثبت علي الشاحنة او الخزان"
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_wheel_action_lines_uninstall
+msgid "register wheel uninstalled on vehicle or tank"
+msgstr "الغاء تسجيل الكفر علي الشاحنة او الخزان"
+
+#. module: fahad_transportation
+#: field:differential.line,rent_id:0 field:gearbox.line,rent_id:0
+#: field:machine.motor.line,rent_id:0
+msgid "rend"
+msgstr "تشقق"
+
+#. module: fahad_transportation
+#: view:new.wheel:fahad_transportation.view_new_wheel_tree
+msgid "wheel"
+msgstr "الكفرات"
+
+#. module: fahad_transportation
+#: model:ir.model,name:fahad_transportation.model_new_wheel
+msgid "wheel definition"
+msgstr "تعريف الكفر"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:395
+#, python-format
+msgid "‫‪Monthly‬‬ ‫‪rent‬‬ Can not be equal to Zero"
+msgstr "الايجار الشهري لا يمكن ان يساوي صفر"
+
+#. module: fahad_transportation
+#: view:car.maintenance:fahad_transportation.view_car_maintenance_form
+#: view:new.car:fahad_transportation.view_new_car_form
+msgid "‫‪Plate‬‬ ‫‪Number‬‬"
+msgstr "رقم اللوحة"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:317
+#, python-format
+msgid "‫‪Sorry‬‬‫‪.‬‬ You Can not Create Rent Invoice because the rent period expired‬‬"
+msgstr "اسف، لا يمكن انشاء فاتورة ايجار لان فترة الايجار انتهت"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_car.py:319
+#, python-format
+msgid "‫‪Sorry‬‬‫‪.‬‬ ‫‪invoice‬‬ ‫‪date‬‬ ‫‪must‬‬ ‫‪be‬‬ ‫‪less‬‬ ‫‪than‬‬ ‫‪rent‬‬ ‫‪end‬‬ ‫‪date‬‬"
+msgstr "اسف، تاريخ الفاتورة يجب ان يكون اقل من تاريخ انتهاء الايجار"
+
+#. module: fahad_transportation
+#: code:addons/fahad_transportation/models/new_tank.py:221
+#, python-format
+msgid "‫‪Sorry‬‬‫‪.‬‬ ‫‪invoice‬‬ ‫‪date‬‬ ‫‪must‬‬ ‫‪be‬‬ ‫‪less‬‬ ‫‪than‬‬ ‫‪rent‬‬ ‫‪end‬‬ ‫‪date‬‬‬‬"
+msgstr "اسف، تاريخ الفاتورة يجب ان يكون اقل من تاريخ انتهاء الايجار"

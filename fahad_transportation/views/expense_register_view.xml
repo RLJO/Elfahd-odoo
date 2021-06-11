@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_expense_register_form">
+            <field name="name">Expense Register</field>
+            <field name="model">expense.register</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name='button_review' type="object" string="Review" states="draft"
+                                groups="fahad_transportation.group_fahd_expens_review"/>
+                        <button name='button_confirm' type="object" string="Confirm" states="reviewed"
+                                groups="fahad_transportation.group_fahd_expens_confirm"/>
+                        <button name='button_draft' type="object" string="Set To Draft" states="draft,reviewed"/>
+                        <button name='button_close' type="object" confirm="Are you sure you want to close" groups="base.group_no_one" string="Close" states="draft,reviewed"/>
+                        <field name="state" widget='statusbar' statusbar_visible="draft,reviewed,confirmed,closed"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" readonly="1"/>
+                                <field name="expense_register_level"
+                                       context="{'expense_register_level': expense_register_level}" required="1"/>
+                                <field name="car_id" options="{'create': false, 'create_edit': false}"
+                                       domain="['|',('state', '=', 'confirm'), ('linked_vehicle', '!=', False)]"
+                                       attrs="{'invisible': [('expense_register_level', 'not in', ['car','trip'])],
+                                             'required': [('expense_register_level', '=', 'car')],
+                                             'readonly':[('expense_register_level','=','trip')]}"/>
+                                <field name="plaque_no"
+                                       attrs="{'invisible': [('expense_register_level', '!=', 'car')]}"/>
+                                <field name="tank_id" options="{'create': false, 'create_edit': false}" domain="[('state', '!=', 'sold')]"
+                                       context="{'no_add_domain':True}"
+                                       attrs="{'invisible': [('expense_register_level', 'not in', ['tank','trip'])],
+                                             'required': [('expense_register_level', '=', 'tank')],
+                                             'readonly':[('expense_register_level','=','trip')]}"/>
+                                <field name="aramco_no"
+                                       attrs="{'invisible': [('expense_register_level', '!=', 'tank')]}"/>
+                                <field name="trips_id" readonly="1" options="{'create': false, 'create_edit': false}" domain="[('state', '!=', 'closed')]"
+                                       attrs="{'invisible': [('expense_register_level', '!=', 'trip')],
+                                             'required': [('expense_register_level', '=', 'trip')],
+                                             'readonly':[('expense_register_level','=','trip')]}"/>
+                                <field name="trip_name" attrs="{'invisible': [('expense_register_level', '!=', 'trip')]}"/>
+                                <field name="trip_details" options="{'create': false, 'create_edit': false}"
+                                       domain="[('trip_line_id','!=',False)]"
+                                       attrs="{'invisible': [('expense_register_level', '!=', 'trip')],
+                                               'required': [('expense_register_level', '=', 'trip')]}"/>
+                                <field name="date"/>
+                            </group>
+                            <group>
+                                <field name="payment_method" required="1" attrs="{'readonly':[('expense_register_level','in',['loans','traffic_violation'])]}"/>
+                                <field name="liquidity_account" context="{'default_type': 'liquidity'}" options="{'create': false, 'create_edit': false}"
+                                       attrs="{'invisible': [('payment_method', '!=', 'bank_cash')],
+                                             'required': [('payment_method', '=', 'bank_cash')],}"/>
+                                <field name="partner_id"  options="{'create': false, 'create_edit': false}" context="{'default_supplier': True, 'default_customer': False}"
+                                       attrs="{'invisible': [('payment_method', '!=', 'credit')],
+                                             'required': [('payment_method', '=', 'credit')]}"/>
+                                <field name="location_id"
+                                       attrs="{'invisible': [('payment_method', '!=', 'warehouse')],
+                                             'required': [('payment_method', '=', 'warehouse')]}"/>
+                                <field name="location_account"
+                                       attrs="{'invisible': [('payment_method', '!=', 'warehouse')],
+                                             'required': [('payment_method', '=', 'warehouse')]}"/>
+                                <field name="journal_id" options="{'create': false, 'create_edit': false}"
+                                       attrs="{'required':[('state','in',['reviewed'])]}"/>
+                                <field name="no_expense"/>
+                                <field name="total_expense"/>
+                                <field name="loan_amount" attrs="{'invisible':[('expense_register_level','not in',['loans'])],
+                                    'required':[('expense_register_level','in',['loans'])]}"/>
+                                <field name="employee_id" domain="[('state','=','confirm'),('can_take_loan','=',True)]"
+                                       options="{'create': false, 'create_edit': false}"
+                                       attrs="{'invisible':[('expense_register_level','not in',['loans','traffic_violation'])],
+                                       'required':[('expense_register_level','in',['loans','traffic_violation'])]}"/>
+                                <field name="traffic_violation_car_id" attrs="{'invisible':[('expense_register_level','not in',['traffic_violation'])],
+                                    'required':[('expense_register_level','in',['traffic_violation'])]}"
+                                options="{'create': false, 'create_edit': false}"/>
+                                <field name="deduction_type" attrs="{'invisible':[('expense_register_level','not in',['traffic_violation'])],
+                                    'required':[('expense_register_level','in',['traffic_violation'])]}"/>
+                                <field name="traffic_violation_amount" attrs="{'invisible':[('expense_register_level','not in',['traffic_violation'])],
+                                    'required':[('expense_register_level','in',['traffic_violation'])]}"/>
+                                <field name="trafic_expense_account_id" options="{'create': false, 'create_edit': false}"
+                                       attrs="{'invisible':[('deduction_type','not in',['full_company','employee_company'])],
+                                          'required':[('deduction_type','in',['full_company','employee_company'])]}"/>
+                                <field name="employee_share" attrs="{'invisible':[('deduction_type','!=','employee_company')],
+                                            'required':[('deduction_type','=','employee_company')]}"/>
+                                <field name="company_share" attrs="{'invisible':[('deduction_type','!=','employee_company')],
+                                            'required':[('deduction_type','=','employee_company')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Expenses">
+                                <field name="expense_register_line_ids" context="{'type': expense_register_level}">
+                                    <tree editable="bottom">
+                                        <field name="expense_name"  options="{'create': false, 'create_edit': false}"
+                                               required="1"/>
+                                        <field name="expense_account" options="{'create': false, 'create_edit': false}" required="1"/>
+                                        <field name="number"/>
+                                        <field name="amount"/>
+                                        <field name="total"/>
+                                        <field name="invoice" required="1"/>
+                                        <field name="filling_station"/>
+                                        <field name="notes"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Notes">
+                                <field name="note"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_expense_register_tree">
+            <field name="name">Expense Register</field>
+            <field name="model">expense.register</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="expense_register_level"/>
+                    <field name="plaque_no"/>
+                    <field name="aramco_no"/>
+                    <field name="payment_method"/>
+                    <field name="liquidity_account"/>
+                    <field name="partner_id"/>
+                    <field name="no_expense"/>
+                    <field name="total_expense"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_traffic_violation_tree">
+            <field name="name">Expense Register</field>
+            <field name="model">expense.register</field>
+            <field name="arch" type="xml">
+                <tree create="false" delete="false">
+                    <field name="code"/>
+                    <field name="car_id"/>
+                    <field name="plaque_no"/>
+                    <field name="date"/>
+                    <field name="payment_method"/>
+                    <field name="partner_id"/>
+                    <field name="no_expense"/>
+                    <field name="total_expense"/>
+                    <field name="loan_amount"/>
+                    <field name="employee_id"/>
+                    <field name="traffic_violation_car_id"/>
+                    <field name="deduction_type"/>
+                    <field name="traffic_violation_amount"/>
+                    <field name="trafic_expense_account_id"/>
+                    <field name="employee_share"/>
+                    <field name="company_share"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="view_expense_register_action">
+            <field name="name">Expense Register</field>
+            <field name="res_model">expense.register</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_expense_register_tree"/>
+        </record>
+
+        <record model="ir.actions.act_window" id="view_traffic_violation_action">
+            <field name="name">Traffic violation</field>
+            <field name="res_model">expense.register</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('expense_register_level','in',['traffic_violation'])]</field>
+            <field name="view_id" ref="view_traffic_violation_tree"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_partner_form">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="website" position="after">
+                    <field name="partner_id_unique" required="1"/>
+                </field>
+            </field>
+        </record>
+
+<!--        <record id="view_res_partner_filter" model="ir.ui.view">-->
+<!--            <field name="name">res.partner.select.inherit</field>-->
+<!--            <field name="model">res.partner</field>-->
+<!--            <field name="inherit_id" ref="base.view_res_partner_filter"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <field name="name" position="attributes">-->
+<!--                    <attribute name="filter_domain">['|','|','|',('display_name','ilike',self),('ref','=',self),('email','ilike',self),('partner_id_unique','ilike',self)]</attribute>-->
+<!--                </field>-->
+<!--                <filter name="supplier" position="after">-->
+<!--                    <filed string="Partner ID" name="partner_id_unique"/>-->
+<!--                    <separator/>-->
+<!--                </filter>-->
+<!--                <filter string="Country" position="after">-->
+<!--                    <filter string="Partner ID" icon="terp-personal" domain="[]" context="{'group_by' : 'partner_id'}"/>-->
+<!--                </filter>-->
+<!--            </field>-->
+<!--        </record>-->
+    </data>
+</openerp>

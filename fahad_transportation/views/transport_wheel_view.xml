@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_wheel_form">
+            <field name="name">Wheels</field>
+            <field name="model">new.wheel</field>
+            <field name="arch" type="xml">
+                <form string="Wheel" version="7.0" create="false">
+                    <header>
+                        <button name="button_review" string="Reviewed"
+                                states="draft" type="object" class="oe_highlight"
+                                groups="fahad_transportation.group_fahd_wheel_review"/>
+                        <button name="button_confirmed" string="Confirmed"
+                                states="reviewed" type="object" class="oe_highlight"
+                                groups="fahad_transportation.group_fahd_wheel_confirm"/>
+                        <button name="button_closed" string="Closed"
+                                states="confirmed,used" type="object" class="oe_highlight"
+                                confirm="In case of closing this wheel. the system will consider this wheel is damage and Unusable. so it will be out of stock ande considered as operational expenses"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" readonly="1"/>
+                                <field name="manufacturing_company_id"/>
+                                <field name="install_type" required="1"/>
+                                <field name="supplier_code"/>
+                                <field name="location_id" options="{'create': false, 'create_edit': false}"/>
+                            </group>
+                            <group>
+                                <field name="wheel_no"
+                                       attrs="{'required': [('state', 'in',['reviewed','confirmed','used','installed','damaged','sold'])]}"/>
+                                <field name="size" attrs="{'required': [('state', '=', 'reviewed')]}"/>
+                                <field name="wheel_status" required="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="car_category_ids" string="Car Category"
+                                   attrs="{'invisible':[('install_type','=','tank')],'required':[('install_type','=','vehicle')]}"/>
+
+                        </group>
+                        <notebook>
+                            <page string="Purchases and Accounting">
+                                <group>
+                                    <group>
+                                        <field name="purchase_price" readonly="1" required="1"/>
+                                        <field name="supplier_id" readonly="1" required="1"/>
+                                        <field name="expense_account" readonly="1"
+                                               attrs="{'required':[('supplier_invoice_type','=','invoiced')]}"/>
+                                        <!--<field name="journal_id"-->
+                                        <!--attrs="{'invisible':[('supplier_invoice_type','=','no_invoice')],'required':[('supplier_invoice_type','=','invoiced')]}"-->
+                                        <!--domain="[('type', 'in', ['purchase','general'])]"/>-->
+                                    </group>
+                                    <group>
+                                        <field name="purchase_date" readonly="1" required="1"/>
+                                        <field name="supplier_invoice_type" readonly="1" required="1"/>
+                                        <field name="expense_journal" readonly="1" domain="[('type', 'not in', ['cash','bank'])]"
+                                               attrs="{'invisible':[('supplier_invoice_type','=','no_invoice')],'required':[('supplier_invoice_type','=','invoiced')]}"/>
+                                        <field name="estimated_life"/>
+                                    </group>
+                                </group>
+
+                            </page>
+                            <page string="Supplier">
+                                <field name="supplier">
+                                    <tree string="Supplier" editable="bottom">
+                                        <field name="supplier_id"/>
+                                        <field name="supplier_product"/>
+                                        <field name="supplier_product_code"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="History">
+                                <label for="install_history_ids"/>
+                                <field name="install_history_ids" domain="[('show_in_history','=',True)]">
+                                    <tree string="Install History" create="false" delete="false">
+                                        <field name="wheel_id"/>
+                                        <field name="wheel_code"/>
+                                        <field name="install_date"/>
+                                        <field name="car_id"/>
+                                        <field name="car_meter"/>
+                                        <field name="install_place_"/>
+                                    </tree>
+                                </field>
+                                <separator/>
+                                <label for="uninstall_history_ids"/>
+                                <field name="uninstall_history_ids" domain="[('select','=',True)]">
+                                    <tree string="UnInstall History" create="false" delete="false">
+                                        <field name="wheel_id"
+                                               domain="[('state', '=', 'confirmed'),('install_type', '=', 'both')]"/>
+                                        <field name="wheel_code"/>
+                                        <field name="install_date"/>
+                                        <field name="car_id"/>
+                                        <field name="car_meter"/>
+                                        <field name="install_place_"/>
+                                        <field name="select"/>
+                                        <field name="uninstall_date" attrs="{'required':[('select','=',True)]}"/>
+                                        <field name="meter_at_uninstall" attrs="{'required':[('select','=',True)]}"/>
+                                        <field name="distance"/>
+                                        <field name="wheel_status" attrs="{'required':[('select','=',True)]}"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="wheel expense treatment">
+                                <group>
+                                    <field name="wheel_expense_account_id"
+                                           required="1" options="{'create': false, 'create_edit': false}"/>
+                                    <field name="wheel_expense_journal_id" domian="[('type','in',['purchase','general'])]"
+                                           required="1" options="{'create': false, 'create_edit': false}"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_new_wheel_tree">
+            <field name="name">Wheel</field>
+            <field name="model">new.wheel</field>
+            <field name="arch" type="xml">
+<!--                colors="blue:state=='sold';-->
+<!--                gray:state=='reviewed';-->
+<!--                black:state=='confirmed';-->
+<!--                green:state=='used';-->
+<!--                brown:state=='installed';-->
+<!--                red:state=='damaged';-->
+<!--                red:state=='closed'"-->
+                <tree string="wheel" create="false">
+
+                    <field name="code" readonly="1"/>
+                    <field name="wheel_no" required="1"/>
+                    <field name="supplier_id" readonly="1"/>
+                    <field name="install_type" required="1"/>
+                    <field name="size" required="1"/>
+                    <field name="manufacturing_company_id"/>
+                    <field name="supplier_code"/>
+                    <field name="wheel_status"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+<!--        <record model="ir.ui.view" id="view_new_wheel_search">-->
+<!--            <field name="name">Wheel</field>-->
+<!--            <field name="model">new.wheel</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <search>-->
+<!--                    <group expand="0" string="Group By">-->
+<!--                        <filter string="Location" context="{'group_by': 'location_id'}"/>-->
+<!--                    </group>-->
+<!--                </search>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <record model="ir.actions.act_window" id="action_new_wheel">
+            <field name="name">Wheels</field>
+            <field name="res_model">new.wheel</field>
+<!--            <field name="view_type">form</field>-->
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--#################### Wheel Action #######################-->
+        <record model="ir.ui.view" id="view_wheel_action_form">
+            <field name="name">Wheels Action</field>
+            <field name="model">wheel.action</field>
+            <field name="arch" type="xml">
+                <form string="Wheel Action">
+                    <header>
+                        <button name="button_review" string="Reviewed"
+                                states="draft" type="object" class="oe_highlight" groups="fahad_transportation.group_fahd_wheel_review"/>
+
+                        <button name="button_confirmed" string="Confirmed"
+                                states="reviewed" type="object" class="oe_highlight" groups="fahad_transportation.group_fahd_wheel_confirm"/>
+
+                        <button name="button_closed" string="Closed" confirm="Are You sure you want to Close this one"
+                                states="reviewed,draft" type="object" class="oe_highlight"/>
+
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="decision_date" required="1"/>
+                                <field name="vehicle_id"/>
+                                <field name="basic_wheel_no_id" readonly="1"
+                                       attrs="{'invisible':[('install_on','!=','vehicle')]}"/>
+                                <field name="backup_wheel_no_id" readonly="1"
+                                       attrs="{'invisible':[('install_on','!=','vehicle')]}"/>
+                                <field name="current_wheel_no_id" readonly="1"
+                                       attrs="{'invisible':[('install_on','!=','vehicle')]}"/>
+                                <field name="vehicle_wheel_no" readonly="1"
+                                       attrs="{'invisible':[('install_on','!=','vehicle')]}"/>
+                                <field name="car_free_places" readonly="1"
+                                       attrs="{'invisible':[('install_on','!=', 'vehicle')]}"/>
+                            </group>
+                            <group>
+                                <field name="install_on" context="{'install_on': install_on}" required="1"/>
+                                <field name="tank_id"
+                                       options="{'create': false, 'create_edit': false}" context="{'tank_id': tank_id,'no_add_domain':True}"
+                                       attrs="{'invisible':[('install_on','!=', 'tank')],'required':[('install_on','=','tank')]}"/>
+                                <field name="t_basic_wheel_no_id" readonly="1"
+                                       attrs="{'invisible':[('install_on','!=', 'tank')]}"/>
+                                <field name="t_backup_wheel_no_id" readonly="1"
+                                       attrs="{'invisible':[('install_on','!=', 'tank')]}"/>
+                                <field name="t_current_wheel_no_id" readonly=""
+                                       attrs="{'invisible':[('install_on','!=', 'tank')]}"/>
+                                <field name="tank_wheel_no" readonly="1"
+                                       attrs="{'invisible':[('install_on','!=', 'tank')]}"/>
+                                <field name="tank_free_places" readonly="1"
+                                       attrs="{'invisible':[('install_on','!=', 'tank')]}"/>
+                            </group>
+                            <group>
+                                <field name="order_type" required="1"/>
+                                <field name="employee_id" options="{'create': false, 'create_edit': false}" required="1"/>
+                            </group>
+                        </group>
+                        <group>
+                        </group>
+                        <notebook>
+                            <page string="Install Wheel"
+                                  attrs="{'invisible':['&amp;','|',('vehicle_id','=',False),('tank_id','=',False),('order_type','!=','install')]}">
+                                <field name="install_decision"
+                                       context="{'default_install_date':decision_date, 'install_on': install_on, 'car_id': vehicle_id,'tank_id':tank_id}">
+                                    <tree string="Install Decision" editable="bottom">
+                                        <field name="wheel_id" required="1" options="{'create': false, 'create_edit': false}"
+                                               domain="[('state', 'in',['confirmed','used']),('install_type','in',[context.get('install_on'),'both'])]"/>
+                                        <field name="wheel_code"/>
+                                        <field name="size" readonly="1"/>
+                                        <field name="wheel_status" readonly="1"/>
+                                        <field name="install_type" readonly="1"/>
+                                        <field name="install_date" required="1"/>
+                                        <field name="car_meter" required="1"/>
+                                        <!--<field name="install_place_" required="1"
+                                               options="{'create': false, 'create_edit': false}"
+                                               domain="[('car_id','=', context.get('car_id')),
+                                               ('tank_id','=', context.get('tank_id'))]"/>-->
+                                        <field name="install_place_" required="1"/>
+                                        <field name="move_id" attrs="{'invisible':[('move_id','=',False)]}" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="UnInstall Wheel">
+                                <field name="uninstall_decision" context="{'default_install_date':decision_date}">
+                                    <tree string="UnInstall Decision" create="false" delete="false" editable="bottom">
+                                        <field name="wheel_id" readonly="1" options="{'create': false, 'create_edit': false}"
+                                               domain="[('state', '=','confirmed'),('install_type', '=', 'both')]"/>
+                                        <field name="wheel_code" readonly="1"/>
+                                        <field name="size" readonly="1"/>
+                                        <field name="wheel_status" readonly="1"/>
+                                        <field name="install_type" readonly="1"/>
+                                        <field name="install_date" readonly="1"/>
+                                        <field name="car_meter" readonly="1"/>
+                                        <field name="install_place_" readonly="1"/>
+                                        <field name="select"/>
+                                        <field name="uninstall_date" attrs="{'required':[('select','=',True)],'readonly':[('select','=',False)]}"/>
+                                        <field name="meter_at_uninstall" attrs="{'required':[('select','=',True)],'readonly':[('select','=',False)]}"/>
+                                        <field name="distance"/>
+                                        <field name="wheel_status" attrs="{'required':[('select','=',True)],'readonly':[('select','=',False)]}"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <!--<page string="UnInstall/Install Wheel"-->
+                            <!--attrs="{'invisible':[('order_type','!=','uninstall_install')]}">-->
+                            <!--<field name="uninstall_decision">-->
+                            <!--<tree string="UnInstall Decision" create="false">-->
+                            <!--<field name="wheel_id"-->
+                            <!--domain="[('state', '=', 'confirmed'),('install_type', '=', install_on),('install_type', '=', 'both')]"/>-->
+                            <!--<field name="wheel_code"/>-->
+                            <!--<field name="install_date"/>-->
+                            <!--<field name="car_meter"/>-->
+                            <!--<field name="install_place_"/>-->
+                            <!--<field name="select"/>-->
+                            <!--<field name="uninstall_date" attrs="{'required':[('select','=',True)]}"/>-->
+                            <!--<field name="meter_at_uninstall" attrs="{'required':[('select','=',True)]}"/>-->
+                            <!--<field name="distance"/>-->
+                            <!--<field name="wheel_status" attrs="{'required':[('select','=',True)]}"/>-->
+                            <!--</tree>-->
+                            <!--</field>-->
+                            <!--<separator/>-->
+                            <!--&lt;!&ndash;<field name="install_decision">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<tree string="Install Decision" editable="bottom">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<field name="wheel_id"&ndash;&gt;-->
+                            <!--&lt;!&ndash;domain="[('state', '=', 'confirmed')]"/>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<field name="wheel_code"/>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<field name="install_date"/>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<field name="car_meter"/>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<field name="install_place_"/>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</tree>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</field>&ndash;&gt;-->
+                            <!--</page>-->
+                        </notebook>
+                        <field name="notes"/>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_new_wheel_action_tree">
+            <field name="name">Wheel Action</field>
+            <field name="model">wheel.action</field>
+            <field name="arch" type="xml">
+                <tree string="Wheel Action">
+                    <field name="decision_date"/>
+                    <field name="install_on"/>
+                    <field name="order_type"/>
+                    <field name="vehicle_id"/>
+                    <field name="tank_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_new_wheel_action">
+            <field name="name">Wheels Action</field>
+            <field name="res_model">wheel.action</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_new_wheel_action_tree"/>
+        </record>
+
+        <!--########################## Install Place  ########################-->
+        <record model="ir.ui.view" id="view_install_place__form">
+            <field name="name">Install Place</field>
+            <field name="model">install.place</field>
+            <field name="arch" type="xml">
+                <form string="Install Place">
+                    <sheet>
+                        <group col="4">
+                            <field name="code" readonly="1"/>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_install_place__tree">
+            <field name="name">Install Place</field>
+            <field name="model">install.place</field>
+            <field name="arch" type="xml">
+                <tree string="Install Place">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_install_place_">
+            <field name="name">Install Places</field>
+            <field name="res_model">install.place</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_install_place__tree"/>
+        </record>
+
+        <!--######################### Wheel Purchase ##########################-->
+
+        <record model="ir.ui.view" id="view_wheel_purchase_form">
+            <field name="name">Wheel Purchase</field>
+            <field name="model">wheel.purchase</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name='button_review' type="object" string="Review" states="draft"
+                                groups="fahad_transportation.group_fahd_wheel_review"/>
+                        <button name='button_confirmed' type="object" string="Confirm" states="reviewed"
+                                groups="fahad_transportation.group_fahd_wheel_confirm"/>
+                        <field name="state" widget='statusbar' statusbar_visible="draft,reviewed,confirmed"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" readonly="1"/>
+                                <field name="invoice_number" required="1"/>
+                                <field name="location_id" options="{'create': false, 'create_edit': false}"/>
+
+                            </group>
+                            <group>
+                                <field name="invoice_date" required="1"/>
+                                <field name="estimated_life" required="1"/>
+                                <field name="show_wheels" invisible="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Wheels">
+                                <field name="wheels_ids">
+                                    <tree string="Wheels" editable="bottom">
+                                        <field name="wheel_no"/>
+                                        <field name="size"/>
+                                        <field name="wheel_status" required="1"/>
+                                        <field name="manufacturing_company_id"/>
+                                        <field name="install_type" required="1"/>
+                                        <field name="purchase_price" required="1"/>
+                                        <field name="purchase_date" required="1"/>
+                                        <field name="estimated_life"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="wheel expense treatment">
+                                <group>
+                                    <field name="wheel_expense_account_id"
+                                           attrs="{'required':[('state','in',['reviewed'])]}"
+                                           options="{'create': false, 'create_edit': false}"/>
+                                    <field name="wheel_expense_journal_id"
+                                           domain="[('type','in',['purchase','general'])]"
+                                           attrs="{'required':[('state','in',['reviewed'])]}"
+                                           options="{'create': false, 'create_edit': false}"/>
+                                    <field name="invoice_id" attrs="{'invisible':[('invoice_id','=',False)]}"/>
+                                </group>
+                            </page>
+                        </notebook>
+                        <group>
+                            <group>
+                                <group>
+                                    <field name="number_of_wheels"/>
+                                    <field name="total"/>
+                                    <field name="supplier_id" attrs="{'required':[('state','in',['reviewed','confirmed'])]}"
+                                           options="{'create': false, 'create_edit': false}"
+                                           context="{'default_supplier':True,'default_customer':False}"/>
+                                    <field name="expense_account"
+                                           options="{'create': false, 'create_edit': false}"
+                                           attrs="{'required':[('state','in',['reviewed','confirmed'])]}"/>
+                                </group>
+                                <group>
+                                    <field name="supplier_invoice_type" attrs="{'required':[('state','in',['reviewed','confirmed'])]}"/>
+                                    <field name="expense_journal" domain="[('type', 'not in', ['cash','bank'])]"
+                                           options="{'create': false, 'create_edit': false}"
+                                           attrs="{'invisible':[('supplier_invoice_type','!=','invoiced')],'required':[('supplier_invoice_type','=','invoiced'),('state','=','reviewed')]}"/>
+                                </group>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_wheel_purchase_tree">
+            <field name="name">Wheel Purchase</field>
+            <field name="model">wheel.purchase</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="invoice_number"/>
+                    <field name="invoice_date"/>
+                    <field name="total"/>
+                    <field name="supplier_id"/>
+                    <field name="expense_account"/>
+                    <field name="supplier_invoice_type"/>
+                    <field name="expense_journal"/>
+                    <field name="location_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+<!--        <record model="ir.ui.view" id="view_wheel_purchase_search">-->
+<!--            <field name="name">Wheel Purchase</field>-->
+<!--            <field name="model">wheel.purchase</field>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <search string="Wheel Purchase">-->
+<!--                    <group expand="0" string="Group By">-->
+<!--                        <filter string="Location" context="{'group_by': 'location_id'}"/>-->
+<!--                    </group>-->
+<!--                </search>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <record model="ir.actions.act_window" id="view_wheel_purchase_action">
+            <field name="name">Wheel Purchase</field>
+            <field name="res_model">wheel.purchase</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

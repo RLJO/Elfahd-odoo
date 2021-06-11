@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_branch_form">
+            <field name="name">Branches</field>
+            <field name="model">branch</field>
+            <field name="arch" type="xml">
+                <form string="Branch">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code" readonly="1"/>
+                                <field name="city_id" required="1"/>
+                                <field name="community"/>
+                                <field name="building_name"/>
+                                <field name="floor_no"/>
+                                <field name="mobile1" required="1"/>
+                                <field name="mobile3"/>
+                                <field name="branch_manager"/>
+                            </group>
+                            <group>
+                                <field name="name" required="1"/>
+                                <field name="district"/>
+                                <field name="street"/>
+                                <field name="building_no"/>
+                                <field name="telephone_no"/>
+                                <field name="mobile2"/>
+                                <field name="email" required="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Employees">
+                                <field name="employee_ids" readonly="1"/>
+                            </page>
+                            <!--<page string="Employees on Branch">-->
+                                <!--<field name="employee_branch_ids"/>-->
+                            <!--</page>-->
+                            <page string="Lines">
+                                <field name="line_ids" readonly="1">
+                                    <tree name="Lines">
+                                        <field name="code"/>
+                                        <field name="line_name"/>
+                                        <field name="start_point"/>
+                                        <field name="end_point"/>
+                                        <field name="distance"/>
+                                        <field name="km_price"/>
+                                        <field name="line_price"/>
+                                        <field name="driver_commission"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Cars">
+                                <field name="cars_ids" readonly="1">
+                                    <tree name="Cars">
+                                        <field name="code"/>
+                                        <field name="plaque_no"/>
+                                        <field name="mark"/>
+                                        <field name="model"/>
+                                        <field name="color"/>
+                                        <field name="chasih_no"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="Tanks">
+                                <field name="tanks_ids" readonly="1">
+                                    <tree name="Tanks">
+                                        <field name="code"/>
+                                        <field name="aramco_no"/>
+                                        <field name="company_number"/>
+                                        <field name="capacity"/>
+                                        <field name="manufacture_company"/>
+                                        <field name="tank_type"/>
+                                        <field name="chasih_no"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_branch_tree">
+            <field name="name">Branch</field>
+            <field name="model">branch</field>
+            <field name="arch" type="xml">
+                <tree string="Branch">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="city"/>
+                    <field name="community"/>
+                    <field name="district"/>
+                    <field name="street"/>
+                    <field name="building_name"/>
+                    <field name="floor_no"/>
+                    <field name="mobile1"/>
+                    <field name="mobile3"/>
+                    <field name="branch_manager"/>
+
+                  <!---->
+                    <!--<field name="building_no"/>-->
+                    <!--<field name="telephone_no"/>-->
+                    <!--<field name="mobile2"/>-->
+                    <!--<field name="email"/>-->
+
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_new_branch">
+            <field name="name">Branches</field>
+            <field name="res_model">branch</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_branch_tree"/>
+        </record>
+
+
+    </data>
+</odoo>
