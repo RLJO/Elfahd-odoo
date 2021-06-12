@@ -57,6 +57,7 @@ New Module For Transportation
         'reports/report_new_car.xml',
         'reports/report_new_tank.xml',
         'reports/employee_document_expiry.xml',
+        'reports/expenses_trips.xml',
         'views/transportation_report.xml',
         'views/transportation_menu.xml',
         'views/others.xml',

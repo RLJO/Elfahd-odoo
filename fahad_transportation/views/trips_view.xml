@@ -8,57 +8,64 @@
                 <form string="Contract">
                     <header>
                         <button name='button_review' type="object" string="Review" states="draft"
-                        groups="fahad_transportation.group_fahd_trip_review"/>
+                                groups="fahad_transportation.group_fahd_trip_review"/>
                         <button name='button_confirm' type="object" string="Confirm" states="reviewed"
                                 groups="fahad_transportation.group_fahd_trip_confirm"/>
                         <button name='button_complete' type="object" string="Complete" states="confirmed"
                                 groups="fahad_transportation.group_fahd_trip_complete"/>
-                        <button name='button_close' type="object" confirm="Are you sure you want to close" groups="base.group_no_one" string="Close" states="draft,reviewed"/>
+                        <button name='button_close' type="object" confirm="Are you sure you want to close"
+                                groups="base.group_no_one" string="Close" states="draft,reviewed"/>
                         <button name='button_draft' type="object" string="Set to Draft" states="draft,reviewed"/>
                         <field name="state" widget='statusbar'/>
                     </header>
+                    <group>
                         <group>
-                            <group>
-                                <field name="code"/>
-                                <label for="month"/>
-                                <div>
-                                    <field name="month" required="1" class="oe_inline"/> -
-                                    <field name="year" required="1" class="oe_inline"/>
-                                </div>
-                                <!--<field name="trip_discount" attrs="{'readonly': [('state', '=', 'confirmed')]}"/>-->
-                                <field name="new_line_id" required="1" options="{'create': false, 'create_edit': false}"/>
-                                <field name="driver_id" required="1"
-                                       attrs="{'readonly':[('state','in',['confirmed','complete','closed'])]}"
-                                       domain="[('employee_type', '=', 'driver'),('active','=',True),('state','=','confirm')]"
-                                       context="{'default_employee_type': 'driver'}" options="{'create': false, 'create_edit': false}"/>
-                                <field name="arabic_name" readonly="1"/>
-                                <field name="driver_code" readonly="1"/>
-                                <field name="aramco_no" readonly="1"/>
-                            </group>
-                            <group>
-                                <!-- <field name="customer_id" options="{'create': false, 'create_edit': false}"/> -->
-                                <field name="customer_id"/>
-                                <field name="journal_id" options="{'create': false, 'create_edit': false}"
-                                       attrs="{'required': [('state', 'in', ['confirmed','complete','closed','reviewed'])]}"
-                                       domain="[('type', '=', 'sale')]"/>
-                                <field name="loss_account" options="{'create': false, 'create_edit': false}" attrs="{'required': [('state', 'in', ['confirmed','complete','closed','reviewed'])]}"/>
-                                <field name="other_account" options="{'create': false, 'create_edit': false}"
-                                       attrs="{'required': [('state', 'in', ['confirmed','complete','closed','reviewed'])]}"/>
-                                <field name="number_of_trips"/>
-                            </group>
+                            <field name="code"/>
+                            <label for="month"/>
+                            <div>
+                                <field name="month" required="1" class="oe_inline"/>
+                                -
+                                <field name="year" required="1" class="oe_inline"/>
+                            </div>
+                            <!--<field name="trip_discount" attrs="{'readonly': [('state', '=', 'confirmed')]}"/>-->
+                            <field name="new_line_id" required="1" options="{'create': false, 'create_edit': false}"/>
+                            <field name="driver_id" required="1"
+                                   attrs="{'readonly':[('state','in',['confirmed','complete','closed'])]}"
+                                   domain="[('employee_type', '=', 'driver'),('active','=',True),('state','=','confirm')]"
+                                   context="{'default_employee_type': 'driver'}"
+                                   options="{'create': false, 'create_edit': false}"/>
+                            <field name="arabic_name" readonly="1"/>
+                            <field name="driver_code" readonly="1"/>
+                            <field name="aramco_no" readonly="1"/>
                         </group>
-                        <notebook>
+                        <group>
+                            <!-- <field name="customer_id" options="{'create': false, 'create_edit': false}"/> -->
+                            <field name="customer_id"/>
+                            <field name="journal_id" options="{'create': false, 'create_edit': false}"
+                                   attrs="{'required': [('state', 'in', ['confirmed','complete','closed','reviewed'])]}"
+                                   domain="[('type', '=', 'sale')]"/>
+                            <field name="loss_account" options="{'create': false, 'create_edit': false}"
+                                   attrs="{'required': [('state', 'in', ['confirmed','complete','closed','reviewed'])]}"/>
+                            <field name="other_account" options="{'create': false, 'create_edit': false}"
+                                   attrs="{'required': [('state', 'in', ['confirmed','complete','closed','reviewed'])]}"/>
+                            <field name="number_of_trips"/>
+                        </group>
+                    </group>
+                    <notebook>
                         <page string="Trips">
-                            <field name="trips_line_ids" required="1" context="{'default_line_id':new_line_id,'default_driver_id':driver_id}">
+                            <field name="trips_line_ids" required="1"
+                                   context="{'default_line_id':new_line_id,'default_driver_id':driver_id}">
                                 <tree string="Trips" editable="bottom" class="trip_line">
-                                    <field name="line_id" required="1" options="{'create': false, 'create_edit': false}"/>
-                                    <field name="new_line_id" invisible="1" options="{'create': false, 'create_edit': false}"
+                                    <field name="line_id" required="1"
+                                           options="{'create': false, 'create_edit': false}"/>
+                                    <field name="new_line_id" invisible="1"
+                                           options="{'create': false, 'create_edit': false}"
                                            context="{'new_line_id': new_line_id}"/>
                                     <field name="driver_id" invisible="1" context="{'driver_id': driver_id}"/>
                                     <field name="vehicle_id" required="1"
-                                           options="{'create': false, 'create_edit': false}" />
+                                           options="{'create': false, 'create_edit': false}"/>
                                     <field name="vehicle_state" required="1"/>
-<!--                                    domain="[('state', '=', 'confirm'),('car_driver','=',driver_id)]" -->
+                                    <!--                                    domain="[('state', '=', 'confirm'),('car_driver','=',driver_id)]" -->
                                     <field name="car_id" invisible="1"/>
                                     <field name="private" invisible="1"/>
                                     <field name="trips_no" invisible="1"/>
@@ -88,15 +95,34 @@
                         <page string="Expenses">
                             <field name="expenses_ids" readonly="1">
                                 <tree string="Expenses" editable="bottom">
-                                        <field name="trip_details"/>
-                                        <field name="expense_name"/>
-                                        <field name="expense_account"/>
-                                        <field name="number"/>
-                                        <field name="amount"/>
-                                        <field name="total"/>
-                                        <field name="invoice"/>
-                                        <field name="filling_station"/>
-                                        <field name="notes"/>
+                                    <field name="trip_details"/>
+                                    <field name="expense_name"/>
+                                    <field name="expense_account"/>
+                                    <field name="number"/>
+                                    <field name="amount"/>
+                                    <field name="total"/>
+                                    <field name="invoice"/>
+                                    <field name="trip_line_id"/>
+                                    <field name="date"/>
+                                    <field name="filling_station"/>
+                                    <field name="notes"/>
+                                    <field name="notes2"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Diesel Difference">
+                            <field name="diesel_difference_ids">
+                                <tree string="Diesel Difference" editable="bottom">
+                                    <field name="aramco_no"/>
+                                    <field name="line_id"/>
+                                    <field name="date"/>
+                                    <field name="quantity"/>
+                                    <field name="distance"/>
+                                    <field name="ratio"/>
+                                    <field name="difference"/>
+                                    <field name="expense_id" invisible="1"/>
+                                    <field name="trip_id" invisible="1"/>
                                 </tree>
                             </field>
                         </page>
@@ -107,8 +133,8 @@
                     </div>
                 </form>
                 <!--<div class="oe_chatter">-->
-                    <!--<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>-->
-                    <!--<field name="message_ids" widget="mail_thread"/>-->
+                <!--<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>-->
+                <!--<field name="message_ids" widget="mail_thread"/>-->
                 <!--</div>-->
             </field>
         </record>
@@ -117,8 +143,8 @@
             <field name="name">Trips</field>
             <field name="model">trips</field>
             <field name="arch" type="xml">
-<!--                 colors="blue:state=='draft';gray:state=='reviewed';black:state=='confirmed';-->
-<!--                                        red:state=='complete';red:state=='closed'"-->
+                <!--                 colors="blue:state=='draft';gray:state=='reviewed';black:state=='confirmed';-->
+                <!--                                        red:state=='complete';red:state=='closed'"-->
                 <tree string="Contract">
                     <field name="code"/>
                     <field name="driver_code"/>
@@ -136,36 +162,36 @@
             </field>
         </record>
 
-<!--        <record id="view_trip_search" model="ir.ui.view">-->
-<!--            <field name="name">Trips search</field>-->
-<!--            <field name="model">trips</field>-->
-<!--            <field name="arch" type="xml">-->
-<!--                <search string="Trips">-->
-<!--                    <field name="code"/>-->
-<!--                    <field name="driver_code"/>-->
-<!--                    <field name="arabic_name"/>-->
-<!--                    <field name="aramco_no"/>-->
-<!--                    <field name="plat_no"/>-->
-<!--                    <field name="tank_aramco_no"/>-->
-<!--                    <field name="state"/>-->
-<!--                    <filter string="Draft"     domain="[('state','=','draft')]"/>-->
-<!--                    <filter string="Reviewed"  domain="[('state','=','reviewed')]"/>-->
-<!--                    <filter string="Confirmed" domain="[('state','=','confirmed')]"/>-->
-<!--                    <filter string="Completed" domain="[('state','=','complete')]"/>-->
-<!--                    <filter string="Closed"    domain="[('state','=','closed')]"/>-->
+        <!--        <record id="view_trip_search" model="ir.ui.view">-->
+        <!--            <field name="name">Trips search</field>-->
+        <!--            <field name="model">trips</field>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <search string="Trips">-->
+        <!--                    <field name="code"/>-->
+        <!--                    <field name="driver_code"/>-->
+        <!--                    <field name="arabic_name"/>-->
+        <!--                    <field name="aramco_no"/>-->
+        <!--                    <field name="plat_no"/>-->
+        <!--                    <field name="tank_aramco_no"/>-->
+        <!--                    <field name="state"/>-->
+        <!--                    <filter string="Draft"     domain="[('state','=','draft')]"/>-->
+        <!--                    <filter string="Reviewed"  domain="[('state','=','reviewed')]"/>-->
+        <!--                    <filter string="Confirmed" domain="[('state','=','confirmed')]"/>-->
+        <!--                    <filter string="Completed" domain="[('state','=','complete')]"/>-->
+        <!--                    <filter string="Closed"    domain="[('state','=','closed')]"/>-->
 
-<!--                    <group expand="0" string="Group By">-->
-<!--                        <filter string="Month" context="{'group_by': 'month'}"/>-->
-<!--                        <filter string="Year" context="{'group_by': 'year'}"/>-->
-<!--                        <filter string="Driver" context="{'group_by': 'driver_id'}"/>-->
-<!--                        <filter string="State" context="{'group_by': 'state'}"/>-->
-<!--                        <filter string="Car" context="{'group_by': 'plat_no'}"/>-->
-<!--                        &lt;!&ndash;<filter string="ownership" context="{'group_by': 'month'}" icon="terp-stock_effects-object-colorize"/>&ndash;&gt;-->
-<!--                        &lt;!&ndash;<filter string="line" context="{'group_by': 'month'}" icon="terp-stock_effects-object-colorize"/>&ndash;&gt;-->
-<!--                    </group>-->
-<!--                </search>-->
-<!--            </field>-->
-<!--        </record>-->
+        <!--                    <group expand="0" string="Group By">-->
+        <!--                        <filter string="Month" context="{'group_by': 'month'}"/>-->
+        <!--                        <filter string="Year" context="{'group_by': 'year'}"/>-->
+        <!--                        <filter string="Driver" context="{'group_by': 'driver_id'}"/>-->
+        <!--                        <filter string="State" context="{'group_by': 'state'}"/>-->
+        <!--                        <filter string="Car" context="{'group_by': 'plat_no'}"/>-->
+        <!--                        &lt;!&ndash;<filter string="ownership" context="{'group_by': 'month'}" icon="terp-stock_effects-object-colorize"/>&ndash;&gt;-->
+        <!--                        &lt;!&ndash;<filter string="line" context="{'group_by': 'month'}" icon="terp-stock_effects-object-colorize"/>&ndash;&gt;-->
+        <!--                    </group>-->
+        <!--                </search>-->
+        <!--            </field>-->
+        <!--        </record>-->
 
         <record model="ir.actions.act_window" id="view_trip_action">
             <field name="name">Trips</field>

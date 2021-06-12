@@ -20,3 +20,4 @@ from . import other_revenue
 from . import buy_screen
 from . import others
 from . import vehicle_history
+from . import diesel_difference

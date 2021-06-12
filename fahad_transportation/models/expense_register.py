@@ -57,13 +57,11 @@ class expense_register(models.Model):
     no_expense = fields.Float('No of Expenses', multi='line')
     total_expense = fields.Float('Total of Expenses', multi='line')
 
-
-
     # @api.one
     @api.depends('traffic_violation_amount', 'employee_share')
     def _get_company_share(self):
         if (
-                    self.traffic_violation_amount and self.employee_share) and self.traffic_violation_amount > self.employee_share:
+                self.traffic_violation_amount and self.employee_share) and self.traffic_violation_amount > self.employee_share:
             self.company_share = self.traffic_violation_amount - self.employee_share
         else:
             self.company_share = 0.0
@@ -90,7 +88,6 @@ class expense_register(models.Model):
                 total += line.total
             record.no_expense = no
             record.total_expense = total
-
 
     # @api.one
     def button_review(self):
@@ -470,8 +467,6 @@ class expense_register(models.Model):
         return super(expense_register, self).unlink()
 
 
-
-
 class expense_register_lines(models.Model):
     _name = 'expense.register.lines'
     _description = 'Expense Register Lines'
@@ -488,15 +483,17 @@ class expense_register_lines(models.Model):
     invoice = fields.Char(_('Invoice'), size=20)
     filling_station = fields.Char(_('Filling Station'), size=10)
     notes = fields.Char(_('Notes'), size=15)
+    notes2 = fields.Selection([('basics', 'Basics'), ('services', 'Services')])
     trip_details = fields.Many2one('trips.line', 'Aramco Number', related='expense_register_id.trip_details')
     trip_id = fields.Many2one('trips', _('Trip'), related='expense_register_id.trips_id', store=True)
     state = fields.Selection([('draft', 'Draft'),
                               ('reviewed', 'Reviewed'),
                               ('confirmed', 'Confirmed'),
-                              ('closed', 'Closed')], 'State', default='draft', related="expense_register_id.state", store=True)
+                              ('closed', 'Closed')], 'State', default='draft', related="expense_register_id.state",
+                             store=True)
     date = fields.Datetime('Date', related='expense_register_id.date')
+    trip_line_id = fields.Many2one('new.line', 'Trip Line')
 
-    
     # @api.one
     @api.depends('number', 'amount')
     def _compute_total(self):
@@ -523,7 +520,7 @@ class expense_register_lines(models.Model):
                     raise ValidationError(_("We shouldn't record a capital expense in a rented tank"))
 
 
-class new_car(models.Model):
+class NewCar(models.Model):
     _inherit = 'new.car'
 
     expense_expense = fields.One2many('expense.register.lines', 'new_car_id', 'Expenses from Expenses')

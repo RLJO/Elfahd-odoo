@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="trips_lines_report_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <div class="oe_structure"/>
+                        <h2 class="mt16">
+                            <t>
+                                <span style="text-align : center">Trips</span>
+                            </t>
+                        </h2>
+                        <br/>
+                        <br/>
+                        <div class="row mt32 mb32" id="code">
+                            <div class="col-auto col-3 mw-100 mb-2">
+                                <strong>Code:</strong>
+                                <p class="m-0" t-field="doc.code"/>
+                            </div>
+                            <div class="col-auto col-3 mw-100 mb-2">
+                                <strong>Month:</strong>
+                                <p class="m-0" t-field="doc.month"/>
+                            </div>
+                            <div class="col-auto col-3 mw-100 mb-2">
+                                <strong>New line:</strong>
+                                <p class="m-0" t-field="doc.new_line_id.line_name"/>
+                            </div>
+                            <div class="col-auto col-3 mw-100 mb-2" name="expiration_date">
+                                <strong>Customer:</strong>
+                                <p class="m-0" t-field="doc.customer_id.name"/>
+                            </div>
+                            <div class="col-auto col-3 mw-100 mb-2">
+                                <strong>Driver:</strong>
+                                <p class="m-0" t-field="doc.driver_id.name"/>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+
+                        <table class="table table-sm o_main_table">
+                            <thead style="display: table-row-group">
+                                <tr style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-left">Line
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Vehicle
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Vehicle state
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Loaded amount
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Unloaded date
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">UnLoaded amount
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Total amount
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Deduction aramco
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Net amount
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Deduct from driver
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Product
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Aramco invoice No
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Deduct owner
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Fixed percentage
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Arrival date
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="unloaded_amount" t-value="0"/>
+                                <t t-set="discounted_aramco" t-value="0"/>
+                                <t t-set="net_amount" t-value="0"/>
+                                <t t-set="deduct_driver" t-value="0"/>
+                                <t t-foreach="doc.trips_line_ids" t-as="line">
+                                    <tr style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.line_id.line_name"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.vehicle_id.code"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.vehicle_state"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.loaded_amount"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.loaded_date"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.unloaded_amount"/>
+                                            <t t-set="unloaded_amount" t-value="line.unloaded_amount+unloaded_amount"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.total_amount"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.discounted_aramco"/>
+                                            <t t-set="discounted_aramco"
+                                               t-value="line.discounted_aramco+discounted_aramco"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.net_amount"/>
+                                            <t t-set="net_amount" t-value="line.net_amount+net_amount"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.deduct_driver"/>
+                                            <t t-set="deduct_driver" t-value="line.deduct_driver+deduct_driver"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-if="line.product_id">
+                                                <t t-esc="line.product_id"/>
+                                            </t>
+                                            <t t-else="">
+                                                <span>No product</span>
+                                            </t>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.aramco_invoice_no"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.deduct_owner"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.deduct_owner_amount"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.arrival_date"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <br/>
+                        <div class="clearfix" name="so_total_summary">
+                            <div id="total" class="row" name="total">
+                                <div t-attf-class="#{'col-4'} ml-auto">
+                                    <table class="table table-sm">
+                                        <thead style="display: table-row-group">
+                                            <tr style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                                <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                                    class="text-left">Unloaded Amount
+                                                </th>
+                                                <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                                    class="text-left">Deduction aramco
+                                                </th>
+                                                <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                                    class="text-left">Net amount
+                                                </th>
+                                                <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                                    class="text-left">Deduct from driver
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tr style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                            <td style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                                <t t-esc="unloaded_amount"/>
+                                            </td>
+                                            <td style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                                <t t-esc="discounted_aramco"/>
+                                            </td>
+                                            <td style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                                <t t-esc="net_amount"/>
+                                            </td>
+                                            <td style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                                <t t-esc="deduct_driver"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template id="expenses_lines_report_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <div class="oe_structure"/>
+                        <h2 class="mt16">
+                            <t>
+                                <span style="text-align : center">Expenses</span>
+                            </t>
+                        </h2>
+                        <br/>
+                        <br/>
+                        <div class="row mt32 mb32" id="code">
+                            <div class="col-auto col-3 mw-100 mb-2">
+                                <strong>Code:</strong>
+                                <p class="m-0" t-field="doc.code"/>
+                            </div>
+                            <div class="col-auto col-3 mw-100 mb-2">
+                                <strong>Month:</strong>
+                                <p class="m-0" t-field="doc.month"/>
+                            </div>
+                            <div class="col-auto col-3 mw-100 mb-2">
+                                <strong>New line:</strong>
+                                <p class="m-0" t-field="doc.new_line_id.line_name"/>
+                            </div>
+                            <div class="col-auto col-3 mw-100 mb-2" name="expiration_date">
+                                <strong>Customer:</strong>
+                                <p class="m-0" t-field="doc.customer_id.name"/>
+                            </div>
+                            <div class="col-auto col-3 mw-100 mb-2">
+                                <strong>Driver:</strong>
+                                <p class="m-0" t-field="doc.driver_id.name"/>
+                            </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+
+                        <table class="table table-sm o_main_table">
+                            <thead style="display: table-row-group">
+                                <tr style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-left">Aramco number
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Expense name
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Expense account
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Quantity
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Amount
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Total
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Invoice
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Trip line
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Date
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Filling station
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Notes
+                                    </th>
+                                    <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                        class="text-right">Notes2
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-set="quantity" t-value="0"/>
+                                <t t-set="amount" t-value="0"/>
+                                <t t-set="total" t-value="0"/>
+                                <t t-foreach="doc.expenses_ids" t-as="line">
+                                    <tr style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.trip_details"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.expense_name"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.expense_account"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.number"/>
+                                            <t t-set="quantity" t-value="line.number+quantity"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.amount"/>
+                                            <t t-set="amount" t-value="line.amount+amount"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.total"/>
+                                            <t t-set="total" t-value="line.total+total"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.invoice"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.trip_line_id"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.date"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.filling_station"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.notes"/>
+                                        </td>
+                                        <td style="border: 1px solid black;text-align:right;padding: 0px 5px 0px 5px;">
+                                            <t t-esc="line.notes2"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <br/>
+                        <div class="clearfix" name="so_total_summary">
+                            <div id="totals" class="row" name="totals">
+                                <div t-attf-class="#{'col-3'} ml-auto">
+                                    <table class="table table-sm">
+                                        <thead style="display: table-row-group">
+                                            <tr style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                                <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                                    class="text-left">Quantity
+                                                </th>
+                                                <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                                    class="text-left">Amount
+                                                </th>
+                                                <th style="border: 1px solid black; position : relative; page-break-inside: avoid;"
+                                                    class="text-left">Total
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tr style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                            <td style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                                <t t-esc="quantity"/>
+                                            </td>
+                                            <td style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                                <t t-esc="amount"/>
+                                            </td>
+                                            <td style="border: 1px solid black; position : relative; page-break-inside: avoid;">
+                                                <t t-esc="total"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+    <report
+            id="trip_lines_report"
+            model='trips'
+            string="Print Trips"
+            name="fahad_transportation.trips_lines_report_template"
+            file="fahad_transportation.trips_lines_report_template"/>
+
+    <report
+            id="expenses_lines_report"
+            model='trips'
+            string="Print Expenses"
+            name="fahad_transportation.expenses_lines_report_template"
+            file="fahad_transportation.expenses_lines_report_template"/>
+    <!--    paperformat="warehouse_operations_paperformat"-->
+</odoo>

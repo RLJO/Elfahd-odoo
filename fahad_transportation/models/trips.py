@@ -43,6 +43,7 @@ class trips(models.Model):
     product = fields.Char('Product')
     tank_aramco_no = fields.Char('Tank Aramco No.')
     year = fields.Integer('Year')
+    diesel_difference_ids = fields.One2many('diesel.difference.lines', 'expense_id', string='Diesel Difference')
 
     # @api.one
     @api.depends('driver_id')
@@ -69,15 +70,15 @@ class trips(models.Model):
         if not self.trips_line_ids:
             raise ValidationError(_("You should insert one line at least"))
 
-    # @api.one
+    @api.multi
     def button_review(self):
-        if not self.driver_id.contract_id.active:
-            raise ValidationError(_('Selected Driver Has no active contract‬‬'))
-        seq = self.env['ir.sequence'].get('trip')
-        self.code = str(date.today().year) + "-" + seq
+        for rec in self:
+            if not rec.driver_id.contract_id.active:
+                raise ValidationError(_('Selected Driver Has no active contract‬‬'))
+            seq = rec.env['ir.sequence'].get('trip')
+            rec.code = str(date.today().year) + "-" + seq
         self.write({'state': 'reviewed'})
 
-    # @api.one
     def button_confirm(self):
         if self.driver_id.active == False:
             raise ValidationError(_("You can not confirm the trip because the driver is not active"))
