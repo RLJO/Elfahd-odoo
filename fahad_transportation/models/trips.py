@@ -386,13 +386,14 @@ class trips_line(models.Model):
     button_flag = fields.Boolean(_('Button Flag'), default=False)
 
     # @api.v7
-    def create_expense_register(self, cr, uid, ids, context=None):
-        res = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'fahad_transportation',
-                                                                  'view_expense_register_form')
-        view_id = res and res[1] or False
+    def create_expense_register(self):
+        # res = self.pool.get('ir.model.data').get_object_reference(cr, uid, 'fahad_transportation',
+        #                                                           'view_expense_register_form')
+        # view_id = res and res[1] or False
+        view_id = self.env.ref('fahad_transportation.view_expense_register_form').id
         ctx = {
             'default_expense_register_level': 'trip',
-            'default_trip_details': ids[0],
+            # 'default_trip_details': ids[0],
         }
         return {
             'domain': "[]",
