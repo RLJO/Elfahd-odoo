@@ -15,7 +15,7 @@ class new_wheel(models.Model):
     code = fields.Char(string='Code')
     wheel_no = fields.Char(string='Wheel No.')
 
-    # @api.multi
+    # 
     @api.constrains('wheel_no')
     def _check_repeat_wheel_no(self):
         for r in self:
@@ -66,7 +66,7 @@ class new_wheel(models.Model):
 
 
 
-    # @api.multi
+    # 
     def unlink(self):
         raise ValidationError(_('you can not delete wheel '))
 
@@ -101,7 +101,7 @@ class new_wheel(models.Model):
                     # invoice
         return True
 
-    # @api.multi
+    # 
     def button_closed(self):
         if self.state != 'closed':
             raise ValidationError(_("You can not close more that once"))
@@ -157,7 +157,7 @@ class wheel_action(models.Model):
     vehicle_wheel_no = fields.Integer(string='Total Wheels No')
     employee_id = fields.Many2one('hr.employee', 'Mechanical')
 
-    # @api.multi
+    # 
     @api.depends('basic_wheel_no_id', 'backup_wheel_no_id', 'current_wheel_no_id')
     def _compute_vehicle_wheel_no(self):
         self.vehicle_wheel_no = self.basic_wheel_no_id + self.backup_wheel_no_id
@@ -170,7 +170,7 @@ class wheel_action(models.Model):
     tank_free_places = fields.Integer(string='Tank Current Wheel No', related="tank_id.free_places")
     tank_wheel_no = fields.Integer(string='Tank Wheel No')
 
-    # @api.multi
+    # 
     @api.depends('t_basic_wheel_no_id', 't_backup_wheel_no_id', 't_current_wheel_no_id')
     def _compute_tank_wheel_no(self):
         self.tank_wheel_no = self.t_basic_wheel_no_id + self.t_backup_wheel_no_id
@@ -194,7 +194,7 @@ class wheel_action(models.Model):
     notes = fields.Html(string='Notes')
 
 
-    # @api.multi
+    # 
     def unlink(self):
         for record in self:
             if record.state == 'confirmed':
@@ -203,7 +203,7 @@ class wheel_action(models.Model):
 
 
 
-    # @api.multi
+    # 
     def write(self, vals):
         if 'install_decision' in vals.keys():
             xxx = self.env['new.car'].browse(self.vehicle_id.id) if self.install_on == 'vehicle' else self.env[
@@ -232,7 +232,7 @@ class wheel_action(models.Model):
                 raise ValidationError(_('You Can not install The same wheel in two places'))
         self.write({'state': 'reviewed'})
 
-    # @api.multi
+    # 
     def button_confirmed(self):
         for rec in self:
             # ############## Req. V2.0 #######################
@@ -581,7 +581,7 @@ class wheel_action_lines_install(models.Model):
     wheel_expense_journal_id = fields.Many2one('account.journal', "wheels expenses journal")
     move_id = fields.Many2one('account.move', 'Journal Entry')
 
-    # @api.multi
+    # 
     @api.constrains('car_meter')
     def _check_values(self):
         if not self.car_meter:
@@ -642,7 +642,7 @@ class wheel_action_lines_uninstall(models.Model):
             raise ValidationError('Meter For Wheel Can not Be Less Than Car Meter')
         return True
 
-    # @api.multi
+    # 
     @api.depends('meter_at_uninstall', 'car_meter')
     def _compute_distance(self):
         for rec in self:
@@ -662,7 +662,7 @@ class install_place(models.Model):
         default['code'] = '/'
         return super(install_place, self).copy(default=default)
 
-    # @api.multi
+    # 
     def unlink(self):
         for record in self:
             results_ids = self.env['action.place.line'].search([('action_place_id', '=', record.id)])
@@ -730,7 +730,7 @@ class wheel_purchase(models.Model):
         self.code = self.env['ir.sequence'].get('wheel.purchase')
         self.write({'state': 'reviewed'})
 
-    # @api.multi
+    # 
     def button_confirmed(self):
         for record in self:
             if record.supplier_invoice_type == 'invoiced':

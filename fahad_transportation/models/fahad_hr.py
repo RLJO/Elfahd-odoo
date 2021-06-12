@@ -269,7 +269,7 @@ class hr_employee(models.Model):
     def button_close(self):
         return self.write({'active': False, 'state': 'close'})
 
-    # @api.multi
+    # 
     def unlink(self):
         for record in self:
             if record.branch_name:
@@ -317,7 +317,7 @@ class hr_employee(models.Model):
             raise ValidationError(_("Insurance Degree should be less than 6 digits only"))
 
    
-    # @api.multi
+    # 
     def report_doc_expiry_data(self):
         data = {}
         if self.remaining_iqama_days <= 60 and self.identification_expiry_hijri_date:

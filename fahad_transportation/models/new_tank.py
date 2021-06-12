@@ -188,7 +188,7 @@ class new_tank(models.Model):
     #     else:
     #         self.for_rent = False
 
-    # @api.multi
+    # 
     def create_action_place(self):
         list = []
         self.action_place_ids.unlink()
@@ -200,7 +200,7 @@ class new_tank(models.Model):
         self.action_place_ids = list
         self.tank_flag = True
 
-    # @api.multi
+    # 
     def create_instalment_sheet(self):
         if self.instalment_sheet:
             for record in self.instalment_sheet:
@@ -259,7 +259,7 @@ class new_tank(models.Model):
         ('company_number_unique', 'unique(company_number)', 'Company No must be unique.'),
     ]
 
-    # @api.multi
+    # 
     # @api.depends('aramco_no')
     # def name_get(self):
         # if self.env['new.car'].check_validation():
@@ -313,7 +313,7 @@ class new_tank(models.Model):
     # TODO product will be what in item_table and supplier will be supplier
     # TODO will increase next_payment_date with 1 month
     # TODO link account invoice and move with new car
-    # @api.multi
+    # 
     def create_invoice(self):
         invoice_line = []
         date_today = datetime.date.today()
@@ -373,7 +373,7 @@ class new_tank(models.Model):
     #     if len(str(self.backup_wheel_no)) > 2:
     #         raise ValidationError(_("Backup Wheel No should not be more than 2 digits only."))
 
-    # # @api.multi
+    # # 
     # @api.constrains('basic_wheel_no', 'total_purchase_value', 'book_value', 'sale_method', 'salvage_value',
     #                 'purchase_date', 'total_value', 'instalment_paid_amount', 'instalment_book_value',
     #                 'final_payment', 'number_of_instalment', 'instalment_salvage_value', 'residual_amount',
@@ -587,7 +587,7 @@ class new_tank(models.Model):
     def button_draft(self):
         self.write({'state': 'new'})
 
-    # @api.multi
+    # 
     def unlink(self):
         for record in self:
             if record.state in ['confirm', 'connect', 'rent', 'sold']:
@@ -608,7 +608,7 @@ class tank_instalment_sheet_line(models.Model):
     account_id = fields.Many2one('account.account', related='tank_id.instalment_capital_account')
     flag = fields.Boolean('Flag')
 
-    # @api.multi
+    # 
     def create_supplier_payment(self):
         if self.env['new.car'].check_validation():
             raise ValidationError("")

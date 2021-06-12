@@ -44,7 +44,7 @@ class rent(models.Model):
     def button_close(self):
         self.write({'state': 'close'})
 
-    # @api.multi
+    # 
     def button_confirm(self):
         if self.rent_type in ('car', 'vehicle'):
             new_car = self.env['new.car'].browse(self.car_id.id)
@@ -56,7 +56,7 @@ class rent(models.Model):
             new_tank.write({'state': 'rent'})
         self.write({'state': 'confirm'})
 
-    # @api.multi
+    # 
     def button_end(self):
         for line in self.rent_line_ids:
             if not line.invoice_id:
@@ -113,7 +113,7 @@ class rent(models.Model):
     #     vals['code'] = self.env['ir.sequence'].get('rent')
     #     return super(rent, self).create(vals)
 
-    # @api.multi
+    # 
     def unlink(self):
         for record in self:
             if record.state == 'confirm':
@@ -130,7 +130,7 @@ class rent_lines(models.Model):
     # invoice
     invoice_id = fields.Many2one('account.account', _('Customer Invoice'))
 
-    # @api.multi
+    # 
     def create_invoice(self):
         if self.rent_id.state == 'confirm':
             invoice_line = []

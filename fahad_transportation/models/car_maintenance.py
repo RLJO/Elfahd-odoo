@@ -74,7 +74,7 @@ class car_maintenance(models.Model):
             # def button_end(self):
             #     self.write({'state': 'end'})
             #
-            # @api.multi
+            # 
             # def button_confirm(self):
             #     for line in self.gearbox_line_ids:
             #         line_obj = self.env['gearbox.line'].browse(line.id)
@@ -138,7 +138,7 @@ class gearbox_line(models.Model):
     #     if len(str(int(self.price_unit))) > 3:
     #         raise ValidationError(_("Price Unit should not be more than 3 digits only."))
 
-    # @api.multi
+    # 
     def create_delivery_order(self):
         order_line = []
         expense_register_line = []
@@ -228,7 +228,7 @@ class differential_line(models.Model):
     #     if len(str(self.price_unit)) > 3:
     #         raise ValidationError(_("Price Unit should not be more than 3 digits only."))
 
-    # @api.multi
+    # 
     def create_delivery_order(self):
         order_line = []
         expense_register_line = []
@@ -320,7 +320,7 @@ class machine_motor_line(models.Model):
     #     if len(str(self.price_unit)) > 3:
     #         raise ValidationError(_("Price Unit should not be more than 3 digits only."))
 
-    # @api.multi
+    # 
     def create_delivery_order(self):
         order_line = []
         expense_register_line = []

@@ -24,7 +24,7 @@ class car_category(models.Model):
 
   
 
-    # @api.multi
+    # 
     def unlink(self):
         for record in self:
             if len(record.linked_cars) > 0:

@@ -111,7 +111,7 @@ class new_vehicle(models.Model):
 
 
 
-    # # @api.multi
+    # # 
     # def unlink(self):
     #     for record in self:
     #         if record.state == 'confirm':
@@ -144,7 +144,7 @@ class new_vehicle(models.Model):
     def action_closed(self):
         return self.write({'state': 'close'})
 
-    # @api.multi
+    # 
     # @api.depends('tank_aramco_no')
     # def name_get(self):
     #     result = []

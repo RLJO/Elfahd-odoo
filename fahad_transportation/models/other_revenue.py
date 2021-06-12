@@ -14,7 +14,7 @@ class other_revenue_line(models.Model):
     note = fields.Char('Note', size=20)
     line_id = fields.Many2one('other.revenue', 'Line')
 
-    # @api.multi
+    # 
     @api.depends('number', 'amount')
     def _compute_total(self):
         self.total = self.number * self.amount
@@ -174,7 +174,7 @@ class other_revenue(models.Model):
     def button_draft(self):
         self.write({'state': 'draft'})
 
-    # @api.multi
+    # 
     def unlink(self):
         for record in self:
             if record.state == 'confirmed':

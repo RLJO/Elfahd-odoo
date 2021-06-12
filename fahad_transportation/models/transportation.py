@@ -38,7 +38,7 @@ class vehicles_on_line(models.Model):
         return super(vehicles_on_line, self).copy(default=default)
 
 
-    # @api.multi
+    # 
     def unlink(self):
         for record in self:
             if record.state == 'confirm':
@@ -217,7 +217,7 @@ class new_line(models.Model):
 
 
 
-    # @api.multi
+    # 
     def unlink(self):
         if self.state == 'close':
             raise ValidationError(_('New Line Can not be deleted when state is closed.'))

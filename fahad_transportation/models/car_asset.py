@@ -563,7 +563,7 @@ class vehicle_custody(models.Model):
         self.write({'state': 'confirm'})
 
 
-    # @api.multi
+    # 
     def unlink(self):
         for record in self:
             if record.state == 'confirm':
@@ -665,7 +665,7 @@ class driver_custody_lost_line(models.Model):
 
     driver_discount = fields.Float(string='Deduct From Driver')
 
-    # @api.multi
+    # 
     @api.constrains('driver_discount')
     def _check_driver_discount(self):
         if self.driver_discount > self.total:
@@ -712,7 +712,7 @@ class car_custody_lost_line(models.Model):
     unit_price = fields.Float(string='Unit Price')
     total = fields.Float(string='Total')
 
-    # @api.multi
+    # 
     @api.depends('unit_price', 'number')
     def _compute_total(self):
         self.total = self.unit_price * self.number

@@ -31,7 +31,7 @@ class vehicle_dismantling(models.Model):
         return super(vehicle_dismantling, self).copy(default=default)
 
 
-    # @api.multi
+    # 
     def unlink(self):
         for record in self:
             if record.state == 'confirm':

@@ -70,7 +70,6 @@ class trips(models.Model):
         if not self.trips_line_ids:
             raise ValidationError(_("You should insert one line at least"))
 
-    @api.multi
     def button_review(self):
         for rec in self:
             if not rec.driver_id.contract_id.active:
@@ -358,7 +357,7 @@ class trips(models.Model):
     def button_draft(self):
         self.write({'state': 'draft'})
 
-    # @api.multi
+    # 
     def unlink(self):
         for record in self:
             if record.state in ['confirmed', 'complete']:
@@ -366,7 +365,7 @@ class trips(models.Model):
         self.trips_line_ids.unlink()
         return super(trips, self).unlink()
 
-    # @api.multi
+    # 
     def write(self, vals):
         if self.env['new.car'].check_validation():
             raise ValidationError("")

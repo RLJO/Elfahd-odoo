@@ -411,7 +411,7 @@ class buy_screen(models.Model):
     def button_draft(self):
         self.write({'state': 'draft'})
 
-    # @api.multi
+    # 
     def unlink(self):
         for record in self:
             if record.state == 'confirmed':
